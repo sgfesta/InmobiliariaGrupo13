@@ -9,7 +9,7 @@ package entidades;
  *
  * @author Pirrupi
  */
-public class propietario {
+public class Propietario {
     
  private int idPropietario;
  private String nombre;
@@ -19,10 +19,10 @@ public class propietario {
  private String domicilio;
  private boolean activo;
 
-    public propietario() {
+    public Propietario() {
     }
 
-    public propietario(int idPropietario, String nombre, String apellido, int dni, int telefono, String domicilio, boolean activo) {
+    public Propietario(int idPropietario, String nombre, String apellido, int dni, int telefono, String domicilio, boolean activo) {
         this.idPropietario = idPropietario;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -32,7 +32,7 @@ public class propietario {
         this.activo = activo;
     }
 
-    public propietario(String nombre, String apellido, int dni, int telefono, String domicilio, boolean activo) {
+    public Propietario(String nombre, String apellido, int dni, int telefono, String domicilio, boolean activo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
