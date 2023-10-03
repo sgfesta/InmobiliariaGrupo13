@@ -91,7 +91,7 @@ public class Garante {
 
     @Override
     public String toString() {
-        return "Garante{" + "idGarante=" + idGarante + ", nombre=" + nombre + ", apellido=" + apellido + ", dni=" + dni + ", domicilio=" + domicilio + ", telefono=" + telefono + ", activo=" + activo + '}';
+        return idGarante + " " + nombre + " " + apellido + " " + dni + " " + domicilio + " " + telefono + " " + activo;
     }
     
     
