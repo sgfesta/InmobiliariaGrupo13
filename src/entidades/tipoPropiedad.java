@@ -11,16 +11,24 @@ package entidades;
  */
 public class tipoPropiedad {
     
+    //Declaro las variables
+    
     private int idTipo;
     private String nombre ;
+    private boolean activo;
+    
+    //Declaro los Constructores
 
-    public tipoPropiedad(int idTipo, String nombre) {
+    public tipoPropiedad(int idTipo, String nombre, boolean activo) {
         this.idTipo = idTipo;
         this.nombre = nombre;
+        this.activo = activo;
     }
 
     public tipoPropiedad() {
     }
+    
+    //Declaro Setter y Getter
 
     public int getIdTipo() {
         return idTipo;
@@ -38,9 +46,17 @@ public class tipoPropiedad {
         this.nombre = nombre;
     }
 
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
     @Override
     public String toString() {
-        return "tipoPropiedad{" + "idTipo=" + idTipo + ", nombre=" + nombre + '}';
+        return "tipoPropiedad{" + "idTipo=" + idTipo + ", nombre=" + nombre + ", activo=" + activo + '}';
     }
     
     
