@@ -14,7 +14,7 @@ public class Propiedad {
     private Propietario propietario;
     private String direccion;
     private int altura;
-    private tipoPropiedad tipo;
+    private TipoPropiedad tipo;
     private int superficieTotal;
     private double precioTasado;
     private int antiguedad;
@@ -25,7 +25,7 @@ public class Propiedad {
     private String observaciones;
     private boolean vigente;
 
-    public Propiedad(int idPropiedad, Propietario propietario, String direccion, int altura, tipoPropiedad tipo, int superficieTotal, double precioTasado, int antiguedad, Servicios servicios, Inspector inspector, Zona zona, Estado estado, String observaciones, boolean vigente) {
+    public Propiedad(int idPropiedad, Propietario propietario, String direccion, int altura, TipoPropiedad tipo, int superficieTotal, double precioTasado, int antiguedad, Servicios servicios, Inspector inspector, Zona zona, Estado estado, String observaciones, boolean vigente) {
         this.idPropiedad = idPropiedad;
         this.propietario = propietario;
         this.direccion = direccion;
@@ -42,7 +42,7 @@ public class Propiedad {
         this.vigente = vigente;
     }
 
-    public Propiedad(Propietario propietario, String direccion, int altura, tipoPropiedad tipo, int superficieTotal, double precioTasado, int antiguedad, Servicios servicios, Inspector inspector, Zona zona, Estado estado, String observaciones, boolean vigente) {
+    public Propiedad(Propietario propietario, String direccion, int altura, TipoPropiedad tipo, int superficieTotal, double precioTasado, int antiguedad, Servicios servicios, Inspector inspector, Zona zona, Estado estado, String observaciones, boolean vigente) {
         this.propietario = propietario;
         this.direccion = direccion;
         this.altura = altura;
@@ -93,11 +93,11 @@ public class Propiedad {
         this.altura = altura;
     }
 
-    public tipoPropiedad getTipo() {
+    public TipoPropiedad getTipo() {
         return tipo;
     }
 
-    public void setTipo(tipoPropiedad tipo) {
+    public void setTipo(TipoPropiedad tipo) {
         this.tipo = tipo;
     }
 
