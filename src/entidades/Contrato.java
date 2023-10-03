@@ -14,8 +14,9 @@ public class Contrato {
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
     private LocalDate fechaContrato;
+    private boolean activo;
 
-    public Contrato(int idContrato, Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Vendedor vendedor, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato) {
+    public Contrato(int idContrato, Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Vendedor vendedor, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, boolean activo) {
         this.idContrato = idContrato;
         this.propietario = propietario;
         this.propiedad = propiedad;
@@ -25,9 +26,10 @@ public class Contrato {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.fechaContrato = fechaContrato;
+        this.activo = activo;
     }
 
-    public Contrato(Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Vendedor vendedor, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato) {
+    public Contrato(Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Vendedor vendedor, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, boolean activo) {
         this.propietario = propietario;
         this.propiedad = propiedad;
         this.inquilino = inquilino;
@@ -36,8 +38,10 @@ public class Contrato {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.fechaContrato = fechaContrato;
+        this.activo = activo;
     }
 
+  
     public Contrato() {
     }
 
@@ -111,6 +115,14 @@ public class Contrato {
 
     public void setFechaContrato(LocalDate fechaContrato) {
         this.fechaContrato = fechaContrato;
+    }
+
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
     }
     
     

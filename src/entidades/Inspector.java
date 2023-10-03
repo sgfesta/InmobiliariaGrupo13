@@ -13,24 +13,29 @@ public class Inspector {
     private int telefono;
 
     private String domicilio;
+    
+    private boolean activo;
 
-    public Inspector(int idInspector, String nombre, String apellido, int dni, int telefono, String domicilio) {
+    public Inspector(int idInspector, String nombre, String apellido, int dni, int telefono, String domicilio, boolean activo) {
         this.idInspector = idInspector;
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.telefono = telefono;
         this.domicilio = domicilio;
+        this.activo = activo;
     }
 
-    public Inspector(String nombre, String apellido, int dni, int telefono, String domicilio) {
+    public Inspector(String nombre, String apellido, int dni, int telefono, String domicilio, boolean activo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.telefono = telefono;
         this.domicilio = domicilio;
+        this.activo = activo;
     }
 
+   
  
 
     public Inspector() {
@@ -84,9 +89,18 @@ public class Inspector {
         this.domicilio = domicilio;
     }
 
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
+    
     @Override
     public String toString() {
-        return "Inspector{" + "idInspector=" + idInspector + ", nombre=" + nombre + ", apellido=" + apellido + ", dni=" + dni + ", telefono=" + telefono + ", domicilio=" + domicilio + '}';
+        return idInspector + " " + nombre + " " + apellido + " " + dni + " " + telefono + " " + domicilio;
     }
     
     
