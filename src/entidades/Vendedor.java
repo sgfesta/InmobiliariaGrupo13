@@ -9,7 +9,7 @@ package entidades;
  *
  * @author Raven
  */
-public class vendedor {
+public class Vendedor {
     
     private int idVendedor;
     private String nombre;
@@ -18,10 +18,10 @@ public class vendedor {
     private int telefono;
     private boolean activo;
 
-    public vendedor() {
+    public Vendedor() {
     }
 
-    public vendedor(int idVendedor, String nombre, String apellido, int dni, int telefono, boolean activo) {
+    public Vendedor(int idVendedor, String nombre, String apellido, int dni, int telefono, boolean activo) {
         this.idVendedor = idVendedor;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -30,7 +30,7 @@ public class vendedor {
         this.activo = activo;
     }
 
-    public vendedor(String nombre, String apellido, int dni, int telefono, boolean activo) {
+    public Vendedor(String nombre, String apellido, int dni, int telefono, boolean activo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
