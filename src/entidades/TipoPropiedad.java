@@ -9,7 +9,7 @@ package entidades;
  *
  * @author Pirrupi
  */
-public class tipoPropiedad {
+public class TipoPropiedad {
     
     //Declaro las variables
     
@@ -19,13 +19,13 @@ public class tipoPropiedad {
     
     //Declaro los Constructores
 
-    public tipoPropiedad(int idTipo, String nombre, boolean activo) {
+    public TipoPropiedad(int idTipo, String nombre, boolean activo) {
         this.idTipo = idTipo;
         this.nombre = nombre;
         this.activo = activo;
     }
 
-    public tipoPropiedad() {
+    public TipoPropiedad() {
     }
     
     //Declaro Setter y Getter

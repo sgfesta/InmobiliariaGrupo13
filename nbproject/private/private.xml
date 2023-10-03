@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Pirrupi/Documents/GitHub/InmobiliariaGrupo13/src/entidades/tipoPropiedad.java</file>
+            <file>file:/C:/Users/Pirrupi/Documents/GitHub/InmobiliariaGrupo13/src/entidades/TipoPropiedad.java</file>
+            <file>file:/C:/Users/Pirrupi/Documents/GitHub/InmobiliariaGrupo13/src/entidades/Propietario.java</file>
+            <file>file:/C:/Users/Pirrupi/Documents/GitHub/InmobiliariaGrupo13/src/entidades/Inquilino.java</file>
+            <file>file:/C:/Users/Pirrupi/Documents/GitHub/InmobiliariaGrupo13/src/entidades/Contrato.java</file>
         </group>
     </open-files>
 </project-private>
