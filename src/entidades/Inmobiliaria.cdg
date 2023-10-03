@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Inmobiliaria">
+  <ClassDiagramComponents>
+    <Class name="Propietario" package="" visibility="public" xPosition="118.0" yPosition="137.0">
+      <Fields>
+        <Field name="idPropietario" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="dni" type="int" visibility="private"/>
+        <Field name="telefono" type="int" visibility="private"/>
+        <Field name="domicilio" type="String" visibility="private"/>
+        <Field name="activo" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Inquilino" package="" visibility="public" xPosition="373.0" yPosition="137.0">
+      <Fields>
+        <Field name="idInquilino" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="dni" type="int" visibility="private"/>
+        <Field name="telefono" type="int" visibility="private"/>
+        <Field name="domicilio" type="String" visibility="private"/>
+        <Field name="activo" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Inspector" package="" visibility="public" xPosition="610.0" yPosition="137.0">
+      <Fields>
+        <Field name="idInspector" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="dni" type="int" visibility="private"/>
+        <Field name="telefono" type="int" visibility="private"/>
+        <Field name="domicilio" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Garante" package="" visibility="public" xPosition="852.0" yPosition="137.0">
+      <Fields>
+        <Field name="idGarante" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="dni" type="int" visibility="private"/>
+        <Field name="telefono" type="int" visibility="private"/>
+        <Field name="domicilio" type="String" visibility="private"/>
+        <Field name="activo" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Vendedor" package="" visibility="public" xPosition="491.0" yPosition="403.0">
+      <Fields>
+        <Field name="idVendedor" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="dni" type="int" visibility="private"/>
+        <Field name="telefono" type="int" visibility="private"/>
+        <Field name="domicilio" type="String" visibility="private"/>
+        <Field name="activo" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
