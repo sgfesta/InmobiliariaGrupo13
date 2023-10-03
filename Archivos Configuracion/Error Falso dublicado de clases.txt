@@ -1,0 +1,20 @@
+
+ Error Falsa duplicacion de Clases: es un error local de nuestro propio editor
+
+error : Bug 226360 - Reporting duplicate class when there is no duplicate class ( https://bz.apache.org/netbeans/show_bug.cgi?id=226360)
+
+
+-Solucion para NetBeans:
+
+
+it might help to clear Netbeans cache:
+
+Go to Help -> About and you will see
+
+Cache directory: Path\to\Directory
+
+Close NetBeans, go to specified directory and delete everything.
+
+
+-Observacion: La primera vez que abri NetBeans luego de borrar cache, como que se tildo, por lo que lo cerre y volvi a abrir y me funciono.
+
