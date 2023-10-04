@@ -5,8 +5,9 @@ public class Inspector {
     //Declaro las variables
 
     private int idInspector;
-    private String nombre;
-    private String apellido;
+    private String matricula;
+     private String apellido;
+    private String nombre;   
     private int dni;
     private int telefono;
     private String domicilio;   
@@ -14,19 +15,21 @@ public class Inspector {
     
     //Declaro los Constructores
 
-    public Inspector(int idInspector, String nombre, String apellido, int dni, int telefono, String domicilio, boolean activo) {
+    public Inspector(int idInspector, String matricula, String apellido, String nombre, int dni, int telefono, String domicilio, boolean activo) {
         this.idInspector = idInspector;
-        this.nombre = nombre;
+        this.matricula = matricula;
         this.apellido = apellido;
+        this.nombre = nombre;        
         this.dni = dni;
         this.telefono = telefono;
         this.domicilio = domicilio;
         this.activo = activo;
     }
 
-    public Inspector(String nombre, String apellido, int dni, int telefono, String domicilio, boolean activo) {
-        this.nombre = nombre;
+    public Inspector(String matricula, String apellido, String nombre, int dni, int telefono, String domicilio, boolean activo) {
+        this.matricula= matricula;
         this.apellido = apellido;
+        this.nombre = nombre;        
         this.dni = dni;
         this.telefono = telefono;
         this.domicilio = domicilio;
@@ -45,15 +48,15 @@ public class Inspector {
     public void setIdInspector(int idInspector) {
         this.idInspector = idInspector;
     }
-
-    public String getNombre() {
-        return nombre;
+    
+    public String getMatricula() {
+        return matricula;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
-
+    
     public String getApellido() {
         return apellido;
     }
@@ -61,6 +64,14 @@ public class Inspector {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+    
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }    
 
     public int getDni() {
         return dni;
@@ -97,7 +108,7 @@ public class Inspector {
     
     @Override
     public String toString() {
-        return idInspector + " " + nombre + " " + apellido + " " + dni + " " + telefono + " " + domicilio;
+        return idInspector + " " + matricula + " " + apellido + " " + nombre + " "+ dni + " " + telefono + " " + domicilio;
     }
     
     
