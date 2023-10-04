@@ -24,33 +24,79 @@ public class InspectorData {
     
     //Guardo Inspector de forma individual
     public void guardarInspector(Inspector inspector) {
-
-        String sql = "INSERT INTO inspector (matricula, nombre, telefono, activo) VALUES (?,?,?,?)";
+        //Consulta slq 
+        String sql = "INSERT INTO inspector (matricula, apellido, nombre, telefono, activo) VALUES (?,?,?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, inspector.get());
-            ps.setString(1, inspector.getNombre());
-            ps.setInt(2, inspector.getAnioMateria());
-            
-            ps.setBoolean(3, inspector.isActivo());
+            ps.setString(1, inspector.getMatricula());
+            ps.setString(2, inspector.getApellido());
+            ps.setString(3, inspector.getNombre());
+            ps.setInt(4, inspector.getTelefono());            
+            ps.setBoolean(5, inspector.isActivo());
             int exito = ps.executeUpdate();
 
             ResultSet rs = ps.getGeneratedKeys();
 
             if (rs.next()) {
-                materia.setIdMateria(rs.getInt(1));
-                JOptionPane.showMessageDialog(null, "Materia guardada exitosamente");
+                inspector.setIdInspector(rs.getInt(1));
+                JOptionPane.showMessageDialog(null, "Inspector guardado exitosamente");
             }
             //Cierro la Conexion
-            ps.close();
-           
+            ps.close();          
 
         } catch (SQLException ex) {
-           JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Materia");
+           JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Inspector");
            
         }
 
     }
 
+    //Modifico Inspector de forma individual
+    public void modificarInspector(Inspector inspector) {
+        //Sentencia SQL
+        String sql = "UPDATE inspector SET matricula = ?, apellido = ?, nombre = ?, año = ?, activa = ? WHERE idInspector = ?";
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+         ps.setString(1, inspector.getMatricula());
+            ps.setString(2, inspector.getApellido());
+            ps.setString(3, inspector.getNombre());
+            ps.setInt(4, inspector.getTelefono());            
+            ps.setBoolean(5, inspector.isActivo());
+            ps.setInt(6, inspector.getIdInspector());
+            int exito = ps.executeUpdate();
+
+           if (exito == 1) {//para avisar de que funciono correctamente.
+                JOptionPane.showMessageDialog(null, "Inspector modificada exitosamente");
+            }
+            //Cierro la Conexion
+            ps.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Inspector");
+            
+        }
+
+    }
     
-}
+    //Elimino de forma logica Inspector
+    public void eliminarMateria(int idInspector) {
+        //borrado logico
+        String sql = "UPDATE inspector SET activo=0 WHERE idInspector= ?";
+
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, idInspector);
+            int exito = ps.executeUpdate();
+
+           if (exito == 1) {
+                JOptionPane.showMessageDialog(null, "Inspector eliminada exitosamente");
+            }
+            //Cierro la Conexion
+            ps.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Inspector");
+        }
+
+    }
+    
+    
+}//fin
