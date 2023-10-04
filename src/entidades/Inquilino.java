@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package entidades;
 
-/**
- *
- * @author Raven
- */
+
 public class Inquilino {
+    
+    //Declaro las variables
 
     private int idInquilino;
     private String name;
@@ -18,6 +13,8 @@ public class Inquilino {
     private int cuit;
     private String lugarTrabajo;
     private boolean activo;
+    
+    //Declaro los Constructores
 
     public Inquilino() {
     }
@@ -40,6 +37,8 @@ public class Inquilino {
         this.lugarTrabajo = lugarTrabajo;
         this.activo = activo;
     }
+    
+    //Declaro Setter y Getter
 
     public int getIdInquilino() {
         return idInquilino;

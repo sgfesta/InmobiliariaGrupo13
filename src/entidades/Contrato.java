@@ -5,6 +5,9 @@ import java.time.LocalDate;
 
 
 public class Contrato {
+    
+    //Declaro las variables
+    
     private int idContrato;
     private Propietario propietario;
     private Propiedad propiedad;
@@ -15,6 +18,8 @@ public class Contrato {
     private LocalDate fechaFin;
     private LocalDate fechaContrato;
     private boolean activo;
+    
+    //Declaro los Constructores
 
     public Contrato(int idContrato, Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Vendedor vendedor, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, boolean activo) {
         this.idContrato = idContrato;
@@ -44,6 +49,8 @@ public class Contrato {
   
     public Contrato() {
     }
+    
+    //Declaro Setter y Getter
 
     public int getIdContrato() {
         return idContrato;
@@ -123,6 +130,11 @@ public class Contrato {
 
     public void setActivo(boolean activo) {
         this.activo = activo;
+    }
+
+    @Override
+    public String toString() {
+        return idContrato + " " + propietario + " " + propiedad + " " + inquilino + " " + garante + " " + vendedor + " " + fechaInicio + " " + fechaFin + " " + fechaContrato + " " + activo;
     }
     
     

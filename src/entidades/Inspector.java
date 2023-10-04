@@ -1,20 +1,18 @@
 package entidades;
 
 public class Inspector {
+    
+    //Declaro las variables
 
     private int idInspector;
-
     private String nombre;
-
     private String apellido;
-
     private int dni;
-
     private int telefono;
-
-    private String domicilio;
-    
+    private String domicilio;   
     private boolean activo;
+    
+    //Declaro los Constructores
 
     public Inspector(int idInspector, String nombre, String apellido, int dni, int telefono, String domicilio, boolean activo) {
         this.idInspector = idInspector;
@@ -35,11 +33,10 @@ public class Inspector {
         this.activo = activo;
     }
 
-   
- 
-
     public Inspector() {
     }
+    
+    //Declaro Setter y Getter
 
     public int getIdInspector() {
         return idInspector;

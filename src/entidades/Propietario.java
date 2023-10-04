@@ -1,23 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package entidades;
 
-/**
- *
- * @author Pirrupi
- */
+
 public class Propietario {
     
- private int idPropietario;
- private String nombre;
- private String apellido;
- private int dni;
- private int telefono;
- private String domicilio;
- private boolean activo;
+    //Declaro las variables
+    
+    private int idPropietario;
+    private String nombre;
+    private String apellido;
+    private int dni;
+    private int telefono;
+    private String domicilio;
+    private boolean activo;
+    
+    //Declaro los Constructores
 
     public Propietario() {
     }
@@ -40,6 +37,8 @@ public class Propietario {
         this.domicilio = domicilio;
         this.activo = activo;
     }
+    
+    //Declaro Setter y Getter
 
     public int getIdPropietario() {
         return idPropietario;

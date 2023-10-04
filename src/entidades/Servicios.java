@@ -3,6 +3,8 @@ package entidades;
 
 
 public class Servicios {
+    
+    //Declaro las variables
 
     private int idServicios;
     private boolean agua_corriente;
@@ -13,6 +15,8 @@ public class Servicios {
     private boolean calefaccion;
     private boolean amoblado;
     private boolean activo;
+    
+    //Declaro los Constructores
 
     public Servicios() {
     }
@@ -39,6 +43,8 @@ public class Servicios {
         this.amoblado = amoblado;
         this.activo = activo;
     }
+    
+    //Declaro Setter y Getter
 
     public int getIdServicios() {
         return idServicios;

@@ -3,10 +3,15 @@ package entidades;
 
 
 public class Zona {
+    
+    //Declaro las variables
+    
     private int idZona;
     private String provincia;
     private String ciudad;
     private String barrio;
+    
+    //Declaro los Constructores
 
     public Zona(int idZona, String provincia, String ciudad, String barrio) {
         this.idZona = idZona;
@@ -23,6 +28,8 @@ public class Zona {
 
     public Zona() {
     }
+    
+    //Declaro Setter y Getter
 
     public int getIdZona() {
         return idZona;

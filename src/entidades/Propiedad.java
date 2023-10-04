@@ -1,15 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package entidades;
 
-/**
- *
- * @author Raven
- */
+
 public class Propiedad {
+    
+    //Declaro las variables
+    
     private int idPropiedad;
     private Propietario propietario;
     private String direccion;
@@ -24,6 +20,8 @@ public class Propiedad {
     private Estado estado;
     private String observaciones;
     private boolean vigente;
+    
+    //Declaro los Constructores
 
     public Propiedad(int idPropiedad, Propietario propietario, String direccion, int altura, TipoPropiedad tipo, int superficieTotal, double precioTasado, int antiguedad, Servicios servicios, Inspector inspector, Zona zona, Estado estado, String observaciones, boolean vigente) {
         this.idPropiedad = idPropiedad;
@@ -60,6 +58,8 @@ public class Propiedad {
 
     public Propiedad() {
     }
+    
+    //Declaro Setter y Getter
 
     public int getIdPropiedad() {
         return idPropiedad;
@@ -171,6 +171,11 @@ public class Propiedad {
 
     public void setVigente(boolean vigente) {
         this.vigente = vigente;
+    }
+
+    @Override
+    public String toString() {
+        return idPropiedad + " " + propietario + " " + direccion + " " + altura + " " + tipo + " " + superficieTotal + " " + precioTasado + " " + antiguedad + " " + servicios + " " + inspector + " " + zona + " " + estado + " " + observaciones + " " + vigente;
     }
     
     

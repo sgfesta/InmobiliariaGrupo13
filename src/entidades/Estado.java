@@ -3,10 +3,14 @@ package entidades;
 
 
 public class Estado {
+    
+    //Declaro las variables
   
     private int idEstado;
     private String nombre;
     private boolean activo;
+    
+    //Declaro los Constructores
 
     public Estado() {
     }
@@ -16,6 +20,8 @@ public class Estado {
         this.nombre = nombre;
         this.activo = activo;
     }
+    
+    //Declaro Setter y Getter
 
     public int getIdEstado() {
         return idEstado;
@@ -40,9 +46,11 @@ public class Estado {
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
-    
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return  idEstado + " " + nombre + " " + activo;
+    }
+   
     
 }
