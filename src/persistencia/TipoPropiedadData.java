@@ -1,11 +1,10 @@
 
-package logica;
+package persistencia;
 
 import java.sql.Connection;
-import persistencia.Conexion;
 
 
-public class ContratoData {
+public class TipoPropiedadData {
     
     //Declaro variable
     
@@ -13,8 +12,8 @@ public class ContratoData {
     
     //Declaro constructor
 
-    public ContratoData() {
+    public TipoPropiedadData() {
         con = Conexion.getConexion();
-    } 
+    }   
     
 }

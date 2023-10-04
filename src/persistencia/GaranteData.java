@@ -1,8 +1,7 @@
 
-package logica;
+package persistencia;
 
 import java.sql.Connection;
-import persistencia.Conexion;
 
 
 public class GaranteData {

@@ -1,11 +1,10 @@
 
-package logica;
+package persistencia;
 
 import java.sql.Connection;
-import persistencia.Conexion;
 
 
-public class ServiciosData {
+public class PropiedadData {
     
     //Declaro variable
     
@@ -13,7 +12,7 @@ public class ServiciosData {
     
     //Declaro constructor
 
-    public ServiciosData() {
+    public PropiedadData() {
         con = Conexion.getConexion();
     } 
     
