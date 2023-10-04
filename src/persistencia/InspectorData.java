@@ -54,7 +54,7 @@ public class InspectorData {
     //Modifico Inspector de forma individual
     public void modificarInspector(Inspector inspector) {
         //Sentencia SQL
-        String sql = "UPDATE inspector SET matricula = ?, apellido = ?, nombre = ?, año = ?, activa = ? WHERE idInspector = ?";
+        String sql = "UPDATE inspector SET matricula = ?, apellido = ?, nombre = ?, telefono = ?, activa = ? WHERE idInspector = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
          ps.setString(1, inspector.getMatricula());
