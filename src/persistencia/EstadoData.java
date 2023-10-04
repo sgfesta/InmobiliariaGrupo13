@@ -59,7 +59,7 @@ public class EstadoData {
             ps.close();
             
         } catch (SQLException ex) {
-           JOptionPane.showMessageDialog(null, "Error al modificar la tabla Estado al modificar "+ex.getMessage());
+           JOptionPane.showMessageDialog(null, "Error al modificar la tabla Estado en modificarEstado "+ex.getMessage());
            
         }
         }
