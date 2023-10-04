@@ -44,68 +44,68 @@ public class Servicios {
         return idServicios;
     }
 
-    public boolean isAgua_corriente() {
-        return agua_corriente;
-    }
-
-    public boolean isGas_natural() {
-        return gas_natural;
-    }
-
-    public boolean isLuz() {
-        return luz;
-    }
-
-    public boolean isCable() {
-        return cable;
-    }
-
-    public boolean isInternet() {
-        return internet;
-    }
-
-    public boolean isCalefaccion() {
-        return calefaccion;
-    }
-
-    public boolean isAmoblado() {
-        return amoblado;
-    }
-
-    public boolean isActivo() {
-        return activo;
-    }
-
     public void setIdServicios(int idServicios) {
         this.idServicios = idServicios;
+    }
+
+    public boolean isAgua_corriente() {
+        return agua_corriente;
     }
 
     public void setAgua_corriente(boolean agua_corriente) {
         this.agua_corriente = agua_corriente;
     }
 
+    public boolean isGas_natural() {
+        return gas_natural;
+    }
+
     public void setGas_natural(boolean gas_natural) {
         this.gas_natural = gas_natural;
+    }
+
+    public boolean isLuz() {
+        return luz;
     }
 
     public void setLuz(boolean luz) {
         this.luz = luz;
     }
 
+    public boolean isCable() {
+        return cable;
+    }
+
     public void setCable(boolean cable) {
         this.cable = cable;
+    }
+
+    public boolean isInternet() {
+        return internet;
     }
 
     public void setInternet(boolean internet) {
         this.internet = internet;
     }
 
+    public boolean isCalefaccion() {
+        return calefaccion;
+    }
+
     public void setCalefaccion(boolean calefaccion) {
         this.calefaccion = calefaccion;
     }
 
+    public boolean isAmoblado() {
+        return amoblado;
+    }
+
     public void setAmoblado(boolean amoblado) {
         this.amoblado = amoblado;
+    }
+
+    public boolean isActivo() {
+        return activo;
     }
 
     public void setActivo(boolean activo) {
