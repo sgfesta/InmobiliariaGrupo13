@@ -186,6 +186,7 @@ public class PropietarioData {
         }
         return propietarios;
     }
+    
     public List<Propietario> listarPropietariosActivos() {
         String sql = "SELECT idPropietario, nombre, apellido, dni, telefono, domicilio, activo FROM propietario WHERE activo = 1";
         ArrayList<Propietario> propietariosAc = new ArrayList<>();
