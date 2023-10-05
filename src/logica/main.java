@@ -1,12 +1,16 @@
 
 package logica;
 
+import entidades.Estado;
 import entidades.Garante;
 import entidades.Inquilino;
 import entidades.Inspector;
+import entidades.Propietario;
+import persistencia.EstadoData;
 import persistencia.GaranteData;
 import persistencia.InquilinoData;
 import persistencia.InspectorData;
+import persistencia.PropietarioData;
 
 public class main {
 
@@ -24,6 +28,13 @@ public class main {
 //    Garante garante = new Garante("Luis", "Medina", 987, "No tiene casa", 168496874, true);
 //    GaranteData g1 = new GaranteData();
 //    g1.guardarGarante(garante);
-    
+
+      Estado estado = new Estado("Bueno", true);
+      EstadoData e1 = new EstadoData();
+      e1.darAlta(estado);
+      
+      Propietario propietario = new Propietario("Luciana", "Juarez", 712, 2348458, "Su casa", true);
+      PropietarioData p1 = new PropietarioData();
+      p1.guardarPropietario(propietario);
 }
 }
