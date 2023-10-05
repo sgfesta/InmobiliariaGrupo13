@@ -20,6 +20,13 @@ public class Estado {
         this.nombre = nombre;
         this.activo = activo;
     }
+
+    public Estado(String nombre, boolean activo) {
+        this.nombre = nombre;
+        this.activo = activo;
+    }
+    
+    
     
     //Declaro Setter y Getter
 
