@@ -5,9 +5,9 @@ public class Inspector {
     //Declaro las variables
 
     private int idInspector;
-    private String matricula;
-     private String apellido;
-    private String nombre;   
+    private String matricula;    
+    private String nombre;  
+    private String apellido;
     private int dni;
     private int telefono;
     private String domicilio;   
@@ -15,21 +15,21 @@ public class Inspector {
     
     //Declaro los Constructores
 
-    public Inspector(int idInspector, String matricula, String apellido, String nombre, int dni, int telefono, String domicilio, boolean activo) {
+    public Inspector(int idInspector, String matricula, String nombre, String apellido, int dni, int telefono, String domicilio, boolean activo) {
         this.idInspector = idInspector;
         this.matricula = matricula;
-        this.apellido = apellido;
-        this.nombre = nombre;        
+        this.nombre = nombre; 
+        this.apellido = apellido;               
         this.dni = dni;
         this.telefono = telefono;
         this.domicilio = domicilio;
         this.activo = activo;
     }
 
-    public Inspector(String matricula, String apellido, String nombre, int dni, int telefono, String domicilio, boolean activo) {
+    public Inspector(String matricula, String nombre,String apellido, int dni, int telefono, String domicilio, boolean activo) {
         this.matricula= matricula;
-        this.apellido = apellido;
-        this.nombre = nombre;        
+         this.nombre = nombre; 
+        this.apellido = apellido;              
         this.dni = dni;
         this.telefono = telefono;
         this.domicilio = domicilio;
@@ -108,7 +108,7 @@ public class Inspector {
     
     @Override
     public String toString() {
-        return idInspector + " " + matricula + " " + apellido + " " + nombre + " "+ dni + " " + telefono + " " + domicilio;
+        return idInspector + " " + matricula + " " + nombre + " " + apellido + " "+ dni + " " + telefono + " " + domicilio;
     }
     
     

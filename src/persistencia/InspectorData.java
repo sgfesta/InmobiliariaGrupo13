@@ -1,4 +1,3 @@
-
 package persistencia;
 
 import entidades.Inspector;
@@ -9,29 +8,26 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
-
 public class InspectorData {
-    
-    //Declaro variable
-    
-    private Connection con = null;
-    
-    //Declaro constructor
 
+    //Declaro variable
+    private Connection con = null;
+
+    //Declaro constructor
     public InspectorData() {
         con = Conexion.getConexion();
-    } 
-    
+    }
+
     //Guardo Inspector de forma individual
     public void guardarInspector(Inspector inspector) {
         //Consulta slq 
-        String sql = "INSERT INTO inspector (matricula, apellido, nombre, telefono, activo) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO inspector (matricula, nombre, apellido, telefono, activo) VALUES (?,?,?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, inspector.getMatricula());
-            ps.setString(2, inspector.getApellido());
-            ps.setString(3, inspector.getNombre());
-            ps.setInt(4, inspector.getTelefono());            
+            ps.setString(2, inspector.getNombre());
+            ps.setString(3, inspector.getApellido());
+            ps.setInt(4, inspector.getTelefono());
             ps.setBoolean(5, inspector.isActivo());
             int exito = ps.executeUpdate();
 
@@ -42,11 +38,11 @@ public class InspectorData {
                 JOptionPane.showMessageDialog(null, "Inspector guardado exitosamente");
             }
             //Cierro la Conexion
-            ps.close();          
+            ps.close();
 
         } catch (SQLException ex) {
-           JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Inspector");
-           
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Inspector");
+
         }
 
     }
@@ -54,29 +50,30 @@ public class InspectorData {
     //Modifico Inspector de forma individual
     public void modificarInspector(Inspector inspector) {
         //Sentencia SQL
-        String sql = "UPDATE inspector SET matricula = ?, apellido = ?, nombre = ?, telefono = ?, activa = ? WHERE idInspector = ?";
+        String sql = "UPDATE inspector SET matricula = ?, nombre = ?, apellido = ?, telefono = ?, activa = ? WHERE idInspector = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-         ps.setString(1, inspector.getMatricula());
-            ps.setString(2, inspector.getApellido());
-            ps.setString(3, inspector.getNombre());
-            ps.setInt(4, inspector.getTelefono());            
+            ps.setString(1, inspector.getMatricula());
+            ps.setString(2, inspector.getNombre());
+            ps.setString(3, inspector.getApellido());
+
+            ps.setInt(4, inspector.getTelefono());
             ps.setBoolean(5, inspector.isActivo());
             ps.setInt(6, inspector.getIdInspector());
             int exito = ps.executeUpdate();
 
-           if (exito == 1) {//para avisar de que funciono correctamente.
+            if (exito == 1) {//para avisar de que funciono correctamente.
                 JOptionPane.showMessageDialog(null, "Inspector modificada exitosamente");
             }
             //Cierro la Conexion
             ps.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Inspector");
-            
+
         }
 
     }
-    
+
     //Elimino de forma logica Inspector
     public void eliminarMateria(int idInspector) {
         //borrado logico
@@ -87,7 +84,7 @@ public class InspectorData {
             ps.setInt(1, idInspector);
             int exito = ps.executeUpdate();
 
-           if (exito == 1) {
+            if (exito == 1) {
                 JOptionPane.showMessageDialog(null, "Inspector eliminada exitosamente");
             }
             //Cierro la Conexion
@@ -97,6 +94,5 @@ public class InspectorData {
         }
 
     }
-    
-    
+
 }//fin

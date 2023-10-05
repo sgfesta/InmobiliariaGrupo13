@@ -111,7 +111,7 @@ public class PropiedadData {
     }
      
       public Propiedad buscarPropiedad(int id, boolean disponible) {
-     String sql = "SELECT * FROM propiedad WHERE idPropiedad = ?  AND disponible = ?";
+     String sql = "SELECT idPropiedad, direccion, altura, superficieTotal, precioTasado, antiguedad, observaciones, disponible, activo FROM propiedad WHERE idPropiedad = ?  AND disponible = ?";
      Propiedad pr1 = null;
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -134,7 +134,7 @@ public class PropiedadData {
             ps.close();
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla propietario");
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Propiedad en buscarPropiedad "+ex.getMessage());
         }
         return pr1;
     }
@@ -142,7 +142,7 @@ public class PropiedadData {
      
      
      public List<Propiedad> listarPropiedades() {
-        String sql = "SELECT * FROM propiedad";
+        String sql = "SELECT idPropiedad, direccion, altura, superficieTotal, precioTasado, antiguedad, observaciones, disponible, activo FROM propiedad";
         ArrayList<Propiedad> propiedades = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -164,14 +164,14 @@ public class PropiedadData {
              //Cierro la Conexion
             ps.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Propiedad en listarPropiedades");
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Propiedad en listarPropiedades "+ex.getMessage());
 
         }
         return propiedades;
     }
     
-      public List<Propiedad> listarPropiedadesActivas() {
-        String sql = "SELECT * FROM propiedad WHERE activo = 1";
+      public List<Propiedad> listarPropiedadesXDueño() {
+        String sql = "SELECT idPropiedad, direccion, altura, superficieTotal, precioTasado, antiguedad, observaciones, disponible, activo FROM propiedad p1 JOIN propietario p2 on (p1.idPropietario = p2.idPropietario) WHERE idPropietario = ?";
         ArrayList<Propiedad> propiedades = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -179,6 +179,7 @@ public class PropiedadData {
 
             while (rs.next()) {
                 Propiedad pr1 = new Propiedad();
+                pr1.getPropietario().getIdPropietario();
                 pr1.setIdPropiedad(rs.getInt("idPropiedad"));
                 pr1.setDireccion(rs.getString("direccion"));
                 pr1.setAltura(rs.getInt("altura"));
@@ -192,7 +193,35 @@ public class PropiedadData {
              //Cierro la Conexion
             ps.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Propiedad en listarPropiedadesActivas");
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Propiedad en listarPropiedadesXDueño "+ex.getMessage());
+
+        }
+        return propiedades;
+    }
+      public List<Propiedad> listarPropiedadesXDueñoActivas() {
+        String sql = "SELECT idPropiedad, direccion, altura, superficieTotal, precioTasado, antiguedad, observaciones, disponible, activo FROM propiedad p1 JOIN propietario p2 on (p1.idPropietario = p2.idPropietario) WHERE idPropietario = ? AND vigente = 1";
+        ArrayList<Propiedad> propiedades = new ArrayList<>();
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                Propiedad pr1 = new Propiedad();
+                pr1.getPropietario().getIdPropietario();
+                pr1.setIdPropiedad(rs.getInt("idPropiedad"));
+                pr1.setDireccion(rs.getString("direccion"));
+                pr1.setAltura(rs.getInt("altura"));
+                pr1.setSuperficieTotal(rs.getInt("superficieTotal"));
+                pr1.setPrecioTasado(rs.getDouble("precioTasado"));
+                pr1.setAntiguedad(rs.getInt("antiguedad"));
+                pr1.setObservaciones(rs.getString("observaciones"));
+                pr1.setDisponible(rs.getBoolean("disponible"));
+                propiedades.add(pr1);
+            }
+             //Cierro la Conexion
+            ps.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Propiedad en listarPropiedadesXDueñoActivas "+ex.getMessage());
 
         }
         return propiedades;
