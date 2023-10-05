@@ -28,16 +28,15 @@ public class PropietarioData {
     
     
     public void guardarPropietario(Propietario propietario) {
-        String sql = "INSERT INTO propietario(idPropietario, nombre, apellido, dni,telefono, domicilio,  activo) VALUES ( ?, ?, ?, ?, ?,?, ?)";
+         String sql = "INSERT INTO propietario(nombre, apellido, dni,telefono, domicilio,  activo) VALUES ( ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-             ps.setDouble(1, propietario.getIdPropietario());
-            ps.setString(2, propietario.getNombre());
-            ps.setString(3, propietario.getApellido());
-            ps.setInt(4, propietario.getDni());
-            ps.setInt(6, propietario.getTelefono());
+            ps.setString(1, propietario.getNombre());
+            ps.setString(2, propietario.getApellido());
+            ps.setInt(3, propietario.getDni());
+            ps.setInt(4, propietario.getTelefono());
             ps.setString(5, propietario.getDomicilio());
-            ps.setBoolean(7, propietario.isActivo());
+            ps.setBoolean(6, propietario.isActivo());
 
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {

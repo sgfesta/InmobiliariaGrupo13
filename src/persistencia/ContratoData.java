@@ -9,6 +9,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 
@@ -106,7 +108,49 @@ public class ContratoData {
 
     }
     
+     public void renovarContrato(Contrato contrato){
+        String sql = "UPDATE contrato,propiedad p SET fechaInicio = ?, fechaFin = ?, p.precioTasado = ? WHERE idContrato = ? ";
+        try{
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setDate(1, Date.valueOf(contrato.getFechaInicio()));
+            ps.setDate(2, Date.valueOf(contrato.getFechaFin()));
+            ps.setDouble(3, contrato.getPropiedad().getPrecioTasado());
+            ps.setInt(4, contrato.getIdContrato());
+            int exito = ps.executeUpdate();
+            if(exito == 1){
+                //Mensaje renovacion de contrato 
+            }
+            ps.close();
+        } catch(SQLException ex){
+            JOptionPane.showMessageDialog(null, "Error en la renovacion de contrato "+ex.getMessage());
+        }
+    }
     
+     public List<Contrato> listarContratosVigentes() {
+        String sql = "SELECT * FROM contrato WHERE activo = 1";
+        ArrayList<Contrato> contratosActivos = new ArrayList<>();
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                Contrato c1 = new Contrato();
+                c1.setIdContrato(rs.getInt("idContrato"));
+                c1.setFechaContrato(rs.getDate("fechaContrato").toLocalDate());
+                c1.setFechaInicio(rs.getDate("fechaInicio").toLocalDate());
+                c1.setFechaInicio(rs.getDate("fechaFin").toLocalDate());
+                c1.setActivo(true);
+           
+                contratosActivos.add(c1);
+            }
+             //Cierro la Conexion
+            ps.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Propiedad en listarPropiedades "+ex.getMessage());
+
+        }
+        return contratosActivos;
+    }
     
     
 }//fin
