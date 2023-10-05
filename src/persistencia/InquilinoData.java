@@ -22,7 +22,7 @@ public class InquilinoData {
     }
 
     public void guardarInquilino(Inquilino inquilino) {
-        String sql = "INSERT INTO alumno(nombre, apellido, dni, cuit, lugarTrabajo, activo)" + "VALUES ( ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO inquilino (nombre, apellido, dni, cuit, lugarTrabajo, activo)" + "VALUES ( ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, inquilino.getNombre());
