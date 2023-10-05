@@ -25,12 +25,11 @@ public class VendedorData {
     //Guardo vendedor de forma individual
     public void guardarVendedor(Vendedor vendedor) {
         //Consulta slq 
-        String sql = "INSERT INTO vendedor (apellido, nombre, dni, telefono, activo) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO vendedor (nombre, apellido, dni, telefono, activo) VALUES (?,?,?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-           
-            ps.setString(1, vendedor.getApellido());
-            ps.setString(2, vendedor.getNombre());
+            ps.setString(1, vendedor.getNombre());
+            ps.setString(2, vendedor.getApellido());            
             ps.setInt(3, vendedor.getDni());
             ps.setInt(4, vendedor.getTelefono());            
             ps.setBoolean(5, vendedor.isActivo());
@@ -55,11 +54,11 @@ public class VendedorData {
     //Modifico Vendedor de forma individual
     public void modificarVendedor(Vendedor vendedor) {
         //Sentencia SQL
-        String sql = "UPDATE vendedor SET apellido = ?, nombre = ?, dni = ?, telefono = ? activa = ? WHERE idVendedor = ?";
+        String sql = "UPDATE vendedor SET nombre = ?, apellido = ?, dni = ?, telefono = ? activa = ? WHERE idVendedor = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setString(1, vendedor.getApellido());
-            ps.setString(2, vendedor.getNombre());
+            ps.setString(1, vendedor.getNombre());
+            ps.setString(2, vendedor.getApellido());            
             ps.setInt(3, vendedor.getDni());
             ps.setInt(4, vendedor.getTelefono());            
             ps.setBoolean(5, vendedor.isActivo());

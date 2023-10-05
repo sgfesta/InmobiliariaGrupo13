@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-10-2023 a las 15:39:55
+-- Tiempo de generación: 05-10-2023 a las 16:58:03
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -93,8 +93,8 @@ CREATE TABLE `inquilino` (
 CREATE TABLE `inspector` (
   `idInspector` int(11) NOT NULL,
   `matricula` varchar(30) NOT NULL,
-  `apellido` varchar(30) NOT NULL,
   `nombre` varchar(30) NOT NULL,
+  `apellido` varchar(30) NOT NULL,
   `telefono` int(30) NOT NULL,
   `activo` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -119,7 +119,7 @@ CREATE TABLE `propiedad` (
   `idZona` int(11) NOT NULL,
   `idEstado` int(11) NOT NULL,
   `observaciones` varchar(300) NOT NULL,
-  `disponible` tinyint(4) NOT NULL,
+  `vigente` tinyint(4) NOT NULL,
   `activo` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -177,8 +177,8 @@ CREATE TABLE `tipo` (
 
 CREATE TABLE `vendedor` (
   `idVendedor` int(11) NOT NULL,
-  `apellido` varchar(30) NOT NULL,
   `nombre` varchar(30) NOT NULL,
+  `apellido` varchar(30) NOT NULL,
   `dni` int(30) NOT NULL,
   `telefono` int(30) NOT NULL,
   `activo` tinyint(4) NOT NULL
