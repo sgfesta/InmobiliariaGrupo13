@@ -111,7 +111,7 @@ public class PropiedadData {
     }
      
       public Propiedad buscarPropiedad(int id, boolean disponible) {
-     String sql = "SELECT * FROM propiedad WHERE idPropiedad = ?  AND disponible = ?";
+     String sql = "SELECT idPropiedad, direccion, altura, superficieTotal, precioTasado, antiguedad, observaciones, disponible, activo FROM propiedad WHERE idPropiedad = ?  AND disponible = ?";
      Propiedad pr1 = null;
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -134,7 +134,7 @@ public class PropiedadData {
             ps.close();
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla propietario");
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Propiedad en buscarPropiedad "+ex.getMessage());
         }
         return pr1;
     }
@@ -142,7 +142,7 @@ public class PropiedadData {
      
      
      public List<Propiedad> listarPropiedades() {
-        String sql = "SELECT * FROM propiedad";
+        String sql = "SELECT idPropiedad, direccion, altura, superficieTotal, precioTasado, antiguedad, observaciones, disponible, activo  FROM propiedad";
         ArrayList<Propiedad> propiedades = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -164,7 +164,7 @@ public class PropiedadData {
              //Cierro la Conexion
             ps.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Propiedad en listarPropiedades");
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Propiedad en listarPropiedades "+ex.getMessage());
 
         }
         return propiedades;
@@ -192,7 +192,7 @@ public class PropiedadData {
              //Cierro la Conexion
             ps.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Propiedad en listarPropiedadesActivas");
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Propiedad en listarPropiedadesActivas "+ex.getMessage());
 
         }
         return propiedades;
