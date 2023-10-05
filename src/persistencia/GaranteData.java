@@ -24,17 +24,16 @@ public class GaranteData {
     //--------------------------------
     public void guardarGarante(Garante garante) {
 
-        String sql = "INSERT INTO garante(idGarante, nombre, apellido, dni, domicilio, telefono, activo) VALUES ( ?, ?, ?, ?, ?,?, ?)";
+        String sql = "INSERT INTO garante(nombre, apellido, dni, domicilio, telefono, activo) VALUES ( ?, ?, ?, ?, ?, ?)";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            ps.setDouble(1, garante.getIdGarante());
-            ps.setString(2, garante.getNombre());
-            ps.setString(3, garante.getApellido());
-            ps.setInt(4, garante.getDni());
-            ps.setString(5, garante.getDomicilio());
-            ps.setInt(6, garante.getTelefono());
-            ps.setBoolean(7, garante.isActivo());
+            ps.setString(1, garante.getNombre());
+            ps.setString(2, garante.getApellido());
+            ps.setInt(3, garante.getDni());
+            ps.setString(4, garante.getDomicilio());
+            ps.setInt(5, garante.getTelefono());
+            ps.setBoolean(6, garante.isActivo());
 
             ps.executeUpdate();
 
