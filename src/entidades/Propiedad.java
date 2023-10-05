@@ -19,11 +19,11 @@ public class Propiedad {
     private Zona zona;
     private Estado estado;
     private String observaciones;
-    private boolean vigente;
-    
+    private boolean disponible;
+    private boolean activo;
     //Declaro los Constructores
 
-    public Propiedad(int idPropiedad, Propietario propietario, String direccion, int altura, TipoPropiedad tipo, int superficieTotal, double precioTasado, int antiguedad, Servicios servicios, Inspector inspector, Zona zona, Estado estado, String observaciones, boolean vigente) {
+    public Propiedad(int idPropiedad, Propietario propietario, String direccion, int altura, TipoPropiedad tipo, int superficieTotal, double precioTasado, int antiguedad, Servicios servicios, Inspector inspector, Zona zona, Estado estado, String observaciones, boolean disponible, boolean activo) {
         this.idPropiedad = idPropiedad;
         this.propietario = propietario;
         this.direccion = direccion;
@@ -37,10 +37,11 @@ public class Propiedad {
         this.zona = zona;
         this.estado = estado;
         this.observaciones = observaciones;
-        this.vigente = vigente;
+        this.disponible = disponible;
+        this.activo = activo;
     }
 
-    public Propiedad(Propietario propietario, String direccion, int altura, TipoPropiedad tipo, int superficieTotal, double precioTasado, int antiguedad, Servicios servicios, Inspector inspector, Zona zona, Estado estado, String observaciones, boolean vigente) {
+    public Propiedad(Propietario propietario, String direccion, int altura, TipoPropiedad tipo, int superficieTotal, double precioTasado, int antiguedad, Servicios servicios, Inspector inspector, Zona zona, Estado estado, String observaciones, boolean disponible, boolean activo) {
         this.propietario = propietario;
         this.direccion = direccion;
         this.altura = altura;
@@ -53,7 +54,8 @@ public class Propiedad {
         this.zona = zona;
         this.estado = estado;
         this.observaciones = observaciones;
-        this.vigente = vigente;
+        this.disponible = disponible;
+        this.activo = activo;
     }
 
     public Propiedad() {
@@ -165,17 +167,24 @@ public class Propiedad {
         this.observaciones = observaciones;
     }
 
-    public boolean isVigente() {
-        return vigente;
+    public boolean isDisponible() {
+        return disponible;
     }
 
-    public void setVigente(boolean vigente) {
-        this.vigente = vigente;
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
     }
 
     @Override
     public String toString() {
-        return idPropiedad + " " + propietario + " " + direccion + " " + altura + " " + tipo + " " + superficieTotal + " " + precioTasado + " " + antiguedad + " " + servicios + " " + inspector + " " + zona + " " + estado + " " + observaciones + " " + vigente;
+        return idPropiedad + " " + propietario + " " + direccion + " " + altura + " " + tipo + " " + superficieTotal + " " + precioTasado + " " + antiguedad + " " + servicios + " " + inspector + " " + zona + " " + estado + " " + observaciones + " " + disponible+ " " + activo;
     }
     
     

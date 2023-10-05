@@ -25,8 +25,8 @@ public class PropiedadData {
     } 
     
     public void agregarPropiedad(Propiedad propiedad) {
-         String sql = "INSERT INTO propiedad (idPropietario, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idServicios, idInspector, idZona, idEstado, observaciones, vigente)" + 
-                 " VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+         String sql = "INSERT INTO propiedad (idPropietario, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idServicios, idInspector, idZona, idEstado, observaciones, disponible,activo" + 
+                 " VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, propiedad.getPropietario().getIdPropietario());
@@ -41,7 +41,8 @@ public class PropiedadData {
             ps.setInt(10, propiedad.getZona().getIdZona());
             ps.setInt(11, propiedad.getEstado().getIdEstado());
             ps.setString(12, propiedad.getObservaciones());
-            ps.setBoolean(13, propiedad.isVigente());
+            ps.setBoolean(13, propiedad.isDisponible());
+            ps.setBoolean(14, propiedad.isActivo());
             ps.executeUpdate();
             ResultSet rs = ps.getGeneratedKeys();
             //cartel para ver si fue hecho exitosamente la inscripcion
@@ -58,7 +59,7 @@ public class PropiedadData {
     }
     
      public void modificarPropiedad(Propiedad propiedad) {
-         String sql = "UPDATE propiedad SET idPropietario = ?, direccion = ?, altura = ?, idTipo = ?, superficieTotal = ?, precioTasado = ?, antiguedad = ?, idServicios = ?, idInspector = ?, idZona = ?, idEstado = ?, observaciones = ?, vigente = ? WHERE idPropiedad = ?";
+         String sql = "UPDATE propiedad SET idPropietario = ?, direccion = ?, altura = ?, idTipo = ?, superficieTotal = ?, precioTasado = ?, antiguedad = ?, idServicios = ?, idInspector = ?, idZona = ?, idEstado = ?, observaciones = ?, disponible = ?, activo = ? WHERE idPropiedad = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, propiedad.getPropietario().getIdPropietario());
@@ -73,8 +74,9 @@ public class PropiedadData {
             ps.setInt(10, propiedad.getZona().getIdZona());
             ps.setInt(11, propiedad.getEstado().getIdEstado());
             ps.setString(12, propiedad.getObservaciones());
-            ps.setBoolean(13, propiedad.isVigente());
-            ps.setInt(14, propiedad.getIdPropiedad());
+            ps.setBoolean(13, propiedad.isDisponible());
+            ps.setBoolean(14, propiedad.isActivo());
+            ps.setInt(15, propiedad.getIdPropiedad());
             
            int exito = ps.executeUpdate();
             if (exito == 1) {
@@ -90,7 +92,7 @@ public class PropiedadData {
     }
     
      public void darBajaAPropiedad(Propiedad propiedad) {
-         String sql = "UPDATE propiedad  vigente = 0 WHERE idPropiedad = ?";
+         String sql = "UPDATE propiedad  activo = 0 WHERE idPropiedad = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);         
             ps.setInt(1, propiedad.getIdPropiedad());
@@ -108,13 +110,13 @@ public class PropiedadData {
         }
     }
      
-      public Propiedad buscarPropiedad(int id, boolean vigente) {
-     String sql = "SELECT * FROM propiedad WHERE idPropiedad = ?  AND vigente = ?";
+      public Propiedad buscarPropiedad(int id, boolean disponible) {
+     String sql = "SELECT * FROM propiedad WHERE idPropiedad = ?  AND disponible = ?";
      Propiedad pr1 = null;
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
-            ps.setBoolean(2, vigente); 
+            ps.setBoolean(2, disponible); 
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 pr1 = new Propiedad();
@@ -125,7 +127,8 @@ public class PropiedadData {
                 pr1.setPrecioTasado(rs.getDouble("precioTasado"));
                 pr1.setAntiguedad(rs.getInt("antiguedad"));
                 pr1.setObservaciones(rs.getString("observaciones"));
-                pr1.setVigente(rs.getBoolean("vigente"));
+                pr1.setDisponible(rs.getBoolean("disponible"));
+                pr1.setActivo(rs.getBoolean("activo"));
             }
              //Cierro la Conexion
             ps.close();
@@ -154,7 +157,8 @@ public class PropiedadData {
                 pr1.setPrecioTasado(rs.getDouble("precioTasado"));
                 pr1.setAntiguedad(rs.getInt("antiguedad"));
                 pr1.setObservaciones(rs.getString("observaciones"));
-                pr1.setVigente(true);
+                pr1.setDisponible(rs.getBoolean("disponible"));
+                pr1.setDisponible(rs.getBoolean("activo"));
                 propiedades.add(pr1);
             }
              //Cierro la Conexion
@@ -167,7 +171,7 @@ public class PropiedadData {
     }
     
       public List<Propiedad> listarPropiedadesActivas() {
-        String sql = "SELECT * FROM propiedad WHERE vigente = 1";
+        String sql = "SELECT * FROM propiedad WHERE activo = 1";
         ArrayList<Propiedad> propiedades = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -182,7 +186,7 @@ public class PropiedadData {
                 pr1.setPrecioTasado(rs.getDouble("precioTasado"));
                 pr1.setAntiguedad(rs.getInt("antiguedad"));
                 pr1.setObservaciones(rs.getString("observaciones"));
-                pr1.setVigente(true);
+                pr1.setDisponible(rs.getBoolean("disponible"));
                 propiedades.add(pr1);
             }
              //Cierro la Conexion
