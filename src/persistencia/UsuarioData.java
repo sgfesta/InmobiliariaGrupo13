@@ -93,5 +93,33 @@ public class UsuarioData {
         }
 
     }
+    
+        public Usuario buscarGarante(String nombre) {
+        String sql = "SELECT idUsuario, nombre,email, password, activo, idNivelAcceso FROM usuario WHERE nombre=?";
+        Usuario usuario = null;
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, nombre);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                usuario = new Usuario();
+                usuario.setIdUsuario(rs.getInt("idUsuario"));
+                usuario.setNombre(rs.getString("nombre"));
+                usuario.setEmail(rs.getString("email"));
+                usuario.setPassword(rs.getString("password"));
+                usuario.setActivo(rs.getBoolean("activo"));
+                usuario.setIdNivelAcceso(rs.getInt("idNivelAcceso"));
+
+            } else {
+                JOptionPane.showMessageDialog(null, "No existe un usuario con ese ID o  en Estado activo");
+            }
+            //Cierro la Conexion
+            ps.close();
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Usuario");
+        }
+        return usuario;
+    }
 
 }
