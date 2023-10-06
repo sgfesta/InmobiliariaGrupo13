@@ -18,7 +18,7 @@ public class UsuarioData {
         con = Conexion.getConexion();
     }
 
-    //Guardo vendedor de forma individual
+    //Guardo Usuario de forma individual
     public void guardarUsuario(Usuario usuario) {
         //Consulta slq 
         String sql = "INSERT INTO  usuario (nombre, email, password, activo, idNivelAcceso) VALUES (?,?,?,?,?)";
@@ -47,7 +47,7 @@ public class UsuarioData {
 
     }
 
-    //Modifico Vendedor de forma individual
+    //Modifico Usuario de forma individual
     public void modificarUsuario(Usuario usuario) {
         //Sentencia SQL
         String sql = "UPDATE usuario SET nombre = ?, email = ?, password = ?, activo = ? idNivelAcceso = ? WHERE idUsuario = ?";
@@ -73,8 +73,8 @@ public class UsuarioData {
 
     }
 
-    //Elimino de forma logica Vendedor
-    public void eliminarJUsuario(int idUsuario) {
+    //Elimino de forma logica Usuario
+    public void eliminarUsuario(int idUsuario) {
         //borrado logico
         String sql = "UPDATE usuario SET activo=0 WHERE idVendedor= ?";
 

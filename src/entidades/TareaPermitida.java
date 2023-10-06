@@ -3,7 +3,7 @@ package entidades;
 
 public class TareaPermitida {
     //Declaro Variables
-    private int idTareaPendiente;
+    private int idTareaPermitida;
     private String tarea;
     private int idNivelAcceso;
     private boolean activo;
@@ -14,7 +14,7 @@ public class TareaPermitida {
     }
 
     public TareaPermitida(int idTareaPendiente, String tarea, int idNivelAcceso, boolean activo) {
-        this.idTareaPendiente = idTareaPendiente;
+        this.idTareaPermitida = idTareaPendiente;
         this.tarea = tarea;
         this.idNivelAcceso = idNivelAcceso;
         this.activo = activo;
@@ -22,12 +22,12 @@ public class TareaPermitida {
     
     //Declaro Setter y Getters
 
-    public int getIdTareaPendiente() {
-        return idTareaPendiente;
+    public int getIdTareaPermitida() {
+        return idTareaPermitida;
     }
 
-    public void setIdTareaPendiente(int idTareaPendiente) {
-        this.idTareaPendiente = idTareaPendiente;
+    public void setIdTareaPermitida(int idTareaPermitida) {
+        this.idTareaPermitida = idTareaPermitida;
     }
 
     public String getTarea() {
@@ -56,7 +56,7 @@ public class TareaPermitida {
 
     @Override
     public String toString() {
-        return idTareaPendiente + " " + tarea + " " + idNivelAcceso + " " + activo;
+        return idTareaPermitida + " " + tarea + " " + idNivelAcceso + " " + activo;
     }
     
     
