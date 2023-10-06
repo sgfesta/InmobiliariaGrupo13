@@ -26,8 +26,6 @@ public class Login extends javax.swing.JFrame {
         loginBtn = new javax.swing.JPanel();
         loginBtnTxt = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         bg.setBackground(new java.awt.Color(153, 153, 153));
         bg.setEnabled(false);
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
