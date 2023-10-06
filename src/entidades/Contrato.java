@@ -17,11 +17,12 @@ public class Contrato {
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
     private LocalDate fechaContrato;
+    private boolean vigente;
     private boolean activo;
     
     //Declaro los Constructores
 
-    public Contrato(int idContrato, Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Vendedor vendedor, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, boolean activo) {
+    public Contrato(int idContrato, Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Vendedor vendedor, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, boolean vigente, boolean activo) {
         this.idContrato = idContrato;
         this.propietario = propietario;
         this.propiedad = propiedad;
@@ -31,10 +32,11 @@ public class Contrato {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.fechaContrato = fechaContrato;
+        this.vigente = vigente;
         this.activo = activo;
     }
 
-    public Contrato(Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Vendedor vendedor, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, boolean activo) {
+    public Contrato(Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Vendedor vendedor, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, boolean vigente, boolean activo) {
         this.propietario = propietario;
         this.propiedad = propiedad;
         this.inquilino = inquilino;
@@ -43,6 +45,7 @@ public class Contrato {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.fechaContrato = fechaContrato;
+        this.vigente = vigente;
         this.activo = activo;
     }
 
@@ -124,6 +127,14 @@ public class Contrato {
         this.fechaContrato = fechaContrato;
     }
 
+    public boolean isVigente() {
+        return vigente;
+    }
+
+    public void setVigente(boolean vigente) {
+        this.vigente = vigente;
+    }
+    
     public boolean isActivo() {
         return activo;
     }
@@ -134,7 +145,7 @@ public class Contrato {
 
     @Override
     public String toString() {
-        return idContrato + " " + propietario + " " + propiedad + " " + inquilino + " " + garante + " " + vendedor + " " + fechaInicio + " " + fechaFin + " " + fechaContrato + " " + activo;
+        return idContrato + " " + propietario + " " + propiedad + " " + inquilino + " " + garante + " " + vendedor + " " + fechaInicio + " " + fechaFin + " " + fechaContrato + " " + vigente + " " + activo;
     }
     
     

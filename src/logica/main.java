@@ -71,7 +71,7 @@ public class main {
 //      PropiedadData pd = new PropiedadData();
 //      pd.agregarPropiedad(propi);
       
-      Contrato contract = new Contrato(propietario, propi, i1, garante, vendedor, LocalDate.of(2018, Month.MARCH, 05), LocalDate.of(2026, Month.MARCH, 05), LocalDate.of(2018, Month.MARCH, 02), true);
+      Contrato contract = new Contrato(propietario, propi, i1, garante, vendedor, LocalDate.of(2018, Month.MARCH, 05), LocalDate.of(2026, Month.MARCH, 05), LocalDate.of(2018, Month.MARCH, 02), true, true);
       ContratoData cd = new ContratoData();
       cd.guardarContrato(contract);
 }
