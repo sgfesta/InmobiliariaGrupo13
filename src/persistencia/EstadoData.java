@@ -33,6 +33,7 @@ public class EstadoData {
                   if (rs.next()) {
                 estado.setIdEstado(rs.getInt(1));
                 //AGREGAR JOptionPane despues, donde se llame al metodo para mensaje de correcta inscripcion
+                      System.out.println("Estado listo");
             }
              //Cierro la Conexion
             ps.close();

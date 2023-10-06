@@ -25,7 +25,7 @@ public class PropiedadData {
     } 
     
     public void agregarPropiedad(Propiedad propiedad) {
-         String sql = "INSERT INTO propiedad (idPropietario, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idServicios, idInspector, idZona, idEstado, observaciones, disponible,activo" + 
+         String sql = "INSERT INTO propiedad (idPropietario, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idServicios, idInspector, idZona, idEstado, observaciones, disponible, activo" + 
                  " VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -48,6 +48,7 @@ public class PropiedadData {
             //cartel para ver si fue hecho exitosamente la inscripcion
             if (rs.next()) {
                 propiedad.setIdPropiedad((rs.getInt(1)));
+                System.out.println("Agrego propiedad");
                 //AGREGAR JOptionPane despues, donde se llame al metodo para mensaje de correcta inscripcion
             } 
             //Cierro la Conexion

@@ -26,7 +26,7 @@ public class ZonaData {
     
       public void guardarZona(Zona zona) {
 
-        String sql = "INSERT INTO materia (provincia, ciudad, barrio) VALUES (?,?,?)";
+        String sql = "INSERT INTO zona (provincia, ciudad, barrio) VALUES (?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
            

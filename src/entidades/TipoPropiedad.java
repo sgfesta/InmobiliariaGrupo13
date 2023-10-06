@@ -17,6 +17,12 @@ public class TipoPropiedad {
         this.activo = activo;
     }
 
+    public TipoPropiedad(String nombre, boolean activo) {
+        this.nombre = nombre;
+        this.activo = activo;
+    }
+   
+
     public TipoPropiedad() {
     }
     
