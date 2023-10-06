@@ -10,7 +10,7 @@ public class Usuario {
     private String email;
     private String password;
     private boolean activo;
-    private int idNivelAcceso;
+    private int nivelAcceso;
     
     
     //Creo costructor
@@ -18,13 +18,13 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(int idUsuario, String nombre, String email, String password, boolean activo, int idNivelAcceso) {
+    public Usuario(int idUsuario, String nombre, String email, String password, boolean activo, int nivelAcceso) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.email = email;
         this.password = password;
         this.activo = activo;
-        this.idNivelAcceso = idNivelAcceso;
+        this.nivelAcceso = nivelAcceso;
     }
     
     //Setter y Getter
@@ -69,17 +69,17 @@ public class Usuario {
         this.activo = activo;
     }
 
-    public int getIdNivelAcceso() {
-        return idNivelAcceso;
+    public int getNivelAcceso() {
+        return nivelAcceso;
     }
 
-    public void setIdNivelAcceso(int idNivelAcceso) {
-        this.idNivelAcceso = idNivelAcceso;
+    public void setNivelAcceso(int nivelAcceso) {
+        this.nivelAcceso = nivelAcceso;
     }
 
     @Override
     public String toString() {
-        return  idUsuario + " " + nombre + " " + email + " " + password + " " + activo + " " + idNivelAcceso;
+        return  idUsuario + " " + nombre + " " + email + " " + password + " " + activo + " " + nivelAcceso;
        
     }
     

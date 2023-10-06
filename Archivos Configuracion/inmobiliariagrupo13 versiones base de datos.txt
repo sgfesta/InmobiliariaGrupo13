@@ -5,5 +5,6 @@ version:
 1.3 se modifico Propiedad agregando avtivo y disponible
 1.4 se agrego tablas usuario, nivel de acceso y tareas permitidas
 1.5 se agrego en tabla contrato el campo vigente
+1.6 se modifico el control de acceso , se dejo solo la tabl ausuario y se agrego nivelacceso dentro
 
 

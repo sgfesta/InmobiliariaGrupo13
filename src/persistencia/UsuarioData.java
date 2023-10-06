@@ -21,14 +21,14 @@ public class UsuarioData {
     //Guardo Usuario de forma individual
     public void guardarUsuario(Usuario usuario) {
         //Consulta slq 
-        String sql = "INSERT INTO  usuario (nombre, email, password, activo, idNivelAcceso) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO  usuario (nombre, email, password, activo, nivelAcceso) VALUES (?,?,?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, usuario.getNombre());
             ps.setString(2, usuario.getEmail());
             ps.setString(3, usuario.getPassword());
             ps.setBoolean(4, usuario.isActivo());
-            ps.setInt(5, usuario.getIdNivelAcceso());
+            ps.setInt(5, usuario.getNivelAcceso());
             int exito = ps.executeUpdate();
 
             ResultSet rs = ps.getGeneratedKeys();
@@ -50,14 +50,14 @@ public class UsuarioData {
     //Modifico Usuario de forma individual
     public void modificarUsuario(Usuario usuario) {
         //Sentencia SQL
-        String sql = "UPDATE usuario SET nombre = ?, email = ?, password = ?, activo = ? idNivelAcceso = ? WHERE idUsuario = ?";
+        String sql = "UPDATE usuario SET nombre = ?, email = ?, password = ?, activo = ? nivelAcceso = ? WHERE idUsuario = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, usuario.getNombre());
             ps.setString(2, usuario.getEmail());
             ps.setString(3, usuario.getPassword());
             ps.setBoolean(4, usuario.isActivo());
-            ps.setInt(5, usuario.getIdNivelAcceso());
+            ps.setInt(5, usuario.getNivelAcceso());
             ps.setInt(6, usuario.getIdUsuario());
             int exito = ps.executeUpdate();
 
@@ -95,7 +95,7 @@ public class UsuarioData {
     }
     
         public Usuario buscarGarante(String nombre) {
-        String sql = "SELECT idUsuario, nombre,email, password, activo, idNivelAcceso FROM usuario WHERE nombre=?";
+        String sql = "SELECT idUsuario, nombre,email, password, activo, nivelAcceso FROM usuario WHERE nombre=?";
         Usuario usuario = null;
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -108,7 +108,7 @@ public class UsuarioData {
                 usuario.setEmail(rs.getString("email"));
                 usuario.setPassword(rs.getString("password"));
                 usuario.setActivo(rs.getBoolean("activo"));
-                usuario.setIdNivelAcceso(rs.getInt("idNivelAcceso"));
+                usuario.setNivelAcceso(rs.getInt("nivelAcceso"));
 
             } else {
                 JOptionPane.showMessageDialog(null, "No existe un usuario con ese ID o  en Estado activo");
