@@ -29,7 +29,7 @@ public class ContratoData {
     //Guardo Contrato de manera individual
     public void guardarContrato(Contrato contrato){
         //Sentencia Sql
-        String sql = "INSERT INTO Contrato(idPropiedad, idPropietario, idInquilino, idGarante, idVendedor, fechaInicio, fechaFin, fechaContrato, vigente ,activo)" + "VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Contrato(idPropiedad, idPropietario, idInquilino, idGarante, idVendedor, fechaInicio, fechaFin, fechaContrato, vigente ,activo)" + "VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, contrato.getPropiedad().getIdPropiedad());
@@ -64,7 +64,7 @@ public class ContratoData {
         //Sentencia Sql
         String sql = "UPDATE Contrato SET idPropiedad = ?, idPropietario = ?, idInquilino = ?, idGarante = ?, idVendedor = ?, fechaInicio = ?, fechaFin = ?, fechaContrato = ?, vigente = ?, activo = ? WHERE idContrato = ?";
         try {
-            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, contrato.getPropiedad().getIdPropiedad());
             ps.setInt(2,  contrato.getPropietario().getIdPropietario());
             ps.setInt(3,  contrato.getInquilino().getIdInquilino());
@@ -75,6 +75,7 @@ public class ContratoData {
             ps.setDate(8, Date.valueOf(contrato.getFechaContrato()));
             ps.setBoolean(9, contrato.isVigente());
             ps.setBoolean(10, contrato.isActivo());
+            ps.setInt(11, contrato.getIdContrato());
             ps.executeUpdate();
 
             int exito = ps.executeUpdate();

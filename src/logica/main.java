@@ -63,19 +63,19 @@ public class main {
       TipoPropiedadData tpd = new TipoPropiedadData();
 //      tpd.guardarTipoPropiedad(tipo);
       
-      Propietario propietario = new Propietario(1,"Luciana", "Juarez", 7126, 2348458, "Su casa", true);
+      Propietario propietario = new Propietario(1,"Luciana", "Juarez", 7126, 234848, "Su casa", true);
       PropietarioData p1 = new PropietarioData();
 //      p1.guardarPropietario(propietario);
 //      p1.modificarPropietario(propietario);
       
-      Propiedad propi = new Propiedad(1, propietario, "Belgrano", 213, tipo, 1900, 150000, 0, servi, inspec, zona, estado, "Departamento nuevo, a estrenar, bla bla bla", true, true);
+      Propiedad propi = new Propiedad(1, propietario, "Belgrano", 213, tipo, 1900, 140000, 0, servi, inspec, zona, estado, "Departamento nuevo, a estrenar, bla bla bla", true, true);
       PropiedadData pd = new PropiedadData();
 //      pd.agregarPropiedad(propi);
 //      pd.modificarPropiedad(propi);
       
-      Contrato contract = new Contrato(1, propietario, propi, i1, garante, vendedor, LocalDate.of(2022, Month.MARCH, 05), LocalDate.of(2026, Month.MARCH, 05), LocalDate.of(2018, Month.MARCH, 02), true, true);
+      Contrato contract = new Contrato(2, propietario, propi, i1, garante, vendedor, LocalDate.of(2023, Month.MARCH, 05), LocalDate.of(2026, Month.MARCH, 05), LocalDate.of(2023, Month.MARCH, 02), true, true);
       ContratoData cd = new ContratoData();
 //      cd.guardarContrato(contract);
-//      cd.modificarContrato(contract);
+      cd.modificarContrato(contract);
 }
 }
