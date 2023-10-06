@@ -55,7 +55,7 @@ public class PropietarioData {
 
     }
 
-    public void modificarAlumno(Propietario propietario) {
+    public void modificarPropietario(Propietario propietario) {
         
         String sql = "UPDATE propietario SET nombre = ?, apellido = ?, dni = ?, telefono= ?,  domicilio = ?, activo = ? WHERE idPropietario = ?";
         try {

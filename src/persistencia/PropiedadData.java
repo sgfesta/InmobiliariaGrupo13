@@ -25,7 +25,7 @@ public class PropiedadData {
     } 
     
     public void agregarPropiedad(Propiedad propiedad) {
-         String sql = "INSERT INTO propiedad (idPropietario, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idServicios, idInspector, idZona, idEstado, observaciones, vigente, activo) " +
+         String sql = "INSERT INTO propiedad (idPropietario, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idServicios, idInspector, idZona, idEstado, observaciones, disponible, activo) " +
              "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -82,6 +82,7 @@ public class PropiedadData {
            int exito = ps.executeUpdate();
             if (exito == 1) {
                 //AGREGAR JOptionPane despues, donde se llame al metodo para mensaje de correcta modificacion
+                System.out.println("Listo");
             }
              //Cierro la Conexion
             ps.close();
@@ -101,6 +102,7 @@ public class PropiedadData {
            int exito = ps.executeUpdate();
             if (exito == 1) {
                 //AGREGAR JOptionPane despues, donde se llame al metodo para mensaje de correcta eliminacion
+                System.out.println("Eliminado rey");
             }
              //Cierro la Conexion
             ps.close();
