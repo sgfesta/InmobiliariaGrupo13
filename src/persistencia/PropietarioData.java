@@ -37,6 +37,7 @@ public class PropietarioData {
             ps.setInt(4, propietario.getTelefono());
             ps.setString(5, propietario.getDomicilio());
             ps.setBoolean(6, propietario.isActivo());
+            ps.executeUpdate();
 
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {

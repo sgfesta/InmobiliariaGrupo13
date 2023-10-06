@@ -25,8 +25,8 @@ public class PropiedadData {
     } 
     
     public void agregarPropiedad(Propiedad propiedad) {
-         String sql = "INSERT INTO propiedad (idPropietario, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idServicios, idInspector, idZona, idEstado, observaciones, disponible, activo" + 
-                 " VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+         String sql = "INSERT INTO propiedad (idPropietario, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idServicios, idInspector, idZona, idEstado, observaciones, vigente, activo) " +
+             "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, propiedad.getPropietario().getIdPropietario());

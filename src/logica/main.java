@@ -34,7 +34,7 @@ public class main {
 //        InspectorData ins = new InspectorData();
 //        ins.guardarInspector(inspec);
 //        
-        Inquilino i1 = new Inquilino("Pedro", "Perez", 111, 1654, "Fabrica", true);
+        Inquilino i1 = new Inquilino(1,"Pedro", "Perez", 111, 1654, "Fabrica", true);
 //        InquilinoData In = new InquilinoData();
 //        In.guardarInquilino(i1);
 //    
@@ -63,13 +63,13 @@ public class main {
 //      TipoPropiedadData tpd = new TipoPropiedadData();
 //      tpd.guardarTipoPropiedad(tipo);
       
-      Propietario propietario = new Propietario("Luciana", "Juarez", 712, 2348458, "Su casa", true);
-      PropietarioData p1 = new PropietarioData();
-      p1.guardarPropietario(propietario);
+      Propietario propietario = new Propietario(1,"Luciana", "Juarez", 712, 2348458, "Su casa", true);
+//      PropietarioData p1 = new PropietarioData();
+//      p1.guardarPropietario(propietario);
       
-      Propiedad propi = new Propiedad(propietario, "Belgrano", 23, tipo, 1800, 150000, 0, servi, inspec, zona, estado, "Departamento nuevo, a estrenar, bla bla bla", true, true);
-      PropiedadData pd = new PropiedadData();
-      pd.agregarPropiedad(propi);
+      Propiedad propi = new Propiedad(1, propietario, "Belgrano", 23, tipo, 1800, 150000, 0, servi, inspec, zona, estado, "Departamento nuevo, a estrenar, bla bla bla", true, true);
+//      PropiedadData pd = new PropiedadData();
+//      pd.agregarPropiedad(propi);
       
       Contrato contract = new Contrato(propietario, propi, i1, garante, vendedor, LocalDate.of(2018, Month.MARCH, 05), LocalDate.of(2026, Month.MARCH, 05), LocalDate.of(2018, Month.MARCH, 02), true);
       ContratoData cd = new ContratoData();
