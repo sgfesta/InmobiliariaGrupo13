@@ -1,12 +1,11 @@
-
 package igu;
 
 import java.awt.Color;
 
 public class Login extends javax.swing.JFrame {
 
-    int xMouse, yMouse;  
-    
+    int xMouse, yMouse;
+
     public Login() {
         initComponents();
     }
@@ -26,7 +25,9 @@ public class Login extends javax.swing.JFrame {
         loginBtn = new javax.swing.JPanel();
         loginBtnTxt = new javax.swing.JLabel();
 
-        bg.setBackground(new java.awt.Color(153, 153, 153));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        bg.setBackground(new java.awt.Color(51, 51, 51));
         bg.setEnabled(false);
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -34,7 +35,7 @@ public class Login extends javax.swing.JFrame {
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo.png"))); // NOI18N
         bg.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 210, 230));
 
-        header.setBackground(new java.awt.Color(153, 153, 153));
+        header.setBackground(new java.awt.Color(51, 51, 51));
         header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 headerMouseDragged(evt);
@@ -78,12 +79,13 @@ public class Login extends javax.swing.JFrame {
         });
         bg.add(exitTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 40, -1));
 
-        userTxt.setBackground(new java.awt.Color(153, 153, 153));
-        userTxt.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        userTxt.setForeground(new java.awt.Color(204, 204, 204));
+        userTxt.setBackground(new java.awt.Color(51, 51, 51));
+        userTxt.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        userTxt.setForeground(new java.awt.Color(255, 255, 255));
         userTxt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        userTxt.setText("Ingrese su nombre de usuario");
+        userTxt.setText("Ingrese nombre de usuario");
         userTxt.setBorder(null);
+        userTxt.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         userTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 userTxtMousePressed(evt);
@@ -94,14 +96,14 @@ public class Login extends javax.swing.JFrame {
                 userTxtActionPerformed(evt);
             }
         });
-        bg.add(userTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 210, 30));
+        bg.add(userTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 290, 30));
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        bg.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, 210, 20));
+        bg.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 290, 20));
 
-        passTxt.setBackground(new java.awt.Color(153, 153, 153));
-        passTxt.setForeground(new java.awt.Color(204, 204, 204));
+        passTxt.setBackground(new java.awt.Color(51, 51, 51));
+        passTxt.setForeground(new java.awt.Color(255, 255, 255));
         passTxt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         passTxt.setText("********");
         passTxt.setBorder(null);
@@ -110,13 +112,13 @@ public class Login extends javax.swing.JFrame {
                 passTxtMousePressed(evt);
             }
         });
-        bg.add(passTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 210, 30));
+        bg.add(passTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 290, 30));
 
         jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
-        bg.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 210, 20));
+        bg.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 290, 20));
 
-        loginBtn.setBackground(new java.awt.Color(153, 153, 153));
+        loginBtn.setBackground(new java.awt.Color(51, 51, 51));
         loginBtn.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), null));
 
         loginBtnTxt.setBackground(new java.awt.Color(255, 255, 255));
@@ -163,7 +165,7 @@ public class Login extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -188,22 +190,23 @@ public class Login extends javax.swing.JFrame {
 
     private void exitTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseEntered
         //   exitBtn.setBackground(Color.red);
-        exitTxt.setForeground(new Color(187,187,187));
+        exitTxt.setForeground(new Color(187, 187, 187));
     }//GEN-LAST:event_exitTxtMouseEntered
 
     private void exitTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseExited
         //   exitBtn.setBackground(new Color(153,153,153));
-        exitTxt.setForeground(new Color(153,153,153));
+        exitTxt.setForeground(new Color(153, 153, 153));
     }//GEN-LAST:event_exitTxtMouseExited
 
     private void userTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userTxtMousePressed
-        if (userTxt.getText().equals("Ingrese su nombre de usuario")) {
+        if (userTxt.getText().equals("Ingrese nombre de usuario")) {
             userTxt.setText("");
-            userTxt.setForeground(Color.black);
+            userTxt.setForeground(Color.white);
         }
         if (String.valueOf(passTxt.getPassword()).isEmpty()) {
             passTxt.setText("********");
-            passTxt.setForeground(Color.gray);
+
+            passTxt.setForeground(Color.white);
         }
     }//GEN-LAST:event_userTxtMousePressed
 
@@ -214,11 +217,11 @@ public class Login extends javax.swing.JFrame {
     private void passTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passTxtMousePressed
         if (String.valueOf(passTxt.getPassword()).equals("********")) {
             passTxt.setText("");
-            passTxt.setForeground(Color.black);
+            passTxt.setForeground(Color.white);
         }
         if (userTxt.getText().isEmpty()) {
-            userTxt.setText("Ingrese su nombre de usuario");
-            userTxt.setForeground(Color.gray);
+            userTxt.setText("Ingrese nombre de usuaio");
+            userTxt.setForeground(Color.white);
         }
     }//GEN-LAST:event_passTxtMousePressed
 
@@ -227,11 +230,11 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_loginBtnTxtMouseClicked
 
     private void loginBtnTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnTxtMouseEntered
-        loginBtn.setBackground(new Color(187,187,187));
+        loginBtn.setBackground(new Color(102, 102, 102));
     }//GEN-LAST:event_loginBtnTxtMouseEntered
 
     private void loginBtnTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnTxtMouseExited
-        loginBtn.setBackground(new Color(150,150,150));
+        loginBtn.setBackground(new Color(51, 51, 51));
     }//GEN-LAST:event_loginBtnTxtMouseExited
 
     /**
@@ -265,9 +268,9 @@ public class Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Login nuevo =new Login();
+                Login nuevo = new Login();
                 nuevo.setVisible(true);
-                nuevo.setLocationRelativeTo(null);    
+                nuevo.setLocationRelativeTo(null);
             }
         });
     }
