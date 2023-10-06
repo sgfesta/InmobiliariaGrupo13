@@ -1,0 +1,9 @@
+version:
+
+1.1 preliminar base de datos
+1.2 se modifico tabla inspector
+1.3 se modifico Propiedad agregando avtivo y disponible
+1.4 se agrego tablas usuario, nivel de acceso y tareas permitidas
+1.5 se agrego en tabla contrato el campo vigente
+
+
