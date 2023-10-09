@@ -5,6 +5,7 @@
  */
 package igu;
 
+import entidades.Propiedad;
 import javax.swing.JRootPane;
 
 
@@ -825,6 +826,7 @@ jPCardPropietarios.setVisible(false);
 jPPropiedades.setVisible(true);
 jPCardAlquileres.setVisible(false);
 jPCardListados.setVisible(false);
+jPCardFondo.setVisible(false);
 //               jPMenuLateral.setVisible(rootPaneCheckingEnabled);
 //        jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
 //        jPPropiedades.setVisible(true);
@@ -848,7 +850,7 @@ jPCardPropietarios.setVisible(true);
 jPPropiedades.setVisible(false);
 jPCardAlquileres.setVisible(false);
 jPCardListados.setVisible(false);
-
+jPCardFondo.setVisible(false);
 //               jPMenuLateral.setVisible(rootPaneCheckingEnabled);
 //        jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
 //        jPPropiedades.setVisible(true);
@@ -864,6 +866,7 @@ jPCardListados.setVisible(false);
     }//GEN-LAST:event_jLPropietariosMouseClicked
 
     private void jLAlquileresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAlquileresMouseClicked
+jPCardFondo.setVisible(false);
 jPCardPropietarios.setVisible(false);
 jPPropiedades.setVisible(false);
 jPCardAlquileres.setVisible(true);
@@ -889,6 +892,7 @@ jPCardPropietarios.setVisible(false);
 jPPropiedades.setVisible(false);
 jPCardAlquileres.setVisible(false);
 jPCardListados.setVisible(true);
+jPCardFondo.setVisible(false);
 //               jPMenuLateral.setVisible(rootPaneCheckingEnabled);
 //        jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
 //        jPPropiedades.setVisible(true);
@@ -959,7 +963,7 @@ jPCardListados.setVisible(true);
     private javax.swing.JButton jBModificar;
     private javax.swing.JButton jBNuevo;
     private javax.swing.JButton jBSalir;
-    private javax.swing.JComboBox<String> jCBusquedaPropiedades;
+    private javax.swing.JComboBox<Propiedad> jCBusquedaPropiedades;
     private javax.swing.JLabel jLAlquileres;
     private javax.swing.JLabel jLLogin;
     private javax.swing.JLabel jLPropiedades;
