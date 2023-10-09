@@ -118,31 +118,31 @@ public class MenuTest extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jCBusquedaContrato = new javax.swing.JComboBox<>();
         jLabel35 = new javax.swing.JLabel();
-        jTIDPropietario1 = new javax.swing.JTextField();
+        jTIDContrato = new javax.swing.JTextField();
         jBNuevo5 = new javax.swing.JButton();
-        jTIDPropietario2 = new javax.swing.JTextField();
+        jTIDPropiedad = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
         jTIDPropietario3 = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        jTIDPropietario4 = new javax.swing.JTextField();
-        jTIDPropietario5 = new javax.swing.JTextField();
-        jTIDPropietario6 = new javax.swing.JTextField();
+        jTIDInquilino = new javax.swing.JTextField();
+        jTIDVendedor = new javax.swing.JTextField();
+        jTIDGarante = new javax.swing.JTextField();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
-        jTIDPropietario9 = new javax.swing.JTextField();
-        jTIDPropietario11 = new javax.swing.JTextField();
+        jTVigencia = new javax.swing.JTextField();
+        jTActivo = new javax.swing.JTextField();
         jLabel45 = new javax.swing.JLabel();
         jBNuevo6 = new javax.swing.JButton();
         jBNuevo7 = new javax.swing.JButton();
         jBNuevo8 = new javax.swing.JButton();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
+        jDFechaFin = new com.toedter.calendar.JDateChooser();
+        jDFechaInicio = new com.toedter.calendar.JDateChooser();
+        jDFechaContrato = new com.toedter.calendar.JDateChooser();
         jPCardListados = new javax.swing.JPanel();
         jPBarraNavegador3 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
@@ -901,7 +901,7 @@ public class MenuTest extends javax.swing.JFrame {
             .addGroup(jPBarraNavegador2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(471, Short.MAX_VALUE))
+                .addContainerGap(469, Short.MAX_VALUE))
         );
         jPBarraNavegador2Layout.setVerticalGroup(
             jPBarraNavegador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -933,18 +933,18 @@ public class MenuTest extends javax.swing.JFrame {
         jLabel35.setText("ID Contrato");
         jLabel35.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jTIDPropietario1.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDPropietario1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDPropietario1.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDContrato.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDContrato.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDContrato.setForeground(new java.awt.Color(51, 51, 51));
 
         jBNuevo5.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBNuevo5.setForeground(new java.awt.Color(51, 204, 255));
         jBNuevo5.setText("Nuevo");
         jBNuevo5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jTIDPropietario2.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDPropietario2.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDPropietario2.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDPropiedad.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDPropiedad.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDPropiedad.setForeground(new java.awt.Color(51, 51, 51));
 
         jLabel36.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(51, 204, 255));
@@ -968,17 +968,17 @@ public class MenuTest extends javax.swing.JFrame {
         jLabel38.setText("ID Inquilino");
         jLabel38.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jTIDPropietario4.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDPropietario4.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDPropietario4.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDInquilino.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDInquilino.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDInquilino.setForeground(new java.awt.Color(51, 51, 51));
 
-        jTIDPropietario5.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDPropietario5.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDPropietario5.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDVendedor.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDVendedor.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDVendedor.setForeground(new java.awt.Color(51, 51, 51));
 
-        jTIDPropietario6.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDPropietario6.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDPropietario6.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDGarante.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDGarante.setForeground(new java.awt.Color(51, 51, 51));
 
         jLabel39.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(51, 204, 255));
@@ -1016,16 +1016,16 @@ public class MenuTest extends javax.swing.JFrame {
         jLabel44.setText("Fecha Contrato");
         jLabel44.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jTIDPropietario9.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDPropietario9.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDPropietario9.setForeground(new java.awt.Color(51, 51, 51));
+        jTVigencia.setBackground(new java.awt.Color(153, 153, 153));
+        jTVigencia.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTVigencia.setForeground(new java.awt.Color(51, 51, 51));
 
-        jTIDPropietario11.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDPropietario11.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDPropietario11.setForeground(new java.awt.Color(51, 51, 51));
-        jTIDPropietario11.addActionListener(new java.awt.event.ActionListener() {
+        jTActivo.setBackground(new java.awt.Color(153, 153, 153));
+        jTActivo.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTActivo.setForeground(new java.awt.Color(51, 51, 51));
+        jTActivo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTIDPropietario11ActionPerformed(evt);
+                jTActivoActionPerformed(evt);
             }
         });
 
@@ -1055,75 +1055,69 @@ public class MenuTest extends javax.swing.JFrame {
         jPCardAlquileresLayout.setHorizontalGroup(
             jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                        .addComponent(jPBarraNavegador2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardAlquileresLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jBNuevo5)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBNuevo6)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBNuevo7)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBNuevo8)
-                        .addGap(204, 204, 204))
-                    .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardAlquileresLayout.createSequentialGroup()
-                                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTIDPropietario5, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTIDPropietario1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTIDPropietario2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTIDPropietario3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                                .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTIDPropietario4, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                                .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTIDPropietario6, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(44, 44, 44)
-                        .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardAlquileresLayout.createSequentialGroup()
-                                .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                                            .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                                            .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jTIDPropietario11))
-                                        .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                                            .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jTIDPropietario9, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardAlquileresLayout.createSequentialGroup()
+                            .addComponent(jBNuevo5)
+                            .addGap(18, 18, 18)
+                            .addComponent(jBNuevo6)
+                            .addGap(18, 18, 18)
+                            .addComponent(jBNuevo7)
+                            .addGap(18, 18, 18)
+                            .addComponent(jBNuevo8)
+                            .addGap(204, 204, 204))
+                        .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                            .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardAlquileresLayout.createSequentialGroup()
+                                    .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTIDVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                    .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTIDContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                    .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTIDPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTIDPropietario3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                    .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTIDInquilino, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                    .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTIDGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(18, 18, 18)
+                            .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardAlquileresLayout.createSequentialGroup()
+                                    .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jDFechaContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                                        .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(62, 62, 62))))
+                                        .addComponent(jDFechaFin, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                        .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTActivo))
+                                    .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                        .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTVigencia, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                    .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jDFechaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(57, 57, 57)))
+                    .addComponent(jPBarraNavegador2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPCardAlquileresLayout.createSequentialGroup()
                     .addGap(209, 209, 209)
@@ -1138,38 +1132,40 @@ public class MenuTest extends javax.swing.JFrame {
         jPCardAlquileresLayout.setVerticalGroup(
             jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
                 .addComponent(jPBarraNavegador2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(179, 179, 179)
+                .addGap(165, 165, 165)
                 .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(jLabel42)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel44))
-                    .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                        .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jDFechaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jDFechaFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jDFechaContrato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel43)
-                            .addComponent(jTIDPropietario9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTVigencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel45)
-                            .addComponent(jTIDPropietario11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel41)
+                            .addComponent(jTActivo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPCardAlquileresLayout.createSequentialGroup()
-                        .addGap(2, 2, 2)
+                        .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addComponent(jLabel42))
+                            .addComponent(jLabel41))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel44))
+                    .addGroup(jPCardAlquileresLayout.createSequentialGroup()
                         .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel35)
-                            .addComponent(jTIDPropietario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTIDContrato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel36)
-                            .addComponent(jTIDPropietario2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTIDPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel37)
@@ -1177,16 +1173,16 @@ public class MenuTest extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel38)
-                            .addComponent(jTIDPropietario4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTIDInquilino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel40)
-                            .addComponent(jTIDPropietario6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTIDGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel39)
-                            .addComponent(jTIDPropietario5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                            .addComponent(jTIDVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
                 .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevo5)
                     .addComponent(jBNuevo6)
@@ -1366,9 +1362,9 @@ jPCardFondo.setVisible(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_jBSalirActionPerformed
 
-    private void jTIDPropietario11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTIDPropietario11ActionPerformed
+    private void jTActivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTActivoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTIDPropietario11ActionPerformed
+    }//GEN-LAST:event_jTActivoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1426,9 +1422,9 @@ jPCardFondo.setVisible(false);
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropietario;
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropietario1;
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropietario2;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
-    private com.toedter.calendar.JDateChooser jDateChooser3;
+    private com.toedter.calendar.JDateChooser jDFechaContrato;
+    private com.toedter.calendar.JDateChooser jDFechaFin;
+    private com.toedter.calendar.JDateChooser jDFechaInicio;
     private javax.swing.JLabel jLAlquileres;
     private javax.swing.JLabel jLLogin;
     private javax.swing.JLabel jLPropiedades;
@@ -1495,20 +1491,18 @@ jPCardFondo.setVisible(false);
     private javax.swing.JPanel jPPropiedades;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTActivo;
     private javax.swing.JTextField jTAltura;
     private javax.swing.JTextField jTAntiguedad;
     private javax.swing.JTextField jTDireccion;
     private javax.swing.JTextField jTDisponibilidad;
     private javax.swing.JTextField jTEstado;
+    private javax.swing.JTextField jTIDContrato;
+    private javax.swing.JTextField jTIDGarante;
+    private javax.swing.JTextField jTIDInquilino;
+    private javax.swing.JTextField jTIDPropiedad;
     private javax.swing.JTextField jTIDPropietario;
-    private javax.swing.JTextField jTIDPropietario1;
-    private javax.swing.JTextField jTIDPropietario11;
-    private javax.swing.JTextField jTIDPropietario2;
     private javax.swing.JTextField jTIDPropietario3;
-    private javax.swing.JTextField jTIDPropietario4;
-    private javax.swing.JTextField jTIDPropietario5;
-    private javax.swing.JTextField jTIDPropietario6;
-    private javax.swing.JTextField jTIDPropietario9;
     private javax.swing.JTextField jTIDPropietarios;
     private javax.swing.JTextField jTIDPropietarios2;
     private javax.swing.JTextField jTIDPropietarios3;
@@ -1516,12 +1510,14 @@ jPCardFondo.setVisible(false);
     private javax.swing.JTextField jTIDPropietarios5;
     private javax.swing.JTextField jTIDPropietarios6;
     private javax.swing.JTextField jTIDPropietarios7;
+    private javax.swing.JTextField jTIDVendedor;
     private javax.swing.JTextField jTInspector;
     private javax.swing.JTextArea jTObservaciones;
     private javax.swing.JTextField jTPrecioTasado;
     private javax.swing.JTextField jTServicios;
     private javax.swing.JTextField jTSuperTotal;
     private javax.swing.JTextField jTTipo;
+    private javax.swing.JTextField jTVigencia;
     private javax.swing.JTextField jTZona;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel logo1;
