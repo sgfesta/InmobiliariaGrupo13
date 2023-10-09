@@ -44,6 +44,12 @@ public class MenuTest extends javax.swing.JFrame {
         jLAlquileres = new javax.swing.JLabel();
         jListados = new javax.swing.JLabel();
         jLSalir = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jPBanner = new javax.swing.JPanel();
         jPCards = new javax.swing.JPanel();
         jPCardFondo = new javax.swing.JPanel();
@@ -212,6 +218,18 @@ public class MenuTest extends javax.swing.JFrame {
         jLSalir.setText("SALIR");
         jLSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3289576-individual-man-people-person_107097.png"))); // NOI18N
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/contract_icon-icons.com_64813.png"))); // NOI18N
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/list-on-a-notebook-stroke-symbol_icon-icons.com_57808.png"))); // NOI18N
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/login_icon_137429.png"))); // NOI18N
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/admin_lock_padlock_icon_205893.png"))); // NOI18N
+
         javax.swing.GroupLayout jPMenuLateralLayout = new javax.swing.GroupLayout(jPMenuLateral);
         jPMenuLateral.setLayout(jPMenuLateralLayout);
         jPMenuLateralLayout.setHorizontalGroup(
@@ -220,30 +238,69 @@ public class MenuTest extends javax.swing.JFrame {
                 .addGap(59, 59, 59)
                 .addComponent(logo)
                 .addContainerGap(59, Short.MAX_VALUE))
-            .addComponent(jLLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLPropietarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLAlquileres, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPMenuLateralLayout.createSequentialGroup()
+                .addGroup(jPMenuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPMenuLateralLayout.createSequentialGroup()
+                        .addComponent(jLLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel8))
+                    .addGroup(jPMenuLateralLayout.createSequentialGroup()
+                        .addComponent(jLAlquileres, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5))
+                    .addGroup(jPMenuLateralLayout.createSequentialGroup()
+                        .addComponent(jLPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel16))
+                    .addGroup(jPMenuLateralLayout.createSequentialGroup()
+                        .addComponent(jLPropietarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel17))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPMenuLateralLayout.createSequentialGroup()
+                        .addGroup(jPMenuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPMenuLateralLayout.createSequentialGroup()
+                                .addComponent(jLSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel7))
+                            .addGroup(jPMenuLateralLayout.createSequentialGroup()
+                                .addComponent(jListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel6)))
+                        .addGap(8, 8, 8)))
+                .addContainerGap())
         );
         jPMenuLateralLayout.setVerticalGroup(
             jPMenuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPMenuLateralLayout.createSequentialGroup()
                 .addGap(43, 43, 43)
-                .addComponent(logo)
-                .addGap(76, 76, 76)
-                .addComponent(jLLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPMenuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPMenuLateralLayout.createSequentialGroup()
+                        .addComponent(logo)
+                        .addGap(76, 76, 76)
+                        .addComponent(jLLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPMenuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPMenuLateralLayout.createSequentialGroup()
+                        .addGroup(jPMenuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPMenuLateralLayout.createSequentialGroup()
+                                .addGroup(jPMenuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel16))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPMenuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel17))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLAlquileres, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jListados, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLAlquileres, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jListados, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPMenuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLSalir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(174, Short.MAX_VALUE))
         );
 
@@ -267,21 +324,17 @@ public class MenuTest extends javax.swing.JFrame {
         jPCardFondo.setLayout(jPCardFondoLayout);
         jPCardFondoLayout.setHorizontalGroup(
             jPCardFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
-            .addGroup(jPCardFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPCardFondoLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(logo1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPCardFondoLayout.createSequentialGroup()
+                .addGap(271, 271, 271)
+                .addComponent(logo1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(289, Short.MAX_VALUE))
         );
         jPCardFondoLayout.setVerticalGroup(
             jPCardFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 635, Short.MAX_VALUE)
-            .addGroup(jPCardFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPCardFondoLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(logo1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPCardFondoLayout.createSequentialGroup()
+                .addGap(155, 155, 155)
+                .addComponent(logo1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(260, Short.MAX_VALUE))
         );
 
         Fondo.add(jPCardFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 55, 760, 610));
@@ -828,22 +881,7 @@ jPPropiedades.setVisible(true);
 jPCardAlquileres.setVisible(false);
 jPCardListados.setVisible(false);
 jPCardFondo.setVisible(false);
-//               jPMenuLateral.setVisible(rootPaneCheckingEnabled);
-//        jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
-//        jPPropiedades.setVisible(true);
-//        
-//        //ocultamos otros paneles
-//        
-//        jLPropietarios.setBackground(new java.awt.Color(51, 51,51));
-//        jLPropietarios.setVisible(true);
-//        
-//        jLAlquileres.setBackground(new java.awt.Color(51, 51,51));
-//        jLAlquileres.setVisible(true);
-//        
-//        jListados.setBackground(new java.awt.Color(51, 51,51));
-//        jListados.setVisible(true);
-        
-        
+   
     }//GEN-LAST:event_jLPropiedadesMouseClicked
 
     private void jLPropietariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLPropietariosMouseClicked
@@ -852,18 +890,7 @@ jPPropiedades.setVisible(false);
 jPCardAlquileres.setVisible(false);
 jPCardListados.setVisible(false);
 jPCardFondo.setVisible(false);
-//               jPMenuLateral.setVisible(rootPaneCheckingEnabled);
-//        jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
-//        jPPropiedades.setVisible(true);
-//        
-//       jLPropietarios.setBackground(new java.awt.Color(51, 51,51));
-//        jLPropietarios.setVisible(true);
-//        
-//        jLAlquileres.setBackground(new java.awt.Color(51, 51,51));
-//        jLAlquileres.setVisible(true);
-//        
-//        jListados.setBackground(new java.awt.Color(51, 51,51));
-//        jListados.setVisible(true);
+
     }//GEN-LAST:event_jLPropietariosMouseClicked
 
     private void jLAlquileresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAlquileresMouseClicked
@@ -872,20 +899,7 @@ jPCardPropietarios.setVisible(false);
 jPPropiedades.setVisible(false);
 jPCardAlquileres.setVisible(true);
 jPCardListados.setVisible(false);
-//              jPMenuLateral.setVisible(rootPaneCheckingEnabled);
-//        jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
-//        jPPropiedades.setVisible(true);
-//        
-//        //ocultamos otros paneles
-//        
-//        jLPropietarios.setBackground(new java.awt.Color(51, 51,51));
-//        jLPropietarios.setVisible(true);
-//        
-//        jLAlquileres.setBackground(new java.awt.Color(51, 51,51));
-//        jLAlquileres.setVisible(true);
-//        
-//        jListados.setBackground(new java.awt.Color(51, 51,51));
-//        jListados.setVisible(true);
+
     }//GEN-LAST:event_jLAlquileresMouseClicked
 
     private void jListadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListadosMouseClicked
@@ -894,20 +908,7 @@ jPPropiedades.setVisible(false);
 jPCardAlquileres.setVisible(false);
 jPCardListados.setVisible(true);
 jPCardFondo.setVisible(false);
-//               jPMenuLateral.setVisible(rootPaneCheckingEnabled);
-//        jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
-//        jPPropiedades.setVisible(true);
-//        
-//        
-//        
-//        jLPropietarios.setBackground(new java.awt.Color(51, 51,51));
-//        jLPropietarios.setVisible(true);
-//        
-//        jLAlquileres.setBackground(new java.awt.Color(51, 51,51));
-//        jLAlquileres.setVisible(true);
-//        
-//        jListados.setBackground(new java.awt.Color(51, 51,51));
-//        jListados.setVisible(true);
+
     }//GEN-LAST:event_jListadosMouseClicked
 
     private void jLLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLLoginMouseClicked
@@ -977,6 +978,8 @@ jPCardFondo.setVisible(false);
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -992,6 +995,10 @@ jPCardFondo.setVisible(false);
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jListados;
     private javax.swing.JMenuItem jMIngreso;
