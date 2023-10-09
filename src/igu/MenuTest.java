@@ -13,8 +13,13 @@ public class MenuTest extends javax.swing.JFrame {
    
     public MenuTest() {
         initComponents();
+
        // jLPropiedades.setBackground(new java.awt.Color(0, 204,255));
        jPCardFondo.setVisible(true);
+
+        jPMenuLateral.setVisible(rootPaneCheckingEnabled);
+//        jLPropiedades.setBackground(new java.awt.Color(0, 204,255));
+
         
         
         
@@ -100,7 +105,6 @@ public class MenuTest extends javax.swing.JFrame {
         jMIngreso.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jMIngreso.setForeground(new java.awt.Color(0, 0, 0));
         jMIngreso.setText("Ingreso de Propiedades");
-        jMIngreso.setOpaque(false);
         jMIngreso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMIngresoActionPerformed(evt);
@@ -112,7 +116,6 @@ public class MenuTest extends javax.swing.JFrame {
         jMenuItem3.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jMenuItem3.setForeground(new java.awt.Color(0, 0, 0));
         jMenuItem3.setText("Listado de Propiedades Disp.");
-        jMenuItem3.setOpaque(false);
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
@@ -124,7 +127,6 @@ public class MenuTest extends javax.swing.JFrame {
         jMenuItem4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jMenuItem4.setForeground(new java.awt.Color(0, 0, 0));
         jMenuItem4.setText("Modificaciones");
-        jMenuItem4.setOpaque(false);
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
@@ -536,28 +538,24 @@ public class MenuTest extends javax.swing.JFrame {
         jBNuevo.setForeground(new java.awt.Color(51, 204, 255));
         jBNuevo.setText("Nuevo");
         jBNuevo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBNuevo.setOpaque(false);
         jPPropiedades.add(jBNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 546, -1, -1));
 
         jBModificar.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBModificar.setForeground(new java.awt.Color(51, 204, 255));
         jBModificar.setText("Modificar");
         jBModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBModificar.setOpaque(false);
         jPPropiedades.add(jBModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 546, -1, -1));
 
         jBEliminar.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBEliminar.setForeground(new java.awt.Color(51, 204, 255));
         jBEliminar.setText("Eliminar");
         jBEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBEliminar.setOpaque(false);
         jPPropiedades.add(jBEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 546, -1, -1));
 
         jBSalir.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBSalir.setForeground(new java.awt.Color(51, 204, 255));
         jBSalir.setText("Salir");
         jBSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBSalir.setOpaque(false);
         jBSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBSalirActionPerformed(evt);
@@ -823,67 +821,88 @@ public class MenuTest extends javax.swing.JFrame {
     }//GEN-LAST:event_jTDisponibilidadActionPerformed
 
     private void jLPropiedadesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLPropiedadesMouseClicked
-        jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
-        jPPropiedades.setVisible(true);
-        
-        //ocultamos otros paneles
-        
-        jLPropietarios.setBackground(new java.awt.Color(51, 51,51));
-        jLPropietarios.setVisible(false);
-        
-        jLAlquileres.setBackground(new java.awt.Color(51, 51,51));
-        jLAlquileres.setVisible(false);
-        
-        jListados.setBackground(new java.awt.Color(51, 51,51));
-        jListados.setVisible(false);
+jPCardPropietarios.setVisible(false);
+jPPropiedades.setVisible(true);
+jPCardAlquileres.setVisible(false);
+jPCardListados.setVisible(false);
+//               jPMenuLateral.setVisible(rootPaneCheckingEnabled);
+//        jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
+//        jPPropiedades.setVisible(true);
+//        
+//        //ocultamos otros paneles
+//        
+//        jLPropietarios.setBackground(new java.awt.Color(51, 51,51));
+//        jLPropietarios.setVisible(true);
+//        
+//        jLAlquileres.setBackground(new java.awt.Color(51, 51,51));
+//        jLAlquileres.setVisible(true);
+//        
+//        jListados.setBackground(new java.awt.Color(51, 51,51));
+//        jListados.setVisible(true);
         
         
     }//GEN-LAST:event_jLPropiedadesMouseClicked
 
     private void jLPropietariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLPropietariosMouseClicked
-       /* jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
-        jPPropiedades.setVisible(false);*/
-        
-       jLPropietarios.setBackground(new java.awt.Color(51, 51,51));
-        jLPropietarios.setVisible(true);
-        
+jPCardPropietarios.setVisible(rootPaneCheckingEnabled);
+jPPropiedades.setVisible(false);
+jPCardAlquileres.setVisible(false);
+jPCardListados.setVisible(false);
+
+//               jPMenuLateral.setVisible(rootPaneCheckingEnabled);
+//        jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
+//        jPPropiedades.setVisible(true);
+//        
+//       jLPropietarios.setBackground(new java.awt.Color(51, 51,51));
+//        jLPropietarios.setVisible(true);
+//        
 //        jLAlquileres.setBackground(new java.awt.Color(51, 51,51));
-//        jLAlquileres.setVisible(false);
+//        jLAlquileres.setVisible(true);
 //        
 //        jListados.setBackground(new java.awt.Color(51, 51,51));
-//        jListados.setVisible(false);
+//        jListados.setVisible(true);
     }//GEN-LAST:event_jLPropietariosMouseClicked
 
     private void jLAlquileresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAlquileresMouseClicked
-        jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
-        jPPropiedades.setVisible(false);
-        
-        //ocultamos otros paneles
-        
-        jLPropietarios.setBackground(new java.awt.Color(51, 51,51));
-        jLPropietarios.setVisible(false);
-        
-        jLAlquileres.setBackground(new java.awt.Color(51, 51,51));
-        jLAlquileres.setVisible(true);
-        
-        jListados.setBackground(new java.awt.Color(51, 51,51));
-        jListados.setVisible(false);
+jPCardPropietarios.setVisible(false);
+jPPropiedades.setVisible(false);
+jPCardAlquileres.setVisible(true);
+jPCardListados.setVisible(false);
+//              jPMenuLateral.setVisible(rootPaneCheckingEnabled);
+//        jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
+//        jPPropiedades.setVisible(true);
+//        
+//        //ocultamos otros paneles
+//        
+//        jLPropietarios.setBackground(new java.awt.Color(51, 51,51));
+//        jLPropietarios.setVisible(true);
+//        
+//        jLAlquileres.setBackground(new java.awt.Color(51, 51,51));
+//        jLAlquileres.setVisible(true);
+//        
+//        jListados.setBackground(new java.awt.Color(51, 51,51));
+//        jListados.setVisible(true);
     }//GEN-LAST:event_jLAlquileresMouseClicked
 
     private void jListadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListadosMouseClicked
-        jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
-        jPPropiedades.setVisible(false);
-        
-        
-        
-        jLPropietarios.setBackground(new java.awt.Color(51, 51,51));
-        jLPropietarios.setVisible(false);
-        
-        jLAlquileres.setBackground(new java.awt.Color(51, 51,51));
-        jLAlquileres.setVisible(false);
-        
-        jListados.setBackground(new java.awt.Color(51, 51,51));
-        jListados.setVisible(true);
+jPCardPropietarios.setVisible(false);
+jPPropiedades.setVisible(false);
+jPCardAlquileres.setVisible(false);
+jPCardListados.setVisible(true);
+//               jPMenuLateral.setVisible(rootPaneCheckingEnabled);
+//        jLPropiedades.setBackground(new java.awt.Color(51, 51,51));
+//        jPPropiedades.setVisible(true);
+//        
+//        
+//        
+//        jLPropietarios.setBackground(new java.awt.Color(51, 51,51));
+//        jLPropietarios.setVisible(true);
+//        
+//        jLAlquileres.setBackground(new java.awt.Color(51, 51,51));
+//        jLAlquileres.setVisible(true);
+//        
+//        jListados.setBackground(new java.awt.Color(51, 51,51));
+//        jListados.setVisible(true);
     }//GEN-LAST:event_jListadosMouseClicked
 
     private void jLLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLLoginMouseClicked
@@ -940,7 +959,7 @@ public class MenuTest extends javax.swing.JFrame {
     private javax.swing.JButton jBModificar;
     private javax.swing.JButton jBNuevo;
     private javax.swing.JButton jBSalir;
-    private javax.swing.JComboBox<Propiedad> jCBusquedaPropiedades;
+    private javax.swing.JComboBox<String> jCBusquedaPropiedades;
     private javax.swing.JLabel jLAlquileres;
     private javax.swing.JLabel jLLogin;
     private javax.swing.JLabel jLPropiedades;
