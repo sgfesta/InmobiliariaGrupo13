@@ -844,7 +844,7 @@ jPCardListados.setVisible(false);
     }//GEN-LAST:event_jLPropiedadesMouseClicked
 
     private void jLPropietariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLPropietariosMouseClicked
-jPCardPropietarios.setVisible(rootPaneCheckingEnabled);
+jPCardPropietarios.setVisible(true);
 jPPropiedades.setVisible(false);
 jPCardAlquileres.setVisible(false);
 jPCardListados.setVisible(false);
