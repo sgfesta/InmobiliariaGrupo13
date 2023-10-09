@@ -17,12 +17,12 @@ public class MenuTest extends javax.swing.JFrame {
 
        // jLPropiedades.setBackground(new java.awt.Color(0, 204,255));
        jPCardFondo.setVisible(true);
-
+        
         jPMenuLateral.setVisible(rootPaneCheckingEnabled);
 //        jLPropiedades.setBackground(new java.awt.Color(0, 204,255));
 
-        
-        
+
+             paraPropiedades();
         
     }
 
@@ -267,7 +267,7 @@ public class MenuTest extends javax.swing.JFrame {
         jPCardFondo.setLayout(jPCardFondoLayout);
         jPCardFondoLayout.setHorizontalGroup(
             jPCardFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 748, Short.MAX_VALUE)
+            .addGap(0, 760, Short.MAX_VALUE)
             .addGroup(jPCardFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPCardFondoLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -284,7 +284,7 @@ public class MenuTest extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        Fondo.add(jPCardFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 65, -1, 600));
+        Fondo.add(jPCardFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 55, 760, 610));
 
         jPPropiedades.setBackground(new java.awt.Color(55, 55, 54));
         jPPropiedades.setMinimumSize(new java.awt.Dimension(748, 635));
@@ -822,6 +822,7 @@ public class MenuTest extends javax.swing.JFrame {
     }//GEN-LAST:event_jTDisponibilidadActionPerformed
 
     private void jLPropiedadesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLPropiedadesMouseClicked
+paraPropiedadesTrue();
 jPCardPropietarios.setVisible(false);
 jPPropiedades.setVisible(true);
 jPCardAlquileres.setVisible(false);
@@ -1026,4 +1027,45 @@ jPCardFondo.setVisible(false);
     private javax.swing.JLabel logo;
     private javax.swing.JLabel logo1;
     // End of variables declaration//GEN-END:variables
+
+    public void paraPropiedades(){
+           jCBusquedaPropiedades.setVisible(false);
+        jTAltura.setVisible(false);
+    jTAntiguedad.setVisible(false);
+     jTDireccion.setVisible(false);
+     jTDisponibilidad.setVisible(false);
+    jTEstado.setVisible(false);
+     jTIDPropietarios.setVisible(false);
+     jTInspector.setVisible(false);
+     jTObservaciones.setVisible(false);
+     jTPrecioTasado.setVisible(false);
+     jTServicios.setVisible(false);
+     jTSuperTotal.setVisible(false);
+     jTTipo.setVisible(false);
+     jTZona.setVisible(false);
+     jBEliminar.setVisible(false);
+     jBModificar.setVisible(false);
+     jBNuevo.setVisible(false);
+     jBSalir.setVisible(false);
+}
+    public void paraPropiedadesTrue(){
+           jCBusquedaPropiedades.setVisible(true);
+        jTAltura.setVisible(true);
+    jTAntiguedad.setVisible(true);
+     jTDireccion.setVisible(true);
+     jTDisponibilidad.setVisible(true);
+    jTEstado.setVisible(true);
+     jTIDPropietarios.setVisible(true);
+     jTInspector.setVisible(true);
+     jTObservaciones.setVisible(true);
+     jTPrecioTasado.setVisible(true);
+     jTServicios.setVisible(true);
+     jTSuperTotal.setVisible(true);
+     jTTipo.setVisible(true);
+     jTZona.setVisible(true);
+     jBEliminar.setVisible(true);
+     jBModificar.setVisible(true);
+     jBNuevo.setVisible(true);
+     jBSalir.setVisible(true);
+}
 }
