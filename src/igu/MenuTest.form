@@ -1272,7 +1272,7 @@
                           <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTIDPropietarios7" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="74" max="32767" attributes="0"/>
+                      <EmptySpace pref="101" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jBNuevo2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBNuevo1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1794,7 +1794,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="80" max="32767" attributes="0"/>
+                      <EmptySpace pref="99" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jBNuevo5" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBNuevo6" alignment="3" min="-2" max="-2" attributes="0"/>

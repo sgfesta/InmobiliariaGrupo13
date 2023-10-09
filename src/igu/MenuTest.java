@@ -23,6 +23,8 @@ public class MenuTest extends javax.swing.JFrame {
 
 
              paraPropiedades();
+             paraPropietarios();
+             paraAlquileres();
         
     }
 
@@ -1323,20 +1325,22 @@ jPCardFondo.setVisible(false);
     }//GEN-LAST:event_jLPropiedadesMouseClicked
 
     private void jLPropietariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLPropietariosMouseClicked
-jPCardPropietarios.setVisible(true);
-jPPropiedades.setVisible(false);
-jPCardAlquileres.setVisible(false);
-jPCardListados.setVisible(false);
-jPCardFondo.setVisible(false);
+        paraPropietariosTrue();
+        jPCardPropietarios.setVisible(true);
+        jPPropiedades.setVisible(false);
+        jPCardAlquileres.setVisible(false);
+        jPCardListados.setVisible(false);
+        jPCardFondo.setVisible(false);
 
     }//GEN-LAST:event_jLPropietariosMouseClicked
 
     private void jLAlquileresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAlquileresMouseClicked
-jPCardFondo.setVisible(false);
-jPCardPropietarios.setVisible(false);
-jPPropiedades.setVisible(false);
-jPCardAlquileres.setVisible(true);
-jPCardListados.setVisible(false);
+        paraAlquileresTrue();
+        jPCardFondo.setVisible(false);
+        jPCardPropietarios.setVisible(false);
+        jPPropiedades.setVisible(false);
+        jPCardAlquileres.setVisible(true);
+        jPCardListados.setVisible(false);
 
     }//GEN-LAST:event_jLAlquileresMouseClicked
 
@@ -1418,9 +1422,6 @@ jPCardFondo.setVisible(false);
     private javax.swing.JComboBox<Propiedad> jCBusquedaContrato;
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropiedades;
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropiedades1;
-    private javax.swing.JComboBox<Propiedad> jCBusquedaPropietario;
-    private javax.swing.JComboBox<Propiedad> jCBusquedaPropietario1;
-    private javax.swing.JComboBox<Propiedad> jCBusquedaPropietario2;
     private com.toedter.calendar.JDateChooser jDFechaContrato;
     private com.toedter.calendar.JDateChooser jDFechaFin;
     private com.toedter.calendar.JDateChooser jDFechaInicio;
@@ -1562,4 +1563,73 @@ jPCardFondo.setVisible(false);
      jBNuevo.setVisible(true);
      jBSalir.setVisible(true);
 }
+        public void paraPropietarios() {
+        jCBusquedaPropiedades1.setVisible(false);
+        jTIDPropietario.setVisible(false);
+        jTIDPropietarios2.setVisible(false);
+        jTIDPropietarios3.setVisible(false);
+        jTIDPropietarios4.setVisible(false);
+        jTIDPropietarios5.setVisible(false);
+        jTIDPropietarios6.setVisible(false);
+        jTIDPropietarios7.setVisible(false);
+        jBNuevo3.setVisible(false);
+        jBNuevo1.setVisible(false);
+        jBNuevo2.setVisible(false);
+        jBNuevo4.setVisible(false);
+    }
+
+    public void paraPropietariosTrue() {
+        jCBusquedaPropiedades1.setVisible(true);
+        jTIDPropietario.setVisible(true);
+        jTIDPropietarios2.setVisible(true);
+        jTIDPropietarios3.setVisible(true);
+        jTIDPropietarios4.setVisible(true);
+        jTIDPropietarios5.setVisible(true);
+        jTIDPropietarios6.setVisible(true);
+        jTIDPropietarios7.setVisible(true);
+        jBNuevo3.setVisible(true);
+        jBNuevo1.setVisible(true);
+        jBNuevo2.setVisible(true);
+        jBNuevo4.setVisible(true);
+    }
+    
+    
+    public void paraAlquileres() {
+        jCBusquedaContrato.setVisible(false);
+        jTIDPropietario3.setVisible(false);
+        jTIDPropiedad.setVisible(false);
+        jTIDContrato.setVisible(false);
+        jTIDInquilino.setVisible(false);
+        jTIDGarante.setVisible(false);
+        jTIDVendedor.setVisible(false);
+        jTVigencia.setVisible(false);
+        jTActivo.setVisible(false);
+        jDFechaInicio.setVisible(false);
+        jDFechaFin.setVisible(false);
+        jDFechaContrato.setVisible(false);
+        jBNuevo7.setVisible(false);
+        jBNuevo6.setVisible(false);
+        jBNuevo5.setVisible(false);
+        jBNuevo8.setVisible(false);
+}
+    
+       public void paraAlquileresTrue() {
+        jCBusquedaContrato.setVisible(true);
+        jTIDPropietario3.setVisible(true);
+        jTIDPropiedad.setVisible(true);
+        jTIDContrato.setVisible(true);
+        jTIDInquilino.setVisible(true);
+        jTIDGarante.setVisible(true);
+        jTIDVendedor.setVisible(true);
+        jTVigencia.setVisible(true);
+        jTActivo.setVisible(true);
+        jDFechaInicio.setVisible(true);
+        jDFechaFin.setVisible(true);
+        jDFechaContrato.setVisible(true);
+        jBNuevo7.setVisible(true);
+        jBNuevo6.setVisible(true);
+        jBNuevo5.setVisible(true);
+        jBNuevo8.setVisible(true);
+}
+    
 }
