@@ -14,7 +14,9 @@ public class MenuTest extends javax.swing.JFrame {
    
     public MenuTest() {
         initComponents();
-
+paraPropiedades();
+paraPropietarios();
+paraAlquileres();
        // jLPropiedades.setBackground(new java.awt.Color(0, 204,255));
        jPCardFondo.setVisible(true);
         
@@ -22,7 +24,7 @@ public class MenuTest extends javax.swing.JFrame {
 //        jLPropiedades.setBackground(new java.awt.Color(0, 204,255));
 
 
-             paraPropiedades();
+             
         
     }
 
@@ -1057,6 +1059,7 @@ public class MenuTest extends javax.swing.JFrame {
             .addGroup(jPCardAlquileresLayout.createSequentialGroup()
                 .addContainerGap(14, Short.MAX_VALUE)
                 .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< Updated upstream
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardAlquileresLayout.createSequentialGroup()
                             .addComponent(jBNuevo5)
@@ -1100,6 +1103,69 @@ public class MenuTest extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(jDFechaContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+=======
+                    .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                        .addComponent(jPBarraNavegador2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardAlquileresLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jBNuevo5)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBNuevo6)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBNuevo7)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBNuevo8)
+                        .addGap(204, 204, 204))
+                    .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                        .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardAlquileresLayout.createSequentialGroup()
+                                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTIDPropietario5, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTIDPropietario1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTIDPropietario2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTIDPropietario3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTIDPropietario4, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTIDPropietario6, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(44, 44, 44)
+                        .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardAlquileresLayout.createSequentialGroup()
+                                .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                            .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                            .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jTIDPropietario11))
+                                        .addGroup(jPCardAlquileresLayout.createSequentialGroup()
+                                            .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jTIDPropietario9, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+>>>>>>> Stashed changes
                                     .addGroup(jPCardAlquileresLayout.createSequentialGroup()
                                         .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1323,6 +1389,7 @@ jPCardFondo.setVisible(false);
     }//GEN-LAST:event_jLPropiedadesMouseClicked
 
     private void jLPropietariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLPropietariosMouseClicked
+paraPropietariosTrue();
 jPCardPropietarios.setVisible(true);
 jPPropiedades.setVisible(false);
 jPCardAlquileres.setVisible(false);
@@ -1332,6 +1399,7 @@ jPCardFondo.setVisible(false);
     }//GEN-LAST:event_jLPropietariosMouseClicked
 
     private void jLAlquileresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAlquileresMouseClicked
+paraAlquileresTrue();
 jPCardFondo.setVisible(false);
 jPCardPropietarios.setVisible(false);
 jPPropiedades.setVisible(false);
@@ -1418,12 +1486,18 @@ jPCardFondo.setVisible(false);
     private javax.swing.JComboBox<Propiedad> jCBusquedaContrato;
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropiedades;
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropiedades1;
+<<<<<<< Updated upstream
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropietario;
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropietario1;
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropietario2;
     private com.toedter.calendar.JDateChooser jDFechaContrato;
     private com.toedter.calendar.JDateChooser jDFechaFin;
     private com.toedter.calendar.JDateChooser jDFechaInicio;
+=======
+    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private com.toedter.calendar.JDateChooser jDateChooser2;
+    private com.toedter.calendar.JDateChooser jDateChooser3;
+>>>>>>> Stashed changes
     private javax.swing.JLabel jLAlquileres;
     private javax.swing.JLabel jLLogin;
     private javax.swing.JLabel jLPropiedades;
@@ -1522,44 +1596,115 @@ jPCardFondo.setVisible(false);
     private javax.swing.JLabel logo1;
     // End of variables declaration//GEN-END:variables
 
-    public void paraPropiedades(){
-           jCBusquedaPropiedades.setVisible(false);
+    public void paraPropiedades() {
+        jCBusquedaPropiedades.setVisible(false);
         jTAltura.setVisible(false);
-    jTAntiguedad.setVisible(false);
-     jTDireccion.setVisible(false);
-     jTDisponibilidad.setVisible(false);
-    jTEstado.setVisible(false);
-     jTIDPropietarios.setVisible(false);
-     jTInspector.setVisible(false);
-     jTObservaciones.setVisible(false);
-     jTPrecioTasado.setVisible(false);
-     jTServicios.setVisible(false);
-     jTSuperTotal.setVisible(false);
-     jTTipo.setVisible(false);
-     jTZona.setVisible(false);
-     jBEliminar.setVisible(false);
-     jBModificar.setVisible(false);
-     jBNuevo.setVisible(false);
-     jBSalir.setVisible(false);
-}
-    public void paraPropiedadesTrue(){
-           jCBusquedaPropiedades.setVisible(true);
+        jTAntiguedad.setVisible(false);
+        jTDireccion.setVisible(false);
+        jTDisponibilidad.setVisible(false);
+        jTEstado.setVisible(false);
+        jTIDPropietarios.setVisible(false);
+        jTInspector.setVisible(false);
+        jTObservaciones.setVisible(false);
+        jTPrecioTasado.setVisible(false);
+        jTServicios.setVisible(false);
+        jTSuperTotal.setVisible(false);
+        jTTipo.setVisible(false);
+        jTZona.setVisible(false);
+        jBEliminar.setVisible(false);
+        jBModificar.setVisible(false);
+        jBNuevo.setVisible(false);
+        jBSalir.setVisible(false);
+    }
+
+    public void paraPropiedadesTrue() {
+        jCBusquedaPropiedades.setVisible(true);
         jTAltura.setVisible(true);
-    jTAntiguedad.setVisible(true);
-     jTDireccion.setVisible(true);
-     jTDisponibilidad.setVisible(true);
-    jTEstado.setVisible(true);
-     jTIDPropietarios.setVisible(true);
-     jTInspector.setVisible(true);
-     jTObservaciones.setVisible(true);
-     jTPrecioTasado.setVisible(true);
-     jTServicios.setVisible(true);
-     jTSuperTotal.setVisible(true);
-     jTTipo.setVisible(true);
-     jTZona.setVisible(true);
-     jBEliminar.setVisible(true);
-     jBModificar.setVisible(true);
-     jBNuevo.setVisible(true);
-     jBSalir.setVisible(true);
+        jTAntiguedad.setVisible(true);
+        jTDireccion.setVisible(true);
+        jTDisponibilidad.setVisible(true);
+        jTEstado.setVisible(true);
+        jTIDPropietarios.setVisible(true);
+        jTInspector.setVisible(true);
+        jTObservaciones.setVisible(true);
+        jTPrecioTasado.setVisible(true);
+        jTServicios.setVisible(true);
+        jTSuperTotal.setVisible(true);
+        jTTipo.setVisible(true);
+        jTZona.setVisible(true);
+        jBEliminar.setVisible(true);
+        jBModificar.setVisible(true);
+        jBNuevo.setVisible(true);
+        jBSalir.setVisible(true);
 }
+    
+    public void paraPropietarios() {
+        jCBusquedaPropiedades1.setVisible(false);
+        jTIDPropietario.setVisible(false);
+        jTIDPropietarios2.setVisible(false);
+        jTIDPropietarios3.setVisible(false);
+        jTIDPropietarios4.setVisible(false);
+        jTIDPropietarios5.setVisible(false);
+        jTIDPropietarios6.setVisible(false);
+        jTIDPropietarios7.setVisible(false);
+        jBNuevo3.setVisible(false);
+        jBNuevo1.setVisible(false);
+        jBNuevo2.setVisible(false);
+        jBNuevo4.setVisible(false);
+    }
+
+    public void paraPropietariosTrue() {
+        jCBusquedaPropiedades1.setVisible(true);
+        jTIDPropietario.setVisible(true);
+        jTIDPropietario2.setVisible(true);
+        jTIDPropietario3.setVisible(true);
+        jTIDPropietario4.setVisible(true);
+        jTIDPropietario5.setVisible(true);
+        jTIDPropietario6.setVisible(true);
+        jTIDPropietarios7.setVisible(true);
+        jBNuevo3.setVisible(true);
+        jBNuevo1.setVisible(true);
+        jBNuevo2.setVisible(true);
+        jBNuevo4.setVisible(true);
+    }
+    
+    
+    public void paraAlquileres() {
+        jCBusquedaContrato.setVisible(false);
+        jTIDPropietario1.setVisible(false);
+        jTIDPropietario2.setVisible(false);
+        jTIDPropietario3.setVisible(false);
+        jTIDPropietario4.setVisible(false);
+        jTIDPropietario5.setVisible(false);
+        jTIDPropietario6.setVisible(false);
+        jTIDPropietario9.setVisible(false);
+        jTIDPropietario11.setVisible(false);
+        jDateChooser1.setVisible(false);
+        jDateChooser2.setVisible(false);
+        jDateChooser3.setVisible(false);
+        jBNuevo7.setVisible(false);
+        jBNuevo6.setVisible(false);
+        jBNuevo5.setVisible(false);
+        jBNuevo8.setVisible(false);
+}
+    
+       public void paraAlquileresTrue() {
+        jCBusquedaContrato.setVisible(true);
+        jTIDPropietario1.setVisible(true);
+        jTIDPropietario2.setVisible(true);
+        jTIDPropietario3.setVisible(true);
+        jTIDPropietario4.setVisible(true);
+        jTIDPropietario5.setVisible(true);
+        jTIDPropietario6.setVisible(true);
+        jTIDPropietario9.setVisible(true);
+        jTIDPropietario11.setVisible(true);
+        jDateChooser1.setVisible(true);
+        jDateChooser2.setVisible(true);
+        jDateChooser3.setVisible(true);
+        jBNuevo7.setVisible(true);
+        jBNuevo6.setVisible(true);
+        jBNuevo5.setVisible(true);
+        jBNuevo8.setVisible(true);
+}
+    
 }

@@ -1272,7 +1272,7 @@
                           <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTIDPropietarios7" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="74" max="32767" attributes="0"/>
+                      <EmptySpace pref="101" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jBNuevo2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBNuevo1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1631,6 +1631,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace pref="14" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< Updated upstream
                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jBNuevo5" min="-2" max="-2" attributes="0"/>
@@ -1641,6 +1642,55 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jBNuevo8" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
+=======
+                          <Group type="102" attributes="0">
+                              <Component id="jPBarraNavegador2" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="jBNuevo5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jBNuevo6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jBNuevo7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jBNuevo8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jLabel39" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTIDPropietario5" min="-2" pref="122" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel35" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTIDPropietario1" min="-2" pref="122" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel36" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTIDPropietario2" min="-2" pref="122" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel37" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTIDPropietario3" min="-2" pref="122" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel38" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTIDPropietario4" min="-2" pref="122" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel40" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTIDPropietario6" min="-2" pref="122" max="-2" attributes="0"/>
+                                  </Group>
+>>>>>>> Stashed changes
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -1794,7 +1844,11 @@
                               </Group>
                           </Group>
                       </Group>
+<<<<<<< Updated upstream
                       <EmptySpace pref="80" max="32767" attributes="0"/>
+=======
+                      <EmptySpace pref="100" max="32767" attributes="0"/>
+>>>>>>> Stashed changes
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jBNuevo5" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBNuevo6" alignment="3" min="-2" max="-2" attributes="0"/>
