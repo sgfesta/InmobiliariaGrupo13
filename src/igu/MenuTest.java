@@ -90,7 +90,27 @@ public class MenuTest extends javax.swing.JFrame {
         jPCardPropietarios = new javax.swing.JPanel();
         jPBarraNavegador1 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jCBusquedaPropiedades1 = new javax.swing.JComboBox<>();
+        jLabel16 = new javax.swing.JLabel();
+        jTIDPropietario = new javax.swing.JTextField();
+        jBNuevo1 = new javax.swing.JButton();
+        jTIDPropietarios2 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jTIDPropietarios3 = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        jTIDPropietarios4 = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        jTIDPropietarios5 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        jTIDPropietarios6 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jTIDPropietarios7 = new javax.swing.JTextField();
+        jBNuevo2 = new javax.swing.JButton();
+        jBNuevo3 = new javax.swing.JButton();
+        jBNuevo4 = new javax.swing.JButton();
         jPCardAlquileres = new javax.swing.JPanel();
         jPBarraNavegador2 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
@@ -310,10 +330,10 @@ public class MenuTest extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 204, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/folder_owner_private_file_data_icon_196451.png"))); // NOI18N
-        jLabel2.setText("Formulario Propiedades");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
+        jLabel2.setText("  Formulario Propiedades");
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPPropiedades.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 83, 345, -1));
+        jPPropiedades.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 290, -1));
 
         jCBusquedaPropiedades.setBackground(new java.awt.Color(153, 153, 153));
         jCBusquedaPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
@@ -631,33 +651,207 @@ public class MenuTest extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI Semilight", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/folder_owner_private_file_data_icon_196451.png"))); // NOI18N
-        jLabel3.setText("Formulario Propietario");
-        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 204, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
+        jLabel5.setText("  Formulario Propiedades");
+        jLabel5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 204, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel6.setText("Busqueda");
+        jLabel6.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jCBusquedaPropiedades1.setBackground(new java.awt.Color(153, 153, 153));
+        jCBusquedaPropiedades1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(51, 204, 255));
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel16.setText("ID Propietario");
+        jLabel16.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTIDPropietario.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDPropietario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDPropietario.setForeground(new java.awt.Color(51, 51, 51));
+
+        jBNuevo1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBNuevo1.setForeground(new java.awt.Color(51, 204, 255));
+        jBNuevo1.setText("Modificar");
+        jBNuevo1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jTIDPropietarios2.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDPropietarios2.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDPropietarios2.setForeground(new java.awt.Color(51, 51, 51));
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(51, 204, 255));
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel17.setText("Nombre");
+        jLabel17.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTIDPropietarios3.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDPropietarios3.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDPropietarios3.setForeground(new java.awt.Color(51, 51, 51));
+
+        jLabel30.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(51, 204, 255));
+        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel30.setText("Apellido");
+        jLabel30.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTIDPropietarios4.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDPropietarios4.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDPropietarios4.setForeground(new java.awt.Color(51, 51, 51));
+
+        jLabel31.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(51, 204, 255));
+        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel31.setText("DNI");
+        jLabel31.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTIDPropietarios5.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDPropietarios5.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDPropietarios5.setForeground(new java.awt.Color(51, 51, 51));
+
+        jLabel32.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(51, 204, 255));
+        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel32.setText("Telefono");
+        jLabel32.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTIDPropietarios6.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDPropietarios6.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDPropietarios6.setForeground(new java.awt.Color(51, 51, 51));
+
+        jLabel33.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(51, 204, 255));
+        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel33.setText("Domicilio");
+        jLabel33.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jLabel34.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(51, 204, 255));
+        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel34.setText("Activo");
+        jLabel34.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTIDPropietarios7.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDPropietarios7.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDPropietarios7.setForeground(new java.awt.Color(51, 51, 51));
+
+        jBNuevo2.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBNuevo2.setForeground(new java.awt.Color(51, 204, 255));
+        jBNuevo2.setText("Nuevo");
+        jBNuevo2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jBNuevo3.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBNuevo3.setForeground(new java.awt.Color(51, 204, 255));
+        jBNuevo3.setText("Eliminar");
+        jBNuevo3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jBNuevo4.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBNuevo4.setForeground(new java.awt.Color(51, 204, 255));
+        jBNuevo4.setText("Salir");
+        jBNuevo4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout jPCardPropietariosLayout = new javax.swing.GroupLayout(jPCardPropietarios);
         jPCardPropietarios.setLayout(jPCardPropietariosLayout);
         jPCardPropietariosLayout.setHorizontalGroup(
             jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPCardPropietariosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPBarraNavegador1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPCardPropietariosLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPBarraNavegador1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPCardPropietariosLayout.createSequentialGroup()
+                        .addGap(206, 206, 206)
+                        .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPCardPropietariosLayout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCBusquedaPropiedades1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel5)
+                            .addGroup(jPCardPropietariosLayout.createSequentialGroup()
+                                .addComponent(jBNuevo2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jBNuevo1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jBNuevo3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jBNuevo4))
+                            .addGroup(jPCardPropietariosLayout.createSequentialGroup()
+                                .addGap(59, 59, 59)
+                                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jLabel34))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTIDPropietarios7, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                                    .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTIDPropietarios6, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                                        .addComponent(jTIDPropietarios5)
+                                        .addComponent(jTIDPropietarios4)
+                                        .addComponent(jTIDPropietarios3)
+                                        .addComponent(jTIDPropietario)
+                                        .addComponent(jTIDPropietarios2)))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPCardPropietariosLayout.createSequentialGroup()
-                .addGap(216, 216, 216)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPCardPropietariosLayout.setVerticalGroup(
             jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPCardPropietariosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPBarraNavegador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(522, Short.MAX_VALUE))
+                .addGap(43, 43, 43)
+                .addComponent(jLabel5)
+                .addGap(48, 48, 48)
+                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jCBusquedaPropiedades1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(51, 51, 51)
+                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jTIDPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(jTIDPropietarios2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel30)
+                    .addComponent(jTIDPropietarios3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(jTIDPropietarios4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel32)
+                    .addComponent(jTIDPropietarios5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel33)
+                    .addComponent(jTIDPropietarios6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel34)
+                    .addComponent(jTIDPropietarios7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBNuevo2)
+                    .addComponent(jBNuevo1)
+                    .addComponent(jBNuevo3)
+                    .addComponent(jBNuevo4))
+                .addGap(56, 56, 56))
         );
 
         Fondo.add(jPCardPropietarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 65, -1, 600));
@@ -920,8 +1114,13 @@ jPCardFondo.setVisible(false);
     private javax.swing.JButton jBEliminar;
     private javax.swing.JButton jBModificar;
     private javax.swing.JButton jBNuevo;
+    private javax.swing.JButton jBNuevo1;
+    private javax.swing.JButton jBNuevo2;
+    private javax.swing.JButton jBNuevo3;
+    private javax.swing.JButton jBNuevo4;
     private javax.swing.JButton jBSalir;
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropiedades;
+    private javax.swing.JComboBox<Propiedad> jCBusquedaPropiedades1;
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropietario;
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropietario1;
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropietario2;
@@ -937,6 +1136,8 @@ jPCardFondo.setVisible(false);
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -950,8 +1151,14 @@ jPCardFondo.setVisible(false);
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jListados;
     private javax.swing.JMenuItem jMIngreso;
@@ -976,7 +1183,14 @@ jPCardFondo.setVisible(false);
     private javax.swing.JTextField jTDireccion;
     private javax.swing.JTextField jTDisponibilidad;
     private javax.swing.JTextField jTEstado;
+    private javax.swing.JTextField jTIDPropietario;
     private javax.swing.JTextField jTIDPropietarios;
+    private javax.swing.JTextField jTIDPropietarios2;
+    private javax.swing.JTextField jTIDPropietarios3;
+    private javax.swing.JTextField jTIDPropietarios4;
+    private javax.swing.JTextField jTIDPropietarios5;
+    private javax.swing.JTextField jTIDPropietarios6;
+    private javax.swing.JTextField jTIDPropietarios7;
     private javax.swing.JTextField jTInspector;
     private javax.swing.JTextArea jTObservaciones;
     private javax.swing.JTextField jTPrecioTasado;
