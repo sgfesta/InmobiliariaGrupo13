@@ -98,11 +98,11 @@ public class Login extends javax.swing.JFrame {
                 userTxtActionPerformed(evt);
             }
         });
-        bg.add(userTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 290, 30));
+        bg.add(userTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 290, 30));
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        bg.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 290, 20));
+        bg.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 290, 20));
 
         passTxt.setBackground(new java.awt.Color(51, 51, 51));
         passTxt.setForeground(new java.awt.Color(255, 255, 255));
@@ -114,11 +114,11 @@ public class Login extends javax.swing.JFrame {
                 passTxtMousePressed(evt);
             }
         });
-        bg.add(passTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 290, 30));
+        bg.add(passTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, 290, 30));
 
         jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
-        bg.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 290, 20));
+        bg.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 290, 20));
 
         loginBtn.setBackground(new java.awt.Color(51, 51, 51));
         loginBtn.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), null));
@@ -203,12 +203,12 @@ public class Login extends javax.swing.JFrame {
 
     private void exitTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseEntered
         //   exitBtn.setBackground(Color.red);
-        exitTxt.setForeground(new Color(187, 187, 187));
+        exitTxt.setForeground(new Color(51,204,255));
     }//GEN-LAST:event_exitTxtMouseEntered
 
     private void exitTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseExited
         //   exitBtn.setBackground(new Color(153,153,153));
-        exitTxt.setForeground(new Color(153, 153, 153));
+        exitTxt.setForeground(new Color(255,255,255));
     }//GEN-LAST:event_exitTxtMouseExited
 
     private void userTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userTxtMousePressed
