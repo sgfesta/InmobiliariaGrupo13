@@ -2,11 +2,6 @@
 
 <Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Component class="javax.swing.JMenuItem" name="jMenuItem7">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jMenuItem7"/>
-      </Properties>
-    </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -388,6 +383,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jPacceso" alignment="0" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
@@ -398,9 +394,8 @@
                           <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
                           <Component id="jPlogueo" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jPacceso" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="0" max="32767" attributes="0"/>
+                  <EmptySpace pref="139" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -411,7 +406,7 @@
                   <Component id="jLabel1" min="-2" pref="58" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPlogueo" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="133" max="32767" attributes="0"/>
+                  <EmptySpace pref="125" max="32767" attributes="0"/>
                   <Component id="jPacceso" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -497,7 +492,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTemail">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Email"/>
+                <Property name="text" type="java.lang.String" value="sgfesta@gmail.com"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
@@ -510,7 +505,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTpwd">
               <Properties>
-                <Property name="text" type="java.lang.String" value="password"/>
+                <Property name="text" type="java.lang.String" value="loquito"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JToggleButton" name="jTBvalidar">
@@ -534,33 +529,47 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLbarraNombre" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="928" max="32767" attributes="0"/>
-                      <Component id="jLbarrapwd" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Component id="jLbarraNombre" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="642" max="-2" attributes="0"/>
+                      <Component id="jLbarranivel" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                      <Component id="jBCerrarS" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLbarraNombre" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLbarrapwd" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="62" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jBCerrarS" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLbarranivel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLbarraNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="25" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLbarraNombre">
+              <Properties>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLbarrapwd">
+            <Component class="javax.swing.JLabel" name="jLbarranivel">
+              <Properties>
+                <Property name="toolTipText" type="java.lang.String" value=" "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jBCerrarS">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cerrar Session"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBCerrarSActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

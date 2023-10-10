@@ -5,6 +5,7 @@
  */
 package igu;
 
+import entidades.EstadoSesion;
 import entidades.Usuario;
 import javax.swing.JOptionPane;
 import persistencia.ControlAcceso;
@@ -14,10 +15,9 @@ import persistencia.ControlAcceso;
  * @author Raven
  */
 public class InmobiliariaGUI extends javax.swing.JFrame {
-    
+
     private ControlAcceso controlacceso;
-    private int intentos =0;
-    
+    private int intentos = 0;
 
     /**
      * Creates new form InmobiliariaGUI
@@ -26,7 +26,7 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
         initComponents();
         menusinicio();
         controlacceso = new ControlAcceso();
-        
+
     }
 
     /**
@@ -38,7 +38,6 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuItem7 = new javax.swing.JMenuItem();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
         jPlogueo = new javax.swing.JPanel();
@@ -50,7 +49,8 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jPacceso = new javax.swing.JPanel();
         jLbarraNombre = new javax.swing.JLabel();
-        jLbarrapwd = new javax.swing.JLabel();
+        jLbarranivel = new javax.swing.JLabel();
+        jBCerrarS = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMLogin = new javax.swing.JMenu();
         jMpropiedades = new javax.swing.JMenu();
@@ -80,8 +80,6 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
         jMenuItem21 = new javax.swing.JMenuItem();
         jMsalir = new javax.swing.JMenu();
 
-        jMenuItem7.setText("jMenuItem7");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jDesktopPane1.setBackground(new java.awt.Color(51, 153, 255));
@@ -95,12 +93,12 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel2.setText("Ingrese su Email");
 
-        jTemail.setText("Email");
+        jTemail.setText("sgfesta@gmail.com");
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel3.setText("Ingrese su Password");
 
-        jTpwd.setText("password");
+        jTpwd.setText("loquito");
 
         jTBvalidar.setText("Validar");
         jTBvalidar.addActionListener(new java.awt.event.ActionListener() {
@@ -154,26 +152,38 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
                     .addContainerGap(100, Short.MAX_VALUE)))
         );
 
+        jLbarraNombre.setToolTipText("");
+
+        jLbarranivel.setToolTipText(" ");
+
+        jBCerrarS.setText("Cerrar Session");
+        jBCerrarS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCerrarSActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPaccesoLayout = new javax.swing.GroupLayout(jPacceso);
         jPacceso.setLayout(jPaccesoLayout);
         jPaccesoLayout.setHorizontalGroup(
             jPaccesoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPaccesoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLbarraNombre)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPaccesoLayout.createSequentialGroup()
-                .addContainerGap(928, Short.MAX_VALUE)
-                .addComponent(jLbarrapwd)
-                .addGap(93, 93, 93))
+                .addComponent(jLbarraNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(642, 642, 642)
+                .addComponent(jLbarranivel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(65, 65, 65)
+                .addComponent(jBCerrarS)
+                .addGap(36, 36, 36))
         );
         jPaccesoLayout.setVerticalGroup(
             jPaccesoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPaccesoLayout.createSequentialGroup()
-                .addGroup(jPaccesoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLbarraNombre, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLbarrapwd, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPaccesoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBCerrarS)
+                    .addComponent(jLbarranivel)
+                    .addComponent(jLbarraNombre)))
         );
 
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -184,6 +194,7 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPacceso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
@@ -191,9 +202,8 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 775, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
                         .addGap(194, 194, 194)
-                        .addComponent(jPlogueo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPacceso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(0, Short.MAX_VALUE))
+                        .addComponent(jPlogueo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,7 +212,7 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPlogueo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
                 .addComponent(jPacceso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -373,35 +383,47 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTBvalidarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTBvalidarActionPerformed
-      
-     if (intentos < 3) { // Comprobar si se han realizado menos de 3 intentos
-        String email = jTemail.getText();
-        String pwd = jTpwd.getText();
-        Usuario usuario = controlacceso.iniciarSesion(email, pwd);
 
-        if (usuario != null) {
-            JOptionPane.showMessageDialog(null, "Bienvenido al Sistema " + usuario.getNombre() + " !!");
-            jLbarraNombre.setText("Usuario : "+usuario.getNombre());
-            jLbarrapwd.setText("NivelAcceso : "+usuario.getNivelAcceso());
-            activarMenuNivel(usuario.getNivelAcceso());
-            
-        } else {
-            intentos++;
-            JOptionPane.showMessageDialog(null, "Vuelva a INTENTAR!, intentos permitidos"+ (3-intentos));
-             // Incrementar el contador de intentos
-            if (intentos == 3) {
-                // Si se han realizado 3 intentos fallidos, puedes realizar alguna acción adicional, como bloquear el acceso.
-                // Por ejemplo, puedes deshabilitar el botón de validación.
-                jTBvalidar.setEnabled(false);
+        if (intentos < 3) { // Comprobar si se han realizado menos de 3 intentos
+            String email = jTemail.getText();
+            String pwd = jTpwd.getText();
+            Usuario usuarioActual = controlacceso.iniciarSesion(email, pwd);
+
+            if (usuarioActual != null) {
+                JOptionPane.showMessageDialog(null, "Bienvenido al Sistema " + usuarioActual.getNombre() + " !!");
+                jLbarraNombre.setText("Usuario : " + usuarioActual.getNombre());
+                jLbarranivel.setText("NivelAcceso : " + usuarioActual.getNivelAcceso());
+                activarMenuNivel(usuarioActual.getNivelAcceso());
+                // Establecer el usuario actual en el EstadoSesion
+                EstadoSesion.setUsuarioActual(usuarioActual);
+                //Cierro panel de logueo
+                jPlogueo.setVisible(false);
+
+            } else {
+                intentos++;
+                JOptionPane.showMessageDialog(null, "Vuelva a INTENTAR!, intentos permitidos" + (3 - intentos));
+                // Incrementar el contador de intentos
+                if (intentos == 3) {
+                    // Si se han realizado 3 intentos fallidos
+                    jTBvalidar.setEnabled(false);
+                }
             }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se han alcanzado los 3 intentos. Bloqueando el acceso.");
+
         }
-    } else {
-        JOptionPane.showMessageDialog(null, "Se han alcanzado los 3 intentos. Bloqueando el acceso.");
-        // Puedes realizar otras acciones aquí, como bloquear el acceso al usuario.
-    }
-        
-        
+
+
     }//GEN-LAST:event_jTBvalidarActionPerformed
+
+    private void jBCerrarSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrarSActionPerformed
+        System.out.println("cierro session");
+        EstadoSesion.cerrarSesion();
+        menusinicio();
+        jLbarraNombre.setText("");
+        jLbarranivel.setText("");
+
+    }//GEN-LAST:event_jBCerrarSActionPerformed
 
     /**
      * @param args the command line arguments
@@ -437,76 +459,82 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
             }
         });
     }
+
     //Metodos de Control
-    private void menusinicio(){
-       jMLogin.setEnabled(true);        
-       jMpropiedades.setVisible(false);       
-       jMpropietarios.setVisible(false);
-       jMalquileres.setVisible(false);
-       jMlistados.setVisible(false);
-       jMsalir.setVisible(true);
-       
+    private void menusinicio() {
+        jMLogin.setEnabled(true);
+        jMpropiedades.setVisible(false);
+        jMpropietarios.setVisible(false);
+        jMalquileres.setVisible(false);
+        jMlistados.setVisible(false);
+        jBCerrarS.setVisible(false);
+        jMsalir.setVisible(true);
+        jPlogueo.setVisible(true);
+
     }
-    
+
     private void activarMenuNivel(int nivelAcceso) {
-    // Habilitar o deshabilitar elementos de menú según el nivel de acceso
-    switch (nivelAcceso) {
-        case 10: // Nivel de acceso 10 (por ejemplo, administrador)
-            jMLogin.setEnabled(true);
-            jMpropiedades.setVisible(true);
-            jMpropietarios.setVisible(true);
-            jMalquileres.setVisible(true);
-            jMlistados.setVisible(true);
-            jMsalir.setVisible(true);
-            break;
-        case 20: // Nivel de acceso 20 (por ejemplo, usuario contable)
-            jMLogin.setEnabled(true);
-            jMpropiedades.setVisible(false);
-            jMpropietarios.setVisible(true);
-            jMalquileres.setVisible(false);
-            jMlistados.setVisible(true);
-            jMsalir.setVisible(true);
-            break;
-        case 30: // Nivel de acceso 30 (por ejemplo, usuario vendedor)
-            jMLogin.setEnabled(true);
-            jMpropiedades.setVisible(false);
-            jMpropietarios.setVisible(false);
-            jMalquileres.setVisible(true);
-            jMlistados.setVisible(true);
-            jMsalir.setVisible(true);
-            break;
-        case 40: // Nivel de acceso 40 (por ejemplo, usuario novato)
-            jMLogin.setEnabled(true);
-            jMpropiedades.setVisible(false);
-            jMpropietarios.setVisible(false);
-            jMalquileres.setVisible(false);
-            jMlistados.setVisible(true);
-            jMsalir.setVisible(true);
-            break;
-        default: // Otros niveles de acceso o valor no válido
-            jMLogin.setEnabled(true);
-            jMpropiedades.setVisible(false);
-            jMpropietarios.setVisible(false);
-            jMalquileres.setVisible(false);
-            jMlistados.setVisible(false);
-            jMsalir.setVisible(true);
-            break;
+        // Habilitar o deshabilitar elementos de menú según el nivel de acceso
+        switch (nivelAcceso) {
+            case 10: // Nivel de acceso 10 (por ejemplo, administrador)
+                jMLogin.setEnabled(true);
+                jMpropiedades.setVisible(true);
+                jMpropietarios.setVisible(true);
+                jMalquileres.setVisible(true);
+                jMlistados.setVisible(true);
+                jBCerrarS.setVisible(true);
+                jMsalir.setVisible(true);
+                break;
+            case 20: // Nivel de acceso 20 (por ejemplo, usuarioActual contable)
+                jMLogin.setEnabled(true);
+                jMpropiedades.setVisible(false);
+                jMpropietarios.setVisible(true);
+                jMalquileres.setVisible(false);
+                jMlistados.setVisible(true);
+                jBCerrarS.setVisible(true);
+                jMsalir.setVisible(true);
+                break;
+            case 30: // Nivel de acceso 30 (por ejemplo, usuarioActual vendedor)
+                jMLogin.setEnabled(true);
+                jMpropiedades.setVisible(false);
+                jMpropietarios.setVisible(false);
+                jMalquileres.setVisible(true);
+                jMlistados.setVisible(true);
+                jBCerrarS.setVisible(true);
+                jMsalir.setVisible(true);
+                break;
+            case 40: // Nivel de acceso 40 (por ejemplo, usuarioActual novato)
+                jMLogin.setEnabled(true);
+                jMpropiedades.setVisible(false);
+                jMpropietarios.setVisible(false);
+                jMalquileres.setVisible(false);
+                jMlistados.setVisible(true);
+                jBCerrarS.setVisible(true);
+                jMsalir.setVisible(true);
+
+                break;
+            default: // Otros niveles de acceso o valor no válido
+                jMLogin.setEnabled(true);
+                jMpropiedades.setVisible(false);
+                jMpropietarios.setVisible(false);
+                jMalquileres.setVisible(false);
+                jMlistados.setVisible(false);
+                jBCerrarS.setVisible(true);
+                jMsalir.setVisible(true);
+                break;
+        }
     }
-}
-    
-    
-    
-    
-    
-    
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBCerrarS;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLbarraNombre;
-    private javax.swing.JLabel jLbarrapwd;
+    private javax.swing.JLabel jLbarranivel;
     private javax.swing.JMenu jMLogin;
     private javax.swing.JMenu jMalquileres;
     private javax.swing.JMenu jMenu6;
@@ -529,7 +557,6 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JMenu jMlistados;
