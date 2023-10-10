@@ -5,17 +5,27 @@
  */
 package igu;
 
+import entidades.Usuario;
+import javax.swing.JOptionPane;
+import persistencia.ControlAcceso;
+
 /**
  *
  * @author Raven
  */
 public class InmobiliariaGUI extends javax.swing.JFrame {
+    
+    private ControlAcceso controlacceso;
+    private int intentos =0;
+    
 
     /**
      * Creates new form InmobiliariaGUI
      */
     public InmobiliariaGUI() {
         initComponents();
+        controlacceso = new ControlAcceso();
+        
     }
 
     /**
@@ -30,6 +40,12 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
         jMenuItem7 = new javax.swing.JMenuItem();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jTemail = new javax.swing.JTextField();
+        jTpwd = new javax.swing.JTextField();
+        jlvalidado = new javax.swing.JLabel();
+        jTBvalidar = new javax.swing.JToggleButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMLogin = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -71,36 +87,88 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 51, 51));
         jLabel1.setText("UTILIZEN ESTE PANEL HASTA QUE PUEDA HACER FUNCIONAR EL OTRO (MENUTEST)");
 
+        jLabel2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        jLabel2.setText("Ingrese su Email");
+
+        jLabel3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        jLabel3.setText("Ingrese su Password");
+
+        jTemail.setText("Email");
+
+        jTpwd.setText("password");
+
+        jTBvalidar.setText("Validar");
+        jTBvalidar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTBvalidarActionPerformed(evt);
+            }
+        });
+
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jTemail, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jTpwd, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jlvalidado, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jTBvalidar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(119, 119, 119)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 775, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(119, 119, 119)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 775, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlvalidado, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTBvalidar)
+                                    .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTemail)
+                                        .addComponent(jTpwd, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)))))))
                 .addContainerGap(126, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addGap(89, 89, 89)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(468, Short.MAX_VALUE))
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)
+                        .addComponent(jLabel2))
+                    .addComponent(jTemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(jTpwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addComponent(jTBvalidar)
+                .addGap(46, 46, 46)
+                .addComponent(jlvalidado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(253, Short.MAX_VALUE))
         );
 
         jMenuBar1.setBackground(new java.awt.Color(51, 51, 51));
 
         jMLogin.setBackground(new java.awt.Color(51, 51, 51));
-        jMLogin.setForeground(new java.awt.Color(255, 255, 255));
+        jMLogin.setForeground(new java.awt.Color(204, 0, 0));
         jMLogin.setText("LOGIN");
         jMLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMLogin.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jMenuBar1.add(jMLogin);
 
         jMenu2.setBackground(new java.awt.Color(51, 51, 51));
-        jMenu2.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu2.setForeground(new java.awt.Color(204, 0, 0));
         jMenu2.setText("PROPIEDADES");
         jMenu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenu2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -127,7 +195,7 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu1.setBackground(new java.awt.Color(51, 51, 51));
-        jMenu1.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu1.setForeground(new java.awt.Color(204, 0, 0));
         jMenu1.setText("PROPIETARIOS");
         jMenu1.setActionCommand("PROPIEDADES");
         jMenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -157,7 +225,7 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu3.setBackground(new java.awt.Color(51, 51, 51));
-        jMenu3.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu3.setForeground(new java.awt.Color(204, 0, 0));
         jMenu3.setText("ALQUILERES");
         jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenu3.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -186,7 +254,7 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
         jMenuBar1.add(jMenu3);
 
         jMenu4.setBackground(new java.awt.Color(51, 51, 51));
-        jMenu4.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu4.setForeground(new java.awt.Color(204, 0, 0));
         jMenu4.setText("LISTADOS");
         jMenu4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenu4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -233,7 +301,7 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
         jMenuBar1.add(jMenu4);
 
         jMenu5.setBackground(new java.awt.Color(51, 51, 51));
-        jMenu5.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu5.setForeground(new java.awt.Color(204, 0, 0));
         jMenu5.setText("SALIR");
         jMenu5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenu5.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -255,6 +323,34 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTBvalidarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTBvalidarActionPerformed
+      
+     if (intentos < 3) { // Comprobar si se han realizado menos de 3 intentos
+        String email = jTemail.getText();
+        String pwd = jTpwd.getText();
+        Usuario usuario = controlacceso.iniciarSesion(email, pwd);
+
+        if (usuario != null) {
+            JOptionPane.showMessageDialog(null, "Bienvenido al Sistema " + usuario.getNombre() + " !!");
+            jlvalidado.setText("Usuario : " + usuario.getNombre() + "                                              " + " Nivel Acceso : " + usuario.getNivelAcceso());
+        } else {
+            intentos++;
+            JOptionPane.showMessageDialog(null, "Vuelva a INTENTAR!, intentos permitidos"+ (3-intentos));
+             // Incrementar el contador de intentos
+            if (intentos == 3) {
+                // Si se han realizado 3 intentos fallidos, puedes realizar alguna acción adicional, como bloquear el acceso.
+                // Por ejemplo, puedes deshabilitar el botón de validación.
+                jTBvalidar.setEnabled(false);
+            }
+        }
+    } else {
+        JOptionPane.showMessageDialog(null, "Se han alcanzado los 3 intentos. Bloqueando el acceso.");
+        // Puedes realizar otras acciones aquí, como bloquear el acceso al usuario.
+    }
+        
+        
+    }//GEN-LAST:event_jTBvalidarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -294,6 +390,8 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMLogin;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
@@ -323,5 +421,9 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JToggleButton jTBvalidar;
+    private javax.swing.JTextField jTemail;
+    private javax.swing.JTextField jTpwd;
+    private javax.swing.JLabel jlvalidado;
     // End of variables declaration//GEN-END:variables
 }

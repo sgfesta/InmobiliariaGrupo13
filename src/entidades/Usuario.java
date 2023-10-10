@@ -26,8 +26,6 @@ public class Usuario {
         this.activo = activo;
         this.nivelAcceso = nivelAcceso;
     }
-    
-    //Setter y Getter
 
     public int getIdUsuario() {
         return idUsuario;
@@ -76,6 +74,8 @@ public class Usuario {
     public void setNivelAcceso(int nivelAcceso) {
         this.nivelAcceso = nivelAcceso;
     }
+
+    
 
     @Override
     public String toString() {
