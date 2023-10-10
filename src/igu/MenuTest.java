@@ -7,6 +7,7 @@ package igu;
 
 import entidades.Propiedad;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import javax.swing.JRootPane;
 import jdk.nashorn.internal.ir.JumpToInlinedFinally;
 
@@ -335,6 +336,9 @@ public class MenuTest extends javax.swing.JFrame {
         jLSalir.setText("   SALIR");
         jLSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLSalirMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLSalirMouseEntered(evt);
             }
@@ -2610,6 +2614,18 @@ public class MenuTest extends javax.swing.JFrame {
     private void loginBtnTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnTxtMouseExited
         loginBtn.setBackground(new Color(51, 51, 51));
     }//GEN-LAST:event_loginBtnTxtMouseExited
+
+    private void jLSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLSalirMouseClicked
+         String mensajeSalida = "¿Estás seguro que quieres salir?";
+  String tituloSalidaTraducido="Salir";
+ 
+    int respuesta = JOptionPane.showConfirmDialog(this, mensajeSalida, tituloSalidaTraducido, JOptionPane.YES_NO_OPTION);
+
+    if (respuesta == JOptionPane.YES_OPTION) {
+        this.dispose(); // cierra la ventana
+    
+        }   // TODO add your handling code here:
+    }//GEN-LAST:event_jLSalirMouseClicked
 
     /**
      * @param args the command line arguments
