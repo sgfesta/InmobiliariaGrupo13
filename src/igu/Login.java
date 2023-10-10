@@ -1,6 +1,7 @@
 package igu;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
 
@@ -198,17 +199,23 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_headerMousePressed
 
     private void exitTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseClicked
-        System.exit(0);
+//        System.exit(0);
+        int respuesta = JOptionPane.showConfirmDialog(this, "Estás seguro que quieres salir?", "Cerrar Ventana", JOptionPane.YES_NO_OPTION);
+        if (respuesta == JOptionPane.YES_OPTION) {
+            this.dispose();//cierro la ventana
+            removeAll();
+            repaint();
+        }
     }//GEN-LAST:event_exitTxtMouseClicked
 
     private void exitTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseEntered
         //   exitBtn.setBackground(Color.red);
-        exitTxt.setForeground(new Color(51,204,255));
+        exitTxt.setForeground(new Color(51, 204, 255));
     }//GEN-LAST:event_exitTxtMouseEntered
 
     private void exitTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseExited
         //   exitBtn.setBackground(new Color(153,153,153));
-        exitTxt.setForeground(new Color(255,255,255));
+        exitTxt.setForeground(new Color(255, 255, 255));
     }//GEN-LAST:event_exitTxtMouseExited
 
     private void userTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userTxtMousePressed
