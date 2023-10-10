@@ -146,35 +146,69 @@ public class MenuTest extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jLTituloAlquiler1 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        jCBusquedaContrato1 = new javax.swing.JComboBox<>();
-        jLabel47 = new javax.swing.JLabel();
+        jLTituloInquilinos = new javax.swing.JLabel();
+        jLBusquedaInquilinos = new javax.swing.JLabel();
+        jCBusquedaInquilinos = new javax.swing.JComboBox<>();
+        jLIdInquilinos = new javax.swing.JLabel();
         jTIDContrato1 = new javax.swing.JTextField();
-        jBNuevo9 = new javax.swing.JButton();
-        jBNuevo10 = new javax.swing.JButton();
-        jBNuevo11 = new javax.swing.JButton();
-        jBNuevo12 = new javax.swing.JButton();
+        jBNuevoInquilinos = new javax.swing.JButton();
+        jBModificarInquilinos = new javax.swing.JButton();
+        jBEliminarInquilinos = new javax.swing.JButton();
+        jBSalirInquilinos = new javax.swing.JButton();
+        jTNombreInquilinos = new javax.swing.JTextField();
+        jLNombreInquilinos = new javax.swing.JLabel();
+        jLApellidoInquilinos = new javax.swing.JLabel();
+        jTApellidoInquilinos = new javax.swing.JTextField();
+        jLDNIInquilinos = new javax.swing.JLabel();
+        jTDNIInquilinos = new javax.swing.JTextField();
+        jLCuitInquilinos = new javax.swing.JLabel();
+        jTLugarTrabajoInquilinos = new javax.swing.JTextField();
+        jLLugarTrabajoInquilinos = new javax.swing.JLabel();
+        jTCuitInquilinos = new javax.swing.JTextField();
+        jLActivoInquilinos = new javax.swing.JLabel();
+        jTActivoInquilinos = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
-        jLTituloAlquiler2 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        jCBusquedaContrato2 = new javax.swing.JComboBox<>();
-        jLabel49 = new javax.swing.JLabel();
-        jTIDContrato2 = new javax.swing.JTextField();
-        jBNuevo13 = new javax.swing.JButton();
-        jBNuevo14 = new javax.swing.JButton();
-        jBNuevo15 = new javax.swing.JButton();
-        jBNuevo16 = new javax.swing.JButton();
+        jLTituloGarante = new javax.swing.JLabel();
+        jLBusquedaGarante = new javax.swing.JLabel();
+        jCBusquedaGarante = new javax.swing.JComboBox<>();
+        jBNuevoGarante = new javax.swing.JButton();
+        jBModificarGarante = new javax.swing.JButton();
+        jBEliminarGarante = new javax.swing.JButton();
+        jBSalirGarante = new javax.swing.JButton();
+        jLIDGarante = new javax.swing.JLabel();
+        jTIDGarante1 = new javax.swing.JTextField();
+        jLNombreGarante = new javax.swing.JLabel();
+        jTNombreGarante = new javax.swing.JTextField();
+        jLApellidoGarante = new javax.swing.JLabel();
+        jTApellidoGarante = new javax.swing.JTextField();
+        jLDNIGarante = new javax.swing.JLabel();
+        jTDNIGarante = new javax.swing.JTextField();
+        jLDomicilio = new javax.swing.JLabel();
+        jTDomicilio = new javax.swing.JTextField();
+        jLTelefonoGarante = new javax.swing.JLabel();
+        jTTelefonoGarante = new javax.swing.JTextField();
+        jLActivoGarante = new javax.swing.JLabel();
+        jTActivoGarante = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        jLTituloAlquiler3 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jCBusquedaContrato3 = new javax.swing.JComboBox<>();
-        jLabel51 = new javax.swing.JLabel();
-        jTIDContrato3 = new javax.swing.JTextField();
-        jBNuevo17 = new javax.swing.JButton();
-        jBNuevo18 = new javax.swing.JButton();
-        jBNuevo19 = new javax.swing.JButton();
-        jBNuevo20 = new javax.swing.JButton();
+        jLTituloInspector = new javax.swing.JLabel();
+        jLBusquedaInspector = new javax.swing.JLabel();
+        jCBusquedaInspector = new javax.swing.JComboBox<>();
+        jBNuevoInspector = new javax.swing.JButton();
+        jBModificarInspector = new javax.swing.JButton();
+        jBEliminarInspector = new javax.swing.JButton();
+        jBSalirInspector = new javax.swing.JButton();
+        jLIDInspector = new javax.swing.JLabel();
+        jTIDInspector = new javax.swing.JTextField();
+        jLMatriculaInspector = new javax.swing.JLabel();
+        jTMatriculaInspector = new javax.swing.JTextField();
+        jLNombreInspector = new javax.swing.JLabel();
+        jTNombreInspector = new javax.swing.JTextField();
+        jLApellidoInspector = new javax.swing.JLabel();
+        jTApellidoInspector = new javax.swing.JTextField();
+        jLTelefonoInspector = new javax.swing.JLabel();
+        jTTelefonoInspector = new javax.swing.JTextField();
+        jLActivoInspector = new javax.swing.JLabel();
+        jTActivoInspector = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GRUPO 13 INMOBILIARIA");
@@ -931,11 +965,7 @@ public class MenuTest extends javax.swing.JFrame {
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel34)
                     .addComponent(jTIDPropietarios7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-<<<<<<< Updated upstream
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
-=======
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
->>>>>>> Stashed changes
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevo2)
                     .addComponent(jBNuevo1)
@@ -1244,11 +1274,7 @@ public class MenuTest extends javax.swing.JFrame {
                         .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel39)
                             .addComponent(jTIDVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-<<<<<<< Updated upstream
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
-=======
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
->>>>>>> Stashed changes
                 .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevo5)
                     .addComponent(jBNuevo6)
@@ -1299,27 +1325,26 @@ public class MenuTest extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        jLTituloAlquiler1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLTituloAlquiler1.setForeground(new java.awt.Color(51, 204, 255));
-        jLTituloAlquiler1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTituloAlquiler1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
-        jLTituloAlquiler1.setText("  Formulario Inquilinos");
-        jLTituloAlquiler1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLTituloInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLTituloInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLTituloInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLTituloInquilinos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
+        jLTituloInquilinos.setText("  Formulario Inquilinos");
+        jLTituloInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel46.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel46.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel46.setText("Busqueda");
-        jLabel46.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLBusquedaInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLBusquedaInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLBusquedaInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLBusquedaInquilinos.setText("Busqueda");
 
-        jCBusquedaContrato1.setBackground(new java.awt.Color(153, 153, 153));
-        jCBusquedaContrato1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+        jCBusquedaInquilinos.setBackground(new java.awt.Color(153, 153, 153));
+        jCBusquedaInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
 
-        jLabel47.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel47.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel47.setText("ID Contrato");
-        jLabel47.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLIdInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLIdInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLIdInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLIdInquilinos.setText("ID Inquilino");
+        jLIdInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jTIDContrato1.setBackground(new java.awt.Color(153, 153, 153));
         jTIDContrato1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -1330,127 +1355,360 @@ public class MenuTest extends javax.swing.JFrame {
             }
         });
 
-        jBNuevo9.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo9.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo9.setText("Nuevo");
-        jBNuevo9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBNuevoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBNuevoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jBNuevoInquilinos.setText("Nuevo");
+        jBNuevoInquilinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jBNuevo10.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo10.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo10.setText("Modificar");
-        jBNuevo10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBModificarInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBModificarInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jBModificarInquilinos.setText("Modificar");
+        jBModificarInquilinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jBNuevo11.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo11.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo11.setText("Eliminar");
-        jBNuevo11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBEliminarInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBEliminarInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jBEliminarInquilinos.setText("Eliminar");
+        jBEliminarInquilinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jBNuevo12.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo12.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo12.setText("Salir");
-        jBNuevo12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBSalirInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBSalirInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jBSalirInquilinos.setText("Salir");
+        jBSalirInquilinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jTNombreInquilinos.setBackground(new java.awt.Color(153, 153, 153));
+        jTNombreInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTNombreInquilinos.setForeground(new java.awt.Color(51, 51, 51));
+        jTNombreInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTNombreInquilinosActionPerformed(evt);
+            }
+        });
+
+        jLNombreInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLNombreInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLNombreInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLNombreInquilinos.setText("Nombre");
+        jLNombreInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jLApellidoInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLApellidoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLApellidoInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLApellidoInquilinos.setText("Apellido");
+        jLApellidoInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTApellidoInquilinos.setBackground(new java.awt.Color(153, 153, 153));
+        jTApellidoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTApellidoInquilinos.setForeground(new java.awt.Color(51, 51, 51));
+        jTApellidoInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTApellidoInquilinosActionPerformed(evt);
+            }
+        });
+
+        jLDNIInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLDNIInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLDNIInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLDNIInquilinos.setText("DNI");
+        jLDNIInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTDNIInquilinos.setBackground(new java.awt.Color(153, 153, 153));
+        jTDNIInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTDNIInquilinos.setForeground(new java.awt.Color(51, 51, 51));
+        jTDNIInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTDNIInquilinosActionPerformed(evt);
+            }
+        });
+
+        jLCuitInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLCuitInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLCuitInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLCuitInquilinos.setText("CUIT");
+        jLCuitInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTLugarTrabajoInquilinos.setBackground(new java.awt.Color(153, 153, 153));
+        jTLugarTrabajoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTLugarTrabajoInquilinos.setForeground(new java.awt.Color(51, 51, 51));
+        jTLugarTrabajoInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTLugarTrabajoInquilinosActionPerformed(evt);
+            }
+        });
+
+        jLLugarTrabajoInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLLugarTrabajoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLLugarTrabajoInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLLugarTrabajoInquilinos.setText("Lugar de Trabajo");
+        jLLugarTrabajoInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTCuitInquilinos.setBackground(new java.awt.Color(153, 153, 153));
+        jTCuitInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTCuitInquilinos.setForeground(new java.awt.Color(51, 51, 51));
+        jTCuitInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTCuitInquilinosActionPerformed(evt);
+            }
+        });
+
+        jLActivoInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLActivoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLActivoInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLActivoInquilinos.setText("Activo");
+        jLActivoInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTActivoInquilinos.setBackground(new java.awt.Color(153, 153, 153));
+        jTActivoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTActivoInquilinos.setForeground(new java.awt.Color(51, 51, 51));
+        jTActivoInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTActivoInquilinosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLTituloAlquiler1)
+                .addContainerGap(230, Short.MAX_VALUE)
+                .addComponent(jLTituloInquilinos)
                 .addGap(242, 242, 242))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(153, 153, 153)
-                .addComponent(jBNuevo9)
-                .addGap(18, 18, 18)
-                .addComponent(jBNuevo10)
-                .addGap(18, 18, 18)
-                .addComponent(jBNuevo11)
-                .addGap(18, 18, 18)
-                .addComponent(jBNuevo12)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(192, 192, 192)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel46)
+                        .addComponent(jBNuevoInquilinos)
                         .addGap(18, 18, 18)
-                        .addComponent(jCBusquedaContrato1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTIDContrato1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 207, Short.MAX_VALUE))
+                        .addComponent(jBModificarInquilinos)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBEliminarInquilinos)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBSalirInquilinos))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(jLIdInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTIDContrato1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(jLApellidoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTApellidoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(jLDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(jLNombreInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTNombreInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(jLCuitInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTCuitInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(jLLugarTrabajoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTLugarTrabajoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(jLActivoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTActivoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLBusquedaInquilinos)
+                        .addGap(18, 18, 18)
+                        .addComponent(jCBusquedaInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 193, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jLTituloAlquiler1)
-                .addGap(41, 41, 41)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel46)
-                    .addComponent(jCBusquedaContrato1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addComponent(jLTituloInquilinos)
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLBusquedaInquilinos)
+                    .addComponent(jCBusquedaInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(57, 57, 57)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTIDContrato1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel47))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 273, Short.MAX_VALUE)
+                    .addComponent(jLIdInquilinos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBNuevo12)
-                    .addComponent(jBNuevo9)
-                    .addComponent(jBNuevo10)
-                    .addComponent(jBNuevo11))
-                .addGap(36, 36, 36))
+                    .addComponent(jTNombreInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLNombreInquilinos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTApellidoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLApellidoInquilinos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLDNIInquilinos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTCuitInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLCuitInquilinos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTLugarTrabajoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLLugarTrabajoInquilinos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTActivoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLActivoInquilinos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBSalirInquilinos)
+                    .addComponent(jBNuevoInquilinos)
+                    .addComponent(jBModificarInquilinos)
+                    .addComponent(jBEliminarInquilinos))
+                .addGap(65, 65, 65))
         );
 
         jTabbedPane1.addTab("INQUILINOS", jPanel1);
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
-        jLTituloAlquiler2.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLTituloAlquiler2.setForeground(new java.awt.Color(51, 204, 255));
-        jLTituloAlquiler2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTituloAlquiler2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
-        jLTituloAlquiler2.setText("  Formulario Alquiler");
-        jLTituloAlquiler2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLTituloGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLTituloGarante.setForeground(new java.awt.Color(51, 204, 255));
+        jLTituloGarante.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLTituloGarante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
+        jLTituloGarante.setText("  Formulario Garante");
+        jLTituloGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel48.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel48.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel48.setText("Busqueda");
-        jLabel48.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLBusquedaGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLBusquedaGarante.setForeground(new java.awt.Color(51, 204, 255));
+        jLBusquedaGarante.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLBusquedaGarante.setText("Busqueda");
+        jLBusquedaGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jCBusquedaContrato2.setBackground(new java.awt.Color(153, 153, 153));
-        jCBusquedaContrato2.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+        jCBusquedaGarante.setBackground(new java.awt.Color(153, 153, 153));
+        jCBusquedaGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
 
-        jLabel49.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel49.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel49.setText("ID Contrato");
-        jLabel49.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jBNuevoGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBNuevoGarante.setForeground(new java.awt.Color(51, 204, 255));
+        jBNuevoGarante.setText("Nuevo");
+        jBNuevoGarante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jTIDContrato2.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDContrato2.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDContrato2.setForeground(new java.awt.Color(51, 51, 51));
+        jBModificarGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBModificarGarante.setForeground(new java.awt.Color(51, 204, 255));
+        jBModificarGarante.setText("Modificar");
+        jBModificarGarante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jBNuevo13.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo13.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo13.setText("Nuevo");
-        jBNuevo13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBEliminarGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBEliminarGarante.setForeground(new java.awt.Color(51, 204, 255));
+        jBEliminarGarante.setText("Eliminar");
+        jBEliminarGarante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jBNuevo14.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo14.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo14.setText("Modificar");
-        jBNuevo14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBSalirGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBSalirGarante.setForeground(new java.awt.Color(51, 204, 255));
+        jBSalirGarante.setText("Salir");
+        jBSalirGarante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jBNuevo15.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo15.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo15.setText("Eliminar");
-        jBNuevo15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLIDGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLIDGarante.setForeground(new java.awt.Color(51, 204, 255));
+        jLIDGarante.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLIDGarante.setText("ID Garante");
+        jLIDGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jBNuevo16.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo16.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo16.setText("Salir");
-        jBNuevo16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jTIDGarante1.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDGarante1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDGarante1.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDGarante1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTIDGarante1ActionPerformed(evt);
+            }
+        });
+
+        jLNombreGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLNombreGarante.setForeground(new java.awt.Color(51, 204, 255));
+        jLNombreGarante.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLNombreGarante.setText("Nombre");
+        jLNombreGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTNombreGarante.setBackground(new java.awt.Color(153, 153, 153));
+        jTNombreGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTNombreGarante.setForeground(new java.awt.Color(51, 51, 51));
+        jTNombreGarante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTNombreGaranteActionPerformed(evt);
+            }
+        });
+
+        jLApellidoGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLApellidoGarante.setForeground(new java.awt.Color(51, 204, 255));
+        jLApellidoGarante.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLApellidoGarante.setText("Apellido");
+        jLApellidoGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTApellidoGarante.setBackground(new java.awt.Color(153, 153, 153));
+        jTApellidoGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTApellidoGarante.setForeground(new java.awt.Color(51, 51, 51));
+        jTApellidoGarante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTApellidoGaranteActionPerformed(evt);
+            }
+        });
+
+        jLDNIGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLDNIGarante.setForeground(new java.awt.Color(51, 204, 255));
+        jLDNIGarante.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLDNIGarante.setText("DNI");
+        jLDNIGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTDNIGarante.setBackground(new java.awt.Color(153, 153, 153));
+        jTDNIGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTDNIGarante.setForeground(new java.awt.Color(51, 51, 51));
+        jTDNIGarante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTDNIGaranteActionPerformed(evt);
+            }
+        });
+
+        jLDomicilio.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLDomicilio.setForeground(new java.awt.Color(51, 204, 255));
+        jLDomicilio.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLDomicilio.setText("Domicilio");
+        jLDomicilio.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTDomicilio.setBackground(new java.awt.Color(153, 153, 153));
+        jTDomicilio.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTDomicilio.setForeground(new java.awt.Color(51, 51, 51));
+        jTDomicilio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTDomicilioActionPerformed(evt);
+            }
+        });
+
+        jLTelefonoGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLTelefonoGarante.setForeground(new java.awt.Color(51, 204, 255));
+        jLTelefonoGarante.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLTelefonoGarante.setText("Telefono");
+        jLTelefonoGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTTelefonoGarante.setBackground(new java.awt.Color(153, 153, 153));
+        jTTelefonoGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTTelefonoGarante.setForeground(new java.awt.Color(51, 51, 51));
+        jTTelefonoGarante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTTelefonoGaranteActionPerformed(evt);
+            }
+        });
+
+        jLActivoGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLActivoGarante.setForeground(new java.awt.Color(51, 204, 255));
+        jLActivoGarante.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLActivoGarante.setText("Activo");
+        jLActivoGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTActivoGarante.setBackground(new java.awt.Color(153, 153, 153));
+        jTActivoGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTActivoGarante.setForeground(new java.awt.Color(51, 51, 51));
+        jTActivoGarante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTActivoGaranteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -1459,116 +1717,251 @@ public class MenuTest extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(238, 238, 238)
-                        .addComponent(jLTituloAlquiler2))
+                        .addGap(230, 230, 230)
+                        .addComponent(jLTituloGarante))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(173, 173, 173)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel48)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCBusquedaContrato2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jBNuevo13)
-                                .addGap(18, 18, 18)
-                                .addComponent(jBNuevo14)
-                                .addGap(18, 18, 18)
-                                .addComponent(jBNuevo15)
-                                .addGap(18, 18, 18)
-                                .addComponent(jBNuevo16))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTIDContrato2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(212, Short.MAX_VALUE))
+                        .addComponent(jLBusquedaGarante)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCBusquedaGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(232, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jBNuevoGarante)
+                .addGap(18, 18, 18)
+                .addComponent(jBModificarGarante)
+                .addGap(18, 18, 18)
+                .addComponent(jBEliminarGarante)
+                .addGap(18, 18, 18)
+                .addComponent(jBSalirGarante)
+                .addGap(167, 167, 167))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(233, 233, 233)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jLIDGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTIDGarante1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jLApellidoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTApellidoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jLDNIGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTDNIGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jLNombreGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTNombreGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jLDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jLTelefonoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTTelefonoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jLActivoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTActivoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(233, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLTituloAlquiler2)
+                .addGap(18, 18, 18)
+                .addComponent(jLTituloGarante)
                 .addGap(37, 37, 37)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel48)
-                    .addComponent(jCBusquedaContrato2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
+                    .addComponent(jLBusquedaGarante)
+                    .addComponent(jCBusquedaGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 324, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel49)
-                    .addComponent(jTIDContrato2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 236, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBNuevo13)
-                    .addComponent(jBNuevo14)
-                    .addComponent(jBNuevo15)
-                    .addComponent(jBNuevo16))
-                .addGap(48, 48, 48))
+                    .addComponent(jBNuevoGarante)
+                    .addComponent(jBModificarGarante)
+                    .addComponent(jBEliminarGarante)
+                    .addComponent(jBSalirGarante))
+                .addGap(66, 66, 66))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(167, 167, 167)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTIDGarante1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLIDGarante))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTNombreGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLNombreGarante))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTApellidoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLApellidoGarante))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTDNIGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLDNIGarante))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLDomicilio))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTTelefonoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLTelefonoGarante))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTActivoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLActivoGarante))
+                    .addContainerGap(168, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab("GARANTES", jPanel2);
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
 
-        jLTituloAlquiler3.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLTituloAlquiler3.setForeground(new java.awt.Color(51, 204, 255));
-        jLTituloAlquiler3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTituloAlquiler3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
-        jLTituloAlquiler3.setText("  Formulario Inspector");
-        jLTituloAlquiler3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLTituloInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLTituloInspector.setForeground(new java.awt.Color(51, 204, 255));
+        jLTituloInspector.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLTituloInspector.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
+        jLTituloInspector.setText("  Formulario Inspector");
+        jLTituloInspector.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel50.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel50.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel50.setText("Busqueda");
-        jLabel50.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLBusquedaInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLBusquedaInspector.setForeground(new java.awt.Color(51, 204, 255));
+        jLBusquedaInspector.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLBusquedaInspector.setText("Busqueda");
+        jLBusquedaInspector.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jCBusquedaContrato3.setBackground(new java.awt.Color(153, 153, 153));
-        jCBusquedaContrato3.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+        jCBusquedaInspector.setBackground(new java.awt.Color(153, 153, 153));
+        jCBusquedaInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
 
-        jLabel51.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel51.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel51.setText("ID Contrato");
-        jLabel51.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        jTIDContrato3.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDContrato3.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDContrato3.setForeground(new java.awt.Color(51, 51, 51));
-
-        jBNuevo17.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo17.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo17.setText("Nuevo");
-        jBNuevo17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBNuevo17.addActionListener(new java.awt.event.ActionListener() {
+        jBNuevoInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBNuevoInspector.setForeground(new java.awt.Color(51, 204, 255));
+        jBNuevoInspector.setText("Nuevo");
+        jBNuevoInspector.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBNuevoInspector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBNuevo17ActionPerformed(evt);
+                jBNuevoInspectorActionPerformed(evt);
             }
         });
 
-        jBNuevo18.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo18.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo18.setText("Modificar");
-        jBNuevo18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBNuevo18.addActionListener(new java.awt.event.ActionListener() {
+        jBModificarInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBModificarInspector.setForeground(new java.awt.Color(51, 204, 255));
+        jBModificarInspector.setText("Modificar");
+        jBModificarInspector.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBModificarInspector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBNuevo18ActionPerformed(evt);
+                jBModificarInspectorActionPerformed(evt);
             }
         });
 
-        jBNuevo19.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo19.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo19.setText("Eliminar");
-        jBNuevo19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBNuevo19.addActionListener(new java.awt.event.ActionListener() {
+        jBEliminarInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBEliminarInspector.setForeground(new java.awt.Color(51, 204, 255));
+        jBEliminarInspector.setText("Eliminar");
+        jBEliminarInspector.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBEliminarInspector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBNuevo19ActionPerformed(evt);
+                jBEliminarInspectorActionPerformed(evt);
             }
         });
 
-        jBNuevo20.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo20.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo20.setText("Salir");
-        jBNuevo20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBSalirInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBSalirInspector.setForeground(new java.awt.Color(51, 204, 255));
+        jBSalirInspector.setText("Salir");
+        jBSalirInspector.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLIDInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLIDInspector.setForeground(new java.awt.Color(51, 204, 255));
+        jLIDInspector.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLIDInspector.setText("ID Inspector");
+        jLIDInspector.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTIDInspector.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDInspector.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDInspector.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTIDInspectorActionPerformed(evt);
+            }
+        });
+
+        jLMatriculaInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLMatriculaInspector.setForeground(new java.awt.Color(51, 204, 255));
+        jLMatriculaInspector.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLMatriculaInspector.setText("Matricula");
+        jLMatriculaInspector.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTMatriculaInspector.setBackground(new java.awt.Color(153, 153, 153));
+        jTMatriculaInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTMatriculaInspector.setForeground(new java.awt.Color(51, 51, 51));
+        jTMatriculaInspector.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTMatriculaInspectorActionPerformed(evt);
+            }
+        });
+
+        jLNombreInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLNombreInspector.setForeground(new java.awt.Color(51, 204, 255));
+        jLNombreInspector.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLNombreInspector.setText("Nombre");
+        jLNombreInspector.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTNombreInspector.setBackground(new java.awt.Color(153, 153, 153));
+        jTNombreInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTNombreInspector.setForeground(new java.awt.Color(51, 51, 51));
+        jTNombreInspector.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTNombreInspectorActionPerformed(evt);
+            }
+        });
+
+        jLApellidoInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLApellidoInspector.setForeground(new java.awt.Color(51, 204, 255));
+        jLApellidoInspector.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLApellidoInspector.setText("Apellido");
+        jLApellidoInspector.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTApellidoInspector.setBackground(new java.awt.Color(153, 153, 153));
+        jTApellidoInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTApellidoInspector.setForeground(new java.awt.Color(51, 51, 51));
+        jTApellidoInspector.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTApellidoInspectorActionPerformed(evt);
+            }
+        });
+
+        jLTelefonoInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLTelefonoInspector.setForeground(new java.awt.Color(51, 204, 255));
+        jLTelefonoInspector.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLTelefonoInspector.setText("Telefono");
+        jLTelefonoInspector.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTTelefonoInspector.setBackground(new java.awt.Color(153, 153, 153));
+        jTTelefonoInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTTelefonoInspector.setForeground(new java.awt.Color(51, 51, 51));
+        jTTelefonoInspector.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTTelefonoInspectorActionPerformed(evt);
+            }
+        });
+
+        jLActivoInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLActivoInspector.setForeground(new java.awt.Color(51, 204, 255));
+        jLActivoInspector.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLActivoInspector.setText("Activo");
+        jLActivoInspector.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTActivoInspector.setBackground(new java.awt.Color(153, 153, 153));
+        jTActivoInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTActivoInspector.setForeground(new java.awt.Color(51, 51, 51));
+        jTActivoInspector.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTActivoInspectorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -1577,51 +1970,97 @@ public class MenuTest extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(245, 245, 245)
-                        .addComponent(jLTituloAlquiler3))
+                        .addGap(230, 230, 230)
+                        .addComponent(jLTituloInspector))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(181, 181, 181)
-                        .addComponent(jLabel50)
+                        .addComponent(jLBusquedaInspector)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCBusquedaContrato3, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jCBusquedaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(224, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(74, Short.MAX_VALUE)
-                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTIDContrato3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(392, 392, 392))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(166, 166, 166)
-                .addComponent(jBNuevo17)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jBNuevoInspector)
                 .addGap(18, 18, 18)
-                .addComponent(jBNuevo18)
+                .addComponent(jBModificarInspector)
                 .addGap(18, 18, 18)
-                .addComponent(jBNuevo19)
+                .addComponent(jBEliminarInspector)
                 .addGap(18, 18, 18)
-                .addComponent(jBNuevo20)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jBSalirInspector)
+                .addGap(160, 160, 160))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(233, 233, 233)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addComponent(jLIDInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTIDInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addComponent(jLNombreInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTNombreInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addComponent(jLApellidoInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTApellidoInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addComponent(jLMatriculaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTMatriculaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addComponent(jLTelefonoInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTTelefonoInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addComponent(jLActivoInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTActivoInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(233, Short.MAX_VALUE)))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jLTituloAlquiler3)
+                .addGap(18, 18, 18)
+                .addComponent(jLTituloInspector)
                 .addGap(37, 37, 37)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel50)
-                    .addComponent(jCBusquedaContrato3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
+                    .addComponent(jLBusquedaInspector)
+                    .addComponent(jCBusquedaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 307, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel51)
-                    .addComponent(jTIDContrato3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 235, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBNuevo17)
-                    .addComponent(jBNuevo18)
-                    .addComponent(jBNuevo19)
-                    .addComponent(jBNuevo20))
-                .addGap(41, 41, 41))
+                    .addComponent(jBNuevoInspector)
+                    .addComponent(jBModificarInspector)
+                    .addComponent(jBEliminarInspector)
+                    .addComponent(jBSalirInspector))
+                .addGap(83, 83, 83))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(182, 182, 182)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTIDInspector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLIDInspector))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTMatriculaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLMatriculaInspector))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTNombreInspector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLNombreInspector))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTApellidoInspector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLApellidoInspector))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTTelefonoInspector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLTelefonoInspector))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTActivoInspector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLActivoInspector))
+                    .addContainerGap(183, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab("INSPECTORES", jPanel3);
@@ -1656,7 +2095,7 @@ public class MenuTest extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< Updated upstream
+
     private void jMIngresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIngresoActionPerformed
 
 
@@ -1670,8 +2109,7 @@ public class MenuTest extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
-=======
->>>>>>> Stashed changes
+
     private void jTDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDireccionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTDireccionActionPerformed
@@ -1771,7 +2209,7 @@ public class MenuTest extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTActivoActionPerformed
 
-<<<<<<< Updated upstream
+
     private void headerMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMouseDragged
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
@@ -1845,23 +2283,99 @@ public class MenuTest extends javax.swing.JFrame {
     private void jLSalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLSalirMouseExited
         jLSalir.setForeground(new Color(255, 255, 255));
     }//GEN-LAST:event_jLSalirMouseExited
-=======
+
     private void jTIDContrato1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTIDContrato1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTIDContrato1ActionPerformed
 
-    private void jBNuevo18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevo18ActionPerformed
+    private void jBModificarInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarInspectorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBNuevo18ActionPerformed
+    }//GEN-LAST:event_jBModificarInspectorActionPerformed
 
-    private void jBNuevo17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevo17ActionPerformed
+    private void jBNuevoInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoInspectorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBNuevo17ActionPerformed
+    }//GEN-LAST:event_jBNuevoInspectorActionPerformed
 
-    private void jBNuevo19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevo19ActionPerformed
+    private void jBEliminarInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarInspectorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBNuevo19ActionPerformed
->>>>>>> Stashed changes
+    }//GEN-LAST:event_jBEliminarInspectorActionPerformed
+
+    private void jTNombreInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNombreInquilinosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTNombreInquilinosActionPerformed
+
+    private void jTApellidoInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTApellidoInquilinosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTApellidoInquilinosActionPerformed
+
+    private void jTDNIInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDNIInquilinosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTDNIInquilinosActionPerformed
+
+    private void jTLugarTrabajoInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTLugarTrabajoInquilinosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTLugarTrabajoInquilinosActionPerformed
+
+    private void jTCuitInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTCuitInquilinosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTCuitInquilinosActionPerformed
+
+    private void jTActivoInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTActivoInquilinosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTActivoInquilinosActionPerformed
+
+    private void jTIDGarante1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTIDGarante1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTIDGarante1ActionPerformed
+
+    private void jTNombreGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNombreGaranteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTNombreGaranteActionPerformed
+
+    private void jTApellidoGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTApellidoGaranteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTApellidoGaranteActionPerformed
+
+    private void jTDNIGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDNIGaranteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTDNIGaranteActionPerformed
+
+    private void jTDomicilioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDomicilioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTDomicilioActionPerformed
+
+    private void jTTelefonoGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTTelefonoGaranteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTTelefonoGaranteActionPerformed
+
+    private void jTActivoGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTActivoGaranteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTActivoGaranteActionPerformed
+
+    private void jTIDInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTIDInspectorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTIDInspectorActionPerformed
+
+    private void jTMatriculaInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTMatriculaInspectorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTMatriculaInspectorActionPerformed
+
+    private void jTNombreInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNombreInspectorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTNombreInspectorActionPerformed
+
+    private void jTApellidoInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTApellidoInspectorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTApellidoInspectorActionPerformed
+
+    private void jTTelefonoInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTTelefonoInspectorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTTelefonoInspectorActionPerformed
+
+    private void jTActivoInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTActivoInspectorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTActivoInspectorActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -1904,47 +2418,70 @@ public class MenuTest extends javax.swing.JFrame {
     private javax.swing.JLabel exitTxt;
     private javax.swing.JPanel header;
     private javax.swing.JButton jBEliminar;
+    private javax.swing.JButton jBEliminarGarante;
+    private javax.swing.JButton jBEliminarInquilinos;
+    private javax.swing.JButton jBEliminarInspector;
     private javax.swing.JButton jBModificar;
+    private javax.swing.JButton jBModificarGarante;
+    private javax.swing.JButton jBModificarInquilinos;
+    private javax.swing.JButton jBModificarInspector;
     private javax.swing.JButton jBNuevo;
     private javax.swing.JButton jBNuevo1;
-    private javax.swing.JButton jBNuevo10;
-    private javax.swing.JButton jBNuevo11;
-    private javax.swing.JButton jBNuevo12;
-    private javax.swing.JButton jBNuevo13;
-    private javax.swing.JButton jBNuevo14;
-    private javax.swing.JButton jBNuevo15;
-    private javax.swing.JButton jBNuevo16;
-    private javax.swing.JButton jBNuevo17;
-    private javax.swing.JButton jBNuevo18;
-    private javax.swing.JButton jBNuevo19;
     private javax.swing.JButton jBNuevo2;
-    private javax.swing.JButton jBNuevo20;
     private javax.swing.JButton jBNuevo3;
     private javax.swing.JButton jBNuevo4;
     private javax.swing.JButton jBNuevo5;
     private javax.swing.JButton jBNuevo6;
     private javax.swing.JButton jBNuevo7;
     private javax.swing.JButton jBNuevo8;
-    private javax.swing.JButton jBNuevo9;
+    private javax.swing.JButton jBNuevoGarante;
+    private javax.swing.JButton jBNuevoInquilinos;
+    private javax.swing.JButton jBNuevoInspector;
     private javax.swing.JButton jBSalir;
+    private javax.swing.JButton jBSalirGarante;
+    private javax.swing.JButton jBSalirInquilinos;
+    private javax.swing.JButton jBSalirInspector;
     private javax.swing.JComboBox<Propiedad> jCBusquedaContrato;
-    private javax.swing.JComboBox<Propiedad> jCBusquedaContrato1;
-    private javax.swing.JComboBox<Propiedad> jCBusquedaContrato2;
-    private javax.swing.JComboBox<Propiedad> jCBusquedaContrato3;
+    private javax.swing.JComboBox<Propiedad> jCBusquedaGarante;
+    private javax.swing.JComboBox<Propiedad> jCBusquedaInquilinos;
+    private javax.swing.JComboBox<Propiedad> jCBusquedaInspector;
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropiedades;
     private javax.swing.JComboBox<Propiedad> jCBusquedaPropiedades1;
     private com.toedter.calendar.JDateChooser jDFechaContrato;
     private com.toedter.calendar.JDateChooser jDFechaFin;
     private com.toedter.calendar.JDateChooser jDFechaInicio;
+    private javax.swing.JLabel jLActivoGarante;
+    private javax.swing.JLabel jLActivoInquilinos;
+    private javax.swing.JLabel jLActivoInspector;
     private javax.swing.JLabel jLAlquileres;
+    private javax.swing.JLabel jLApellidoGarante;
+    private javax.swing.JLabel jLApellidoInquilinos;
+    private javax.swing.JLabel jLApellidoInspector;
+    private javax.swing.JLabel jLBusquedaGarante;
+    private javax.swing.JLabel jLBusquedaInquilinos;
+    private javax.swing.JLabel jLBusquedaInspector;
+    private javax.swing.JLabel jLCuitInquilinos;
+    private javax.swing.JLabel jLDNIGarante;
+    private javax.swing.JLabel jLDNIInquilinos;
+    private javax.swing.JLabel jLDomicilio;
+    private javax.swing.JLabel jLIDGarante;
+    private javax.swing.JLabel jLIDInspector;
+    private javax.swing.JLabel jLIdInquilinos;
     private javax.swing.JLabel jLLogin;
+    private javax.swing.JLabel jLLugarTrabajoInquilinos;
+    private javax.swing.JLabel jLMatriculaInspector;
+    private javax.swing.JLabel jLNombreGarante;
+    private javax.swing.JLabel jLNombreInquilinos;
+    private javax.swing.JLabel jLNombreInspector;
     private javax.swing.JLabel jLPropiedades;
     private javax.swing.JLabel jLPropietarios;
     private javax.swing.JLabel jLSalir;
+    private javax.swing.JLabel jLTelefonoGarante;
+    private javax.swing.JLabel jLTelefonoInspector;
     private javax.swing.JLabel jLTituloAlquiler;
-    private javax.swing.JLabel jLTituloAlquiler1;
-    private javax.swing.JLabel jLTituloAlquiler2;
-    private javax.swing.JLabel jLTituloAlquiler3;
+    private javax.swing.JLabel jLTituloGarante;
+    private javax.swing.JLabel jLTituloInquilinos;
+    private javax.swing.JLabel jLTituloInspector;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1983,24 +2520,11 @@ public class MenuTest extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jListados;
-<<<<<<< Updated upstream
-    private javax.swing.JMenuItem jMIngreso;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-=======
-    private javax.swing.JPanel jPBanner;
->>>>>>> Stashed changes
     private javax.swing.JPanel jPBarraNavegador;
     private javax.swing.JPanel jPBarraNavegador1;
     private javax.swing.JPanel jPBarraNavegador2;
@@ -2017,17 +2541,27 @@ public class MenuTest extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTActivo;
+    private javax.swing.JTextField jTActivoGarante;
+    private javax.swing.JTextField jTActivoInquilinos;
+    private javax.swing.JTextField jTActivoInspector;
     private javax.swing.JTextField jTAltura;
     private javax.swing.JTextField jTAntiguedad;
+    private javax.swing.JTextField jTApellidoGarante;
+    private javax.swing.JTextField jTApellidoInquilinos;
+    private javax.swing.JTextField jTApellidoInspector;
+    private javax.swing.JTextField jTCuitInquilinos;
+    private javax.swing.JTextField jTDNIGarante;
+    private javax.swing.JTextField jTDNIInquilinos;
     private javax.swing.JTextField jTDireccion;
     private javax.swing.JTextField jTDisponibilidad;
+    private javax.swing.JTextField jTDomicilio;
     private javax.swing.JTextField jTEstado;
     private javax.swing.JTextField jTIDContrato;
     private javax.swing.JTextField jTIDContrato1;
-    private javax.swing.JTextField jTIDContrato2;
-    private javax.swing.JTextField jTIDContrato3;
     private javax.swing.JTextField jTIDGarante;
+    private javax.swing.JTextField jTIDGarante1;
     private javax.swing.JTextField jTIDInquilino;
+    private javax.swing.JTextField jTIDInspector;
     private javax.swing.JTextField jTIDPropiedad;
     private javax.swing.JTextField jTIDPropietario;
     private javax.swing.JTextField jTIDPropietario3;
@@ -2040,10 +2574,17 @@ public class MenuTest extends javax.swing.JFrame {
     private javax.swing.JTextField jTIDPropietarios7;
     private javax.swing.JTextField jTIDVendedor;
     private javax.swing.JTextField jTInspector;
+    private javax.swing.JTextField jTLugarTrabajoInquilinos;
+    private javax.swing.JTextField jTMatriculaInspector;
+    private javax.swing.JTextField jTNombreGarante;
+    private javax.swing.JTextField jTNombreInquilinos;
+    private javax.swing.JTextField jTNombreInspector;
     private javax.swing.JTextArea jTObservaciones;
     private javax.swing.JTextField jTPrecioTasado;
     private javax.swing.JTextField jTServicios;
     private javax.swing.JTextField jTSuperTotal;
+    private javax.swing.JTextField jTTelefonoGarante;
+    private javax.swing.JTextField jTTelefonoInspector;
     private javax.swing.JTextField jTTipo;
     private javax.swing.JTextField jTVigencia;
     private javax.swing.JTextField jTZona;
