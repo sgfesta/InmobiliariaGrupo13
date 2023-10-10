@@ -1353,6 +1353,12 @@ public class MenuTest extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane1StateChanged(evt);
+            }
+        });
+
         jPInquilinos.setBackground(new java.awt.Color(51, 51, 51));
 
         jLTituloInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
@@ -2427,6 +2433,17 @@ public class MenuTest extends javax.swing.JFrame {
     private void jTActivoInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTActivoInspectorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTActivoInspectorActionPerformed
+
+    private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
+        int SelectPestaña = jTabbedPane1.getSelectedIndex();
+        if(SelectPestaña == 0){
+            paraListadosInquilinosTrue();
+        } else if(SelectPestaña == 1){
+            paraListadosGaranteTrue();
+        } else if(SelectPestaña == 2){
+            paraListadosInspectorTrue();
+        }
+    }//GEN-LAST:event_jTabbedPane1StateChanged
 
     /**
      * @param args the command line arguments
