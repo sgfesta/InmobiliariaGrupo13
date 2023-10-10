@@ -50,6 +50,7 @@ public class MenuTest extends javax.swing.JFrame {
         jPCards = new javax.swing.JPanel();
         jPCardFondo = new javax.swing.JPanel();
         logo1 = new javax.swing.JLabel();
+        jPLogin1 = new javax.swing.JPanel();
         jPPropiedades = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -442,6 +443,21 @@ public class MenuTest extends javax.swing.JFrame {
         );
 
         Fondo.add(jPCardFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 55, 760, 590));
+
+        jPLogin1.setBackground(new java.awt.Color(255, 51, 153));
+
+        javax.swing.GroupLayout jPLogin1Layout = new javax.swing.GroupLayout(jPLogin1);
+        jPLogin1.setLayout(jPLogin1Layout);
+        jPLogin1Layout.setHorizontalGroup(
+            jPLogin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 748, Short.MAX_VALUE)
+        );
+        jPLogin1Layout.setVerticalGroup(
+            jPLogin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 635, Short.MAX_VALUE)
+        );
+
+        Fondo.add(jPLogin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 65, -1, -1));
 
         jPPropiedades.setBackground(new java.awt.Color(55, 55, 54));
         jPPropiedades.setMinimumSize(new java.awt.Dimension(748, 635));
@@ -2251,7 +2267,7 @@ public class MenuTest extends javax.swing.JFrame {
 
     private void jLLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLLoginMouseClicked
 
-        jPLogin.setVisible(true);
+        jPLogin1.setVisible(true);
         jPCardPropietarios.setVisible(false);
         jPPropiedades.setVisible(false);
         jPCardAlquileres.setVisible(false);
@@ -2607,6 +2623,7 @@ public class MenuTest extends javax.swing.JFrame {
     private javax.swing.JPanel jPInquilinos;
     private javax.swing.JPanel jPInspector;
     private javax.swing.JPanel jPLogin;
+    private javax.swing.JPanel jPLogin1;
     private javax.swing.JPanel jPMenuLateral;
     private javax.swing.JPanel jPPropiedades;
     private javax.swing.JScrollPane jScrollPane1;
