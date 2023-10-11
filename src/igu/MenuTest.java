@@ -48,7 +48,6 @@ public class MenuTest extends javax.swing.JFrame {
         jListados = new javax.swing.JLabel();
         jLSalir = new javax.swing.JLabel();
         exitTxt = new javax.swing.JLabel();
-        header = new javax.swing.JPanel();
         jPCards = new javax.swing.JPanel();
         jPCardFondo = new javax.swing.JPanel();
         logo1 = new javax.swing.JLabel();
@@ -228,6 +227,11 @@ public class MenuTest extends javax.swing.JFrame {
         jTTelefonoInspector = new javax.swing.JTextField();
         jLActivoInspector = new javax.swing.JLabel();
         jTActivoInspector = new javax.swing.JTextField();
+        header = new javax.swing.JPanel();
+        jLNivelAccesoBanner = new javax.swing.JLabel();
+        jLUsuarioBannerIcon1 = new javax.swing.JLabel();
+        jLNombreUsuarioBanner = new javax.swing.JLabel();
+        jBCerrarSesionBanner = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GRUPO 13 INMOBILIARIA");
@@ -416,20 +420,6 @@ public class MenuTest extends javax.swing.JFrame {
 
         Fondo.add(jPMenuLateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 670));
 
-        header.setBackground(new java.awt.Color(51, 204, 255));
-        header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                headerMouseDragged(evt);
-            }
-        });
-        header.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                headerMousePressed(evt);
-            }
-        });
-        header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Fondo.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1030, 60));
-
         jPCards.setLayout(new java.awt.CardLayout());
         Fondo.add(jPCards, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -447,7 +437,7 @@ public class MenuTest extends javax.swing.JFrame {
             .addGroup(jPCardFondoLayout.createSequentialGroup()
                 .addGap(278, 278, 278)
                 .addComponent(logo1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(270, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPCardFondoLayout.setVerticalGroup(
             jPCardFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2268,6 +2258,43 @@ public class MenuTest extends javax.swing.JFrame {
 
         Fondo.add(jPCardListados, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 60, -1, 600));
 
+        header.setBackground(new java.awt.Color(51, 153, 255));
+        header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                headerMouseDragged(evt);
+            }
+        });
+        header.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                headerMousePressed(evt);
+            }
+        });
+        header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLNivelAccesoBanner.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jLNivelAccesoBanner.setForeground(new java.awt.Color(255, 255, 255));
+        jLNivelAccesoBanner.setText("Nivel Acceso: 10");
+        header.add(jLNivelAccesoBanner, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 110, 30));
+
+        jLUsuarioBannerIcon1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jLUsuarioBannerIcon1.setForeground(new java.awt.Color(255, 255, 255));
+        jLUsuarioBannerIcon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White_User_icon-icons.com_55902.png"))); // NOI18N
+        jLUsuarioBannerIcon1.setText("USUARIO:");
+        header.add(jLUsuarioBannerIcon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 100, 30));
+
+        jLNombreUsuarioBanner.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jLNombreUsuarioBanner.setForeground(new java.awt.Color(255, 255, 255));
+        jLNombreUsuarioBanner.setText("Sergio G Festa");
+        header.add(jLNombreUsuarioBanner, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 130, 30));
+
+        jBCerrarSesionBanner.setBackground(new java.awt.Color(255, 255, 255));
+        jBCerrarSesionBanner.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBCerrarSesionBanner.setForeground(new java.awt.Color(51, 51, 51));
+        jBCerrarSesionBanner.setText("Cerrar Sesion");
+        header.add(jBCerrarSesionBanner, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, -1, 30));
+
+        Fondo.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 760, 60));
+
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 670));
 
         pack();
@@ -2700,6 +2727,7 @@ public class MenuTest extends javax.swing.JFrame {
     private javax.swing.JPanel bg;
     private javax.swing.JLabel exitTxt;
     private javax.swing.JPanel header;
+    private javax.swing.JButton jBCerrarSesionBanner;
     private javax.swing.JButton jBEliminar;
     private javax.swing.JButton jBEliminarGarante;
     private javax.swing.JButton jBEliminarInquilinos;
@@ -2753,9 +2781,11 @@ public class MenuTest extends javax.swing.JFrame {
     private javax.swing.JLabel jLLogin;
     private javax.swing.JLabel jLLugarTrabajoInquilinos;
     private javax.swing.JLabel jLMatriculaInspector;
+    private javax.swing.JLabel jLNivelAccesoBanner;
     private javax.swing.JLabel jLNombreGarante;
     private javax.swing.JLabel jLNombreInquilinos;
     private javax.swing.JLabel jLNombreInspector;
+    private javax.swing.JLabel jLNombreUsuarioBanner;
     private javax.swing.JLabel jLPropiedades;
     private javax.swing.JLabel jLPropietarios;
     private javax.swing.JLabel jLSalir;
@@ -2765,6 +2795,7 @@ public class MenuTest extends javax.swing.JFrame {
     private javax.swing.JLabel jLTituloGarante;
     private javax.swing.JLabel jLTituloInquilinos;
     private javax.swing.JLabel jLTituloInspector;
+    private javax.swing.JLabel jLUsuarioBannerIcon1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
