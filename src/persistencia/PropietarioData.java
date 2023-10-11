@@ -42,7 +42,7 @@ public class PropietarioData {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
                 propietario.setIdPropietario(rs.getInt(1));
-                // MENSAJE DE INGRESO EN EL METODO
+                JOptionPane.showMessageDialog(null, "Propietario guardado correctamente");
             }
              //Cierro la Conexion
             ps.close();
@@ -69,6 +69,7 @@ public class PropietarioData {
             ps.setInt(7, propietario.getIdPropietario());
             int exito = ps.executeUpdate();
             if (exito == 1) {
+                JOptionPane.showMessageDialog(null, "Propietario modificado con Exito");
             }
              //Cierro la Conexion
             ps.close();
@@ -86,7 +87,7 @@ public class PropietarioData {
             ps.setInt(1, dni);
             int exito = ps.executeUpdate();
             if (exito == 1) {
-
+                JOptionPane.showMessageDialog(null, "Propietario eliminado");
             }
              //Cierro la Conexion
             ps.close();
@@ -160,7 +161,7 @@ public class PropietarioData {
     }
 
     public List<Propietario> listarPropietarios() {
-        String sql = "SELECT idPropietario,nombre, apellido, dni, telefono, domicilio, activo FROM alumno";
+        String sql = "SELECT idPropietario,nombre, apellido, dni, telefono, domicilio, activo FROM propietario";
         ArrayList<Propietario> propietarios = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
