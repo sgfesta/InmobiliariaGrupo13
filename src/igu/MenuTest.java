@@ -127,10 +127,11 @@ public class MenuTest extends javax.swing.JFrame {
         jTIDPropietarios6 = new javax.swing.JTextField();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        jTIDPropietarios7 = new javax.swing.JTextField();
         jBNuevo2 = new javax.swing.JButton();
         jBNuevo3 = new javax.swing.JButton();
         jBNuevo4 = new javax.swing.JButton();
+        jrbPropietario = new javax.swing.JRadioButton();
+        jLabel46 = new javax.swing.JLabel();
         jPCardAlquileres = new javax.swing.JPanel();
         jPBarraNavegador2 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
@@ -964,6 +965,11 @@ public class MenuTest extends javax.swing.JFrame {
         jBNuevo1.setForeground(new java.awt.Color(51, 204, 255));
         jBNuevo1.setText("Modificar");
         jBNuevo1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBNuevo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBNuevo1ActionPerformed(evt);
+            }
+        });
 
         jTIDPropietarios2.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropietarios2.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -1021,24 +1027,42 @@ public class MenuTest extends javax.swing.JFrame {
         jLabel34.setText("Activo");
         jLabel34.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jTIDPropietarios7.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDPropietarios7.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDPropietarios7.setForeground(new java.awt.Color(51, 51, 51));
-
         jBNuevo2.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBNuevo2.setForeground(new java.awt.Color(51, 204, 255));
         jBNuevo2.setText("Nuevo");
         jBNuevo2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBNuevo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBNuevo2ActionPerformed(evt);
+            }
+        });
 
         jBNuevo3.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBNuevo3.setForeground(new java.awt.Color(51, 204, 255));
         jBNuevo3.setText("Eliminar");
         jBNuevo3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBNuevo3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBNuevo3ActionPerformed(evt);
+            }
+        });
 
         jBNuevo4.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBNuevo4.setForeground(new java.awt.Color(51, 204, 255));
         jBNuevo4.setText("Salir");
         jBNuevo4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBNuevo4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBNuevo4ActionPerformed(evt);
+            }
+        });
+
+        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3844432-magnifier-search-zoom_110300.png"))); // NOI18N
+        jLabel46.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel46MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPCardPropietariosLayout = new javax.swing.GroupLayout(jPCardPropietarios);
         jPCardPropietarios.setLayout(jPCardPropietariosLayout);
@@ -1075,15 +1099,19 @@ public class MenuTest extends javax.swing.JFrame {
                                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel34))
                         .addGap(18, 18, 18)
-                        .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTIDPropietarios7)
-                            .addComponent(jTIDPropietarios6)
-                            .addComponent(jTIDPropietarios5)
-                            .addComponent(jTIDPropietarios4)
-                            .addComponent(jTIDPropietarios3)
-                            .addComponent(jTIDPropietario)
-                            .addComponent(jTIDPropietarios2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(237, 237, 237))
+                        .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jrbPropietario)
+                            .addGroup(jPCardPropietariosLayout.createSequentialGroup()
+                                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTIDPropietarios6)
+                                    .addComponent(jTIDPropietarios5)
+                                    .addComponent(jTIDPropietarios4)
+                                    .addComponent(jTIDPropietarios3)
+                                    .addComponent(jTIDPropietario)
+                                    .addComponent(jTIDPropietarios2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel46)))
+                        .addGap(176, 176, 176))
                     .addComponent(jPBarraNavegador1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         jPCardPropietariosLayout.setVerticalGroup(
@@ -1112,7 +1140,8 @@ public class MenuTest extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31)
-                    .addComponent(jTIDPropietarios4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTIDPropietarios4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel46))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
@@ -1124,8 +1153,8 @@ public class MenuTest extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel34)
-                    .addComponent(jTIDPropietarios7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                    .addComponent(jrbPropietario))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevo2)
                     .addComponent(jBNuevo1)
@@ -2646,6 +2675,36 @@ public class MenuTest extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTTelefonoGaranteActionPerformed
 
+    private void jBNuevo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevo2ActionPerformed
+            agregarPropietario();
+            cargarComboPropietarios();
+    }//GEN-LAST:event_jBNuevo2ActionPerformed
+
+    private void jBNuevo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevo1ActionPerformed
+        modificarPropietario();
+    cargarComboPropietarios();
+    }//GEN-LAST:event_jBNuevo1ActionPerformed
+
+    private void jBNuevo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevo3ActionPerformed
+         eliminarPropietario();
+        cargarComboPropietarios();
+    }//GEN-LAST:event_jBNuevo3ActionPerformed
+
+    private void jBNuevo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevo4ActionPerformed
+        jPCards.setVisible(true);
+        bg.setVisible(false);
+        jPLogin1.setVisible(false);
+        jPCardPropietarios.setVisible(false);
+        jPPropiedades.setVisible(false);
+        jPCardAlquileres.setVisible(false);
+        jPCardListados.setVisible(false);
+        jPCardFondo.setVisible(false);
+    }//GEN-LAST:event_jBNuevo4ActionPerformed
+
+    private void jLabel46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel46MouseClicked
+       buscarPropietario();
+    }//GEN-LAST:event_jLabel46MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2792,6 +2851,7 @@ public class MenuTest extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -2848,7 +2908,6 @@ public class MenuTest extends javax.swing.JFrame {
     private javax.swing.JTextField jTIDPropietarios4;
     private javax.swing.JTextField jTIDPropietarios5;
     private javax.swing.JTextField jTIDPropietarios6;
-    private javax.swing.JTextField jTIDPropietarios7;
     private javax.swing.JTextField jTIDVendedor;
     private javax.swing.JTextField jTInspector;
     private javax.swing.JTextField jTLugarTrabajoInquilinos;
@@ -2866,6 +2925,7 @@ public class MenuTest extends javax.swing.JFrame {
     private javax.swing.JTextField jTVigencia;
     private javax.swing.JTextField jTZona;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JRadioButton jrbPropietario;
     private javax.swing.JPanel loginBtn;
     private javax.swing.JLabel loginBtnTxt;
     private javax.swing.JLabel logo;
@@ -2925,7 +2985,7 @@ public class MenuTest extends javax.swing.JFrame {
         jTIDPropietarios4.setVisible(false);
         jTIDPropietarios5.setVisible(false);
         jTIDPropietarios6.setVisible(false);
-        jTIDPropietarios7.setVisible(false);
+        jrbPropietario.setVisible(false);
         jBNuevo3.setVisible(false);
         jBNuevo1.setVisible(false);
         jBNuevo2.setVisible(false);
@@ -2940,7 +3000,7 @@ public class MenuTest extends javax.swing.JFrame {
         jTIDPropietarios4.setVisible(true);
         jTIDPropietarios5.setVisible(true);
         jTIDPropietarios6.setVisible(true);
-        jTIDPropietarios7.setVisible(true);
+        jrbPropietario.setVisible(true);
         jBNuevo3.setVisible(true);
         jBNuevo1.setVisible(true);
         jBNuevo2.setVisible(true);
@@ -3135,7 +3195,7 @@ public class MenuTest extends javax.swing.JFrame {
         jTActivoInspector.setVisible(true);
     }
     
-        private void cargarComboPropietarios() {
+   private void cargarComboPropietarios() {
         jCBusquedaPropiedades1.removeAllItems();
 
         List<Propietario> propietarios = pd.listarPropietarios();
@@ -3144,4 +3204,62 @@ public class MenuTest extends javax.swing.JFrame {
             jCBusquedaPropiedades1.addItem(propietario);
         }
     }
+     public void agregarPropietario(){
+             String ap = jTIDPropietarios3.getText();
+                String nom = jTIDPropietarios2.getText();
+        int documento = Integer.parseInt(jTIDPropietarios4.getText());
+        int tel = Integer.parseInt(jTIDPropietarios5.getText());
+                String dom = jTIDPropietarios6.getText();
+                boolean est = jrbPropietario.isSelected();
+                Propietario nuevo = new Propietario(ap, nom, documento, tel, dom, est);
+                pd.guardarPropietario(nuevo);
+        JOptionPane.showMessageDialog(this, "Propietario ingresado correctamente");
+     }
+     
+     
+     public void modificarPropietario() {
+        try {
+            Propietario pSelect = (Propietario) jCBusquedaPropiedades1.getSelectedItem();
+            int id = Integer.parseInt(jTIDPropietario.getText());
+            String ap = jTIDPropietarios3.getText();
+            String nom = jTIDPropietarios2.getText();
+            int documento = Integer.parseInt(jTIDPropietarios4.getText());
+            int tel = Integer.parseInt(jTIDPropietarios5.getText());
+            String dom = jTIDPropietarios6.getText();
+            boolean est = jrbPropietario.isSelected();
+            Propietario nuevoM = new Propietario(id, ap, nom, documento, tel, dom, est);
+            pd.modificarAlumno(nuevoM);
+             JOptionPane.showMessageDialog(this, "Propietario modificado exitosamente");
+        }
+        catch(NullPointerException ex){
+            JOptionPane.showMessageDialog(this, "Error al modificar "+ex.getMessage());
+        }
+}
+     
+     public void eliminarPropietario(){
+         Propietario pSelect = (Propietario) jCBusquedaPropiedades1.getSelectedItem();
+         pd.eliminarPropietario(pSelect.getDni());
+            JOptionPane.showMessageDialog(this, "Propietario eliminado");
+     }
+    
+     public void buscarPropietario(){
+         try {
+            int pSelect = Integer.parseInt(jTIDPropietarios4.getText());
+            boolean activo = jrbPropietario.isSelected();
+           Propietario ps = pd.buscarPropietarioPorDni(pSelect, activo); 
+             if(ps != null){
+                 jTIDPropietario.setText(String.valueOf(ps.getIdPropietario()));
+                 jTIDPropietarios2.setText(ps.getNombre());
+                 jTIDPropietarios3.setText(ps.getApellido());
+                 jTIDPropietarios4.setText(String.valueOf(ps.getDni()));
+                 jTIDPropietarios5.setText(String.valueOf(ps.getTelefono()));
+                 jTIDPropietarios6.setText(ps.getDomicilio());
+                 jrbPropietario.setSelected(ps.isActivo());
+             }
+     }
+         catch(NumberFormatException ex){
+             JOptionPane.showMessageDialog(this, "Error al buscar "+ex.getMessage());
+         }
+     
+}
 }
