@@ -1450,16 +1450,22 @@
                                   <Component id="jLabel34" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jTIDPropietarios7" max="32767" attributes="0"/>
-                                  <Component id="jTIDPropietarios6" max="32767" attributes="0"/>
-                                  <Component id="jTIDPropietarios5" max="32767" attributes="0"/>
-                                  <Component id="jTIDPropietarios4" max="32767" attributes="0"/>
-                                  <Component id="jTIDPropietarios3" max="32767" attributes="0"/>
-                                  <Component id="jTIDPropietario" max="32767" attributes="0"/>
-                                  <Component id="jTIDPropietarios2" min="-2" pref="131" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jrbPropietario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jTIDPropietarios6" max="32767" attributes="0"/>
+                                          <Component id="jTIDPropietarios5" max="32767" attributes="0"/>
+                                          <Component id="jTIDPropietarios4" max="32767" attributes="0"/>
+                                          <Component id="jTIDPropietarios3" max="32767" attributes="0"/>
+                                          <Component id="jTIDPropietario" max="32767" attributes="0"/>
+                                          <Component id="jTIDPropietarios2" min="-2" pref="131" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="237" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="176" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jPBarraNavegador1" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -1497,6 +1503,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTIDPropietarios4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel46" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1511,9 +1518,13 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTIDPropietarios7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jrbPropietario" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
+<<<<<<< Updated upstream
                       <EmptySpace pref="69" max="32767" attributes="0"/>
+=======
+                      <EmptySpace pref="89" max="32767" attributes="0"/>
+>>>>>>> Stashed changes
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jBNuevo2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBNuevo1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1656,6 +1667,9 @@
                   <Color id="Cursor de Mano"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBNuevo1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTIDPropietarios2">
               <Properties>
@@ -1800,19 +1814,6 @@
                 <Property name="verticalAlignment" type="int" value="3"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTIDPropietarios7">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="99" green="99" red="99" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI Semilight" size="12" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="33" red="33" type="rgb"/>
-                </Property>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JButton" name="jBNuevo2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1829,6 +1830,9 @@
                   <Color id="Cursor de Mano"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBNuevo2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jBNuevo3">
               <Properties>
@@ -1846,6 +1850,9 @@
                   <Color id="Cursor de Mano"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBNuevo3ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jBNuevo4">
               <Properties>
@@ -1863,6 +1870,21 @@
                   <Color id="Cursor de Mano"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBNuevo4ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="jrbPropietario">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel46">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imagenes/3844432-magnifier-search-zoom_110300.png"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel46MouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
