@@ -1057,6 +1057,8 @@ public class MenuTest extends javax.swing.JFrame {
             }
         });
 
+        jrbPropietario.setSelected(true);
+
         jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3844432-magnifier-search-zoom_110300.png"))); // NOI18N
         jLabel46.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
