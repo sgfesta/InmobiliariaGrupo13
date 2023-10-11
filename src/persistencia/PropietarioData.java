@@ -161,7 +161,7 @@ public class PropietarioData {
     }
 
     public List<Propietario> listarPropietarios() {
-        String sql = "SELECT idPropietario,nombre, apellido, dni, telefono, domicilio, activo FROM alumno";
+        String sql = "SELECT idPropietario,nombre, apellido, dni, telefono, domicilio, activo FROM propietario";
         ArrayList<Propietario> propietarios = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
