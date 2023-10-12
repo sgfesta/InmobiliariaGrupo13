@@ -1,4 +1,4 @@
-package igu;
+package igu.menuanterior;
 
 import java.awt.Color;
 import javax.swing.JOptionPane;
@@ -101,7 +101,6 @@ public class Login extends javax.swing.JFrame {
         });
         bg.add(userTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 290, 30));
 
-        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         bg.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 290, 20));
 
@@ -117,7 +116,6 @@ public class Login extends javax.swing.JFrame {
         });
         bg.add(passTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, 290, 30));
 
-        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         bg.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 290, 20));
 

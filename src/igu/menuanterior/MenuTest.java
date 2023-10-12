@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package igu;
+package igu.menuanterior;
 
 import entidades.Propiedad;
 import entidades.Propietario;
@@ -492,7 +492,6 @@ public class MenuTest extends javax.swing.JFrame {
         });
         bg.add(userTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 290, 30));
 
-        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         bg.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, 290, 20));
 
@@ -508,7 +507,6 @@ public class MenuTest extends javax.swing.JFrame {
         });
         bg.add(passTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 290, 30));
 
-        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         bg.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 460, 290, 20));
 
@@ -879,7 +877,7 @@ public class MenuTest extends javax.swing.JFrame {
 
         jPPropiedades.add(jPBarraNavegador, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 740, -1));
 
-        jPLogin.setBackground(new java.awt.Color(255, 0, 0));
+        jPLogin.setBackground(new java.awt.Color(51, 51, 51));
         jPLogin.setMinimumSize(new java.awt.Dimension(748, 635));
         jPLogin.setPreferredSize(new java.awt.Dimension(748, 635));
 
