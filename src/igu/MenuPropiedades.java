@@ -12,9 +12,8 @@ import entidades.Propietario;
 import entidades.TipoPropiedad;
 import entidades.Zona;
 import java.awt.Dimension;
-import java.time.LocalDate;
-import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import persistencia.EstadoData;
@@ -24,21 +23,21 @@ import persistencia.PropietarioData;
 import persistencia.TipoPropiedadData;
 import persistencia.ZonaData;
 
-
 public class MenuPropiedades extends javax.swing.JInternalFrame {
-     private int idPropietarioSeleccionado = -1;
-     PropiedadData pd = new PropiedadData();
-     
+
+    private int idPropietarioSeleccionado = -1;
+    PropiedadData pd = new PropiedadData();
+
     public MenuPropiedades() {
         initComponents();
-       QuitarLaBarraTitulo();
-       cargarComboTipo();
-       cargarComboZona();
-       cargarComboEstado();
-       cargarComboInspector();
+        QuitarLaBarraTitulo();
+        cargarComboTipo();
+        cargarComboZona();
+        cargarComboEstado();
+        cargarComboInspector();
 
     }
-    
+
     //defino dos métodosdentro del JInternalFrame y lo instanciamos de la siguiente manera.
     private JComponent Barra = ((javax.swing.plaf.basic.BasicInternalFrameUI) getUI()).getNorthPane();
     private Dimension DimensionBarra = null;
@@ -52,7 +51,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         repaint();
     }
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -66,7 +64,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jLSuperTotalPropiedades = new javax.swing.JLabel();
         jLPrecioTasadoPropiedades = new javax.swing.JLabel();
         jLAntiguedadPropiedades = new javax.swing.JLabel();
-        jLServiciosPropiedad = new javax.swing.JLabel();
         jLInspectorPropiedades = new javax.swing.JLabel();
         jLZonaPropiedades = new javax.swing.JLabel();
         jTIDPropietarios = new javax.swing.JTextField();
@@ -75,7 +72,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jTSuperTotalPropiedades = new javax.swing.JTextField();
         jTPrecioTasadoPropiedades = new javax.swing.JTextField();
         jTAntiguedadPropiedad = new javax.swing.JTextField();
-        jTServiciosPropiedades = new javax.swing.JTextField();
         jLEstadoPropiedad = new javax.swing.JLabel();
         jLDisponibilidadPropiedad = new javax.swing.JLabel();
         jLActivoPropiedades = new javax.swing.JLabel();
@@ -137,7 +133,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jLTipoPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLTipoPropiedades.setText("Tipo");
         jLTipoPropiedades.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPPropiedades.add(jLTipoPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 131, -1));
+        jPPropiedades.add(jLTipoPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 131, -1));
 
         jLSuperTotalPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLSuperTotalPropiedades.setForeground(new java.awt.Color(51, 204, 255));
@@ -160,24 +156,17 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jLAntiguedadPropiedades.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jPPropiedades.add(jLAntiguedadPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 131, -1));
 
-        jLServiciosPropiedad.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLServiciosPropiedad.setForeground(new java.awt.Color(51, 204, 255));
-        jLServiciosPropiedad.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLServiciosPropiedad.setText("Servicios");
-        jLServiciosPropiedad.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPPropiedades.add(jLServiciosPropiedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 131, 20));
-
         jLInspectorPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLInspectorPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLInspectorPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLInspectorPropiedades.setText("Inspector");
-        jPPropiedades.add(jLInspectorPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 131, 30));
+        jPPropiedades.add(jLInspectorPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 131, 30));
 
         jLZonaPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLZonaPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLZonaPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLZonaPropiedades.setText("Zona");
-        jPPropiedades.add(jLZonaPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 131, 30));
+        jPPropiedades.add(jLZonaPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, 131, 30));
 
         jTIDPropietarios.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropietarios.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -209,17 +198,12 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jTAntiguedadPropiedad.setForeground(new java.awt.Color(51, 51, 51));
         jPPropiedades.add(jTAntiguedadPropiedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 187, -1));
 
-        jTServiciosPropiedades.setBackground(new java.awt.Color(153, 153, 153));
-        jTServiciosPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTServiciosPropiedades.setForeground(new java.awt.Color(51, 51, 51));
-        jPPropiedades.add(jTServiciosPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 187, -1));
-
         jLEstadoPropiedad.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLEstadoPropiedad.setForeground(new java.awt.Color(51, 204, 255));
         jLEstadoPropiedad.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLEstadoPropiedad.setText("Estado");
         jLEstadoPropiedad.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPPropiedades.add(jLEstadoPropiedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, 110, 30));
+        jPPropiedades.add(jLEstadoPropiedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 110, 30));
 
         jLDisponibilidadPropiedad.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLDisponibilidadPropiedad.setForeground(new java.awt.Color(51, 204, 255));
@@ -275,6 +259,11 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jBEliminarPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jBEliminarPropiedades.setText("Eliminar");
         jBEliminarPropiedades.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBEliminarPropiedades.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEliminarPropiedadesActionPerformed(evt);
+            }
+        });
         jPPropiedades.add(jBEliminarPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 580, -1, -1));
 
         jBSalirPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -330,22 +319,27 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jPPropiedades.add(jBBotonBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 40, 40));
 
         jCListaTipoPropiedades.setBackground(new java.awt.Color(153, 153, 153));
-        jPPropiedades.add(jCListaTipoPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 190, 30));
+        jPPropiedades.add(jCListaTipoPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 190, 30));
 
         jRActivoPropiedades1.setText("Activo");
         jPPropiedades.add(jRActivoPropiedades1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, -1, -1));
 
         jCListaPropiedades1.setBackground(new java.awt.Color(153, 153, 153));
+        jCListaPropiedades1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCListaPropiedades1ActionPerformed(evt);
+            }
+        });
         jPPropiedades.add(jCListaPropiedades1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, 220, 30));
 
         jCListarEstadoPropiedades.setBackground(new java.awt.Color(153, 153, 153));
-        jPPropiedades.add(jCListarEstadoPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 190, 30));
+        jPPropiedades.add(jCListarEstadoPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 190, 30));
 
         jCListaInspectoresPropiedades.setBackground(new java.awt.Color(153, 153, 153));
-        jPPropiedades.add(jCListaInspectoresPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 190, 30));
+        jPPropiedades.add(jCListaInspectoresPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 190, 30));
 
         jCListarZonaPropiedades.setBackground(new java.awt.Color(153, 153, 153));
-        jPPropiedades.add(jCListarZonaPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 480, 190, 30));
+        jPPropiedades.add(jCListarZonaPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 450, 190, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -368,7 +362,12 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBSalirPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirPropiedadesActionPerformed
-        // TODO add your handling code here:
+         int respuesta = JOptionPane.showConfirmDialog(this, "Estás seguro que quieres salir?", "Cerrar Ventana", JOptionPane.YES_NO_OPTION);
+
+        if (respuesta == JOptionPane.YES_OPTION) {
+
+            this.dispose();//cierro la ventana
+        }
     }//GEN-LAST:event_jBSalirPropiedadesActionPerformed
 
     private void jBNuevoPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoPropiedadesActionPerformed
@@ -376,20 +375,36 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jBNuevoPropiedadesActionPerformed
 
     private void jBModificarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarPropiedadesActionPerformed
-        if (idPropietarioSeleccionado != -1) { // Verifica que se haya seleccionado un propietario
-           // modificar(); // Llama al método modificar solo si se ha seleccionado un alumno
-           // limpiarcampos();
-            //Deshabilito botones luego de ejecutar acccion!
-           // desHabilitarBotones();
-          //  cargarCombo();
-        } else {
-            JOptionPane.showMessageDialog(this, "Debes seleccionar un alumno antes de guardar.");
-        }
+       // pendiente
     }//GEN-LAST:event_jBModificarPropiedadesActionPerformed
 
     private void jBBotonBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBotonBusquedaActionPerformed
-        cargarComboListapropiedades();
+        jCListaPropiedades1.removeAllItems();
+        try {
+
+            int idPropietario = Integer.parseInt(jTIDPropietarios.getText());
+            List<Propiedad> propiedades = pd.listarPropiedadesXDueño(idPropietario);
+
+            for (Propiedad propiedad : propiedades) {
+                jCListaPropiedades1.addItem(propiedad);
+            }
+
+        } catch (NullPointerException e) {
+            JOptionPane.showMessageDialog(this, "No deje el campo vacío" + e.getMessage());
+        }
     }//GEN-LAST:event_jBBotonBusquedaActionPerformed
+
+    private void jCListaPropiedades1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCListaPropiedades1ActionPerformed
+        rellenarCampos();
+    }//GEN-LAST:event_jCListaPropiedades1ActionPerformed
+
+    private void jBEliminarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarPropiedadesActionPerformed
+        Propiedad propiedadSeleccionado = (Propiedad) jCListaPropiedades1.getSelectedItem();
+       // ad.eliminarAlumno(alumnoSelecionado.getDni());
+        pd.darBajaAPropiedad(propiedadSeleccionado);
+        limpiarcampos();
+       
+    }//GEN-LAST:event_jBEliminarPropiedadesActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -414,7 +429,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLNavegacionEnBarra;
     private javax.swing.JLabel jLObservacionesPropiedades;
     private javax.swing.JLabel jLPrecioTasadoPropiedades;
-    private javax.swing.JLabel jLServiciosPropiedad;
     private javax.swing.JLabel jLSuperTotalPropiedades;
     private javax.swing.JLabel jLTipoPropiedades;
     private javax.swing.JLabel jLTituloPropiedades;
@@ -430,7 +444,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTIDPropietarios;
     private javax.swing.JTextArea jTObservacionesPropiedades;
     private javax.swing.JTextField jTPrecioTasadoPropiedades;
-    private javax.swing.JTextField jTServiciosPropiedades;
     private javax.swing.JTextField jTSuperTotalPropiedades;
     // End of variables declaration//GEN-END:variables
 
@@ -441,9 +454,8 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         try {
             if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
                     && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-                    && !jTAntiguedadPropiedad.getText().isEmpty() && !jTServiciosPropiedades.getText().isEmpty()
-                    && jRDisponibilidadPropiedades.isSelected() == true && !jTObservacionesPropiedades.getText().isEmpty()
-                    && jRDisponibilidadPropiedades.isSelected() == true) {
+                    && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true &&
+                    !jTObservacionesPropiedades.getText().isEmpty()&& jRDisponibilidadPropiedades.isSelected() == true) {
                 // habilitarBotones();
 
                 Propiedad PSelec = (Propiedad) jCListaTipoPropiedades.getSelectedItem();
@@ -481,7 +493,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         TipoPropiedadData tipD = new TipoPropiedadData();
         ArrayList<TipoPropiedad> tipoProp = new ArrayList<>();
 
-        for (TipoPropiedad tipo : tipD.listarTipoPropiedadesActivas() ) {
+        for (TipoPropiedad tipo : tipD.listarTipoPropiedadesActivas()) {
             tipoProp.add(tipo);
             jCListaTipoPropiedades.addItem(tipo);
 
@@ -499,7 +511,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
         }
     }
- 
+
     public void cargarComboEstado() {
 
         EstadoData estadoD = new EstadoData();
@@ -511,7 +523,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
         }
     }
-       
+
     public void cargarComboZona() {
 
         ZonaData zonaD = new ZonaData();
@@ -524,16 +536,44 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         }
     }
     
-    public void cargarComboListapropiedades() {
-        
-         int idPropietario=Integer.parseInt(jTIDPropietarios.getText());
-        pd.listarPropiedadesXDueño(idPropietario);
-        
+     public void limpiarcampos(){
+        //Cintia: Agrego limpieza de campos
+            jTDireccionPropiedades.setText("");
+            jTAlturaPropiedades.setText("");
+            jTSuperTotalPropiedades.setText("");
+            jTPrecioTasadoPropiedades.setText("");
+            jTAntiguedadPropiedad.setText("");
+            jRDisponibilidadPropiedades.setSelected(true);
+            jRActivoPropiedades1.setSelected(true);
+     }
+    public void rellenarCampos() {
 
-       
+        
+        Propiedad propiedadSeleccionado = (Propiedad) jCListaPropiedades1.getSelectedItem();
+        // boolean activo = jrbEstado.isSelected();
+
+        if (propiedadSeleccionado != null) {
+
+            jTDireccionPropiedades.setText(String.valueOf(propiedadSeleccionado.getDireccion()));
+            jTAlturaPropiedades.setText(String.valueOf(propiedadSeleccionado.getAltura()));
+            jTSuperTotalPropiedades.setText(String.valueOf(propiedadSeleccionado.getSuperficieTotal()));
+            jTPrecioTasadoPropiedades.setText(String.valueOf(propiedadSeleccionado.getPrecioTasado()));
+            jTAntiguedadPropiedad.setText(String.valueOf(propiedadSeleccionado.getAntiguedad()));
+            //combos
+            //jCListaTipoPropiedades
+            //jCListaInspectoresPropiedades
+            //jCListarZonaPropiedades
+            //jCListarEstadoPropiedades
+            
+            jRDisponibilidadPropiedades.setSelected(propiedadSeleccionado.isActivo());
+            jRActivoPropiedades1.setSelected(propiedadSeleccionado.isActivo());
+            jTObservacionesPropiedades.setText(String.valueOf(propiedadSeleccionado.getObservaciones()));
+        }
     }
+       
     
- /*    public void modificar() {
+    
+    /*    public void modificar() {
        
         try {
            Alumno alumnoSelecionado = (Alumno) jComboBox1.getSelectedItem();
@@ -548,5 +588,4 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
         }
     }*/
-
-}
+    }

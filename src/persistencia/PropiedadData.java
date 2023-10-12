@@ -181,7 +181,7 @@ public class PropiedadData {
 
             while (rs.next()) {
                 Propiedad pr1 = new Propiedad();
-                pr1.getPropietario().getIdPropietario();
+               // pr1.getPropietario().getIdPropietario();
                 pr1.setIdPropiedad(rs.getInt("idPropiedad"));
                 pr1.setDireccion(rs.getString("direccion"));
                 pr1.setAltura(rs.getInt("altura"));
