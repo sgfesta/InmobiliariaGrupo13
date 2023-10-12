@@ -71,11 +71,11 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jBNuevo2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jBNuevo1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jBModificarPropietario" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jBNuevo3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jBEliminarPropietario" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jBNuevo4" min="-2" max="-2" attributes="0"/>
+                          <Component id="jBSalirPropietario" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -169,9 +169,9 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jBNuevo2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jBNuevo1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jBNuevo3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jBNuevo4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jBModificarPropietario" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jBEliminarPropietario" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jBSalirPropietario" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
               </Group>
@@ -293,7 +293,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jBNuevo1">
+        <Component class="javax.swing.JButton" name="jBModificarPropietario">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Semilight" size="12" style="1"/>
@@ -307,7 +307,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBNuevo1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBModificarPropietarioActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTIDPropietarios2">
@@ -470,7 +470,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBNuevo2ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jBNuevo3">
+        <Component class="javax.swing.JButton" name="jBEliminarPropietario">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Semilight" size="12" style="1"/>
@@ -484,10 +484,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBNuevo3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBEliminarPropietarioActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jBNuevo4">
+        <Component class="javax.swing.JButton" name="jBSalirPropietario">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Semilight" size="12" style="1"/>
@@ -501,7 +501,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBNuevo4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBSalirPropietarioActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jrbPropietario">

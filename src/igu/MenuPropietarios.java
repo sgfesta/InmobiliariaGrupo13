@@ -23,6 +23,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
      */
     public MenuPropietarios() {
         initComponents(); 
+        cargarComboPropietarios();
         QuitarLaBarraTitulo();
 
     }
@@ -56,7 +57,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jCBusquedaPropiedades1 = new javax.swing.JComboBox<>();
         jLabel16 = new javax.swing.JLabel();
         jTIDPropietario = new javax.swing.JTextField();
-        jBNuevo1 = new javax.swing.JButton();
+        jBModificarPropietario = new javax.swing.JButton();
         jTIDPropietarios2 = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jTIDPropietarios3 = new javax.swing.JTextField();
@@ -69,8 +70,8 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jBNuevo2 = new javax.swing.JButton();
-        jBNuevo3 = new javax.swing.JButton();
-        jBNuevo4 = new javax.swing.JButton();
+        jBEliminarPropietario = new javax.swing.JButton();
+        jBSalirPropietario = new javax.swing.JButton();
         jrbPropietario = new javax.swing.JRadioButton();
         jLabel46 = new javax.swing.JLabel();
 
@@ -130,13 +131,13 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jTIDPropietario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDPropietario.setForeground(new java.awt.Color(51, 51, 51));
 
-        jBNuevo1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo1.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo1.setText("Modificar");
-        jBNuevo1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBNuevo1.addActionListener(new java.awt.event.ActionListener() {
+        jBModificarPropietario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBModificarPropietario.setForeground(new java.awt.Color(51, 204, 255));
+        jBModificarPropietario.setText("Modificar");
+        jBModificarPropietario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBModificarPropietario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBNuevo1ActionPerformed(evt);
+                jBModificarPropietarioActionPerformed(evt);
             }
         });
 
@@ -206,23 +207,23 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
             }
         });
 
-        jBNuevo3.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo3.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo3.setText("Eliminar");
-        jBNuevo3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBNuevo3.addActionListener(new java.awt.event.ActionListener() {
+        jBEliminarPropietario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBEliminarPropietario.setForeground(new java.awt.Color(51, 204, 255));
+        jBEliminarPropietario.setText("Eliminar");
+        jBEliminarPropietario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBEliminarPropietario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBNuevo3ActionPerformed(evt);
+                jBEliminarPropietarioActionPerformed(evt);
             }
         });
 
-        jBNuevo4.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo4.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo4.setText("Salir");
-        jBNuevo4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBNuevo4.addActionListener(new java.awt.event.ActionListener() {
+        jBSalirPropietario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBSalirPropietario.setForeground(new java.awt.Color(51, 204, 255));
+        jBSalirPropietario.setText("Salir");
+        jBSalirPropietario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBSalirPropietario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBNuevo4ActionPerformed(evt);
+                jBSalirPropietarioActionPerformed(evt);
             }
         });
 
@@ -250,11 +251,11 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                     .addGroup(jPCardPropietariosLayout.createSequentialGroup()
                         .addComponent(jBNuevo2)
                         .addGap(18, 18, 18)
-                        .addComponent(jBNuevo1)
+                        .addComponent(jBModificarPropietario)
                         .addGap(18, 18, 18)
-                        .addComponent(jBNuevo3)
+                        .addComponent(jBEliminarPropietario)
                         .addGap(18, 18, 18)
-                        .addComponent(jBNuevo4)))
+                        .addComponent(jBSalirPropietario)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardPropietariosLayout.createSequentialGroup()
                 .addGap(0, 14, Short.MAX_VALUE)
@@ -328,9 +329,9 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevo2)
-                    .addComponent(jBNuevo1)
-                    .addComponent(jBNuevo3)
-                    .addComponent(jBNuevo4))
+                    .addComponent(jBModificarPropietario)
+                    .addComponent(jBEliminarPropietario)
+                    .addComponent(jBSalirPropietario))
                 .addGap(56, 56, 56))
         );
 
@@ -358,26 +359,26 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jBNuevo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevo1ActionPerformed
+    private void jBModificarPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarPropietarioActionPerformed
         modificarPropietario();
         cargarComboPropietarios();
-    }//GEN-LAST:event_jBNuevo1ActionPerformed
+    }//GEN-LAST:event_jBModificarPropietarioActionPerformed
 
     private void jBNuevo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevo2ActionPerformed
         agregarPropietario();
         cargarComboPropietarios();
     }//GEN-LAST:event_jBNuevo2ActionPerformed
 
-    private void jBNuevo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevo3ActionPerformed
+    private void jBEliminarPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarPropietarioActionPerformed
         eliminarPropietario();
         cargarComboPropietarios();
-    }//GEN-LAST:event_jBNuevo3ActionPerformed
+    }//GEN-LAST:event_jBEliminarPropietarioActionPerformed
 
-    private void jBNuevo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevo4ActionPerformed
+    private void jBSalirPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirPropietarioActionPerformed
         
         jPCardPropietarios.setVisible(false);
         
-    }//GEN-LAST:event_jBNuevo4ActionPerformed
+    }//GEN-LAST:event_jBSalirPropietarioActionPerformed
 
     private void jLabel46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel46MouseClicked
         buscarPropietario();
@@ -385,10 +386,10 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBNuevo1;
+    private javax.swing.JButton jBEliminarPropietario;
+    private javax.swing.JButton jBModificarPropietario;
     private javax.swing.JButton jBNuevo2;
-    private javax.swing.JButton jBNuevo3;
-    private javax.swing.JButton jBNuevo4;
+    private javax.swing.JButton jBSalirPropietario;
     private javax.swing.JComboBox<Propietario> jCBusquedaPropiedades1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
