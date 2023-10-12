@@ -1,3 +1,4 @@
+
 package persistencia;
 
 import entidades.Garante;
@@ -59,7 +60,7 @@ public class GaranteData {
     }
 
     public void modificarGarante(Garante garante) {
-        String sql = "UPDATE garante SET nombre = ?, apellido = ?, dni = ?,  domicilio = ?, telefono= ? activo = ? WHERE idGarante = ?";
+        String sql = "UPDATE garante SET nombre = ?, apellido = ?, dni = ?,  domicilio = ?, telefono= ?, activo = ? WHERE idGarante = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, garante.getNombre());
@@ -190,7 +191,7 @@ public class GaranteData {
     
     public List<Garante> listarGarantesActivos() {
         
-        String sql = "SELECT idGarante, nombre, apellido, dni, domicilio, telefono, activo FROM Garante WHERE activo = ?";
+        String sql = "SELECT idGarante, nombre, apellido, dni, domicilio, telefono, activo FROM Garante WHERE activo = 1";
         ArrayList<Garante> garantesAc = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(sql);

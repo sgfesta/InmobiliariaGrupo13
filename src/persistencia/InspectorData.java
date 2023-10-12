@@ -1,3 +1,4 @@
+
 package persistencia;
 
 import entidades.Inspector;
@@ -52,20 +53,19 @@ public class InspectorData {
     //Modifico Inspector de forma individual
     public void modificarInspector(Inspector inspector) {
         //Sentencia SQL
-        String sql = "UPDATE inspector SET matricula = ?, nombre = ?, apellido = ?, telefono = ?, activa = ? WHERE idInspector = ?";
+        String sql = "UPDATE inspector SET matricula = ?, nombre = ?, apellido = ?, telefono = ?, activo = ? WHERE idInspector = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, inspector.getMatricula());
             ps.setString(2, inspector.getNombre());
             ps.setString(3, inspector.getApellido());
-
             ps.setInt(4, inspector.getTelefono());
             ps.setBoolean(5, inspector.isActivo());
             ps.setInt(6, inspector.getIdInspector());
             int exito = ps.executeUpdate();
 
             if (exito == 1) {//para avisar de que funciono correctamente.
-                JOptionPane.showMessageDialog(null, "Inspector modificada exitosamente");
+                JOptionPane.showMessageDialog(null, "Inspector modificado exitosamente");
             }
             //Cierro la Conexion
             ps.close();
@@ -77,7 +77,7 @@ public class InspectorData {
     }
 
     //Elimino de forma logica Inspector
-    public void eliminarMateria(int idInspector) {
+    public void eliminarInspector(int idInspector) {
         //borrado logico
         String sql = "UPDATE inspector SET activo=0 WHERE idInspector= ?";
 
@@ -87,7 +87,7 @@ public class InspectorData {
             int exito = ps.executeUpdate();
 
             if (exito == 1) {
-                JOptionPane.showMessageDialog(null, "Inspector eliminada exitosamente");
+                JOptionPane.showMessageDialog(null, "Inspector eliminado exitosamente");
             }
             //Cierro la Conexion
             ps.close();
@@ -96,8 +96,6 @@ public class InspectorData {
         }
 
     }
-    
-    
     public List<Inspector> listarInspectoresActivos() {
         
         String sql = "SELECT idInspector, matricula, nombre, apellido, telefono, activo FROM inspector WHERE activo = 1";
@@ -114,6 +112,33 @@ public class InspectorData {
                 inspectorA.setApellido(rs.getString("apellido"));
                 inspectorA.setTelefono(rs.getInt("telefono"));
                 inspectorA.setActivo(true);
+                inspectoresA.add(inspectorA);
+            }
+             //Cierro la Conexion
+            ps.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inspector");
+
+        }
+        return inspectoresA;
+    }
+    
+        public List<Inspector> listarInspectores() {
+        
+        String sql = "SELECT idInspector, matricula, nombre, apellido, telefono, activo FROM inspector ";
+        ArrayList<Inspector> inspectoresA = new ArrayList<>();
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                Inspector inspectorA= new Inspector();
+               inspectorA.setIdInspector(rs.getInt("idInspector"));
+               inspectorA.setMatricula(rs.getString("matricula"));
+                inspectorA.setNombre(rs.getString("nombre"));
+                inspectorA.setApellido(rs.getString("apellido"));
+                inspectorA.setTelefono(rs.getInt("telefono"));
+                inspectorA.setActivo(rs.getBoolean("activo"));
                 inspectoresA.add(inspectorA);
             }
              //Cierro la Conexion
