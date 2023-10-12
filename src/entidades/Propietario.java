@@ -98,7 +98,7 @@ public class Propietario {
 
     @Override
     public String toString() {
-        return idPropietario + " " + nombre + " " + apellido + " " + dni + " " + telefono + " " + domicilio + " " + activo;
+        return idPropietario + ") " + apellido + ", " + nombre + " - " + dni;
     }
  
  

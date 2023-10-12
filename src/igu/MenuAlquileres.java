@@ -1,17 +1,20 @@
 
 package igu;
 
-import entidades.Propiedad;
+import entidades.Contrato;
 import java.awt.Dimension;
+import java.util.List;
 import javax.swing.JComponent;
+import persistencia.ContratoData;
 
 public class MenuAlquileres extends javax.swing.JInternalFrame {
-
+ContratoData cd = new ContratoData();
     /**
      * Creates new form MenuAlquileres
      */
     public MenuAlquileres() {
         initComponents();
+        cargarComboContratos();
         QuitarLaBarraTitulo();
 
     }
@@ -44,7 +47,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jCBusquedaContrato = new javax.swing.JComboBox<>();
         jLabel35 = new javax.swing.JLabel();
         jTIDContrato = new javax.swing.JTextField();
-        jBNuevo5 = new javax.swing.JButton();
+        jBNuevoAlquiler = new javax.swing.JButton();
         jTIDPropiedad = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
         jTIDPropietario3 = new javax.swing.JTextField();
@@ -62,9 +65,9 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jTVigencia = new javax.swing.JTextField();
         jTActivo = new javax.swing.JTextField();
         jLabel45 = new javax.swing.JLabel();
-        jBNuevo6 = new javax.swing.JButton();
-        jBNuevo7 = new javax.swing.JButton();
-        jBNuevo8 = new javax.swing.JButton();
+        jBModificarAlquiler = new javax.swing.JButton();
+        jBEliminarAlquiler = new javax.swing.JButton();
+        jBSalirAlquiler = new javax.swing.JButton();
         jDFechaFin = new com.toedter.calendar.JDateChooser();
         jDFechaInicio = new com.toedter.calendar.JDateChooser();
         jDFechaContrato = new com.toedter.calendar.JDateChooser();
@@ -124,10 +127,10 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jTIDContrato.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDContrato.setForeground(new java.awt.Color(51, 51, 51));
 
-        jBNuevo5.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo5.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo5.setText("Nuevo");
-        jBNuevo5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBNuevoAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBNuevoAlquiler.setForeground(new java.awt.Color(51, 204, 255));
+        jBNuevoAlquiler.setText("Nuevo");
+        jBNuevoAlquiler.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jTIDPropiedad.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropiedad.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -222,20 +225,20 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jLabel45.setText("Activo");
         jLabel45.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jBNuevo6.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo6.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo6.setText("Modificar");
-        jBNuevo6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBModificarAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBModificarAlquiler.setForeground(new java.awt.Color(51, 204, 255));
+        jBModificarAlquiler.setText("Modificar");
+        jBModificarAlquiler.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jBNuevo7.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo7.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo7.setText("Eliminar");
-        jBNuevo7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBEliminarAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBEliminarAlquiler.setForeground(new java.awt.Color(51, 204, 255));
+        jBEliminarAlquiler.setText("Eliminar");
+        jBEliminarAlquiler.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jBNuevo8.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevo8.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo8.setText("Salir");
-        jBNuevo8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBSalirAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBSalirAlquiler.setForeground(new java.awt.Color(51, 204, 255));
+        jBSalirAlquiler.setText("Salir");
+        jBSalirAlquiler.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout jPCardAlquileresLayout = new javax.swing.GroupLayout(jPCardAlquileres);
         jPCardAlquileres.setLayout(jPCardAlquileresLayout);
@@ -246,13 +249,13 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
                 .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardAlquileresLayout.createSequentialGroup()
-                            .addComponent(jBNuevo5)
+                            .addComponent(jBNuevoAlquiler)
                             .addGap(18, 18, 18)
-                            .addComponent(jBNuevo6)
+                            .addComponent(jBModificarAlquiler)
                             .addGap(18, 18, 18)
-                            .addComponent(jBNuevo7)
+                            .addComponent(jBEliminarAlquiler)
                             .addGap(18, 18, 18)
-                            .addComponent(jBNuevo8)
+                            .addComponent(jBSalirAlquiler)
                             .addGap(204, 204, 204))
                         .addGroup(jPCardAlquileresLayout.createSequentialGroup()
                             .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -369,12 +372,12 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
                         .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel39)
                             .addComponent(jTIDVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
                 .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBNuevo5)
-                    .addComponent(jBNuevo6)
-                    .addComponent(jBNuevo7)
-                    .addComponent(jBNuevo8))
+                    .addComponent(jBNuevoAlquiler)
+                    .addComponent(jBModificarAlquiler)
+                    .addComponent(jBEliminarAlquiler)
+                    .addComponent(jBSalirAlquiler))
                 .addGap(73, 73, 73))
             .addGroup(jPCardAlquileresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPCardAlquileresLayout.createSequentialGroup()
@@ -417,11 +420,11 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBNuevo5;
-    private javax.swing.JButton jBNuevo6;
-    private javax.swing.JButton jBNuevo7;
-    private javax.swing.JButton jBNuevo8;
-    private javax.swing.JComboBox<Propiedad> jCBusquedaContrato;
+    private javax.swing.JButton jBEliminarAlquiler;
+    private javax.swing.JButton jBModificarAlquiler;
+    private javax.swing.JButton jBNuevoAlquiler;
+    private javax.swing.JButton jBSalirAlquiler;
+    private javax.swing.JComboBox<Contrato> jCBusquedaContrato;
     private com.toedter.calendar.JDateChooser jDFechaContrato;
     private com.toedter.calendar.JDateChooser jDFechaFin;
     private com.toedter.calendar.JDateChooser jDFechaInicio;
@@ -450,4 +453,13 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTIDVendedor;
     private javax.swing.JTextField jTVigencia;
     // End of variables declaration//GEN-END:variables
+    private void cargarComboContratos() {
+        jCBusquedaContrato.removeAllItems();
+        List<Contrato> contratos = cd.listarContratosVigentes();
+        for (Contrato contrato:contratos) {
+            jCBusquedaContrato.addItem(contrato);
+        }
+    }
+
+    
 }

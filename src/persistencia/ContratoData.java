@@ -2,6 +2,7 @@
 package persistencia;
 
 import entidades.Contrato;
+import entidades.Inquilino;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -128,29 +129,59 @@ public class ContratoData {
         }
     }
     
-     public List<Contrato> listarContratosVigentes() {
-        String sql = "SELECT * FROM contrato WHERE vigente = 1";
-        ArrayList<Contrato> contratosVigentes = new ArrayList<>();
+   public List<Contrato> listarContratosVigentes() {
+    String sql = "SELECT * FROM contrato WHERE vigente = 1";
+    ArrayList<Contrato> contratosVigentes = new ArrayList<>();
+    try {
+        PreparedStatement ps = con.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        while (rs.next()) {
+            Contrato c1 = new Contrato();
+            c1.setIdContrato(rs.getInt("idContrato"));
+            int idInquilino = rs.getInt("idInquilino");
+            Inquilino inquilino = buscarInquilino(idInquilino);
+            c1.setInquilino(inquilino);
+            c1.setFechaContrato(rs.getDate("fechaContrato").toLocalDate());
+            c1.setFechaInicio(rs.getDate("fechaInicio").toLocalDate());
+            c1.setFechaFin(rs.getDate("fechaFin").toLocalDate());                           
+            contratosVigentes.add(c1);
+        }
+         //Cierro la Conexion
+        ps.close();
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Propiedad en listarPropiedades "+ex.getMessage());
+    }
+    return contratosVigentes;
+}
+
+ public Inquilino buscarInquilino(int idInquilino) {
+        String sql = "SELECT nombre, apellido, dni, cuit, lugarTrabajo, activo FROM inquilino WHERE idinquilino = ?  AND activo = 1";
+        Inquilino inquilino = null;
         try {
             PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, idInquilino);
             ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                inquilino = new Inquilino();           
+                inquilino.setNombre(rs.getString("nombre"));
+                inquilino.setApellido(rs.getString("apellido"));
+                inquilino.setDni(rs.getInt("dni"));
+                inquilino.setCuit(rs.getInt("cuit"));
+                inquilino.setLugarTrabajo(rs.getString("lugarTrabajo"));
+                inquilino.setActivo(rs.getBoolean("activo"));
+                inquilino.setIdInquilino(idInquilino);
 
-            while (rs.next()) {
-                Contrato c1 = new Contrato();
-                c1.setIdContrato(rs.getInt("idContrato"));
-                c1.setFechaContrato(rs.getDate("fechaContrato").toLocalDate());
-                c1.setFechaInicio(rs.getDate("fechaInicio").toLocalDate());
-                c1.setFechaInicio(rs.getDate("fechaFin").toLocalDate());                           
-                contratosVigentes.add(c1);
+            } else {
+                JOptionPane.showMessageDialog(null, "No existe un inquilino con ese ID o Estado");
             }
-             //Cierro la Conexion
-            ps.close();
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Propiedad en listarPropiedades "+ex.getMessage());
 
+            //Cierro la Conexion
+            ps.close();
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inquilino");
         }
-        return contratosVigentes;
-    }
-    
-    
+        return inquilino;
 }//fin
+}

@@ -145,7 +145,7 @@ public class Contrato {
 
     @Override
     public String toString() {
-        return idContrato + " " + propietario + " " + propiedad + " " + inquilino + " " + garante + " " + vendedor + " " + fechaInicio + " " + fechaFin + " " + fechaContrato + " " + vigente + " " + activo;
+        return idContrato + ") " + inquilino.getApellido()+", "+inquilino.getNombre()+" - "+inquilino.getDni();
     }
     
     
