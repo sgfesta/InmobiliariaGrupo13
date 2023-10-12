@@ -3,8 +3,11 @@ package igu;
 
 import entidades.Contrato;
 import java.awt.Dimension;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.List;
 import javax.swing.JComponent;
+import javax.swing.JOptionPane;
 import persistencia.ContratoData;
 
 public class MenuAlquileres extends javax.swing.JInternalFrame {
@@ -131,6 +134,11 @@ ContratoData cd = new ContratoData();
         jBNuevoAlquiler.setForeground(new java.awt.Color(51, 204, 255));
         jBNuevoAlquiler.setText("Nuevo");
         jBNuevoAlquiler.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBNuevoAlquiler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBNuevoAlquilerActionPerformed(evt);
+            }
+        });
 
         jTIDPropiedad.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropiedad.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -418,6 +426,10 @@ ContratoData cd = new ContratoData();
         // TODO add your handling code here:
     }//GEN-LAST:event_jTActivoActionPerformed
 
+    private void jBNuevoAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoAlquilerActionPerformed
+       agregarContrato();
+    }//GEN-LAST:event_jBNuevoAlquilerActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBEliminarAlquiler;
@@ -461,5 +473,15 @@ ContratoData cd = new ContratoData();
         }
     }
 
+     public void agregarContrato(){
+         
+         
+           LocalDate fechaI = jDFechaInicio.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+           LocalDate fechaF = jDFechaFin.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+           LocalDate fechaC = jDFechaContrato.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+           int idContract = Integer.parseInt(jTIDContrato.getText());
+                
+        JOptionPane.showMessageDialog(this, "Contrato guardado correctamente");
+     }
     
 }
