@@ -30,7 +30,7 @@ public class main {
 
 
     public static void main(String[] args) {
-        Inspector inspec = new Inspector(1,"D-51657", "Jose", "Ramirez", 638, 156784576, "Casita 123", true);
+        //Inspector inspec = new Inspector(1,"D-51657", "Jose", "Ramirez", 638, 156784576, "Casita 123", true);
 //        InspectorData ins = new InspectorData();
 //        ins.guardarInspector(inspec);
 //        
@@ -67,11 +67,11 @@ public class main {
 //      PropietarioData p1 = new PropietarioData();
 //      p1.guardarPropietario(propietario);
       
-      Propiedad propi = new Propiedad(1, propietario, "Belgrano", 23, tipo, 1800, 150000, 0, inspec, zona, estado, "Departamento nuevo, a estrenar, bla bla bla", true, true);
+//      Propiedad propi = new Propiedad(1, propietario, "Belgrano", 23, tipo, 1800, 150000, 0, inspec, zona, estado, "Departamento nuevo, a estrenar, bla bla bla", true, true);
 //      PropiedadData pd = new PropiedadData();
 //      pd.agregarPropiedad(propi);
       
-      Contrato contract = new Contrato(propietario, propi, i1, garante, vendedor, LocalDate.of(2018, Month.MARCH, 05), LocalDate.of(2026, Month.MARCH, 05), LocalDate.of(2018, Month.MARCH, 02), true, true);
+//      Contrato contract = new Contrato(propietario, propi, i1, garante, vendedor, LocalDate.of(2018, Month.MARCH, 05), LocalDate.of(2026, Month.MARCH, 05), LocalDate.of(2018, Month.MARCH, 02), true, true);
       ContratoData cd = new ContratoData();
 //      cd.guardarContrato(contract);
 }
