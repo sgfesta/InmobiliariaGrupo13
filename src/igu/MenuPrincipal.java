@@ -36,6 +36,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLSalir = new javax.swing.JLabel();
         exitTxt = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jPCardFondo = new javax.swing.JPanel();
         logo1 = new javax.swing.JLabel();
 
@@ -224,7 +226,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         Fondo.add(jPMenuLateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 670));
 
-        header.setBackground(new java.awt.Color(51, 204, 255));
+        header.setBackground(new java.awt.Color(51, 153, 255));
         header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 headerMouseDragged(evt);
@@ -236,7 +238,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
         header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Fondo.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1030, 60));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White_User_icon-icons.com_55902.png"))); // NOI18N
+        jLabel1.setText("Usuario");
+        header.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 51, 51));
+        jButton1.setText("Cerrar Sesion");
+        header.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, -1, -1));
+
+        Fondo.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 760, 60));
 
         jPCardFondo.setBackground(new java.awt.Color(55, 55, 54));
         jPCardFondo.setMinimumSize(new java.awt.Dimension(748, 635));
@@ -261,7 +276,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addContainerGap(260, Short.MAX_VALUE))
         );
 
-        Fondo.add(jPCardFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 55, 760, 590));
+        Fondo.add(jPCardFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 55, 760, 620));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -466,11 +481,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel Fondo;
     private javax.swing.JLabel exitTxt;
     private javax.swing.JPanel header;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLAlquileres;
     private javax.swing.JLabel jLLogin;
     private javax.swing.JLabel jLPropiedades;
     private javax.swing.JLabel jLPropietarios;
     private javax.swing.JLabel jLSalir;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jListados;
     private javax.swing.JPanel jPCardFondo;
     private javax.swing.JPanel jPMenuLateral;

@@ -14,7 +14,7 @@ public class Propiedad {
     private int superficieTotal;
     private double precioTasado;
     private int antiguedad;
-    private Servicios servicios;
+    //private Servicios servicios;
     private Inspector inspector;
     private Zona zona;
     private Estado estado;
@@ -23,7 +23,7 @@ public class Propiedad {
     private boolean activo;
     //Declaro los Constructores
 
-    public Propiedad(int idPropiedad, Propietario propietario, String direccion, int altura, TipoPropiedad tipo, int superficieTotal, double precioTasado, int antiguedad, Servicios servicios, Inspector inspector, Zona zona, Estado estado, String observaciones, boolean disponible, boolean activo) {
+    public Propiedad(int idPropiedad, Propietario propietario, String direccion, int altura, TipoPropiedad tipo, int superficieTotal, double precioTasado, int antiguedad, Inspector inspector, Zona zona, Estado estado, String observaciones, boolean disponible, boolean activo) {
         this.idPropiedad = idPropiedad;
         this.propietario = propietario;
         this.direccion = direccion;
@@ -32,7 +32,7 @@ public class Propiedad {
         this.superficieTotal = superficieTotal;
         this.precioTasado = precioTasado;
         this.antiguedad = antiguedad;
-        this.servicios = servicios;
+       // this.servicios = servicios;
         this.inspector = inspector;
         this.zona = zona;
         this.estado = estado;
@@ -41,7 +41,7 @@ public class Propiedad {
         this.activo = activo;
     }
 
-    public Propiedad(Propietario propietario, String direccion, int altura, TipoPropiedad tipo, int superficieTotal, double precioTasado, int antiguedad, Servicios servicios, Inspector inspector, Zona zona, Estado estado, String observaciones, boolean disponible, boolean activo) {
+    public Propiedad(Propietario propietario, String direccion, int altura, TipoPropiedad tipo, int superficieTotal, double precioTasado, int antiguedad, Inspector inspector, Zona zona, Estado estado, String observaciones, boolean disponible, boolean activo) {
         this.propietario = propietario;
         this.direccion = direccion;
         this.altura = altura;
@@ -49,7 +49,7 @@ public class Propiedad {
         this.superficieTotal = superficieTotal;
         this.precioTasado = precioTasado;
         this.antiguedad = antiguedad;
-        this.servicios = servicios;
+       // this.servicios = servicios;
         this.inspector = inspector;
         this.zona = zona;
         this.estado = estado;
@@ -127,13 +127,13 @@ public class Propiedad {
         this.antiguedad = antiguedad;
     }
 
-    public Servicios getServicios() {
+  /*  public Servicios getServicios() {
         return servicios;
     }
 
     public void setServicios(Servicios servicios) {
         this.servicios = servicios;
-    }
+    }*/
 
     public Inspector getInspector() {
         return inspector;
@@ -184,7 +184,7 @@ public class Propiedad {
 
     @Override
     public String toString() {
-        return idPropiedad + " " + propietario + " " + direccion + " " + altura + " " + tipo + " " + superficieTotal + " " + precioTasado + " " + antiguedad + " " + servicios + " " + inspector + " " + zona + " " + estado + " " + observaciones + " " + disponible+ " " + activo;
+        return idPropiedad + " " + propietario + " " + direccion + " " + altura + " " + tipo + " " + superficieTotal + " " + precioTasado + " " + antiguedad + " " + " " + inspector + " " + zona + " " + estado + " " + observaciones + " " + disponible+ " " + activo;
     }
     
     

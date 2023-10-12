@@ -67,7 +67,7 @@ public class main {
 //      PropietarioData p1 = new PropietarioData();
 //      p1.guardarPropietario(propietario);
       
-      Propiedad propi = new Propiedad(1, propietario, "Belgrano", 23, tipo, 1800, 150000, 0, servi, inspec, zona, estado, "Departamento nuevo, a estrenar, bla bla bla", true, true);
+      Propiedad propi = new Propiedad(1, propietario, "Belgrano", 23, tipo, 1800, 150000, 0, inspec, zona, estado, "Departamento nuevo, a estrenar, bla bla bla", true, true);
 //      PropiedadData pd = new PropiedadData();
 //      pd.agregarPropiedad(propi);
       

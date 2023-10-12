@@ -108,7 +108,7 @@ public class Inspector {
     
     @Override
     public String toString() {
-        return idInspector + " " + matricula + " " + nombre + " " + apellido + " "+ dni + " " + telefono + " " + domicilio;
+        return idInspector + " " + matricula + " " + nombre + " " + apellido;
     }
     
     

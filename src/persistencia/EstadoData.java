@@ -7,6 +7,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 
@@ -87,5 +89,28 @@ public class EstadoData {
       
 }
    
+     public List<Estado> listarEstadosActivos() {
+        
+        String sql = "SELECT idEstado, nombre, activo FROM estado WHERE activo = 1";
+        ArrayList<Estado> estadoA = new ArrayList<>();
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                Estado estadA= new Estado();
+               estadA.setIdEstado(rs.getInt("idEstado"));
+               estadA.setNombre(rs.getString("nombre"));
+               estadA.setActivo(true);
+                estadoA.add(estadA);
+            }
+             //Cierro la Conexion
+            ps.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inspector");
+
+        }
+        return estadoA;
+    }
    
 }

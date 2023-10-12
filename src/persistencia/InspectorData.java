@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 public class InspectorData {
@@ -94,5 +96,32 @@ public class InspectorData {
         }
 
     }
+    
+    
+    public List<Inspector> listarInspectoresActivos() {
+        
+        String sql = "SELECT idInspector, matricula, nombre, apellido, telefono, activo FROM inspector WHERE activo = 1";
+        ArrayList<Inspector> inspectoresA = new ArrayList<>();
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
 
+            while (rs.next()) {
+                Inspector inspectorA= new Inspector();
+               inspectorA.setIdInspector(rs.getInt("idInspector"));
+               inspectorA.setMatricula(rs.getString("matricula"));
+                inspectorA.setNombre(rs.getString("nombre"));
+                inspectorA.setApellido(rs.getString("apellido"));
+                inspectorA.setTelefono(rs.getInt("telefono"));
+                inspectorA.setActivo(true);
+                inspectoresA.add(inspectorA);
+            }
+             //Cierro la Conexion
+            ps.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inspector");
+
+        }
+        return inspectoresA;
+    }
 }//fin

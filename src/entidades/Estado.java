@@ -56,7 +56,7 @@ public class Estado {
 
     @Override
     public String toString() {
-        return  idEstado + " " + nombre + " " + activo;
+        return  idEstado + " " + nombre;
     }
    
     

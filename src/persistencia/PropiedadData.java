@@ -25,8 +25,8 @@ public class PropiedadData {
     } 
     
     public void agregarPropiedad(Propiedad propiedad) {
-         String sql = "INSERT INTO propiedad (idPropietario, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idServicios, idInspector, idZona, idEstado, observaciones, vigente, activo) " +
-             "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+         String sql = "INSERT INTO propiedad (idPropietario, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idInspector, idZona, idEstado, observaciones, vigente, activo) " +
+             "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, propiedad.getPropietario().getIdPropietario());
@@ -36,19 +36,19 @@ public class PropiedadData {
             ps.setInt(5,propiedad.getSuperficieTotal());
             ps.setDouble(6, propiedad.getPrecioTasado());
             ps.setInt(7, propiedad.getAntiguedad());
-            ps.setInt(8, propiedad.getServicios().getIdServicios());
-            ps.setInt(9, propiedad.getInspector().getIdInspector());
-            ps.setInt(10, propiedad.getZona().getIdZona());
-            ps.setInt(11, propiedad.getEstado().getIdEstado());
-            ps.setString(12, propiedad.getObservaciones());
-            ps.setBoolean(13, propiedad.isDisponible());
-            ps.setBoolean(14, propiedad.isActivo());
+          //  ps.setInt(8, propiedad.getServicios().getIdServicios());
+            ps.setInt(8, propiedad.getInspector().getIdInspector());
+            ps.setInt(9, propiedad.getZona().getIdZona());
+            ps.setInt(10, propiedad.getEstado().getIdEstado());
+            ps.setString(11, propiedad.getObservaciones());
+            ps.setBoolean(12, propiedad.isDisponible());
+            ps.setBoolean(13, propiedad.isActivo());
             ps.executeUpdate();
             ResultSet rs = ps.getGeneratedKeys();
             //cartel para ver si fue hecho exitosamente la inscripcion
             if (rs.next()) {
                 propiedad.setIdPropiedad((rs.getInt(1)));
-                System.out.println("Agrego propiedad");
+                System.out.println("Propiedad agregada Exitosamente");
                 //AGREGAR JOptionPane despues, donde se llame al metodo para mensaje de correcta inscripcion
             } 
             //Cierro la Conexion
@@ -60,7 +60,7 @@ public class PropiedadData {
     }
     
      public void modificarPropiedad(Propiedad propiedad) {
-         String sql = "UPDATE propiedad SET idPropietario = ?, direccion = ?, altura = ?, idTipo = ?, superficieTotal = ?, precioTasado = ?, antiguedad = ?, idServicios = ?, idInspector = ?, idZona = ?, idEstado = ?, observaciones = ?, disponible = ?, activo = ? WHERE idPropiedad = ?";
+         String sql = "UPDATE propiedad SET idPropietario = ?, direccion = ?, altura = ?, idTipo = ?, superficieTotal = ?, precioTasado = ?, antiguedad = ?, idInspector = ?, idZona = ?, idEstado = ?, observaciones = ?, disponible = ?, activo = ? WHERE idPropiedad = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, propiedad.getPropietario().getIdPropietario());
@@ -70,14 +70,14 @@ public class PropiedadData {
             ps.setInt(5,propiedad.getSuperficieTotal());
             ps.setDouble(6, propiedad.getPrecioTasado());
             ps.setInt(7, propiedad.getAntiguedad());
-            ps.setInt(8, propiedad.getServicios().getIdServicios());
-            ps.setInt(9, propiedad.getInspector().getIdInspector());
-            ps.setInt(10, propiedad.getZona().getIdZona());
-            ps.setInt(11, propiedad.getEstado().getIdEstado());
-            ps.setString(12, propiedad.getObservaciones());
-            ps.setBoolean(13, propiedad.isDisponible());
-            ps.setBoolean(14, propiedad.isActivo());
-            ps.setInt(15, propiedad.getIdPropiedad());
+         //   ps.setInt(8, propiedad.getServicios().getIdServicios());
+            ps.setInt(8, propiedad.getInspector().getIdInspector());
+            ps.setInt(9, propiedad.getZona().getIdZona());
+            ps.setInt(10, propiedad.getEstado().getIdEstado());
+            ps.setString(11, propiedad.getObservaciones());
+            ps.setBoolean(12, propiedad.isDisponible());
+            ps.setBoolean(13, propiedad.isActivo());
+            ps.setInt(14, propiedad.getIdPropiedad());
             
            int exito = ps.executeUpdate();
             if (exito == 1) {
@@ -171,11 +171,12 @@ public class PropiedadData {
         return propiedades;
     }
     
-      public List<Propiedad> listarPropiedadesXDueño() {
+      public List<Propiedad> listarPropiedadesXDueño(int idPropietario) {
          String sql = "SELECT idPropiedad, direccion, altura, superficieTotal, precioTasado, antiguedad, observaciones, disponible FROM propiedad p1 JOIN propietario p2 on (p1.idPropietario = p2.idPropietario) WHERE p1.idPropietario = ?";
         ArrayList<Propiedad> propiedades = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
+             ps.setInt(1, idPropietario);
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
