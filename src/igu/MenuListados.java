@@ -149,6 +149,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jTabbedPane1.setBackground(new java.awt.Color(51, 51, 51));
         jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jTabbedPane1StateChanged(evt);
@@ -192,6 +193,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jBNuevoInquilinos.setBackground(new java.awt.Color(51, 51, 51));
         jBNuevoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBNuevoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
         jBNuevoInquilinos.setText("Nuevo");
@@ -202,6 +204,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jBModificarInquilinos.setBackground(new java.awt.Color(51, 51, 51));
         jBModificarInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBModificarInquilinos.setForeground(new java.awt.Color(51, 204, 255));
         jBModificarInquilinos.setText("Modificar");
@@ -212,6 +215,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jBEliminarInquilinos.setBackground(new java.awt.Color(51, 51, 51));
         jBEliminarInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBEliminarInquilinos.setForeground(new java.awt.Color(51, 204, 255));
         jBEliminarInquilinos.setText("Eliminar");
@@ -222,6 +226,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jBSalirInquilinos.setBackground(new java.awt.Color(51, 51, 51));
         jBSalirInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBSalirInquilinos.setForeground(new java.awt.Color(51, 204, 255));
         jBSalirInquilinos.setText("Salir");
@@ -412,13 +417,13 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLActivoInquilinos)
                     .addComponent(jRInquilino))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addGap(50, 50, 50)
                 .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBSalirInquilinos)
                     .addComponent(jBNuevoInquilinos)
                     .addComponent(jBModificarInquilinos)
                     .addComponent(jBEliminarInquilinos))
-                .addGap(65, 65, 65))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("INQUILINOS", jPInquilinos);
@@ -446,6 +451,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jBNuevoGarante.setBackground(new java.awt.Color(51, 51, 51));
         jBNuevoGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBNuevoGarante.setForeground(new java.awt.Color(51, 204, 255));
         jBNuevoGarante.setText("Nuevo");
@@ -456,6 +462,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jBModificarGarante.setBackground(new java.awt.Color(51, 51, 51));
         jBModificarGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBModificarGarante.setForeground(new java.awt.Color(51, 204, 255));
         jBModificarGarante.setText("Modificar");
@@ -466,6 +473,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jBEliminarGarante.setBackground(new java.awt.Color(51, 51, 51));
         jBEliminarGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBEliminarGarante.setForeground(new java.awt.Color(51, 204, 255));
         jBEliminarGarante.setText("Eliminar");
@@ -476,6 +484,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jBSalirGarante.setBackground(new java.awt.Color(51, 51, 51));
         jBSalirGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBSalirGarante.setForeground(new java.awt.Color(51, 204, 255));
         jBSalirGarante.setText("Salir");
@@ -604,8 +613,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addComponent(jCBusquedaGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(249, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPGaranteLayout.createSequentialGroup()
-                .addGap(0, 235, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPGaranteLayout.createSequentialGroup()
+                        .addComponent(jRGarante)
+                        .addGap(331, 331, 331))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPGaranteLayout.createSequentialGroup()
                         .addComponent(jBNuevoGarante)
                         .addGap(18, 18, 18)
@@ -614,10 +626,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addComponent(jBEliminarGarante)
                         .addGap(18, 18, 18)
                         .addComponent(jBSalirGarante)
-                        .addGap(167, 167, 167))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPGaranteLayout.createSequentialGroup()
-                        .addComponent(jRGarante)
-                        .addGap(331, 331, 331))))
+                        .addGap(170, 170, 170))))
             .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPGaranteLayout.createSequentialGroup()
                     .addGap(233, 233, 233)
@@ -662,13 +671,13 @@ public class MenuListados extends javax.swing.JInternalFrame {
                     .addComponent(jCBusquedaGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
                 .addComponent(jRGarante)
-                .addGap(80, 80, 80)
+                .addGap(32, 32, 32)
                 .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevoGarante)
                     .addComponent(jBModificarGarante)
                     .addComponent(jBEliminarGarante)
                     .addComponent(jBSalirGarante))
-                .addGap(66, 66, 66))
+                .addGap(114, 114, 114))
             .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPGaranteLayout.createSequentialGroup()
                     .addGap(167, 167, 167)
@@ -725,6 +734,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jBNuevoInspector.setBackground(new java.awt.Color(51, 51, 51));
         jBNuevoInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBNuevoInspector.setForeground(new java.awt.Color(51, 204, 255));
         jBNuevoInspector.setText("Nuevo");
@@ -735,6 +745,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jBModificarInspector.setBackground(new java.awt.Color(51, 51, 51));
         jBModificarInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBModificarInspector.setForeground(new java.awt.Color(51, 204, 255));
         jBModificarInspector.setText("Modificar");
@@ -745,6 +756,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jBEliminarInspector.setBackground(new java.awt.Color(51, 51, 51));
         jBEliminarInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBEliminarInspector.setForeground(new java.awt.Color(51, 204, 255));
         jBEliminarInspector.setText("Eliminar");
@@ -755,6 +767,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jBSalirInspector.setBackground(new java.awt.Color(51, 51, 51));
         jBSalirInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBSalirInspector.setForeground(new java.awt.Color(51, 204, 255));
         jBSalirInspector.setText("Salir");
@@ -869,17 +882,19 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addContainerGap(241, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInspectorLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jRInspector)
-                    .addGroup(jPInspectorLayout.createSequentialGroup()
+                .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInspectorLayout.createSequentialGroup()
+                        .addComponent(jRInspector)
+                        .addGap(333, 333, 333))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInspectorLayout.createSequentialGroup()
                         .addComponent(jBNuevoInspector)
                         .addGap(18, 18, 18)
-                        .addComponent(jBModificarInspector)))
-                .addGap(18, 18, 18)
-                .addComponent(jBEliminarInspector)
-                .addGap(18, 18, 18)
-                .addComponent(jBSalirInspector)
-                .addGap(160, 160, 160))
+                        .addComponent(jBModificarInspector)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBEliminarInspector)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBSalirInspector)
+                        .addGap(173, 173, 173))))
             .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPInspectorLayout.createSequentialGroup()
                     .addGap(233, 233, 233)
@@ -920,13 +935,13 @@ public class MenuListados extends javax.swing.JInternalFrame {
                     .addComponent(jCBusquedaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 226, Short.MAX_VALUE)
                 .addComponent(jRInspector)
-                .addGap(76, 76, 76)
+                .addGap(27, 27, 27)
                 .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevoInspector)
                     .addComponent(jBModificarInspector)
                     .addComponent(jBEliminarInspector)
                     .addComponent(jBSalirInspector))
-                .addGap(83, 83, 83))
+                .addGap(132, 132, 132))
             .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPInspectorLayout.createSequentialGroup()
                     .addGap(182, 182, 182)
@@ -974,7 +989,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(jPBarraNavegador3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
 

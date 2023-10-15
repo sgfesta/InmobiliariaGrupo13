@@ -149,7 +149,7 @@ ContratoData cd = new ContratoData();
                 jBNuevoAlquilerActionPerformed(evt);
             }
         });
-        jPCardAlquileres.add(jBNuevoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 544, -1, -1));
+        jPCardAlquileres.add(jBNuevoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, -1, -1));
 
         jTIDPropiedad.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropiedad.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -266,21 +266,21 @@ ContratoData cd = new ContratoData();
         jBModificarAlquiler.setForeground(new java.awt.Color(51, 204, 255));
         jBModificarAlquiler.setText("Modificar");
         jBModificarAlquiler.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPCardAlquileres.add(jBModificarAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 544, -1, -1));
+        jPCardAlquileres.add(jBModificarAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 460, -1, -1));
 
         jBEliminarAlquiler.setBackground(new java.awt.Color(51, 51, 51));
         jBEliminarAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBEliminarAlquiler.setForeground(new java.awt.Color(51, 204, 255));
         jBEliminarAlquiler.setText("Eliminar");
         jBEliminarAlquiler.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPCardAlquileres.add(jBEliminarAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(399, 544, -1, -1));
+        jPCardAlquileres.add(jBEliminarAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 460, -1, -1));
 
         jBSalirAlquiler.setBackground(new java.awt.Color(51, 51, 51));
         jBSalirAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBSalirAlquiler.setForeground(new java.awt.Color(51, 204, 255));
         jBSalirAlquiler.setText("Salir");
         jBSalirAlquiler.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPCardAlquileres.add(jBSalirAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 544, -1, -1));
+        jPCardAlquileres.add(jBSalirAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 460, -1, -1));
         jPCardAlquileres.add(jDFechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(545, 238, 156, -1));
         jPCardAlquileres.add(jDFechaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(545, 197, 156, -1));
         jPCardAlquileres.add(jDFechaContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(545, 273, 156, -1));
