@@ -1,7 +1,11 @@
 
 package persistencia;
 
+import entidades.Estado;
+import entidades.Inspector;
 import entidades.Propiedad;
+import entidades.TipoPropiedad;
+import entidades.Zona;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -172,7 +176,7 @@ public class PropiedadData {
     }
     
       public List<Propiedad> listarPropiedadesXDueño(int idPropietario) {
-         String sql = "SELECT idPropiedad, direccion, altura, superficieTotal, precioTasado, antiguedad, observaciones, disponible FROM propiedad p1 JOIN propietario p2 on (p1.idPropietario = p2.idPropietario) WHERE p1.idPropietario = ?";
+         String sql = "SELECT idPropiedad, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idInspector, idZona, idEstado, observaciones, disponible FROM propiedad p1 JOIN propietario p2 on (p1.idPropietario = p2.idPropietario) WHERE p1.idPropietario = ?";
         ArrayList<Propiedad> propiedades = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -185,12 +189,31 @@ public class PropiedadData {
                 pr1.setIdPropiedad(rs.getInt("idPropiedad"));
                 pr1.setDireccion(rs.getString("direccion"));
                 pr1.setAltura(rs.getInt("altura"));
+                
+                TipoPropiedad tipo=new TipoPropiedad();
+                tipo.setIdTipo(rs.getInt("idTipo"));
+                pr1.setTipo(tipo);
+                
                 pr1.setSuperficieTotal(rs.getInt("superficieTotal"));
                 pr1.setPrecioTasado(rs.getDouble("precioTasado"));
                 pr1.setAntiguedad(rs.getInt("antiguedad"));
+                
+                Inspector inspector=new Inspector();
+                inspector.setIdInspector(rs.getInt("idInspector"));
+                pr1.setInspector(inspector);
+                
+                Zona zona=new Zona();
+                zona.setIdZona(rs.getInt("idZona"));
+                pr1.setZona(zona);
+                
+                Estado estado=new Estado();
+                estado.setIdEstado(rs.getInt("idEstado"));
+                pr1.setEstado(estado);
+                
                 pr1.setObservaciones(rs.getString("observaciones"));
                 pr1.setDisponible(rs.getBoolean("disponible"));
                 propiedades.add(pr1);
+                
             }
              //Cierro la Conexion
             ps.close();
@@ -200,6 +223,7 @@ public class PropiedadData {
         }
         return propiedades;
     }
+      
       public List<Propiedad> listarPropiedadesXDueñoyDisponibles() {
         String sql = "SELECT idPropiedad, direccion, altura, superficieTotal, precioTasado, antiguedad, observaciones, disponible FROM propiedad p1 JOIN propietario p2 on (p1.idPropietario = p2.idPropietario) WHERE activo = 1";
         ArrayList<Propiedad> propiedades = new ArrayList<>();

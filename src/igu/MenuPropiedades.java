@@ -93,12 +93,12 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jCListaInspectoresPropiedades = new javax.swing.JComboBox<>();
         jCListarZonaPropiedades = new javax.swing.JComboBox<>();
 
+        setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
         jPPropiedades.setBackground(new java.awt.Color(55, 55, 54));
         jPPropiedades.setMinimumSize(new java.awt.Dimension(748, 635));
         jPPropiedades.setPreferredSize(new java.awt.Dimension(748, 635));
-        jPPropiedades.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLTituloPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLTituloPropiedades.setForeground(new java.awt.Color(51, 204, 255));
@@ -106,133 +106,112 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jLTituloPropiedades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
         jLTituloPropiedades.setText("  Formulario Propiedades");
         jLTituloPropiedades.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPPropiedades.add(jLTituloPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 290, -1));
 
         jLIDPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLIDPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLIDPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLIDPropiedades.setText("ID Propietario");
-        jPPropiedades.add(jLIDPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 150, 150, 30));
 
         jLDireccionPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLDireccionPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLDireccionPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLDireccionPropiedades.setText("Direccion");
         jLDireccionPropiedades.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPPropiedades.add(jLDireccionPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 131, -1));
 
         jLAlturaPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLAlturaPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLAlturaPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLAlturaPropiedades.setText("Altura");
         jLAlturaPropiedades.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPPropiedades.add(jLAlturaPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 131, -1));
 
         jLTipoPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLTipoPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLTipoPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLTipoPropiedades.setText("Tipo");
         jLTipoPropiedades.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPPropiedades.add(jLTipoPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 131, -1));
 
         jLSuperTotalPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLSuperTotalPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLSuperTotalPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLSuperTotalPropiedades.setText("Super. Total");
         jLSuperTotalPropiedades.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPPropiedades.add(jLSuperTotalPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 131, -1));
 
         jLPrecioTasadoPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLPrecioTasadoPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLPrecioTasadoPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLPrecioTasadoPropiedades.setText("Precio Tasado");
         jLPrecioTasadoPropiedades.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPPropiedades.add(jLPrecioTasadoPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 131, -1));
 
         jLAntiguedadPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLAntiguedadPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLAntiguedadPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLAntiguedadPropiedades.setText("Antiguedad");
         jLAntiguedadPropiedades.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPPropiedades.add(jLAntiguedadPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 131, -1));
 
         jLInspectorPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLInspectorPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLInspectorPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLInspectorPropiedades.setText("Inspector");
-        jPPropiedades.add(jLInspectorPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 131, 30));
 
         jLZonaPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLZonaPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLZonaPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLZonaPropiedades.setText("Zona");
-        jPPropiedades.add(jLZonaPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, 131, 30));
 
         jTIDPropietarios.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropietarios.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDPropietarios.setForeground(new java.awt.Color(51, 51, 51));
-        jPPropiedades.add(jTIDPropietarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 187, 30));
 
         jTDireccionPropiedades.setBackground(new java.awt.Color(153, 153, 153));
         jTDireccionPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTDireccionPropiedades.setForeground(new java.awt.Color(51, 51, 51));
-        jPPropiedades.add(jTDireccionPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 187, -1));
 
         jTAlturaPropiedades.setBackground(new java.awt.Color(153, 153, 153));
         jTAlturaPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTAlturaPropiedades.setForeground(new java.awt.Color(51, 51, 51));
-        jPPropiedades.add(jTAlturaPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 187, -1));
 
         jTSuperTotalPropiedades.setBackground(new java.awt.Color(153, 153, 153));
         jTSuperTotalPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTSuperTotalPropiedades.setForeground(new java.awt.Color(51, 51, 51));
-        jPPropiedades.add(jTSuperTotalPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 187, -1));
 
         jTPrecioTasadoPropiedades.setBackground(new java.awt.Color(153, 153, 153));
         jTPrecioTasadoPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTPrecioTasadoPropiedades.setForeground(new java.awt.Color(51, 51, 51));
-        jPPropiedades.add(jTPrecioTasadoPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 187, -1));
 
         jTAntiguedadPropiedad.setBackground(new java.awt.Color(153, 153, 153));
         jTAntiguedadPropiedad.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTAntiguedadPropiedad.setForeground(new java.awt.Color(51, 51, 51));
-        jPPropiedades.add(jTAntiguedadPropiedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 187, -1));
 
         jLEstadoPropiedad.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLEstadoPropiedad.setForeground(new java.awt.Color(51, 204, 255));
         jLEstadoPropiedad.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLEstadoPropiedad.setText("Estado");
         jLEstadoPropiedad.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPPropiedades.add(jLEstadoPropiedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 110, 30));
 
         jLDisponibilidadPropiedad.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLDisponibilidadPropiedad.setForeground(new java.awt.Color(51, 204, 255));
         jLDisponibilidadPropiedad.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLDisponibilidadPropiedad.setText("Disponibilidad");
         jLDisponibilidadPropiedad.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPPropiedades.add(jLDisponibilidadPropiedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 118, 30));
 
         jLActivoPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLActivoPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLActivoPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLActivoPropiedades.setText("Activo");
         jLActivoPropiedades.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPPropiedades.add(jLActivoPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 118, 30));
 
         jLObservacionesPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLObservacionesPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLObservacionesPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLObservacionesPropiedades.setText("Observaciones");
         jLObservacionesPropiedades.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPPropiedades.add(jLObservacionesPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 320, 118, -1));
 
         jTObservacionesPropiedades.setBackground(new java.awt.Color(153, 153, 153));
         jTObservacionesPropiedades.setColumns(20);
         jTObservacionesPropiedades.setRows(5);
         jScrollPane1.setViewportView(jTObservacionesPropiedades);
 
-        jPPropiedades.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, 312, 157));
-
+        jBNuevoPropiedades.setBackground(new java.awt.Color(51, 51, 51));
         jBNuevoPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBNuevoPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jBNuevoPropiedades.setText("Nuevo");
@@ -242,8 +221,8 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 jBNuevoPropiedadesActionPerformed(evt);
             }
         });
-        jPPropiedades.add(jBNuevoPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 580, -1, -1));
 
+        jBModificarPropiedades.setBackground(new java.awt.Color(51, 51, 51));
         jBModificarPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBModificarPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jBModificarPropiedades.setText("Modificar");
@@ -253,8 +232,8 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 jBModificarPropiedadesActionPerformed(evt);
             }
         });
-        jPPropiedades.add(jBModificarPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 580, -1, -1));
 
+        jBEliminarPropiedades.setBackground(new java.awt.Color(51, 51, 51));
         jBEliminarPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBEliminarPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jBEliminarPropiedades.setText("Eliminar");
@@ -264,8 +243,8 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 jBEliminarPropiedadesActionPerformed(evt);
             }
         });
-        jPPropiedades.add(jBEliminarPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 580, -1, -1));
 
+        jBSalirPropiedades.setBackground(new java.awt.Color(51, 51, 51));
         jBSalirPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBSalirPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jBSalirPropiedades.setText("Salir");
@@ -275,7 +254,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 jBSalirPropiedadesActionPerformed(evt);
             }
         });
-        jPPropiedades.add(jBSalirPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 580, -1, -1));
 
         jPBarraNavegador.setBackground(new java.awt.Color(153, 153, 153));
 
@@ -292,7 +270,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             .addGroup(jPBarraNavegadorLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLNavegacionEnBarra, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(475, Short.MAX_VALUE))
         );
         jPBarraNavegadorLayout.setVerticalGroup(
             jPBarraNavegadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -302,10 +280,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPPropiedades.add(jPBarraNavegador, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 740, -1));
-
         jRDisponibilidadPropiedades.setText("Activo");
-        jPPropiedades.add(jRDisponibilidadPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, -1, -1));
 
         jBBotonBusqueda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3844432-magnifier-search-zoom_110300.png"))); // NOI18N
         jBBotonBusqueda.setBorder(null);
@@ -316,13 +291,10 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 jBBotonBusquedaActionPerformed(evt);
             }
         });
-        jPPropiedades.add(jBBotonBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 40, 40));
 
         jCListaTipoPropiedades.setBackground(new java.awt.Color(153, 153, 153));
-        jPPropiedades.add(jCListaTipoPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 190, 30));
 
         jRActivoPropiedades1.setText("Activo");
-        jPPropiedades.add(jRActivoPropiedades1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, -1, -1));
 
         jCListaPropiedades1.setBackground(new java.awt.Color(153, 153, 153));
         jCListaPropiedades1.addActionListener(new java.awt.event.ActionListener() {
@@ -330,32 +302,181 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 jCListaPropiedades1ActionPerformed(evt);
             }
         });
-        jPPropiedades.add(jCListaPropiedades1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, 220, 30));
 
         jCListarEstadoPropiedades.setBackground(new java.awt.Color(153, 153, 153));
-        jPPropiedades.add(jCListarEstadoPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 190, 30));
 
         jCListaInspectoresPropiedades.setBackground(new java.awt.Color(153, 153, 153));
-        jPPropiedades.add(jCListaInspectoresPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 190, 30));
 
         jCListarZonaPropiedades.setBackground(new java.awt.Color(153, 153, 153));
-        jPPropiedades.add(jCListarZonaPropiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 450, 190, 30));
+
+        javax.swing.GroupLayout jPPropiedadesLayout = new javax.swing.GroupLayout(jPPropiedades);
+        jPPropiedades.setLayout(jPPropiedadesLayout);
+        jPPropiedadesLayout.setHorizontalGroup(
+            jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jPBarraNavegador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(230, 230, 230)
+                        .addComponent(jLTituloPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLIDPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9)
+                        .addComponent(jTIDPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(3, 3, 3)
+                        .addComponent(jBBotonBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addComponent(jCListaPropiedades1, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jLDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9)
+                        .addComponent(jTDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(43, 43, 43)
+                        .addComponent(jLDisponibilidadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
+                        .addComponent(jRDisponibilidadPropiedades))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLAlturaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLSuperTotalPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(9, 9, 9)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTAlturaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTSuperTotalPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(43, 43, 43)
+                        .addComponent(jLActivoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
+                        .addComponent(jRActivoPropiedades1))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jLPrecioTasadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9)
+                        .addComponent(jTPrecioTasadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(133, 133, 133)
+                        .addComponent(jLObservacionesPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLAntiguedadPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLTipoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLInspectorPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLEstadoPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(9, 9, 9)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTAntiguedadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCListaTipoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCListaInspectoresPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCListarZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCListarEstadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addComponent(jBNuevoPropiedades)
+                        .addGap(20, 20, 20)
+                        .addComponent(jBModificarPropiedades)
+                        .addGap(22, 22, 22)
+                        .addComponent(jBEliminarPropiedades)
+                        .addGap(20, 20, 20)
+                        .addComponent(jBSalirPropiedades)))
+                .addContainerGap(8, Short.MAX_VALUE))
+        );
+        jPPropiedadesLayout.setVerticalGroup(
+            jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jPBarraNavegador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(jLTituloPropiedades)
+                .addGap(18, 18, 18)
+                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jBBotonBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLIDPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTIDPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCListaPropiedades1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(40, 40, 40)
+                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLDireccionPropiedades)
+                    .addComponent(jTDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLDisponibilidadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRDisponibilidadPropiedades))
+                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addComponent(jLAlturaPropiedades)
+                        .addGap(21, 21, 21)
+                        .addComponent(jLSuperTotalPropiedades))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addComponent(jTAlturaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(jTSuperTotalPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLActivoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRActivoPropiedades1))))
+                .addGap(1, 1, 1)
+                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLPrecioTasadoPropiedades)
+                    .addComponent(jTPrecioTasadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLObservacionesPropiedades)))
+                .addGap(1, 1, 1)
+                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addComponent(jLAntiguedadPropiedades)
+                        .addGap(21, 21, 21)
+                        .addComponent(jLTipoPropiedades)
+                        .addGap(11, 11, 11)
+                        .addComponent(jLInspectorPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(jLZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jLEstadoPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addComponent(jTAntiguedadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(jCListaTipoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(jCListaInspectoresPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(jCListarZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(jCListarEstadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(60, 60, 60)
+                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jBNuevoPropiedades)
+                    .addComponent(jBModificarPropiedades)
+                    .addComponent(jBEliminarPropiedades)
+                    .addComponent(jBSalirPropiedades)))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(0, 0, 0)
+                .addComponent(jPPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 758, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jPPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -560,14 +681,49 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             jTPrecioTasadoPropiedades.setText(String.valueOf(propiedadSeleccionado.getPrecioTasado()));
             jTAntiguedadPropiedad.setText(String.valueOf(propiedadSeleccionado.getAntiguedad()));
             //combos
-            //jCListaTipoPropiedades
+           // jCListaTipoPropiedades 
+           
+             for (int i=0; i<jCListaTipoPropiedades.getItemCount(); i++) {
+                TipoPropiedad x=jCListaTipoPropiedades.getItemAt(i);
+                if (x.getIdTipo() == propiedadSeleccionado.getTipo().getIdTipo() ){
+                    jCListaTipoPropiedades.setSelectedIndex(i);
+                }
+              }
+           
             //jCListaInspectoresPropiedades
+               
+            for (int i=0; i<jCListaInspectoresPropiedades.getItemCount(); i++) {
+                Inspector x=jCListaInspectoresPropiedades.getItemAt(i);
+                if (x.getIdInspector() == propiedadSeleccionado.getInspector().getIdInspector() ){
+                    jCListaInspectoresPropiedades.setSelectedIndex(i);
+                }
+              }
+            
             //jCListarZonaPropiedades
+            
+             for (int i=0; i<jCListarZonaPropiedades.getItemCount(); i++) {
+                Zona x=jCListarZonaPropiedades.getItemAt(i);
+                if (x.getIdZona() == propiedadSeleccionado.getZona().getIdZona() ){
+                    jCListarZonaPropiedades.setSelectedIndex(i);
+                }
+              }
+            
+            
             //jCListarEstadoPropiedades
+            
+            for (int i=0; i<jCListarEstadoPropiedades.getItemCount(); i++) {
+                Estado x=jCListarEstadoPropiedades.getItemAt(i);
+                if (x.getIdEstado() == propiedadSeleccionado.getEstado().getIdEstado() ){
+                    jCListarEstadoPropiedades.setSelectedIndex(i);
+                }
+              }
+            
+            
             
             jRDisponibilidadPropiedades.setSelected(propiedadSeleccionado.isActivo());
             jRActivoPropiedades1.setSelected(propiedadSeleccionado.isActivo());
             jTObservacionesPropiedades.setText(String.valueOf(propiedadSeleccionado.getObservaciones()));
+            System.out.println(jCListaTipoPropiedades.getSelectedIndex());
         }
     }
        

@@ -75,6 +75,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jrbPropietario = new javax.swing.JRadioButton();
         jLabel46 = new javax.swing.JLabel();
 
+        setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
         jPCardPropietarios.setBackground(new java.awt.Color(55, 55, 55));
@@ -131,6 +132,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jTIDPropietario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDPropietario.setForeground(new java.awt.Color(51, 51, 51));
 
+        jBModificarPropietario.setBackground(new java.awt.Color(51, 51, 51));
         jBModificarPropietario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBModificarPropietario.setForeground(new java.awt.Color(51, 204, 255));
         jBModificarPropietario.setText("Modificar");
@@ -197,6 +199,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jLabel34.setText("Activo");
         jLabel34.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        jBNuevo2.setBackground(new java.awt.Color(51, 51, 51));
         jBNuevo2.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBNuevo2.setForeground(new java.awt.Color(51, 204, 255));
         jBNuevo2.setText("Nuevo");
@@ -207,6 +210,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
             }
         });
 
+        jBEliminarPropietario.setBackground(new java.awt.Color(51, 51, 51));
         jBEliminarPropietario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBEliminarPropietario.setForeground(new java.awt.Color(51, 204, 255));
         jBEliminarPropietario.setText("Eliminar");
@@ -217,6 +221,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
             }
         });
 
+        jBSalirPropietario.setBackground(new java.awt.Color(51, 51, 51));
         jBSalirPropietario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBSalirPropietario.setForeground(new java.awt.Color(51, 204, 255));
         jBSalirPropietario.setText("Salir");
@@ -258,7 +263,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                         .addComponent(jBSalirPropietario)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardPropietariosLayout.createSequentialGroup()
-                .addGap(0, 14, Short.MAX_VALUE)
+                .addGap(0, 26, Short.MAX_VALUE)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardPropietariosLayout.createSequentialGroup()
                         .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -289,9 +294,9 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jPCardPropietariosLayout.setVerticalGroup(
             jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPCardPropietariosLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap()
                 .addComponent(jPBarraNavegador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel5)
                 .addGap(48, 48, 48)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -339,21 +344,15 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 754, Short.MAX_VALUE)
+            .addGap(0, 760, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPCardPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jPCardPropietarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGap(0, 612, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPCardPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jPCardPropietarios, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 612, Short.MAX_VALUE))
         );
 
         pack();
