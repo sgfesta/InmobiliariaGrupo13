@@ -52,7 +52,6 @@ public class PropiedadData {
             //cartel para ver si fue hecho exitosamente la inscripcion
             if (rs.next()) {
                 propiedad.setIdPropiedad((rs.getInt(1)));
-                System.out.println("Propiedad agregada Exitosamente");
                 //AGREGAR JOptionPane despues, donde se llame al metodo para mensaje de correcta inscripcion
             } 
             //Cierro la Conexion

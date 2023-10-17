@@ -65,7 +65,7 @@ public class Zona {
 
     @Override
     public String toString() {
-        return idZona + ", " + provincia + ", " + ciudad + ", " + barrio;
+        return idZona + ") " + provincia + ", " + ciudad + ", " + barrio;
     }
     
     

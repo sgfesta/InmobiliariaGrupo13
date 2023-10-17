@@ -54,7 +54,7 @@ public class TipoPropiedad {
 
     @Override
     public String toString() {
-        return  idTipo + " " + nombre;
+        return  idTipo + ") " + nombre;
     }
     
     

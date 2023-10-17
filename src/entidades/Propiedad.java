@@ -184,7 +184,7 @@ public class Propiedad {
 
     @Override
     public String toString() {
-        return idPropiedad + " " + propietario + " " + direccion + " " + altura + " " + tipo + " " + superficieTotal + " " + precioTasado + " " + antiguedad + " " + " " + inspector + " " + zona + " " + estado + " " + observaciones + " " + disponible+ " " + activo;
+        return idPropiedad + ") " + direccion + " " + altura;
     }
     
     

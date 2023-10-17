@@ -86,7 +86,7 @@ public class Inspector {
     
     @Override
     public String toString() {
-        return idInspector + " " + matricula + " " + nombre + " " + apellido + " " + telefono + " " + activo;
+        return idInspector + ") " + matricula + " - " + apellido + ", " + nombre;
     }
     
     
