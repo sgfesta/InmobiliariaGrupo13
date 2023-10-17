@@ -494,15 +494,10 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jBNuevoPropiedadesActionPerformed
 
     private void jBModificarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarPropiedadesActionPerformed
-        if (idPropietarioSeleccionado != -1) { // Verifica que se haya seleccionado un alumno
+
             modificarPropiedad(); // Llama al método modificar solo si se ha seleccionado un alumno
-            limpiarCampos();
-            //Deshabilito botones luego de ejecutar acccion
-            //desHabilitarBotones();
-            //cargarCombo();
-        } else {
-            JOptionPane.showMessageDialog(this, "Error, no se ha podido modificar.");
-        }
+          
+        
     }//GEN-LAST:event_jBModificarPropiedadesActionPerformed
 
     private void jBEliminarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarPropiedadesActionPerformed
@@ -753,9 +748,8 @@ limpiarCampos();
 
         try {
             PropietarioData prod = new PropietarioData();
-            Propiedad propiedadSeleccionada = (Propiedad) jCListaPropietarios.getSelectedItem();
-
-            Propiedad PSelec = (Propiedad) jCListaTipoPropiedades.getSelectedItem();
+            Propiedad propiedadSeleccionada = (Propiedad) jCListaPropiedades2.getSelectedItem();
+           int id = propiedadSeleccionada.getIdPropiedad();
           //  int idp = Integer.parseInt(jTIDPropietarios.getText());
             Propietario propietario = (Propietario)jCListaPropietarios.getSelectedItem();
             String direccion = jTDireccionPropiedades.getText();
@@ -764,16 +758,18 @@ limpiarCampos();
             int superficieTotal = Integer.parseInt(jTSuperTotalPropiedades.getText());
             double precioTasado = Double.parseDouble(jTPrecioTasadoPropiedades.getText());
             int antiguedad = Integer.parseInt(jTAntiguedadPropiedad.getText());
-            Inspector insSelec = (Inspector) jCListaTipoPropiedades.getSelectedItem();
-            Zona zona = (Zona) jCListarEstadoPropiedades.getSelectedItem();
+            Inspector insSelec = (Inspector) jCListaInspectoresPropiedades.getSelectedItem();
+            Zona zona = (Zona) jCListarZonaPropiedades.getSelectedItem();
             Estado estado = (Estado) jCListarEstadoPropiedades.getSelectedItem();
             String observaciones = jTObservacionesPropiedades.getText();
             boolean disponible = jRDisponibilidadPropiedades.isSelected();
             boolean activo = jRActivoPropiedades1.isSelected();
-            Propiedad nuevoP = new Propiedad(propietario, direccion, altura, tipoSelec, superficieTotal, precioTasado, antiguedad, insSelec, zona, estado, observaciones, disponible, activo);
+            Propiedad nuevoP = new Propiedad(id, propietario, direccion, altura, tipoSelec, superficieTotal, precioTasado, antiguedad, insSelec, zona, estado, observaciones, disponible, activo);
             pd.modificarPropiedad(nuevoP);
+            JOptionPane.showMessageDialog(this, "Propiedad modificada exitosamente");
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
         }
-    }
+        }
+    
 }

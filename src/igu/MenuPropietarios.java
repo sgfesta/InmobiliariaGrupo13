@@ -444,7 +444,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
             String dom = jTIDPropietarios6.getText();
             boolean est = jrbPropietario.isSelected();
             Propietario nuevoM = new Propietario(id, ap, nom, documento, tel, dom, est);
-            pd.modificarAlumno(nuevoM);
+            pd.modificarPropietario(nuevoM);
              JOptionPane.showMessageDialog(this, "Propietario modificado exitosamente");
         }
         catch(NullPointerException ex){

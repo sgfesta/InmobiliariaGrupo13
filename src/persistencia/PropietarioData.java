@@ -55,7 +55,7 @@ public class PropietarioData {
 
     }
 
-    public void modificarAlumno(Propietario propietario) {
+    public void modificarPropietario(Propietario propietario) {
         
         String sql = "UPDATE propietario SET nombre = ?, apellido = ?, dni = ?, telefono= ?,  domicilio = ?, activo = ? WHERE idPropietario = ?";
         try {
@@ -63,8 +63,8 @@ public class PropietarioData {
             ps.setString(1, propietario.getNombre());
             ps.setString(2, propietario.getApellido());
             ps.setString(3, propietario.getDni());
-            ps.setString(5, propietario.getTelefono());
-            ps.setString(4, propietario.getDomicilio());
+            ps.setString(4, propietario.getTelefono());
+            ps.setString(5, propietario.getDomicilio());
             ps.setBoolean(6, propietario.isActivo());
             ps.setInt(7, propietario.getIdPropietario());
             int exito = ps.executeUpdate();
