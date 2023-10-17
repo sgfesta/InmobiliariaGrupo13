@@ -34,7 +34,7 @@ public class main {
 //        InspectorData ins = new InspectorData();
 //        ins.guardarInspector(inspec);
 //        
-        Inquilino i1 = new Inquilino(1,"Pedro", "Perez", 111, 1654, "Fabrica", true);
+        Inquilino i1 = new Inquilino(1,"Pedro", "Perez", "111", "1654", "Fabrica", true);
 //        InquilinoData In = new InquilinoData();
 //        In.guardarInquilino(i1);
 //    

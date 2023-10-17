@@ -166,8 +166,8 @@ public class ContratoData {
                 inquilino = new Inquilino();           
                 inquilino.setNombre(rs.getString("nombre"));
                 inquilino.setApellido(rs.getString("apellido"));
-                inquilino.setDni(rs.getInt("dni"));
-                inquilino.setCuit(rs.getInt("cuit"));
+                inquilino.setDni(rs.getString("dni"));
+                inquilino.setCuit(rs.getString("cuit"));
                 inquilino.setLugarTrabajo(rs.getString("lugarTrabajo"));
                 inquilino.setActivo(rs.getBoolean("activo"));
                 inquilino.setIdInquilino(idInquilino);

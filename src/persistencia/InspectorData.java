@@ -30,7 +30,7 @@ public class InspectorData {
             ps.setString(1, inspector.getMatricula());
             ps.setString(2, inspector.getNombre());
             ps.setString(3, inspector.getApellido());
-            ps.setInt(4, inspector.getTelefono());
+            ps.setString(4, inspector.getTelefono());
             ps.setBoolean(5, inspector.isActivo());
             int exito = ps.executeUpdate();
 
@@ -59,7 +59,7 @@ public class InspectorData {
             ps.setString(1, inspector.getMatricula());
             ps.setString(2, inspector.getNombre());
             ps.setString(3, inspector.getApellido());
-            ps.setInt(4, inspector.getTelefono());
+            ps.setString(4, inspector.getTelefono());
             ps.setBoolean(5, inspector.isActivo());
             ps.setInt(6, inspector.getIdInspector());
             int exito = ps.executeUpdate();
@@ -110,7 +110,7 @@ public class InspectorData {
                inspectorA.setMatricula(rs.getString("matricula"));
                 inspectorA.setNombre(rs.getString("nombre"));
                 inspectorA.setApellido(rs.getString("apellido"));
-                inspectorA.setTelefono(rs.getInt("telefono"));
+                inspectorA.setTelefono(rs.getString("telefono"));
                 inspectorA.setActivo(true);
                 inspectoresA.add(inspectorA);
             }
@@ -137,7 +137,7 @@ public class InspectorData {
                inspectorA.setMatricula(rs.getString("matricula"));
                 inspectorA.setNombre(rs.getString("nombre"));
                 inspectorA.setApellido(rs.getString("apellido"));
-                inspectorA.setTelefono(rs.getInt("telefono"));
+                inspectorA.setTelefono(rs.getString("telefono"));
                 inspectorA.setActivo(rs.getBoolean("activo"));
                 inspectoresA.add(inspectorA);
             }

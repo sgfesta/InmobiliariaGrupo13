@@ -1063,7 +1063,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         String matricula = jTMatriculaInspector.getText();
         String nombre = jTNombreInspector.getText();
         String apellido = jTApellidoInspector.getText();
-        int telefono = Integer.parseInt(jTTelefonoInspector.getText());
+        String telefono = jTTelefonoInspector.getText();
         boolean activo = jRInspector.isSelected();
 
         Inspector nuevo = new Inspector(matricula, nombre, apellido, telefono, activo);
@@ -1080,7 +1080,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             String matricula = jTMatriculaInspector.getText();
             String nombre = jTNombreInspector.getText();
             String apellido = jTApellidoInspector.getText();
-            int telefono = Integer.parseInt(jTTelefonoInspector.getText());
+            String telefono = jTTelefonoInspector.getText();
             boolean activo = jRInspector.isSelected();
 
             Inspector nuevo = new Inspector(idInspector, matricula, nombre, apellido, telefono, activo);
@@ -1149,8 +1149,8 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private void jBNuevoInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoInquilinosActionPerformed
        String nombre = jTNombreInquilinos.getText();
         String apellido = jTApellidoInquilinos.getText();
-        int dni = Integer.parseInt(jTDNIInquilinos.getText());
-        int cuit = Integer.parseInt(jTCuitInquilinos.getText());
+        String dni = jTDNIInquilinos.getText();
+        String cuit = jTCuitInquilinos.getText();
         String lugarTrabajo = jTLugarTrabajoInquilinos.getText();
         boolean activo = jRInquilino.isSelected();
         Inquilino nuevo = new Inquilino(nombre, apellido, dni, cuit, lugarTrabajo, activo);
@@ -1166,8 +1166,8 @@ public class MenuListados extends javax.swing.JInternalFrame {
             int idInquilino = Integer.parseInt(jTIDInquilino.getText());
             String nombre = jTNombreInquilinos.getText();
             String apellido = jTApellidoInquilinos.getText();
-            int dni = Integer.parseInt(jTDNIInquilinos.getText());
-            int cuit = Integer.parseInt(jTCuitInquilinos.getText());
+            String dni = jTDNIInquilinos.getText();
+            String cuit = jTCuitInquilinos.getText();
             String lugarTrabajo = jTLugarTrabajoInquilinos.getText();
             boolean activo = jRInquilino.isSelected();
 

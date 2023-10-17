@@ -9,7 +9,7 @@ public class Inspector {
     private String matricula;    
     private String nombre;  
     private String apellido;
-    private int telefono;
+    private String telefono;
     private boolean activo;
     
     //Declaro los Constructores
@@ -17,7 +17,7 @@ public class Inspector {
     public Inspector() {
     }
 
-    public Inspector(int idInspector, String matricula, String nombre, String apellido, int telefono, boolean activo) {
+    public Inspector(int idInspector, String matricula, String nombre, String apellido, String telefono, boolean activo) {
         this.idInspector = idInspector;
         this.matricula = matricula;
         this.nombre = nombre;
@@ -26,7 +26,7 @@ public class Inspector {
         this.activo = activo;
     }
 
-    public Inspector(String matricula, String nombre, String apellido, int telefono, boolean activo) {
+    public Inspector(String matricula, String nombre, String apellido, String telefono, boolean activo) {
         this.matricula = matricula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -66,11 +66,11 @@ public class Inspector {
         this.apellido = apellido;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
