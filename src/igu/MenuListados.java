@@ -1194,7 +1194,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private void jBNuevoGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoGaranteActionPerformed
     String nombre = jTNombreGarante.getText();
         String apellido = jTApellidoGarante.getText();
-        int dni = Integer.parseInt(jTDNIGarante.getText());
+        String dni = jTDNIGarante.getText();
         String domicilio = jTDomicilioGarante.getText();
         String telefono = jTTelefonoGarante.getText();
         boolean activo = jRGarante.isSelected();
@@ -1210,7 +1210,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             int idGarante = Integer.parseInt(jTIDGarante.getText());
             String nombre = jTNombreGarante.getText();
             String apellido = jTApellidoGarante.getText();
-            int dni = Integer.parseInt(jTDNIGarante.getText());
+            String dni = jTDNIGarante.getText();
             String domicilio = jTDomicilioGarante.getText();
             String telefono = jTTelefonoGarante.getText();
             boolean activo = jRGarante.isSelected();

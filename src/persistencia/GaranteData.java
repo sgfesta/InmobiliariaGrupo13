@@ -31,7 +31,7 @@ public class GaranteData {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, garante.getNombre());
             ps.setString(2, garante.getApellido());
-            ps.setInt(3, garante.getDni());
+            ps.setString(3, garante.getDni());
             ps.setString(4, garante.getDomicilio());
             ps.setString(5, garante.getTelefono());
             ps.setBoolean(6, garante.isActivo());
@@ -65,7 +65,7 @@ public class GaranteData {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, garante.getNombre());
             ps.setString(2, garante.getApellido());
-            ps.setInt(3, garante.getDni());
+            ps.setString(3, garante.getDni());
             ps.setString(4, garante.getDomicilio());
             ps.setString(5, garante.getTelefono());
             ps.setBoolean(6, garante.isActivo());
@@ -85,11 +85,11 @@ public class GaranteData {
 
     }
 
-    public void eliminarGarante(int dni) {
+    public void eliminarGarante(String dni) {
         String sql = "UPDATE garante SET activo = 0 WHERE dni = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, dni);
+            ps.setString(1, dni);
 
             int exito = ps.executeUpdate();
             if (exito == 1) {
@@ -117,7 +117,7 @@ public class GaranteData {
                 garante.setIdGarante(idGarante);
                 garante.setNombre(rs.getString("nombre"));
                 garante.setApellido(rs.getString("apellido"));
-                garante.setDni(rs.getInt("dni"));
+                garante.setDni(rs.getString("dni"));
                 garante.setDomicilio(rs.getString("domicilio"));
                 garante.setTelefono(rs.getString("telefono"));
 
@@ -148,7 +148,7 @@ public class GaranteData {
                 garante.setIdGarante(rs.getInt("idGarante"));
                 garante.setNombre(rs.getString("nombre"));
                 garante.setApellido(rs.getString("apellido"));
-                garante.setDni(rs.getInt("dni"));
+                garante.setDni(rs.getString("dni"));
                 garante.setDomicilio(rs.getString("domicilio"));
                 garante.setTelefono(rs.getString("telefono"));
                 garante.setActivo(rs.getBoolean("activo"));
@@ -174,7 +174,7 @@ public class GaranteData {
                 garante.setIdGarante(rs.getInt("idGarante"));
                 garante.setNombre(rs.getString("nombre"));
                 garante.setApellido(rs.getString("apellido"));
-                garante.setDni(rs.getInt("dni"));
+                garante.setDni(rs.getString("dni"));
                 garante.setDomicilio(rs.getString("domicilio"));
                 garante.setTelefono(rs.getString("telefono"));
                 garante.setActivo(rs.getBoolean("activo"));
@@ -202,7 +202,7 @@ public class GaranteData {
                garante.setIdGarante(rs.getInt("idGarante"));
                 garante.setNombre(rs.getString("nombre"));
                 garante.setApellido(rs.getString("apellido"));
-                garante.setDni(rs.getInt("dni"));
+                garante.setDni(rs.getString("dni"));
                 garante.setDomicilio(rs.getString("domicilio"));
                 garante.setTelefono(rs.getString("telefono"));
                 garante.setActivo(true);
