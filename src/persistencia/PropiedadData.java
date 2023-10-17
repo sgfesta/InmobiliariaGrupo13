@@ -29,7 +29,7 @@ public class PropiedadData {
     } 
     
     public void agregarPropiedad(Propiedad propiedad) {
-         String sql = "INSERT INTO propiedad (idPropietario, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idInspector, idZona, idEstado, observaciones, vigente, activo) " +
+         String sql = "INSERT INTO propiedad (idPropietario, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idInspector, idZona, idEstado, observaciones, disponible, activo) " +
              "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);

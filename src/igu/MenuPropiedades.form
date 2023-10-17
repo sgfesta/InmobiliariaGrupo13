@@ -629,6 +629,7 @@
         </Container>
         <Component class="javax.swing.JRadioButton" name="jRDisponibilidadPropiedades">
           <Properties>
+            <Property name="selected" type="boolean" value="true"/>
             <Property name="text" type="java.lang.String" value="Activo"/>
           </Properties>
         </Component>
@@ -647,6 +648,7 @@
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRActivoPropiedades1">
           <Properties>
+            <Property name="selected" type="boolean" value="true"/>
             <Property name="text" type="java.lang.String" value="Activo"/>
           </Properties>
         </Component>

@@ -277,10 +277,12 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jRDisponibilidadPropiedades.setSelected(true);
         jRDisponibilidadPropiedades.setText("Activo");
 
         jCListaTipoPropiedades.setBackground(new java.awt.Color(153, 153, 153));
 
+        jRActivoPropiedades1.setSelected(true);
         jRActivoPropiedades1.setText("Activo");
 
         jCListaPropietarios.setBackground(new java.awt.Color(153, 153, 153));
@@ -494,7 +496,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     private void jBModificarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarPropiedadesActionPerformed
         if (idPropietarioSeleccionado != -1) { // Verifica que se haya seleccionado un alumno
             modificarPropiedad(); // Llama al método modificar solo si se ha seleccionado un alumno
-            limpiarcampos();
+            limpiarCampos();
             //Deshabilito botones luego de ejecutar acccion
             //desHabilitarBotones();
             //cargarCombo();
@@ -507,7 +509,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         Propiedad propiedadSeleccionado = (Propiedad) jCListaPropietarios.getSelectedItem();
         // ad.eliminarAlumno(alumnoSelecionado.getDni());
         pd.darBajaAPropiedad(propiedadSeleccionado);
-        limpiarcampos();
+        limpiarCampos();
 
     }//GEN-LAST:event_jBEliminarPropiedadesActionPerformed
 
@@ -528,7 +530,9 @@ if (selectedItem != null) {
 for (Propiedad propiedad : propiedadesDelPropietario) {
     jCListaPropiedades2.addItem(propiedad);
 }
+limpiarCampos();
         rellenarCampos();
+        
     } else {
         JOptionPane.showMessageDialog(this, "Seleccione un propietario válido");
     }
@@ -600,15 +604,16 @@ for (Propiedad propiedad : propiedadesDelPropietario) {
                 int superficieTotal = Integer.parseInt(jTSuperTotalPropiedades.getText());
                 double precioTasado = Double.parseDouble(jTPrecioTasadoPropiedades.getText());
                 int antiguedad = Integer.parseInt(jTAntiguedadPropiedad.getText());
-                Inspector insSelec = (Inspector) jCListaTipoPropiedades.getSelectedItem();
-                Zona zona = (Zona) jCListarEstadoPropiedades.getSelectedItem();
+                Inspector insSelec = (Inspector) jCListaInspectoresPropiedades.getSelectedItem();
+                Zona zona = (Zona) jCListarZonaPropiedades.getSelectedItem();
                 Estado estado = (Estado) jCListarEstadoPropiedades.getSelectedItem();
                 String observaciones = jTObservacionesPropiedades.getText();
                 boolean disponible = jRDisponibilidadPropiedades.isSelected();
                 boolean activo = jRActivoPropiedades1.isSelected();
                 Propiedad nuevo = new Propiedad(propietario, direccion, altura, tipoSelec, superficieTotal, precioTasado, antiguedad, insSelec, zona, estado, observaciones, disponible, activo);
                  pd.agregarPropiedad(nuevo);
-                 limpiarcampos();
+                 JOptionPane.showMessageDialog(this, "Propiedad agregada exitosamente");
+                 limpiarCampos();
                 //  desHabilitarBotones();
                 // cargarCombo();
 
@@ -680,7 +685,7 @@ for (Propiedad propiedad : propiedadesDelPropietario) {
         }
     }
 
-    public void limpiarcampos() {
+    public void limpiarCampos() {
         //Cintia: Agrego limpieza de campos
         jTDireccionPropiedades.setText("");
         jTAlturaPropiedades.setText("");
