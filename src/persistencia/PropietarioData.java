@@ -33,8 +33,8 @@ public class PropietarioData {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, propietario.getNombre());
             ps.setString(2, propietario.getApellido());
-            ps.setInt(3, propietario.getDni());
-            ps.setInt(4, propietario.getTelefono());
+            ps.setString(3, propietario.getDni());
+            ps.setString(4, propietario.getTelefono());
             ps.setString(5, propietario.getDomicilio());
             ps.setBoolean(6, propietario.isActivo());
             ps.executeUpdate();
@@ -62,8 +62,8 @@ public class PropietarioData {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, propietario.getNombre());
             ps.setString(2, propietario.getApellido());
-            ps.setInt(3, propietario.getDni());
-            ps.setInt(5, propietario.getTelefono());
+            ps.setString(3, propietario.getDni());
+            ps.setString(5, propietario.getTelefono());
             ps.setString(4, propietario.getDomicilio());
             ps.setBoolean(6, propietario.isActivo());
             ps.setInt(7, propietario.getIdPropietario());
@@ -80,11 +80,11 @@ public class PropietarioData {
         }
     }
 
-    public void eliminarPropietario(int dni) {
+    public void eliminarPropietario(String dni) {
         String sql = "UPDATE propietario SET activo = 0 WHERE dni = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, dni);
+            ps.setString(1, dni);
             int exito = ps.executeUpdate();
             if (exito == 1) {
                 JOptionPane.showMessageDialog(null, "Propietario eliminado");
@@ -113,8 +113,8 @@ public class PropietarioData {
                 propietario.setIdPropietario(idPropietario);
                 propietario.setNombre(rs.getString("nombre"));
                 propietario.setApellido(rs.getString("apellido"));
-                propietario.setDni(rs.getInt("dni"));
-                propietario.setTelefono(rs.getInt("telefono"));
+                propietario.setDni(rs.getString("dni"));
+                propietario.setTelefono(rs.getString("telefono"));
                 propietario.setDomicilio(rs.getString("domicilio"));
                 
                 
@@ -131,14 +131,14 @@ public class PropietarioData {
         return propietario;
     }
 
-    public Propietario buscarPropietarioPorDni(int dni, boolean activo) {
+    public Propietario buscarPropietarioPorDni(String dni, boolean activo) {
         
         String sql = "SELECT idPropietario, nombre, apellido, dni, telefono, domicilio, activo FROM propietario WHERE dni = ?  AND activo = ?";
     
         Propietario propietario = null;
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, dni);
+            ps.setString(1, dni);
             ps.setBoolean(2, activo); 
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
@@ -146,8 +146,8 @@ public class PropietarioData {
                 propietario.setIdPropietario(rs.getInt("idPropietario"));
                 propietario.setNombre(rs.getString("nombre"));
                 propietario.setApellido(rs.getString("apellido"));
-                propietario.setDni(rs.getInt("dni"));
-                propietario.setTelefono(rs.getInt("telefono"));
+                propietario.setDni(rs.getString("dni"));
+                propietario.setTelefono(rs.getString("telefono"));
                 propietario.setDomicilio(rs.getString("domicilio"));
                 propietario.setActivo(rs.getBoolean("activo"));
             }
@@ -172,8 +172,8 @@ public class PropietarioData {
                 propietario.setIdPropietario(rs.getInt("idPropietario"));
                 propietario.setNombre(rs.getString("nombre"));
                 propietario.setApellido(rs.getString("apellido"));
-                propietario.setDni(rs.getInt("dni"));
-                propietario.setTelefono(rs.getInt("telefono"));
+                propietario.setDni(rs.getString("dni"));
+                propietario.setTelefono(rs.getString("telefono"));
                 propietario.setDomicilio(rs.getString("domicilio"));
                 propietario.setActivo(rs.getBoolean("activo"));
                 propietarios.add(propietario);
@@ -199,8 +199,8 @@ public class PropietarioData {
                propietario.setIdPropietario(rs.getInt("idPropietario"));
                 propietario.setNombre(rs.getString("nombre"));
                 propietario.setApellido(rs.getString("apellido"));
-                propietario.setDni(rs.getInt("dni"));
-                propietario.setTelefono(rs.getInt("telefono"));
+                propietario.setDni(rs.getString("dni"));
+                propietario.setTelefono(rs.getString("telefono"));
                 propietario.setDomicilio(rs.getString("domicilio"));
                 propietario.setActivo(true);
                 propietariosAc.add(propietario);

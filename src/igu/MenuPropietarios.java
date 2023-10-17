@@ -423,8 +423,8 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
      public void agregarPropietario(){
              String ap = jTIDPropietarios3.getText();
                 String nom = jTIDPropietarios2.getText();
-        int documento = Integer.parseInt(jTIDPropietarios4.getText());
-        int tel = Integer.parseInt(jTIDPropietarios5.getText());
+        String documento = jTIDPropietarios4.getText();
+        String tel = jTIDPropietarios5.getText();
                 String dom = jTIDPropietarios6.getText();
                 boolean est = jrbPropietario.isSelected();
                 Propietario nuevo = new Propietario(ap, nom, documento, tel, dom, est);
@@ -439,8 +439,8 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
             int id = Integer.parseInt(jTIDPropietario.getText());
             String ap = jTIDPropietarios3.getText();
             String nom = jTIDPropietarios2.getText();
-            int documento = Integer.parseInt(jTIDPropietarios4.getText());
-            int tel = Integer.parseInt(jTIDPropietarios5.getText());
+            String documento = jTIDPropietarios4.getText();
+            String tel = jTIDPropietarios5.getText();
             String dom = jTIDPropietarios6.getText();
             boolean est = jrbPropietario.isSelected();
             Propietario nuevoM = new Propietario(id, ap, nom, documento, tel, dom, est);
@@ -460,7 +460,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
     
      public void buscarPropietario(){
          try {
-            int pSelect = Integer.parseInt(jTIDPropietarios4.getText());
+            String pSelect = jTIDPropietarios4.getText();
             boolean activo = jrbPropietario.isSelected();
            Propietario ps = pd.buscarPropietarioPorDni(pSelect, activo); 
              if(ps != null){

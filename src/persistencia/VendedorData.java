@@ -30,8 +30,8 @@ public class VendedorData {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, vendedor.getNombre());
             ps.setString(2, vendedor.getApellido());            
-            ps.setInt(3, vendedor.getDni());
-            ps.setInt(4, vendedor.getTelefono());            
+            ps.setString(3, vendedor.getDni());
+            ps.setString(4, vendedor.getTelefono());            
             ps.setBoolean(5, vendedor.isActivo());
             int exito = ps.executeUpdate();
 
@@ -59,8 +59,8 @@ public class VendedorData {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, vendedor.getNombre());
             ps.setString(2, vendedor.getApellido());            
-            ps.setInt(3, vendedor.getDni());
-            ps.setInt(4, vendedor.getTelefono());            
+            ps.setString(3, vendedor.getDni());
+            ps.setString(4, vendedor.getTelefono());            
             ps.setBoolean(5, vendedor.isActivo());
             ps.setInt(6, vendedor.getIdVendedor());
             int exito = ps.executeUpdate();

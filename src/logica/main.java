@@ -43,7 +43,8 @@ public class main {
 //    GaranteData g1 = new GaranteData();
 //    g1.guardarGarante(garante);
 //
-      Vendedor vendedor = new Vendedor(1,"Fulanito", "Cosmo", 64841, 26987546, true);
+      Vendedor vendedor = new Vendedor(1,"Fulanito", "Cosmo", "64841", "26987546", true);
+      
 //      VendedorData vd = new VendedorData();
 //      vd.guardarVendedor(vendedor);
 //
@@ -63,7 +64,7 @@ public class main {
 //      TipoPropiedadData tpd = new TipoPropiedadData();
 //      tpd.guardarTipoPropiedad(tipo);
       
-      Propietario propietario = new Propietario(1,"Luciana", "Juarez", 712, 2348458, "Su casa", true);
+      Propietario propietario = new Propietario(1,"Luciana", "Juarez", "712", "2348458", "Su casa", true);
 //      PropietarioData p1 = new PropietarioData();
 //      p1.guardarPropietario(propietario);
       
