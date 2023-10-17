@@ -39,7 +39,7 @@ public class main {
 //        In.guardarInquilino(i1);
 //    
 //    
-    Garante garante = new Garante(1,"Luis", "Medina", 987, "No tiene casa", 168496874, true);
+    Garante garante = new Garante(1,"Luis", "Medina", "987", "No tiene casa", "168496874", true);
 //    GaranteData g1 = new GaranteData();
 //    g1.guardarGarante(garante);
 //

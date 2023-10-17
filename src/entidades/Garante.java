@@ -6,15 +6,15 @@ public class Garante {
     private int idGarante;
     private String nombre;
     private String apellido;
-    private int dni;
+    private String dni;
     private String domicilio;
-    private int telefono;
+    private String telefono;
     private boolean activo;
 
     public Garante() {
     }
 
-    public Garante(String nombre, String apellido, int dni, String domicilio, int telefono, boolean activo) {
+    public Garante(String nombre, String apellido, String dni, String domicilio, String telefono, boolean activo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -23,7 +23,7 @@ public class Garante {
         this.activo = activo;
     }
 
-    public Garante(int idGarante, String nombre, String apellido, int dni, String domicilio, int telefono, boolean activo) {
+    public Garante(int idGarante, String nombre, String apellido, String dni, String domicilio, String telefono, boolean activo) {
         this.idGarante = idGarante;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -57,11 +57,11 @@ public class Garante {
         this.apellido = apellido;
     }
 
-    public int getDni() {
+    public String getDni() {
         return dni;
     }
 
-    public void setDni(int dni) {
+    public void setDni(String dni) {
         this.dni = dni;
     }
 
@@ -73,11 +73,11 @@ public class Garante {
         this.domicilio = domicilio;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
