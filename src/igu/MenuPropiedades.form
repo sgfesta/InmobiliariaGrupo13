@@ -69,16 +69,6 @@
                           <Component id="jLTituloPropiedades" min="-2" pref="290" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
-                          <Component id="jLIDPropiedades" min="-2" pref="150" max="-2" attributes="0"/>
-                          <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
-                          <Component id="jTIDPropietarios" min="-2" pref="187" max="-2" attributes="0"/>
-                          <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
-                          <Component id="jBBotonBusqueda" min="-2" pref="40" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="jCListaPropiedades1" min="-2" pref="297" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
                           <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
                           <Component id="jLDireccionPropiedades" min="-2" pref="131" max="-2" attributes="0"/>
                           <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
@@ -112,25 +102,36 @@
                           <EmptySpace min="133" pref="133" max="-2" attributes="0"/>
                           <Component id="jLObservacionesPropiedades" min="-2" pref="118" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLAntiguedadPropiedades" min="-2" pref="131" max="-2" attributes="0"/>
-                              <Component id="jLTipoPropiedades" min="-2" pref="131" max="-2" attributes="0"/>
-                              <Component id="jLInspectorPropiedades" min="-2" pref="131" max="-2" attributes="0"/>
-                              <Component id="jLZonaPropiedades" min="-2" pref="131" max="-2" attributes="0"/>
-                              <Component id="jLEstadoPropiedad" min="-2" pref="110" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jLIDPropiedades" min="-2" pref="150" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jCListaPropietarios" min="-2" pref="229" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Component id="jCListaPropiedades2" min="-2" pref="256" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLAntiguedadPropiedades" min="-2" pref="131" max="-2" attributes="0"/>
+                                      <Component id="jLTipoPropiedades" min="-2" pref="131" max="-2" attributes="0"/>
+                                      <Component id="jLInspectorPropiedades" min="-2" pref="131" max="-2" attributes="0"/>
+                                      <Component id="jLZonaPropiedades" min="-2" pref="131" max="-2" attributes="0"/>
+                                      <Component id="jLEstadoPropiedad" min="-2" pref="110" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jTAntiguedadPropiedad" min="-2" pref="187" max="-2" attributes="0"/>
+                                      <Component id="jCListaTipoPropiedades" min="-2" pref="190" max="-2" attributes="0"/>
+                                      <Component id="jCListaInspectoresPropiedades" min="-2" pref="190" max="-2" attributes="0"/>
+                                      <Component id="jCListarZonaPropiedades" min="-2" pref="190" max="-2" attributes="0"/>
+                                      <Component id="jCListarEstadoPropiedades" min="-2" pref="190" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane1" min="-2" pref="312" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTAntiguedadPropiedad" min="-2" pref="187" max="-2" attributes="0"/>
-                              <Component id="jCListaTipoPropiedades" min="-2" pref="190" max="-2" attributes="0"/>
-                              <Component id="jCListaInspectoresPropiedades" min="-2" pref="190" max="-2" attributes="0"/>
-                              <Component id="jCListarZonaPropiedades" min="-2" pref="190" max="-2" attributes="0"/>
-                              <Component id="jCListarEstadoPropiedades" min="-2" pref="190" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" min="-2" pref="312" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="8" max="32767" attributes="0"/>
@@ -155,19 +156,13 @@
                   <Component id="jPBarraNavegador" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="48" pref="48" max="-2" attributes="0"/>
                   <Component id="jLTituloPropiedades" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jBBotonBusqueda" min="-2" pref="40" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLIDPropiedades" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jTIDPropietarios" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jCListaPropiedades1" min="-2" pref="30" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLIDPropiedades" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jCListaPropietarios" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jCListaPropiedades2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
+                  <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLDireccionPropiedades" min="-2" max="-2" attributes="0"/>
                       <Component id="jTDireccionPropiedades" min="-2" max="-2" attributes="0"/>
@@ -372,19 +367,6 @@
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="text" type="java.lang.String" value="Zona"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTIDPropietarios">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="99" red="99" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI Semilight" size="12" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="33" type="rgb"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTDireccionPropiedades">
@@ -650,23 +632,6 @@
             <Property name="text" type="java.lang.String" value="Activo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jBBotonBusqueda">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagenes/3844432-magnifier-search-zoom_110300.png"/>
-            </Property>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="null"/>
-            </Property>
-            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor de Mano"/>
-            </Property>
-            <Property name="opaque" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBBotonBusquedaActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JComboBox" name="jCListaTipoPropiedades">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -685,7 +650,7 @@
             <Property name="text" type="java.lang.String" value="Activo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jCListaPropiedades1">
+        <Component class="javax.swing.JComboBox" name="jCListaPropietarios">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -695,10 +660,11 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCListaPropiedades1ActionPerformed"/>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCListaPropietariosItemStateChanged"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCListaPropietariosActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Propiedad&gt;"/>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Propietario&gt;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JComboBox" name="jCListarEstadoPropiedades">
@@ -738,6 +704,22 @@
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Zona&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jCListaPropiedades2">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="99" red="99" type="rgb"/>
+            </Property>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCListaPropiedades2ActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Propiedad&gt;"/>
           </AuxValues>
         </Component>
       </SubComponents>
