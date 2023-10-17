@@ -33,7 +33,7 @@ public class GaranteData {
             ps.setString(2, garante.getApellido());
             ps.setInt(3, garante.getDni());
             ps.setString(4, garante.getDomicilio());
-            ps.setInt(5, garante.getTelefono());
+            ps.setString(5, garante.getTelefono());
             ps.setBoolean(6, garante.isActivo());
 
             ps.executeUpdate();
@@ -67,7 +67,7 @@ public class GaranteData {
             ps.setString(2, garante.getApellido());
             ps.setInt(3, garante.getDni());
             ps.setString(4, garante.getDomicilio());
-            ps.setInt(5, garante.getTelefono());
+            ps.setString(5, garante.getTelefono());
             ps.setBoolean(6, garante.isActivo());
             ps.setInt(7, garante.getIdGarante());
 
@@ -119,7 +119,7 @@ public class GaranteData {
                 garante.setApellido(rs.getString("apellido"));
                 garante.setDni(rs.getInt("dni"));
                 garante.setDomicilio(rs.getString("domicilio"));
-                garante.setTelefono(rs.getInt("telefono"));
+                garante.setTelefono(rs.getString("telefono"));
 
             } else {
                 JOptionPane.showMessageDialog(null, "No existe un Garante con ese ID o  en Estado activo");
@@ -150,7 +150,7 @@ public class GaranteData {
                 garante.setApellido(rs.getString("apellido"));
                 garante.setDni(rs.getInt("dni"));
                 garante.setDomicilio(rs.getString("domicilio"));
-                garante.setTelefono(rs.getInt("telefono"));
+                garante.setTelefono(rs.getString("telefono"));
                 garante.setActivo(rs.getBoolean("activo"));
             }
              //Cierro la Conexion
@@ -176,7 +176,7 @@ public class GaranteData {
                 garante.setApellido(rs.getString("apellido"));
                 garante.setDni(rs.getInt("dni"));
                 garante.setDomicilio(rs.getString("domicilio"));
-                garante.setTelefono(rs.getInt("telefono"));
+                garante.setTelefono(rs.getString("telefono"));
                 garante.setActivo(rs.getBoolean("activo"));
                 garantes.add(garante);
             }
@@ -204,7 +204,7 @@ public class GaranteData {
                 garante.setApellido(rs.getString("apellido"));
                 garante.setDni(rs.getInt("dni"));
                 garante.setDomicilio(rs.getString("domicilio"));
-                garante.setTelefono(rs.getInt("telefono"));
+                garante.setTelefono(rs.getString("telefono"));
                 garante.setActivo(true);
                 garantesAc.add(garante);
             }
