@@ -141,7 +141,7 @@ public class ZonaData {
                 zona.setIdZona(rs.getInt("idZona"));
                 zona.setProvincia(rs.getString("provincia"));
                 zona.setCiudad(rs.getString("ciudad"));
-                
+                zona.setBarrio(rs.getString("barrio"));
                 Zonas.add(zona);
             }
             //Cierro la Conexion
