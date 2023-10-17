@@ -516,12 +516,19 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jCListaPropiedades2ActionPerformed
 
     private void jCListaPropietariosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCListaPropietariosItemStateChanged
-        int idPropietario = -1;
+            int idPropietario = -1;
         Object selectedItem = jCListaPropietarios.getSelectedItem();
 if (selectedItem != null) {
     if (selectedItem instanceof Propietario) { //USO UN instanceof PARA VERIFICAR SI EL OBJETO ES UNA INSTANCIA DE LA CALSE PROPIETARIO, LO CASTEO Y SACO EL ID DEL PROPIETARIO
         Propietario propietarioSeleccionado = (Propietario) selectedItem;
-        idPropietario = propietarioSeleccionado.getIdPropietario();
+        idPropietario = propietarioSeleccionado.getIdPropietario(); //UNA VEZ TENGO EL ID, LLAMO, LIMPIO LOS CAMPOS DEL COMBO BOX DE PROPIEDADES Y CARGO LAS PROPIEDADES
+        jCListaPropiedades2.removeAllItems();
+        List<Propiedad> propiedadesDelPropietario = pd.listarPropiedadesXDueño(propietarioSeleccionado.getIdPropietario());
+
+for (Propiedad propiedad : propiedadesDelPropietario) {
+    jCListaPropiedades2.addItem(propiedad);
+}
+        rellenarCampos();
     } else {
         JOptionPane.showMessageDialog(this, "Seleccione un propietario válido");
     }
@@ -686,7 +693,7 @@ if (selectedItem != null) {
 
     public void rellenarCampos() {
 
-        Propiedad propiedadSeleccionado = (Propiedad) jCListaPropietarios.getSelectedItem();
+        Propiedad propiedadSeleccionado = (Propiedad) jCListaPropiedades2.getSelectedItem();
         // boolean activo = jrbEstado.isSelected();
 
         if (propiedadSeleccionado != null) {
