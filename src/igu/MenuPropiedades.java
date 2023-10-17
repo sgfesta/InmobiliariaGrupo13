@@ -503,10 +503,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jBModificarPropiedadesActionPerformed
 
-    private void jCListaPropietariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCListaPropietariosActionPerformed
-        rellenarCampos();
-    }//GEN-LAST:event_jCListaPropietariosActionPerformed
-
     private void jBEliminarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarPropiedadesActionPerformed
         Propiedad propiedadSeleccionado = (Propiedad) jCListaPropietarios.getSelectedItem();
         // ad.eliminarAlumno(alumnoSelecionado.getDni());
@@ -520,8 +516,23 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jCListaPropiedades2ActionPerformed
 
     private void jCListaPropietariosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCListaPropietariosItemStateChanged
-        // TODO add your handling code here:
+        int idPropietario = -1;
+        Object selectedItem = jCListaPropietarios.getSelectedItem();
+if (selectedItem != null) {
+    if (selectedItem instanceof Propietario) { //USO UN instanceof PARA VERIFICAR SI EL OBJETO ES UNA INSTANCIA DE LA CALSE PROPIETARIO, LO CASTEO Y SACO EL ID DEL PROPIETARIO
+        Propietario propietarioSeleccionado = (Propietario) selectedItem;
+        idPropietario = propietarioSeleccionado.getIdPropietario();
+    } else {
+        JOptionPane.showMessageDialog(this, "Seleccione un propietario válido");
+    }
+} else {
+    JOptionPane.showMessageDialog(this, "No ha seleccionado ningún propietario");
+}
     }//GEN-LAST:event_jCListaPropietariosItemStateChanged
+
+    private void jCListaPropietariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCListaPropietariosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCListaPropietariosActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
