@@ -101,7 +101,7 @@ public class PropietarioData {
     }
 
     public Propietario buscarPropietario(int idPropietario) {
-        String sql = "SELECT nombre, apellido, dni, telefono, domicilio FROM propietario WHERE idPropietario = ?  AND activo = 1";
+        String sql = "SELECT nombre, apellido, dni, telefono, domicilio FROM alumno WHERE idPropietario = ?  AND activo = 1";
         Propietario propietario = null;
         try {
             PreparedStatement ps = con.prepareStatement(sql);

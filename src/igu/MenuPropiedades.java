@@ -27,7 +27,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
     private int idPropietarioSeleccionado = -1;
     PropiedadData pd = new PropiedadData();
-    PropietarioData propd=new PropietarioData();
 
     public MenuPropiedades() {
         initComponents();
@@ -36,7 +35,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         cargarComboZona();
         cargarComboEstado();
         cargarComboInspector();
-        cargarComboPropietarios();
 
     }
 
@@ -68,6 +66,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jLAntiguedadPropiedades = new javax.swing.JLabel();
         jLInspectorPropiedades = new javax.swing.JLabel();
         jLZonaPropiedades = new javax.swing.JLabel();
+        jTIDPropietarios = new javax.swing.JTextField();
         jTDireccionPropiedades = new javax.swing.JTextField();
         jTAlturaPropiedades = new javax.swing.JTextField();
         jTSuperTotalPropiedades = new javax.swing.JTextField();
@@ -86,13 +85,13 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jPBarraNavegador = new javax.swing.JPanel();
         jLNavegacionEnBarra = new javax.swing.JLabel();
         jRDisponibilidadPropiedades = new javax.swing.JRadioButton();
+        jBBotonBusqueda = new javax.swing.JButton();
         jCListaTipoPropiedades = new javax.swing.JComboBox<>();
         jRActivoPropiedades1 = new javax.swing.JRadioButton();
-        jCListaPropietarios = new javax.swing.JComboBox<>();
+        jCListaPropiedades1 = new javax.swing.JComboBox<>();
         jCListarEstadoPropiedades = new javax.swing.JComboBox<>();
         jCListaInspectoresPropiedades = new javax.swing.JComboBox<>();
         jCListarZonaPropiedades = new javax.swing.JComboBox<>();
-        jCListaPropiedades2 = new javax.swing.JComboBox<>();
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -158,6 +157,10 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jLZonaPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLZonaPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLZonaPropiedades.setText("Zona");
+
+        jTIDPropietarios.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDPropietarios.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDPropietarios.setForeground(new java.awt.Color(51, 51, 51));
 
         jTDireccionPropiedades.setBackground(new java.awt.Color(153, 153, 153));
         jTDireccionPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -279,19 +282,24 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
         jRDisponibilidadPropiedades.setText("Activo");
 
+        jBBotonBusqueda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3844432-magnifier-search-zoom_110300.png"))); // NOI18N
+        jBBotonBusqueda.setBorder(null);
+        jBBotonBusqueda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBBotonBusqueda.setOpaque(false);
+        jBBotonBusqueda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBBotonBusquedaActionPerformed(evt);
+            }
+        });
+
         jCListaTipoPropiedades.setBackground(new java.awt.Color(153, 153, 153));
 
         jRActivoPropiedades1.setText("Activo");
 
-        jCListaPropietarios.setBackground(new java.awt.Color(153, 153, 153));
-        jCListaPropietarios.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jCListaPropietariosItemStateChanged(evt);
-            }
-        });
-        jCListaPropietarios.addActionListener(new java.awt.event.ActionListener() {
+        jCListaPropiedades1.setBackground(new java.awt.Color(153, 153, 153));
+        jCListaPropiedades1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCListaPropietariosActionPerformed(evt);
+                jCListaPropiedades1ActionPerformed(evt);
             }
         });
 
@@ -300,13 +308,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jCListaInspectoresPropiedades.setBackground(new java.awt.Color(153, 153, 153));
 
         jCListarZonaPropiedades.setBackground(new java.awt.Color(153, 153, 153));
-
-        jCListaPropiedades2.setBackground(new java.awt.Color(153, 153, 153));
-        jCListaPropiedades2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCListaPropiedades2ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPPropiedadesLayout = new javax.swing.GroupLayout(jPPropiedades);
         jPPropiedades.setLayout(jPPropiedadesLayout);
@@ -320,6 +321,15 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
                         .addGap(230, 230, 230)
                         .addComponent(jLTituloPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLIDPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9)
+                        .addComponent(jTIDPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(3, 3, 3)
+                        .addComponent(jBBotonBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addComponent(jCListaPropiedades1, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addComponent(jLDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -350,30 +360,22 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                         .addGap(133, 133, 133)
                         .addComponent(jLObservacionesPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                .addComponent(jLIDPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jCListaPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(50, 50, 50)
-                                .addComponent(jCListaPropiedades2, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLAntiguedadPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLTipoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLInspectorPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLEstadoPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(9, 9, 9)
-                                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTAntiguedadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCListaTipoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCListaInspectoresPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCListarZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCListarEstadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(30, 30, 30)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(40, 40, 40)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLAntiguedadPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLTipoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLInspectorPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLEstadoPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(9, 9, 9)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTAntiguedadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCListaTipoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCListaInspectoresPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCListarZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCListarEstadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(8, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -393,12 +395,16 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 .addComponent(jPBarraNavegador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
                 .addComponent(jLTituloPropiedades)
-                .addGap(28, 28, 28)
-                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLIDPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCListaPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCListaPropiedades2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
+                .addGap(18, 18, 18)
+                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jBBotonBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLIDPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTIDPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCListaPropiedades1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(40, 40, 40)
                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLDireccionPropiedades)
                     .addComponent(jTDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -503,35 +509,43 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jBModificarPropiedadesActionPerformed
 
-    private void jCListaPropietariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCListaPropietariosActionPerformed
+    private void jBBotonBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBotonBusquedaActionPerformed
+        jCListaPropiedades1.removeAllItems();
+        try {
+
+            int idPropietario = Integer.parseInt(jTIDPropietarios.getText());
+            List<Propiedad> propiedades = pd.listarPropiedadesXDueño(idPropietario);
+
+            for (Propiedad propiedad : propiedades) {
+                jCListaPropiedades1.addItem(propiedad);
+            }
+
+        } catch (NullPointerException e) {
+            JOptionPane.showMessageDialog(this, "No deje el campo vacío" + e.getMessage());
+        }
+    }//GEN-LAST:event_jBBotonBusquedaActionPerformed
+
+    private void jCListaPropiedades1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCListaPropiedades1ActionPerformed
         rellenarCampos();
-    }//GEN-LAST:event_jCListaPropietariosActionPerformed
+    }//GEN-LAST:event_jCListaPropiedades1ActionPerformed
 
     private void jBEliminarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarPropiedadesActionPerformed
-        Propiedad propiedadSeleccionado = (Propiedad) jCListaPropietarios.getSelectedItem();
+        Propiedad propiedadSeleccionado = (Propiedad) jCListaPropiedades1.getSelectedItem();
         // ad.eliminarAlumno(alumnoSelecionado.getDni());
         pd.darBajaAPropiedad(propiedadSeleccionado);
         limpiarcampos();
 
     }//GEN-LAST:event_jBEliminarPropiedadesActionPerformed
 
-    private void jCListaPropiedades2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCListaPropiedades2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCListaPropiedades2ActionPerformed
-
-    private void jCListaPropietariosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCListaPropietariosItemStateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCListaPropietariosItemStateChanged
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBBotonBusqueda;
     private javax.swing.JButton jBEliminarPropiedades;
     private javax.swing.JButton jBModificarPropiedades;
     private javax.swing.JButton jBNuevoPropiedades;
     private javax.swing.JButton jBSalirPropiedades;
     private javax.swing.JComboBox<Inspector> jCListaInspectoresPropiedades;
-    private javax.swing.JComboBox<Propiedad> jCListaPropiedades2;
-    private javax.swing.JComboBox<Propietario> jCListaPropietarios;
+    private javax.swing.JComboBox<Propiedad> jCListaPropiedades1;
     private javax.swing.JComboBox<TipoPropiedad> jCListaTipoPropiedades;
     private javax.swing.JComboBox<Estado> jCListarEstadoPropiedades;
     private javax.swing.JComboBox<Zona> jCListarZonaPropiedades;
@@ -558,6 +572,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTAlturaPropiedades;
     private javax.swing.JTextField jTAntiguedadPropiedad;
     private javax.swing.JTextField jTDireccionPropiedades;
+    private javax.swing.JTextField jTIDPropietarios;
     private javax.swing.JTextArea jTObservacionesPropiedades;
     private javax.swing.JTextField jTPrecioTasadoPropiedades;
     private javax.swing.JTextField jTSuperTotalPropiedades;
@@ -574,8 +589,8 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                     && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
                 // habilitarBotones();
                 // Propiedad PSelec = (Propiedad) jCListaTipoPropiedades.getSelectedItem();
-               
-                Propietario propietario =(Propietario) jCListaPropietarios.getSelectedItem();
+                int idp = Integer.parseInt(jTIDPropietarios.getText());
+                Propietario propietario = prod.buscarPropietario(idp);
                 String direccion = jTDireccionPropiedades.getText();
                 int altura = Integer.parseInt(jTAlturaPropiedades.getText());
                 TipoPropiedad tipoSelec = (TipoPropiedad) jCListaTipoPropiedades.getSelectedItem();
@@ -589,8 +604,8 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 boolean disponible = jRDisponibilidadPropiedades.isSelected();
                 boolean activo = jRActivoPropiedades1.isSelected();
                 Propiedad nuevo = new Propiedad(propietario, direccion, altura, tipoSelec, superficieTotal, precioTasado, antiguedad, insSelec, zona, estado, observaciones, disponible, activo);
-                 pd.agregarPropiedad(nuevo);
-                 limpiarcampos();
+                // pd.guardarAlumno(nuevo);
+                // limpiarcampos();
                 //  desHabilitarBotones();
                 // cargarCombo();
 
@@ -600,17 +615,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "No debe dejar campos vacios");
-        }
-    }
-    
-    public void cargarComboPropietarios() {
-        jCListaPropietarios.removeAllItems();
-
-        List<Propietario> propietarios = propd.listarPropietarios();
-
-        for (Propietario propietario:propietarios) {
-           
-            jCListaPropietarios.addItem(propietario);
         }
     }
 
@@ -675,7 +679,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
     public void rellenarCampos() {
 
-        Propiedad propiedadSeleccionado = (Propiedad) jCListaPropietarios.getSelectedItem();
+        Propiedad propiedadSeleccionado = (Propiedad) jCListaPropiedades1.getSelectedItem();
         // boolean activo = jrbEstado.isSelected();
 
         if (propiedadSeleccionado != null) {
@@ -730,11 +734,11 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
         try {
             PropietarioData prod = new PropietarioData();
-            Propiedad propiedadSeleccionada = (Propiedad) jCListaPropietarios.getSelectedItem();
+            Propiedad propiedadSeleccionada = (Propiedad) jCListaPropiedades1.getSelectedItem();
 
             Propiedad PSelec = (Propiedad) jCListaTipoPropiedades.getSelectedItem();
-          //  int idp = Integer.parseInt(jTIDPropietarios.getText());
-            Propietario propietario = (Propietario)jCListaPropietarios.getSelectedItem();
+            int idp = Integer.parseInt(jTIDPropietarios.getText());
+            Propietario propietario = prod.buscarPropietario(idp);
             String direccion = jTDireccionPropiedades.getText();
             int altura = Integer.parseInt(jTAlturaPropiedades.getText());
             TipoPropiedad tipoSelec = (TipoPropiedad) jCListaTipoPropiedades.getSelectedItem();

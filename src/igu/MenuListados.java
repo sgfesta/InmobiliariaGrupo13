@@ -1194,9 +1194,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private void jBNuevoGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoGaranteActionPerformed
     String nombre = jTNombreGarante.getText();
         String apellido = jTApellidoGarante.getText();
-        String dni = jTDNIGarante.getText();
+        int dni = Integer.parseInt(jTDNIGarante.getText());
         String domicilio = jTDomicilioGarante.getText();
-        String telefono = jTTelefonoGarante.getText();
+        int telefono = Integer.parseInt(jTTelefonoGarante.getText());
         boolean activo = jRGarante.isSelected();
         Garante nuevo = new Garante(nombre, apellido, dni, domicilio, telefono, activo);
         garanteD.guardarGarante(nuevo);
@@ -1210,9 +1210,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
             int idGarante = Integer.parseInt(jTIDGarante.getText());
             String nombre = jTNombreGarante.getText();
             String apellido = jTApellidoGarante.getText();
-            String dni = jTDNIGarante.getText();
+            int dni = Integer.parseInt(jTDNIGarante.getText());
             String domicilio = jTDomicilioGarante.getText();
-            String telefono = jTTelefonoGarante.getText();
+            int telefono = Integer.parseInt(jTTelefonoGarante.getText());
             boolean activo = jRGarante.isSelected();
 
             Garante nuevo = new Garante(idGarante, nombre, apellido, dni, domicilio, telefono, activo);
