@@ -9,8 +9,8 @@ public class Inquilino {
     private int idInquilino;
     private String nombre;
     private String apellido;
-    private int dni;
-    private int cuit;
+    private String dni;
+    private String cuit;
     private String lugarTrabajo;
     private boolean activo;
     
@@ -19,7 +19,16 @@ public class Inquilino {
     public Inquilino() {
     }
 
-    public Inquilino(int idInquilino, String nombre, String apellido, int dni, int cuit, String lugarTrabajo, boolean activo) {
+    public Inquilino(String nombre, String apellido, String dni, String cuit, String lugarTrabajo, boolean activo) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.cuit = cuit;
+        this.lugarTrabajo = lugarTrabajo;
+        this.activo = activo;
+    }
+
+    public Inquilino(int idInquilino, String nombre, String apellido, String dni, String cuit, String lugarTrabajo, boolean activo) {
         this.idInquilino = idInquilino;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -29,19 +38,10 @@ public class Inquilino {
         this.activo = activo;
     }
 
-    public Inquilino(String nombre, String apellido, int dni, int cuit, String lugarTrabajo, boolean activo) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.dni = dni;
-        this.cuit = cuit;
-        this.lugarTrabajo = lugarTrabajo;
-        this.activo = activo;
-    }
     
-    //Declaro Setter y Getter
 
-    public int getIdInquilino() {
-        return idInquilino;
+    public int getIdInquilino() {    
+        return  idInquilino;
     }
 
     public void setIdInquilino(int idInquilino) {
@@ -64,19 +64,19 @@ public class Inquilino {
         this.apellido = apellido;
     }
 
-    public int getDni() {
+    public String getDni() {
         return dni;
     }
 
-    public void setDni(int dni) {
+    public void setDni(String dni) {
         this.dni = dni;
     }
 
-    public int getCuit() {
+    public String getCuit() {
         return cuit;
     }
 
-    public void setCuit(int cuit) {
+    public void setCuit(String cuit) {
         this.cuit = cuit;
     }
 
@@ -92,6 +92,7 @@ public class Inquilino {
         return activo;
     }
 
+    //Declaro Setter y Getter
     public void setActivo(boolean activo) {
         this.activo = activo;
     }

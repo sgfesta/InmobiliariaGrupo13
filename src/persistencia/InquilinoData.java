@@ -27,8 +27,8 @@ public class InquilinoData {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, inquilino.getNombre());
             ps.setString(2, inquilino.getApellido());
-            ps.setInt(3, inquilino.getDni());
-            ps.setInt(4, inquilino.getCuit());
+            ps.setString(3, inquilino.getDni());
+            ps.setString(4, inquilino.getCuit());
             ps.setString(5, inquilino.getLugarTrabajo());
             ps.setBoolean(6, inquilino.isActivo());
             ps.executeUpdate();
@@ -56,8 +56,8 @@ public class InquilinoData {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, inquilino.getNombre());
             ps.setString(2, inquilino.getApellido());
-            ps.setInt(3, inquilino.getDni());
-            ps.setInt(4, inquilino.getCuit());
+            ps.setString(3, inquilino.getDni());
+            ps.setString(4, inquilino.getCuit());
             ps.setString(5, inquilino.getLugarTrabajo());
             ps.setBoolean(6, inquilino.isActivo());
             ps.setInt(7, inquilino.getIdInquilino());
@@ -74,11 +74,11 @@ public class InquilinoData {
         }
     }
 
-    public void eliminarInquilino(int dni) {
+        public void eliminarInquilino(String dni) {
         String sql = "UPDATE inquilino SET activo = 0 WHERE dni = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, dni);
+            ps.setString(1, dni);
             int exito = ps.executeUpdate();
             if (exito == 1) {
                 JOptionPane.showMessageDialog(null, "Inquilino eliminado");
@@ -103,8 +103,8 @@ public class InquilinoData {
                 inquilino = new Inquilino();           
                 inquilino.setNombre(rs.getString("nombre"));
                 inquilino.setApellido(rs.getString("apellido"));
-                inquilino.setDni(rs.getInt("dni"));
-                inquilino.setCuit(rs.getInt("cuit"));
+                inquilino.setDni(rs.getString("dni"));
+                inquilino.setCuit(rs.getString("cuit"));
                 inquilino.setLugarTrabajo(rs.getString("lugarTrabajo"));
                 inquilino.setActivo(rs.getBoolean("activo"));
                 inquilino.setIdInquilino(idInquilino);
@@ -122,14 +122,14 @@ public class InquilinoData {
         return inquilino;
     }
 
-    public Inquilino buscarInquilinoPorDni(int dni, boolean activo) {
+    public Inquilino buscarInquilinoPorDni(String dni, boolean activo) {
 
         String sql = "SELECT idInquilino, nombre, apellido, dni, cuit, lugarTrabajo, activo FROM inquilino WHERE dni = ?  AND activo = ?";
                   
         Inquilino inquilino = null;
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, dni);
+            ps.setString(1, dni);
             ps.setBoolean(2, activo); // Establecer el valor de activo
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
@@ -137,8 +137,8 @@ public class InquilinoData {
                 inquilino.setIdInquilino(rs.getInt("idInquilino"));
                 inquilino.setNombre(rs.getString("nombre"));
                 inquilino.setApellido(rs.getString("apellido"));
-                inquilino.setDni(dni);
-                inquilino.setCuit(rs.getInt("cuit"));
+                inquilino.setDni(rs.getString("dni"));
+                inquilino.setCuit(rs.getString("cuit"));
                 inquilino.setLugarTrabajo(rs.getString("lugarTrabajo"));
                 inquilino.setActivo(activo);
                 
@@ -166,8 +166,8 @@ public class InquilinoData {
                 inquilino.setIdInquilino(rs.getInt("idInquilino"));
                 inquilino.setNombre(rs.getString("nombre"));
                 inquilino.setApellido(rs.getString("apellido"));
-                inquilino.setDni(rs.getInt("dni"));
-                inquilino.setCuit(rs.getInt("cuit"));
+                inquilino.setDni(rs.getString("dni"));
+                inquilino.setCuit(rs.getString("cuit"));
                 inquilino.setLugarTrabajo(rs.getString("lugarTrabajo"));
                 inquilino.setActivo(rs.getBoolean("activo"));
                 inquilinos.add(inquilino);
@@ -195,8 +195,8 @@ public class InquilinoData {
                 inquilino.setIdInquilino(rs.getInt("idInquilino"));
                 inquilino.setNombre(rs.getString("nombre"));
                 inquilino.setApellido(rs.getString("apellido"));
-                inquilino.setDni(rs.getInt("dni"));
-                inquilino.setCuit(rs.getInt("cuit"));
+                inquilino.setDni(rs.getString("dni"));
+                inquilino.setCuit(rs.getString("cuit"));
                 inquilino.setLugarTrabajo(rs.getString("lugarTrabajo"));
                 inquilino.setActivo(true);
                 inquilinos.add(inquilino);
