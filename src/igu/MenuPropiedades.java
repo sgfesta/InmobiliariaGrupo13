@@ -27,7 +27,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
     private int idPropietarioSeleccionado = -1;
     PropiedadData pd = new PropiedadData();
-    PropietarioData propd=new PropietarioData();
+    PropietarioData propd = new PropietarioData();
 
     public MenuPropiedades() {
         initComponents();
@@ -92,7 +92,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jCListarEstadoPropiedades = new javax.swing.JComboBox<>();
         jCListaInspectoresPropiedades = new javax.swing.JComboBox<>();
         jCListarZonaPropiedades = new javax.swing.JComboBox<>();
-        jCListaPropiedades2 = new javax.swing.JComboBox<>();
+        jCListaPropiedades = new javax.swing.JComboBox<>();
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -277,11 +277,17 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jRDisponibilidadPropiedades.setBackground(new java.awt.Color(51, 51, 51));
+        jRDisponibilidadPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
+        jRDisponibilidadPropiedades.setForeground(new java.awt.Color(255, 255, 255));
         jRDisponibilidadPropiedades.setSelected(true);
         jRDisponibilidadPropiedades.setText("Activo");
 
         jCListaTipoPropiedades.setBackground(new java.awt.Color(153, 153, 153));
 
+        jRActivoPropiedades1.setBackground(new java.awt.Color(51, 51, 51));
+        jRActivoPropiedades1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
+        jRActivoPropiedades1.setForeground(new java.awt.Color(255, 255, 255));
         jRActivoPropiedades1.setSelected(true);
         jRActivoPropiedades1.setText("Activo");
 
@@ -303,10 +309,10 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
         jCListarZonaPropiedades.setBackground(new java.awt.Color(153, 153, 153));
 
-        jCListaPropiedades2.setBackground(new java.awt.Color(153, 153, 153));
-        jCListaPropiedades2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCListaPropiedades2ActionPerformed(evt);
+        jCListaPropiedades.setBackground(new java.awt.Color(153, 153, 153));
+        jCListaPropiedades.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCListaPropiedadesItemStateChanged(evt);
             }
         });
 
@@ -359,7 +365,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jCListaPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(50, 50, 50)
-                                .addComponent(jCListaPropiedades2, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jCListaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPPropiedadesLayout.createSequentialGroup()
                                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLAntiguedadPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -399,7 +405,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLIDPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCListaPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCListaPropiedades2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCListaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38)
                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLDireccionPropiedades)
@@ -495,50 +501,50 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
     private void jBModificarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarPropiedadesActionPerformed
 
-            modificarPropiedad(); // Llama al método modificar solo si se ha seleccionado un alumno
-          
-        
+        modificarPropiedad(); // Llama al método modificar solo si se ha seleccionado una propiedad
+
+
     }//GEN-LAST:event_jBModificarPropiedadesActionPerformed
 
     private void jBEliminarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarPropiedadesActionPerformed
-        Propiedad propiedadSeleccionado = (Propiedad) jCListaPropietarios.getSelectedItem();
-        // ad.eliminarAlumno(alumnoSelecionado.getDni());
+        Propiedad propiedadSeleccionado = (Propiedad) jCListaPropiedades.getSelectedItem();
         pd.darBajaAPropiedad(propiedadSeleccionado);
         limpiarCampos();
 
     }//GEN-LAST:event_jBEliminarPropiedadesActionPerformed
 
-    private void jCListaPropiedades2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCListaPropiedades2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCListaPropiedades2ActionPerformed
-
     private void jCListaPropietariosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCListaPropietariosItemStateChanged
-            int idPropietario = -1;
+        int idPropietario = -1;
         Object selectedItem = jCListaPropietarios.getSelectedItem();
-if (selectedItem != null) {
-    if (selectedItem instanceof Propietario) { //USO UN instanceof PARA VERIFICAR SI EL OBJETO ES UNA INSTANCIA DE LA CALSE PROPIETARIO, LO CASTEO Y SACO EL ID DEL PROPIETARIO
-        Propietario propietarioSeleccionado = (Propietario) selectedItem;
-        idPropietario = propietarioSeleccionado.getIdPropietario(); //UNA VEZ TENGO EL ID, LLAMO, LIMPIO LOS CAMPOS DEL COMBO BOX DE PROPIEDADES Y CARGO LAS PROPIEDADES
-        jCListaPropiedades2.removeAllItems();
-        List<Propiedad> propiedadesDelPropietario = pd.listarPropiedadesXDueño(propietarioSeleccionado.getIdPropietario());
+        if (selectedItem != null) {
+            if (selectedItem instanceof Propietario) { //USO UN instanceof PARA VERIFICAR SI EL OBJETO ES UNA INSTANCIA DE LA CALSE PROPIETARIO, LO CASTEO Y SACO EL ID DEL PROPIETARIO
+                Propietario propietarioSeleccionado = (Propietario) selectedItem;
+                idPropietario = propietarioSeleccionado.getIdPropietario(); //UNA VEZ TENGO EL ID, LLAMO, LIMPIO LOS CAMPOS DEL COMBO BOX DE PROPIEDADES Y CARGO LAS PROPIEDADES
+                jCListaPropiedades.removeAllItems();
+                List<Propiedad> propiedadesDelPropietario = pd.listarPropiedadesXDueño(propietarioSeleccionado.getIdPropietario());
 
-for (Propiedad propiedad : propiedadesDelPropietario) {
-    jCListaPropiedades2.addItem(propiedad);
-}
-limpiarCampos();
-        rellenarCampos();
-        
-    } else {
-        JOptionPane.showMessageDialog(this, "Seleccione un propietario válido");
-    }
-} else {
-    JOptionPane.showMessageDialog(this, "No ha seleccionado ningún propietario");
-}
+                for (Propiedad propiedad : propiedadesDelPropietario) {
+                    jCListaPropiedades.addItem(propiedad);
+                }
+                limpiarCampos();
+                rellenarCampos();
+
+            } else {
+                JOptionPane.showMessageDialog(this, "Seleccione un propietario válido");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "No ha seleccionado ningún propietario");
+        }
     }//GEN-LAST:event_jCListaPropietariosItemStateChanged
 
     private void jCListaPropietariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCListaPropietariosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCListaPropietariosActionPerformed
+
+    private void jCListaPropiedadesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCListaPropiedadesItemStateChanged
+        limpiarCampos();
+        rellenarCampos();
+    }//GEN-LAST:event_jCListaPropiedadesItemStateChanged
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -547,7 +553,7 @@ limpiarCampos();
     private javax.swing.JButton jBNuevoPropiedades;
     private javax.swing.JButton jBSalirPropiedades;
     private javax.swing.JComboBox<Inspector> jCListaInspectoresPropiedades;
-    private javax.swing.JComboBox<Propiedad> jCListaPropiedades2;
+    private javax.swing.JComboBox<Propiedad> jCListaPropiedades;
     private javax.swing.JComboBox<Propietario> jCListaPropietarios;
     private javax.swing.JComboBox<TipoPropiedad> jCListaTipoPropiedades;
     private javax.swing.JComboBox<Estado> jCListarEstadoPropiedades;
@@ -591,8 +597,8 @@ limpiarCampos();
                     && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
                 // habilitarBotones();
                 // Propiedad PSelec = (Propiedad) jCListaTipoPropiedades.getSelectedItem();
-               
-                Propietario propietario =(Propietario) jCListaPropietarios.getSelectedItem();
+
+                Propietario propietario = (Propietario) jCListaPropietarios.getSelectedItem();
                 String direccion = jTDireccionPropiedades.getText();
                 int altura = Integer.parseInt(jTAlturaPropiedades.getText());
                 TipoPropiedad tipoSelec = (TipoPropiedad) jCListaTipoPropiedades.getSelectedItem();
@@ -606,9 +612,9 @@ limpiarCampos();
                 boolean disponible = jRDisponibilidadPropiedades.isSelected();
                 boolean activo = jRActivoPropiedades1.isSelected();
                 Propiedad nuevo = new Propiedad(propietario, direccion, altura, tipoSelec, superficieTotal, precioTasado, antiguedad, insSelec, zona, estado, observaciones, disponible, activo);
-                 pd.agregarPropiedad(nuevo);
-                 JOptionPane.showMessageDialog(this, "Propiedad agregada exitosamente");
-                 limpiarCampos();
+                pd.agregarPropiedad(nuevo);
+                JOptionPane.showMessageDialog(this, "Propiedad agregada exitosamente");
+                limpiarCampos();
                 //  desHabilitarBotones();
                 // cargarCombo();
 
@@ -620,14 +626,14 @@ limpiarCampos();
             JOptionPane.showMessageDialog(this, "No debe dejar campos vacios");
         }
     }
-    
+
     public void cargarComboPropietarios() {
         jCListaPropietarios.removeAllItems();
 
         List<Propietario> propietarios = propd.listarPropietarios();
 
-        for (Propietario propietario:propietarios) {
-           
+        for (Propietario propietario : propietarios) {
+
             jCListaPropietarios.addItem(propietario);
         }
     }
@@ -693,7 +699,7 @@ limpiarCampos();
 
     public void rellenarCampos() {
 
-        Propiedad propiedadSeleccionado = (Propiedad) jCListaPropiedades2.getSelectedItem();
+        Propiedad propiedadSeleccionado = (Propiedad) jCListaPropiedades.getSelectedItem();
         // boolean activo = jrbEstado.isSelected();
 
         if (propiedadSeleccionado != null) {
@@ -748,10 +754,10 @@ limpiarCampos();
 
         try {
             PropietarioData prod = new PropietarioData();
-            Propiedad propiedadSeleccionada = (Propiedad) jCListaPropiedades2.getSelectedItem();
-           int id = propiedadSeleccionada.getIdPropiedad();
-          //  int idp = Integer.parseInt(jTIDPropietarios.getText());
-            Propietario propietario = (Propietario)jCListaPropietarios.getSelectedItem();
+            Propiedad propiedadSeleccionada = (Propiedad) jCListaPropiedades.getSelectedItem();
+            int id = propiedadSeleccionada.getIdPropiedad();
+            //  int idp = Integer.parseInt(jTIDPropietarios.getText());
+            Propietario propietario = (Propietario) jCListaPropietarios.getSelectedItem();
             String direccion = jTDireccionPropiedades.getText();
             int altura = Integer.parseInt(jTAlturaPropiedades.getText());
             TipoPropiedad tipoSelec = (TipoPropiedad) jCListaTipoPropiedades.getSelectedItem();
@@ -770,6 +776,6 @@ limpiarCampos();
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
         }
-        }
-    
+    }
+
 }
