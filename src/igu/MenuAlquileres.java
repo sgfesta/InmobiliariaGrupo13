@@ -2,13 +2,18 @@
 package igu;
 
 import entidades.Contrato;
+import entidades.TipoPropiedad;
+import entidades.Zona;
 import java.awt.Dimension;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import persistencia.ContratoData;
+import persistencia.TipoPropiedadData;
+import persistencia.ZonaData;
 
 public class MenuAlquileres extends javax.swing.JInternalFrame {
 ContratoData cd = new ContratoData();
@@ -17,8 +22,10 @@ ContratoData cd = new ContratoData();
      */
     public MenuAlquileres() {
         initComponents();
-        cargarComboContratos();
         QuitarLaBarraTitulo();
+        cargarComboTipo();
+        cargarComboZona();
+        
 
     }
     //defino dos métodosdentro del JInternalFrame y lo instanciamos de la siguiente manera.
@@ -75,7 +82,7 @@ ContratoData cd = new ContratoData();
         jDFechaInicio = new com.toedter.calendar.JDateChooser();
         jDFechaContrato = new com.toedter.calendar.JDateChooser();
         jCFiltroZonaalquiler = new javax.swing.JComboBox<>();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        jRPrecioAlquiler = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
         jCListadoFiltradoPropiedadesAlquiler = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
@@ -288,22 +295,28 @@ ContratoData cd = new ContratoData();
         jCFiltroZonaalquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jPCardAlquileres.add(jCFiltroZonaalquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 140, 30));
 
-        jRadioButton1.setBackground(new java.awt.Color(51, 51, 51));
-        jRadioButton1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(51, 153, 255));
-        jRadioButton1.setText("Precio Mayor");
-        jPCardAlquileres.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, -1, -1));
+        jRPrecioAlquiler.setBackground(new java.awt.Color(51, 51, 51));
+        jRPrecioAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jRPrecioAlquiler.setForeground(new java.awt.Color(51, 153, 255));
+        jRPrecioAlquiler.setSelected(true);
+        jRPrecioAlquiler.setText("Hasta");
+        jRPrecioAlquiler.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jRPrecioAlquilerStateChanged(evt);
+            }
+        });
+        jPCardAlquileres.add(jRPrecioAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, -1, 30));
 
         jButton1.setBackground(new java.awt.Color(51, 51, 51));
         jButton1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 153, 255));
-        jButton1.setText("Filtro");
+        jButton1.setText("Filtrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPCardAlquileres.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 140, 80, -1));
+        jPCardAlquileres.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 140, 80, -1));
 
         jCListadoFiltradoPropiedadesAlquiler.setBackground(new java.awt.Color(153, 153, 153));
         jCListadoFiltradoPropiedadesAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -341,6 +354,10 @@ ContratoData cd = new ContratoData();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jRPrecioAlquilerStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jRPrecioAlquilerStateChanged
+        actualizarPrecio();
+    }//GEN-LAST:event_jRPrecioAlquilerStateChanged
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBEliminarAlquiler;
@@ -348,8 +365,8 @@ ContratoData cd = new ContratoData();
     private javax.swing.JButton jBNuevoAlquiler;
     private javax.swing.JButton jBSalirAlquiler;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<Contrato> jCFiltroTipoAlquiler;
-    private javax.swing.JComboBox<String> jCFiltroZonaalquiler;
+    private javax.swing.JComboBox<TipoPropiedad> jCFiltroTipoAlquiler;
+    private javax.swing.JComboBox<Zona> jCFiltroZonaalquiler;
     private javax.swing.JComboBox<String> jCListadoFiltradoPropiedadesAlquiler;
     private javax.swing.JComboBox<String> jComboBox3;
     private com.toedter.calendar.JDateChooser jDFechaContrato;
@@ -370,7 +387,7 @@ ContratoData cd = new ContratoData();
     private javax.swing.JLabel jLabel45;
     private javax.swing.JPanel jPBarraNavegador2;
     private javax.swing.JPanel jPCardAlquileres;
-    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRPrecioAlquiler;
     private javax.swing.JTextField jTActivo;
     private javax.swing.JTextField jTIDContrato;
     private javax.swing.JTextField jTIDGarante;
@@ -381,18 +398,34 @@ ContratoData cd = new ContratoData();
     private javax.swing.JTextField jTVigencia;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
-    private void cargarComboContratos() {
-        jCFiltroTipoAlquiler.removeAllItems();
-        List<Contrato> contratos = cd.listarContratosVigentes();
-        for (Contrato contrato:contratos) {
-            jCFiltroTipoAlquiler.addItem(contrato);
+ 
+
+     public void cargarComboTipo(){
+
+        TipoPropiedadData tipD = new TipoPropiedadData();
+        ArrayList<TipoPropiedad> tipoProp = new ArrayList<>();
+
+        for (TipoPropiedad tipo : tipD.listarTipoPropiedadesActivas()) {
+            tipoProp.add(tipo);
+            jCFiltroTipoAlquiler.addItem(tipo);
+
         }
     }
+     
+      public void cargarComboZona(){
+ ZonaData zonaD = new ZonaData();
+        ArrayList<Zona> Zonas = new ArrayList<>();
 
+        for (Zona zon : zonaD.listarZona()) {
+            Zonas.add(zon);
+            jCFiltroZonaalquiler.addItem(zon);
+
+        }
+    }
+    
+    
      public void agregarContrato(){
-         
-         
-           LocalDate fechaI = jDFechaInicio.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+          LocalDate fechaI = jDFechaInicio.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
            LocalDate fechaF = jDFechaFin.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
            LocalDate fechaC = jDFechaContrato.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
            int idContract = Integer.parseInt(jTIDContrato.getText());
@@ -400,4 +433,12 @@ ContratoData cd = new ContratoData();
         JOptionPane.showMessageDialog(this, "Contrato guardado correctamente");
      }
     
+     public void actualizarPrecio() {
+        if (jRPrecioAlquiler.isSelected()) {
+            jRPrecioAlquiler.setText("Hasta");
+        } else {
+            jRPrecioAlquiler.setText("Desde");
+        }
+    }
+     
 }
