@@ -99,7 +99,7 @@ public class Inquilino {
 
     @Override
     public String toString() {
-        return  idInquilino + " " + nombre + " " + apellido + " " + dni + " " + cuit + " " + lugarTrabajo + " " + activo;
+        return  idInquilino + ") " + apellido + ", " + nombre;
     }
     
 }
