@@ -280,7 +280,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jRDisponibilidadPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
         jRDisponibilidadPropiedades.setForeground(new java.awt.Color(255, 255, 255));
         jRDisponibilidadPropiedades.setSelected(true);
-        jRDisponibilidadPropiedades.setText("Activo");
 
         jCListaTipoPropiedades.setBackground(new java.awt.Color(153, 153, 153));
 
@@ -288,7 +287,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jRActivoPropiedades1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
         jRActivoPropiedades1.setForeground(new java.awt.Color(255, 255, 255));
         jRActivoPropiedades1.setSelected(true);
-        jRActivoPropiedades1.setText("Activo");
 
         jCListaPropietarios.setBackground(new java.awt.Color(153, 153, 153));
         jCListaPropietarios.addItemListener(new java.awt.event.ItemListener() {
