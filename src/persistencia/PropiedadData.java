@@ -96,14 +96,14 @@ public class PropiedadData {
     }
     
      public void darBajaAPropiedad(Propiedad propiedad) {
-         String sql = "UPDATE propiedad  activo = 0 WHERE idPropiedad = ?";
+         String sql = "UPDATE propiedad SET activo=0 WHERE idPropiedad=?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);         
             ps.setInt(1, propiedad.getIdPropiedad());
             
            int exito = ps.executeUpdate();
             if (exito == 1) {
-                //AGREGAR JOptionPane despues, donde se llame al metodo para mensaje de correcta eliminacion
+                JOptionPane.showMessageDialog(null,"Propiedad eliminada exitosamente");
             }
              //Cierro la Conexion
             ps.close();
