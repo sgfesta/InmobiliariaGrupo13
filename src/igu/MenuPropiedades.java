@@ -756,12 +756,23 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                     jCListarEstadoPropiedades.setSelectedIndex(i);
                 }
             }
-if(propiedadSeleccionado.isDisponible()==true){
-          actualizarDisponibilidad();
-}else{
+
     actualizarDisponibilidad();
-}
-          actualizarActivo();
+    if(propiedadSeleccionado.isDisponible()==true){
+    jRDisponibilidadPropiedades.setSelected(true);
+    }else{
+        jRDisponibilidadPropiedades.setSelected(false);
+    }
+            System.out.println(propiedadSeleccionado.isActivo());
+            
+          actualizarActivo();       
+          if(propiedadSeleccionado.isActivo()==true){
+     jRActivoPropiedades1.setSelected(true);
+    }else{
+              System.out.println("hola");
+         jRActivoPropiedades1.setSelected(false);
+    }
+
 
             jTObservacionesPropiedades.setText(String.valueOf(propiedadSeleccionado.getObservaciones()));
            // System.out.println(jCListaTipoPropiedades.getSelectedIndex());  este era el que jodia en la consola jajaja
