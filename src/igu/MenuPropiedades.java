@@ -552,21 +552,11 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jCListaPropiedadesItemStateChanged
 
     private void jRDisponibilidadPropiedadesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRDisponibilidadPropiedadesItemStateChanged
-        if (jRDisponibilidadPropiedades.isSelected()==true){
-               jLDisponibilidadPropiedad.setText("Disponible");
-           }else{
-               jRDisponibilidadPropiedades.setSelected(false);
-               jLDisponibilidadPropiedad.setText("NO Disponible");
-        }
+      actualizarDisponibilidad();
     }//GEN-LAST:event_jRDisponibilidadPropiedadesItemStateChanged
 
     private void jRActivoPropiedades1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRActivoPropiedades1ItemStateChanged
-       if (jRActivoPropiedades1.isSelected()==true){
-               jLActivoPropiedades.setText("Activa");
-           }else{
-               jRActivoPropiedades1.setSelected(false);
-               jLActivoPropiedades.setText("Inactiva");
-        }
+      actualizarActivo();
     }//GEN-LAST:event_jRActivoPropiedades1ItemStateChanged
 
 
@@ -716,8 +706,9 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jTSuperTotalPropiedades.setText("");
         jTPrecioTasadoPropiedades.setText("");
         jTAntiguedadPropiedad.setText("");
-        jRDisponibilidadPropiedades.setSelected(true);
-        jRActivoPropiedades1.setSelected(true);
+        jRDisponibilidadPropiedades.isSelected();
+        jRActivoPropiedades1.isSelected();
+
     }
 
     public void rellenarCampos() {
@@ -765,23 +756,12 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                     jCListarEstadoPropiedades.setSelectedIndex(i);
                 }
             }
-
-            // jRDisponibilidadPropiedades
-           if ( jRDisponibilidadPropiedades.isSelected()==true){          
-            propiedadSeleccionado.setDisponible(true);
-          }else{
-              propiedadSeleccionado.setDisponible(false);
-               
-               
-           }
-           
-           //jRActivoPropiedades1;
-           if (jRActivoPropiedades1.isSelected()==true){
-                propiedadSeleccionado.setActivo(true);
-           }else{
-                 propiedadSeleccionado.setActivo(false);
-               
-           }
+if(propiedadSeleccionado.isDisponible()==true){
+          actualizarDisponibilidad();
+}else{
+    actualizarDisponibilidad();
+}
+          actualizarActivo();
 
             jTObservacionesPropiedades.setText(String.valueOf(propiedadSeleccionado.getObservaciones()));
            // System.out.println(jCListaTipoPropiedades.getSelectedIndex());  este era el que jodia en la consola jajaja
@@ -814,5 +794,21 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
         }
     }
+    
+    private void actualizarDisponibilidad() {
+    if (jRDisponibilidadPropiedades.isSelected()) {
+        jLDisponibilidadPropiedad.setText("Disponible");
+    } else {
+        jLDisponibilidadPropiedad.setText("NO Disponible");
+    }
+}
+
+private void actualizarActivo() {
+    if (jRActivoPropiedades1.isSelected()) {
+        jLActivoPropiedades.setText("Activa");
+    } else {
+        jLActivoPropiedades.setText("Inactiva");
+    }
+}
 
 }
