@@ -502,7 +502,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     private void jBModificarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarPropiedadesActionPerformed
 
         modificarPropiedad(); // Llama al método modificar solo si se ha seleccionado una propiedad
-
+        cargarComboPropietarios();
 
     }//GEN-LAST:event_jBModificarPropiedadesActionPerformed
 
@@ -532,8 +532,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             } else {
                 JOptionPane.showMessageDialog(this, "Seleccione un propietario válido");
             }
-        } else {
-            JOptionPane.showMessageDialog(this, "No ha seleccionado ningún propietario");
         }
     }//GEN-LAST:event_jCListaPropietariosItemStateChanged
 
