@@ -189,7 +189,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jLDisponibilidadPropiedad.setForeground(new java.awt.Color(51, 204, 255));
         jLDisponibilidadPropiedad.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLDisponibilidadPropiedad.setText("Disponible");
-        jLDisponibilidadPropiedad.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jLActivoPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLActivoPropiedades.setForeground(new java.awt.Color(51, 204, 255));
@@ -742,17 +741,24 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             }
 
             // jRDisponibilidadPropiedades
-           if (propiedadSeleccionado.isActivo()==true){
+           if (propiedadSeleccionado.isDisponible()==true){
                jLDisponibilidadPropiedad.setText("Disponible");
+               jRDisponibilidadPropiedades.setSelected(true);
            }else{
+               jRDisponibilidadPropiedades.setSelected(false);
                jLDisponibilidadPropiedad.setText("NO Disponible");
+               
+               
            }
            
            //jRActivoPropiedades1;
            if (propiedadSeleccionado.isActivo()==true){
                jLActivoPropiedades.setText("Activo");
+               jRActivoPropiedades1.setSelected(true);
            }else{
+               jRActivoPropiedades1.setSelected(false);
                jLActivoPropiedades.setText("No Activa");
+               
            }
 
             jTObservacionesPropiedades.setText(String.valueOf(propiedadSeleccionado.getObservaciones()));
