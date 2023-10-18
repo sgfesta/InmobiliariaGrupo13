@@ -188,7 +188,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jLDisponibilidadPropiedad.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLDisponibilidadPropiedad.setForeground(new java.awt.Color(51, 204, 255));
         jLDisponibilidadPropiedad.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLDisponibilidadPropiedad.setText("Disponibilidad");
+        jLDisponibilidadPropiedad.setText("Disponible");
         jLDisponibilidadPropiedad.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jLActivoPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -741,8 +741,20 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 }
             }
 
-            jRDisponibilidadPropiedades.setSelected(propiedadSeleccionado.isActivo());
-            jRActivoPropiedades1.setSelected(propiedadSeleccionado.isActivo());
+            // jRDisponibilidadPropiedades
+           if (propiedadSeleccionado.isActivo()==true){
+               jLDisponibilidadPropiedad.setText("Disponible");
+           }else{
+               jLDisponibilidadPropiedad.setText("NO Disponible");
+           }
+           
+           //jRActivoPropiedades1;
+           if (propiedadSeleccionado.isActivo()==true){
+               jLActivoPropiedades.setText("Activo");
+           }else{
+               jLActivoPropiedades.setText("No Activa");
+           }
+
             jTObservacionesPropiedades.setText(String.valueOf(propiedadSeleccionado.getObservaciones()));
            // System.out.println(jCListaTipoPropiedades.getSelectedIndex());  este era el que jodia en la consola jajaja
         }
