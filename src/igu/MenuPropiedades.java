@@ -767,23 +767,19 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             }
 
             // jRDisponibilidadPropiedades
-           if (propiedadSeleccionado.isDisponible()==true){
-               jLDisponibilidadPropiedad.setText("Disponible");
-//               jRDisponibilidadPropiedades.setSelected(false);
-//           }else{
-//               jRDisponibilidadPropiedades.setSelected(true);
-               jLDisponibilidadPropiedad.setText("NO Disponible");
+           if ( jRDisponibilidadPropiedades.isSelected()==true){          
+            propiedadSeleccionado.setDisponible(true);
+          }else{
+              propiedadSeleccionado.setDisponible(false);
                
                
            }
            
            //jRActivoPropiedades1;
-           if (propiedadSeleccionado.isActivo()==true){
-               jLActivoPropiedades.setText("Activo");
-//               jRActivoPropiedades1.setSelected(false);
+           if (jRActivoPropiedades1.isSelected()==true){
+                propiedadSeleccionado.setActivo(true);
            }else{
-//               jRActivoPropiedades1.setSelected(true);
-               jLActivoPropiedades.setText("Inactiva");
+                 propiedadSeleccionado.setActivo(false);
                
            }
 
