@@ -55,12 +55,13 @@ public class ZonaData {
 
     public void modificarZona(Zona zona) {
 
-        String sql = "UPDATE zona SET provincia=?, ciudad=?, barrio=? WHERE idZona=?";
+        String sql = "UPDATE zona SET provincia=?, ciudad=?, barrio=?, activo=? WHERE idZona=?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, zona.getProvincia());
             ps.setString(2, zona.getCiudad());
             ps.setString(3, zona.getBarrio());
+            ps.setBoolean(4, zona.isActivo());
            
             int exito = ps.executeUpdate();
 
@@ -80,7 +81,7 @@ public class ZonaData {
 
     public void eliminarZona(int idZona) {
         //borrado logico
-        String sql = "UPDATE zona SET activa=0 WHERE idZona= ?";
+        String sql = "UPDATE zona SET activo=0 WHERE idZona= ?";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -128,7 +129,7 @@ public class ZonaData {
     }
 
      public List<Zona> listarZona() {
-        String sql = "SELECT idZona, provincia, ciudad, barrio FROM zona";
+        String sql = "SELECT idZona, provincia, ciudad, barrio, activo FROM zona";
         ArrayList<Zona> Zonas = new ArrayList();
 
         try {
@@ -142,6 +143,8 @@ public class ZonaData {
                 zona.setProvincia(rs.getString("provincia"));
                 zona.setCiudad(rs.getString("ciudad"));
                 zona.setBarrio(rs.getString("barrio"));
+                zona.setActivo(rs.getBoolean("activo"));
+                
                 Zonas.add(zona);
             }
             //Cierro la Conexion

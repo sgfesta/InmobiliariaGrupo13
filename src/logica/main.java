@@ -52,7 +52,7 @@ public class main {
 //      EstadoData e1 = new EstadoData();
 //      e1.darAlta(estado);
 //      
-      Zona zona = new Zona(1,"Entre Rios", "Parana", "Puerto");
+      Zona zona = new Zona(1,"Entre Rios", "Parana", "Puerto", true);
 //      ZonaData zd = new ZonaData();
 //      zd.guardarZona(zona);
 //      
