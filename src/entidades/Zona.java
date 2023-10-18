@@ -1,36 +1,34 @@
-
 package entidades;
 
-
 public class Zona {
-    
+
     //Declaro las variables
-    
     private int idZona;
     private String provincia;
     private String ciudad;
     private String barrio;
-    
-    //Declaro los Constructores
+    private boolean activo;
 
-    public Zona(int idZona, String provincia, String ciudad, String barrio) {
+    //Declaro los Constructores
+    public Zona(int idZona, String provincia, String ciudad, String barrio, boolean activo) {
         this.idZona = idZona;
         this.provincia = provincia;
         this.ciudad = ciudad;
         this.barrio = barrio;
+        this.activo = activo;
     }
 
-    public Zona(String provincia, String ciudad, String barrio) {
+    public Zona(String provincia, String ciudad, String barrio, boolean activo) {
         this.provincia = provincia;
         this.ciudad = ciudad;
         this.barrio = barrio;
+        this.activo = activo;
     }
 
     public Zona() {
     }
-    
-    //Declaro Setter y Getter
 
+    //Declaro Setter y Getter
     public int getIdZona() {
         return idZona;
     }
@@ -41,6 +39,10 @@ public class Zona {
 
     public String getProvincia() {
         return provincia;
+    }
+
+    public boolean isActivo() {
+        return activo;
     }
 
     public void setProvincia(String provincia) {
@@ -63,9 +65,13 @@ public class Zona {
         this.barrio = barrio;
     }
 
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
     @Override
     public String toString() {
-        return idZona + ") " + provincia + ", " + ciudad + ", " + barrio;
+        return idZona + ") " + provincia + ", " + ciudad + ", " + barrio + ", " + activo;
     }
     
     
