@@ -175,7 +175,7 @@ public class PropiedadData {
     }
     
       public List<Propiedad> listarPropiedadesXDueño(int idPropietario) {
-         String sql = "SELECT idPropiedad, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idInspector, idZona, idEstado, observaciones, disponible FROM propiedad p1 JOIN propietario p2 on (p1.idPropietario = p2.idPropietario) WHERE p1.idPropietario = ?";
+         String sql = "SELECT idPropiedad, direccion, altura, idTipo, superficieTotal, precioTasado, antiguedad, idInspector, idZona, idEstado, observaciones, disponible, p1.activo FROM propiedad p1 JOIN propietario p2 on (p1.idPropietario = p2.idPropietario) WHERE p1.idPropietario = ?";
         ArrayList<Propiedad> propiedades = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -211,7 +211,10 @@ public class PropiedadData {
                 
                 pr1.setObservaciones(rs.getString("observaciones"));
                 pr1.setDisponible(rs.getBoolean("disponible"));
+                pr1.setActivo(rs.getBoolean("activo"));
                 propiedades.add(pr1);
+                
+                
                 
             }
              //Cierro la Conexion
