@@ -746,7 +746,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             jRDisponibilidadPropiedades.setSelected(propiedadSeleccionado.isActivo());
             jRActivoPropiedades1.setSelected(propiedadSeleccionado.isActivo());
             jTObservacionesPropiedades.setText(String.valueOf(propiedadSeleccionado.getObservaciones()));
-            System.out.println(jCListaTipoPropiedades.getSelectedIndex());
+           // System.out.println(jCListaTipoPropiedades.getSelectedIndex());  este era el que jodia en la consola jajaja
         }
     }
 
@@ -756,7 +756,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             PropietarioData prod = new PropietarioData();
             Propiedad propiedadSeleccionada = (Propiedad) jCListaPropiedades.getSelectedItem();
             int id = propiedadSeleccionada.getIdPropiedad();
-            //  int idp = Integer.parseInt(jTIDPropietarios.getText());
             Propietario propietario = (Propietario) jCListaPropietarios.getSelectedItem();
             String direccion = jTDireccionPropiedades.getText();
             int altura = Integer.parseInt(jTAlturaPropiedades.getText());
