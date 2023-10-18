@@ -280,6 +280,11 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jRDisponibilidadPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
         jRDisponibilidadPropiedades.setForeground(new java.awt.Color(255, 255, 255));
         jRDisponibilidadPropiedades.setSelected(true);
+        jRDisponibilidadPropiedades.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jRDisponibilidadPropiedadesItemStateChanged(evt);
+            }
+        });
 
         jCListaTipoPropiedades.setBackground(new java.awt.Color(153, 153, 153));
 
@@ -287,6 +292,11 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jRActivoPropiedades1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
         jRActivoPropiedades1.setForeground(new java.awt.Color(255, 255, 255));
         jRActivoPropiedades1.setSelected(true);
+        jRActivoPropiedades1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jRActivoPropiedades1ItemStateChanged(evt);
+            }
+        });
 
         jCListaPropietarios.setBackground(new java.awt.Color(153, 153, 153));
         jCListaPropietarios.addItemListener(new java.awt.event.ItemListener() {
@@ -541,6 +551,24 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         rellenarCampos();
     }//GEN-LAST:event_jCListaPropiedadesItemStateChanged
 
+    private void jRDisponibilidadPropiedadesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRDisponibilidadPropiedadesItemStateChanged
+        if (jRDisponibilidadPropiedades.isSelected()==true){
+               jLDisponibilidadPropiedad.setText("Disponible");
+           }else{
+               jRDisponibilidadPropiedades.setSelected(false);
+               jLDisponibilidadPropiedad.setText("NO Disponible");
+        }
+    }//GEN-LAST:event_jRDisponibilidadPropiedadesItemStateChanged
+
+    private void jRActivoPropiedades1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRActivoPropiedades1ItemStateChanged
+       if (jRActivoPropiedades1.isSelected()==true){
+               jLActivoPropiedades.setText("Activa");
+           }else{
+               jRActivoPropiedades1.setSelected(false);
+               jLActivoPropiedades.setText("Inactiva");
+        }
+    }//GEN-LAST:event_jRActivoPropiedades1ItemStateChanged
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBEliminarPropiedades;
@@ -741,9 +769,9 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             // jRDisponibilidadPropiedades
            if (propiedadSeleccionado.isDisponible()==true){
                jLDisponibilidadPropiedad.setText("Disponible");
-               jRDisponibilidadPropiedades.setSelected(true);
-           }else{
-               jRDisponibilidadPropiedades.setSelected(false);
+//               jRDisponibilidadPropiedades.setSelected(false);
+//           }else{
+//               jRDisponibilidadPropiedades.setSelected(true);
                jLDisponibilidadPropiedad.setText("NO Disponible");
                
                
@@ -752,10 +780,10 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
            //jRActivoPropiedades1;
            if (propiedadSeleccionado.isActivo()==true){
                jLActivoPropiedades.setText("Activo");
-               jRActivoPropiedades1.setSelected(true);
+//               jRActivoPropiedades1.setSelected(false);
            }else{
-               jRActivoPropiedades1.setSelected(false);
-               jLActivoPropiedades.setText("No Activa");
+//               jRActivoPropiedades1.setSelected(true);
+               jLActivoPropiedades.setText("Inactiva");
                
            }
 
