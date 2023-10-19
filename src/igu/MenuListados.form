@@ -591,6 +591,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRInquilino">
+                  <Properties>
+                    <Property name="opaque" type="boolean" value="false"/>
+                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRInquilinoActionPerformed"/>
                   </Events>
@@ -1070,6 +1073,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRGarante">
+                  <Properties>
+                    <Property name="opaque" type="boolean" value="false"/>
+                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRGaranteActionPerformed"/>
                   </Events>
@@ -1510,6 +1516,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRInspector">
+                  <Properties>
+                    <Property name="opaque" type="boolean" value="false"/>
+                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRInspectorActionPerformed"/>
                   </Events>
@@ -2031,6 +2040,15 @@
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jCBusquedaContratos">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="99" green="99" red="99" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI Semilight" size="12" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
                     </Property>

@@ -265,8 +265,9 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         });
 
         jrbPropietario.setSelected(true);
+        jrbPropietario.setOpaque(false);
 
-        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3844432-magnifier-search-zoom_110300.png"))); // NOI18N
+        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-magnifier-search-zoom_110300.png"))); // NOI18N
         jLabel46.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel46MouseClicked(evt);

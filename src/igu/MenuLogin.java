@@ -49,8 +49,6 @@ public class MenuLogin extends javax.swing.JInternalFrame {
         jSeparator2 = new javax.swing.JSeparator();
         loginBtn = new javax.swing.JPanel();
         loginBtnTxt = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -60,8 +58,8 @@ public class MenuLogin extends javax.swing.JInternalFrame {
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         logo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logoceleste.png"))); // NOI18N
-        bg.add(logo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 200, 220));
+        logo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LogoGrupo13Blancopequeño.png"))); // NOI18N
+        bg.add(logo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 240, 220));
 
         jTmail.setBackground(new java.awt.Color(51, 51, 51));
         jTmail.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -139,16 +137,6 @@ public class MenuLogin extends javax.swing.JInternalFrame {
 
         bg.add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 500, 130, 40));
 
-        jLabel4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("GRUPO 13");
-        bg.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 90, -1));
-
-        jLabel7.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("INMOBILIARIA");
-        bg.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, 130, -1));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -210,8 +198,6 @@ public class MenuLogin extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTextField jTmail;

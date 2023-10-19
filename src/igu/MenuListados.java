@@ -361,6 +361,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLActivoInquilinos.setText("Activo");
         jLActivoInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        jRInquilino.setOpaque(false);
         jRInquilino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRInquilinoActionPerformed(evt);
@@ -634,6 +635,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLActivoGarante.setText("Activo");
         jLActivoGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        jRGarante.setOpaque(false);
         jRGarante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRGaranteActionPerformed(evt);
@@ -902,6 +904,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLActivoInspector.setText("Activo");
         jLActivoInspector.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        jRInspector.setOpaque(false);
         jRInspector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRInspectorActionPerformed(evt);
@@ -1157,6 +1160,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLRenovadoListados.setForeground(new java.awt.Color(255, 51, 51));
         jLRenovadoListados.setText("No Renovado");
 
+        jCBusquedaContratos.setBackground(new java.awt.Color(153, 153, 153));
+        jCBusquedaContratos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jCBusquedaContratos.setForeground(new java.awt.Color(51, 51, 51));
         jCBusquedaContratos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCBusquedaContratosActionPerformed(evt);

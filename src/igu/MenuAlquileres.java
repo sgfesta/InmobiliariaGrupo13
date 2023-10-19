@@ -268,6 +268,7 @@ ContratoData cd = new ContratoData();
         jRPrecioAlquiler.setForeground(new java.awt.Color(51, 153, 255));
         jRPrecioAlquiler.setSelected(true);
         jRPrecioAlquiler.setText("Hasta");
+        jRPrecioAlquiler.setOpaque(false);
         jRPrecioAlquiler.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jRPrecioAlquilerStateChanged(evt);
@@ -297,6 +298,7 @@ ContratoData cd = new ContratoData();
         jTextField1.setText("Precio");
         jPCardAlquileres.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 120, 30));
 
+        jRActivoAlquiler.setOpaque(false);
         jRActivoAlquiler.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRActivoAlquilerActionPerformed(evt);

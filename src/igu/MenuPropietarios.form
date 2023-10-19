@@ -144,7 +144,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTIDPropietarios4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel46" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel46" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -532,12 +532,13 @@
         <Component class="javax.swing.JRadioButton" name="jrbPropietario">
           <Properties>
             <Property name="selected" type="boolean" value="true"/>
+            <Property name="opaque" type="boolean" value="false"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel46">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagenes/3844432-magnifier-search-zoom_110300.png"/>
+              <Image iconType="3" name="/imagenes/White-magnifier-search-zoom_110300.png"/>
             </Property>
           </Properties>
           <Events>

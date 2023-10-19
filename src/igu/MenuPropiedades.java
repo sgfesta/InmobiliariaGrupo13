@@ -57,6 +57,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPasswordField1 = new javax.swing.JPasswordField();
         jPPropiedades = new javax.swing.JPanel();
         jLTituloPropiedades = new javax.swing.JLabel();
         jLIDPropiedades = new javax.swing.JLabel();
@@ -93,6 +94,8 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jCListaInspectoresPropiedades = new javax.swing.JComboBox<>();
         jCListarZonaPropiedades = new javax.swing.JComboBox<>();
         jCListaPropiedades = new javax.swing.JComboBox<>();
+
+        jPasswordField1.setText("jPasswordField1");
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -265,7 +268,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             .addGroup(jPBarraNavegadorLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLNavegacionEnBarra, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(475, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPBarraNavegadorLayout.setVerticalGroup(
             jPBarraNavegadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -279,6 +282,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jRDisponibilidadPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
         jRDisponibilidadPropiedades.setForeground(new java.awt.Color(255, 255, 255));
         jRDisponibilidadPropiedades.setSelected(true);
+        jRDisponibilidadPropiedades.setOpaque(false);
         jRDisponibilidadPropiedades.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jRDisponibilidadPropiedadesItemStateChanged(evt);
@@ -291,6 +295,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jRActivoPropiedades1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
         jRActivoPropiedades1.setForeground(new java.awt.Color(255, 255, 255));
         jRActivoPropiedades1.setSelected(true);
+        jRActivoPropiedades1.setOpaque(false);
         jRActivoPropiedades1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jRActivoPropiedades1ItemStateChanged(evt);
@@ -328,9 +333,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPPropiedadesLayout.createSequentialGroup()
                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jPBarraNavegador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
                         .addGap(230, 230, 230)
                         .addComponent(jLTituloPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -388,7 +390,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                                     .addComponent(jCListarEstadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(30, 30, 30)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jBNuevoPropiedades)
@@ -399,6 +401,9 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jBSalirPropiedades)
                 .addGap(192, 192, 192))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPBarraNavegador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPPropiedadesLayout.setVerticalGroup(
             jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -587,6 +592,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLZonaPropiedades;
     private javax.swing.JPanel jPBarraNavegador;
     private javax.swing.JPanel jPPropiedades;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JRadioButton jRActivoPropiedades1;
     private javax.swing.JRadioButton jRDisponibilidadPropiedades;
     private javax.swing.JScrollPane jScrollPane1;
