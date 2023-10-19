@@ -11,6 +11,7 @@ import javax.swing.DefaultListCellRenderer;
 import javax.swing.JComponent;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.JTabbedPane;
 import persistencia.GaranteData;
 import persistencia.InquilinoData;
 import persistencia.InspectorData;
@@ -1127,10 +1128,13 @@ public class MenuListados extends javax.swing.JInternalFrame {
         int SelectPestaña = jTabbedPane1.getSelectedIndex();
         if (SelectPestaña == 0) {
             paraListadosInquilinosTrue();
+            borrarCampos();
         } else if (SelectPestaña == 1) {
             paraListadosGaranteTrue();
+            borrarCampos();
         } else if (SelectPestaña == 2) {
             paraListadosInspectorTrue();
+            borrarCampos();
         }
     }//GEN-LAST:event_jTabbedPane1StateChanged
 
@@ -1668,4 +1672,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTTelefonoGarante.setText("");
         jRGarante.setSelected(false);
     }
+    
+
 }
