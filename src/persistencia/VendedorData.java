@@ -97,4 +97,32 @@ public class VendedorData {
         }
 
     }
+    
+        public Vendedor buscarVendedor(int idVendedor) {
+        String sql = "SELECT idVendedor,nombre, apellido, dni, telefono, activo FROM vendedor WHERE idVendedor = ?";
+        Vendedor vendedor = null;
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, idVendedor);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                vendedor = new Vendedor();
+            vendedor.setIdVendedor(rs.getInt("idVendedor"));
+            vendedor.setNombre(rs.getString("nombre"));
+            vendedor.setApellido(rs.getString("apellido"));
+            vendedor.setDni(rs.getString("dni"));
+            vendedor.setTelefono(rs.getString("telefono"));
+            vendedor.setActivo(rs.getBoolean("activo"));
+
+            } else {
+                JOptionPane.showMessageDialog(null, "No existe un Vendedor con ese ID");
+            }
+            //Cierro la Conexion
+            ps.close();
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Vendedor");
+        }
+        return vendedor;
+    }
 }

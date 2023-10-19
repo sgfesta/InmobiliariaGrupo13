@@ -184,7 +184,7 @@ public class MenuLogin extends javax.swing.JInternalFrame {
             jTpwd.setForeground(Color.white);
         }
         if (jTmail.getText().isEmpty()) {
-            jTmail.setText("Ingrese nombre de usuaio");
+            jTmail.setText("Ingrese nombre de usuario");
             jTmail.setForeground(Color.white);
         }
     }//GEN-LAST:event_jTpwdMousePressed

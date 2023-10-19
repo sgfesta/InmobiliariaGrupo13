@@ -105,8 +105,8 @@ public class GaranteData {
 
     }
 
-    public Garante buscarGarante(int idGarante) {
-        String sql = "SELECT nombre, apellido, dni,domicilio, telefono FROM alumno WHERE idGarante = ?  AND activo = 1";
+    public Garante buscarGaranteActivo(int idGarante) {
+        String sql = "SELECT nombre, apellido, dni,domicilio, telefono FROM garante WHERE idGarante = ?  AND activo = 1";
         Garante garante = null;
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -133,9 +133,38 @@ public class GaranteData {
         return garante;
     }
     
+        public Garante buscarGarante(int idGarante) {
+        String sql = "SELECT nombre, apellido, dni,domicilio, telefono, activo FROM garante WHERE idGarante = ?";
+        Garante garante = null;
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, idGarante);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                garante = new Garante();
+                garante.setIdGarante(idGarante);
+                garante.setNombre(rs.getString("nombre"));
+                garante.setApellido(rs.getString("apellido"));
+                garante.setDni(rs.getInt("dni"));
+                garante.setDomicilio(rs.getString("domicilio"));
+                garante.setTelefono(rs.getInt("telefono"));
+                garante.setActivo(rs.getBoolean("activo"));
+
+            } else {
+                JOptionPane.showMessageDialog(null, "No existe un Garante con ese ID");
+            }
+            //Cierro la Conexion
+            ps.close();
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Garante");
+        }
+        return garante;
+    }
+    
     public Garante buscarGarantePorDni(int dni, boolean activo) {
         
-        String sql = "SELECT idGarante, nombre, apellido, dni, domicilio, telefono, activo FROM Garante WHERE dni = ?  AND activo = ?";
+        String sql = "SELECT idGarante, nombre, apellido, dni, domicilio, telefono, activo FROM garante WHERE dni = ?  AND activo = ?";
     
         Garante garante = null;
         try {
@@ -191,7 +220,7 @@ public class GaranteData {
     
     public List<Garante> listarGarantesActivos() {
         
-        String sql = "SELECT idGarante, nombre, apellido, dni, domicilio, telefono, activo FROM Garante WHERE activo = 1";
+        String sql = "SELECT idGarante, nombre, apellido, dni, domicilio, telefono, activo FROM garante WHERE activo = 1";
         ArrayList<Garante> garantesAc = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
