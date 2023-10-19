@@ -190,7 +190,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLTituloInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLTituloInquilinos.setForeground(new java.awt.Color(51, 204, 255));
         jLTituloInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTituloInquilinos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
+        jLTituloInquilinos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-individual-man-people-person_107097.png"))); // NOI18N
         jLTituloInquilinos.setText("  Formulario Inquilinos");
         jLTituloInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
@@ -462,7 +462,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLTituloGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLTituloGarante.setForeground(new java.awt.Color(51, 204, 255));
         jLTituloGarante.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTituloGarante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
+        jLTituloGarante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-individual-man-people-person_107097.png"))); // NOI18N
         jLTituloGarante.setText("  Formulario Garante");
         jLTituloGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
@@ -745,7 +745,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLTituloInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLTituloInspector.setForeground(new java.awt.Color(51, 204, 255));
         jLTituloInspector.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTituloInspector.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
+        jLTituloInspector.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-individual-man-people-person_107097.png"))); // NOI18N
         jLTituloInspector.setText("  Formulario Inspector");
         jLTituloInspector.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
@@ -1005,7 +1005,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLTituloContratoListados.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLTituloContratoListados.setForeground(new java.awt.Color(51, 204, 255));
         jLTituloContratoListados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTituloContratoListados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
+        jLTituloContratoListados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-contract_icon-icons.com_64813.png"))); // NOI18N
         jLTituloContratoListados.setText("  Formulario Contratos");
         jLTituloContratoListados.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
@@ -1258,7 +1258,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addGap(127, 127, 127))
         );
 
-        jTabbedPane1.addTab("Contratos", jPanel1);
+        jTabbedPane1.addTab("CONTRATOS", jPanel1);
 
         javax.swing.GroupLayout jPCardListadosLayout = new javax.swing.GroupLayout(jPCardListados);
         jPCardListados.setLayout(jPCardListadosLayout);

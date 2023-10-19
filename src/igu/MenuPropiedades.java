@@ -104,7 +104,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jLTituloPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLTituloPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jLTituloPropiedades.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTituloPropiedades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
+        jLTituloPropiedades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-casita.png"))); // NOI18N
         jLTituloPropiedades.setText("  Formulario Propiedades");
         jLTituloPropiedades.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 

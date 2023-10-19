@@ -111,7 +111,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 204, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-individual-man-people-person_107097.png"))); // NOI18N
         jLabel5.setText("  Formulario Propietarios");
         jLabel5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 

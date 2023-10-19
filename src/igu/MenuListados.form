@@ -286,7 +286,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/imagenes/casita.png"/>
+                      <Image iconType="3" name="/imagenes/White-individual-man-people-person_107097.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="  Formulario Inquilinos"/>
                     <Property name="verticalAlignment" type="int" value="3"/>
@@ -764,7 +764,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/imagenes/casita.png"/>
+                      <Image iconType="3" name="/imagenes/White-individual-man-people-person_107097.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="  Formulario Garante"/>
                     <Property name="verticalAlignment" type="int" value="3"/>
@@ -1233,7 +1233,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/imagenes/casita.png"/>
+                      <Image iconType="3" name="/imagenes/White-individual-man-people-person_107097.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="  Formulario Inspector"/>
                     <Property name="verticalAlignment" type="int" value="3"/>
@@ -1524,8 +1524,8 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Contratos">
-                    <Property name="tabTitle" type="java.lang.String" value="Contratos"/>
+                  <JTabbedPaneConstraints tabName="CONTRATOS">
+                    <Property name="tabTitle" type="java.lang.String" value="CONTRATOS"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -1688,7 +1688,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/imagenes/casita.png"/>
+                      <Image iconType="3" name="/imagenes/White-contract_icon-icons.com_64813.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="  Formulario Contratos"/>
                     <Property name="verticalAlignment" type="int" value="3"/>

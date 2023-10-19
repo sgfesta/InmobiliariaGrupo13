@@ -120,7 +120,7 @@ ContratoData cd = new ContratoData();
         jLTituloAlquiler.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLTituloAlquiler.setForeground(new java.awt.Color(51, 204, 255));
         jLTituloAlquiler.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTituloAlquiler.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/contract_icon-icons.com_64813.png"))); // NOI18N
+        jLTituloAlquiler.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-contract_icon-icons.com_64813.png"))); // NOI18N
         jLTituloAlquiler.setText("  Formulario Alquiler");
         jLTituloAlquiler.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jPCardAlquileres.add(jLTituloAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 68, -1, -1));
