@@ -400,7 +400,7 @@ ContratoData cd = new ContratoData();
           LocalDate fechaI = jDFechaInicioAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
            LocalDate fechaF = jDFechaFinAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
            LocalDate fechaC = jDFechaContratoAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-           int idContract = Integer.parseInt(jTIDContratoAlquiler.getText());
+
                 
         JOptionPane.showMessageDialog(this, "Contrato guardado correctamente");
      }

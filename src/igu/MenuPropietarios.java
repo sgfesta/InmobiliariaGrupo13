@@ -25,6 +25,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         initComponents(); 
         cargarComboPropietarios();
         QuitarLaBarraTitulo();
+        limpiarCampos();
 
     }
     //defino dos métodosdentro del JInternalFrame y lo instanciamos de la siguiente manera.
@@ -121,6 +122,11 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
 
         jCBusquedaPropiedades1.setBackground(new java.awt.Color(153, 153, 153));
         jCBusquedaPropiedades1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+        jCBusquedaPropiedades1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCBusquedaPropiedades1ItemStateChanged(evt);
+            }
+        });
 
         jLabel16.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(51, 204, 255));
@@ -361,16 +367,19 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
     private void jBModificarPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarPropietarioActionPerformed
         modificarPropietario();
         cargarComboPropietarios();
+        limpiarCampos();
     }//GEN-LAST:event_jBModificarPropietarioActionPerformed
 
     private void jBNuevo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevo2ActionPerformed
         agregarPropietario();
         cargarComboPropietarios();
+        limpiarCampos();
     }//GEN-LAST:event_jBNuevo2ActionPerformed
 
     private void jBEliminarPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarPropietarioActionPerformed
         eliminarPropietario();
         cargarComboPropietarios();
+        limpiarCampos();
     }//GEN-LAST:event_jBEliminarPropietarioActionPerformed
 
     private void jBSalirPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirPropietarioActionPerformed
@@ -382,6 +391,10 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
     private void jLabel46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel46MouseClicked
         buscarPropietario();
     }//GEN-LAST:event_jLabel46MouseClicked
+
+    private void jCBusquedaPropiedades1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBusquedaPropiedades1ItemStateChanged
+        rellenarCampos();
+    }//GEN-LAST:event_jCBusquedaPropiedades1ItemStateChanged
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -414,7 +427,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
     private void cargarComboPropietarios() {
         jCBusquedaPropiedades1.removeAllItems();
 
-        List<Propietario> propietarios = pd.listarPropietarios();
+        List<Propietario> propietarios = pd.listarPropietariosActivos();
 
         for (Propietario propietario:propietarios) {
             jCBusquedaPropiedades1.addItem(propietario);
@@ -477,8 +490,32 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
              JOptionPane.showMessageDialog(this, "Error al buscar "+ex.getMessage());
          }
      
+         
+}
+    public void rellenarCampos() {
+
+        Propietario pSelect = (Propietario) jCBusquedaPropiedades1.getSelectedItem();
+       
+
+        if (pSelect != null) {
+
+             jTIDPropietario.setText(String.valueOf(pSelect.getIdPropietario()));
+             jTIDPropietarios2.setText(pSelect.getNombre());
+             jTIDPropietarios3.setText(pSelect.getApellido());
+             jTIDPropietarios4.setText(String.valueOf(pSelect.getDni()));
+             jTIDPropietarios5.setText(String.valueOf(pSelect.getTelefono()));
+             jTIDPropietarios6.setText(pSelect.getDomicilio());
+             jrbPropietario.setSelected(pSelect.isActivo());
+}
 }
 
-
-
+    public void limpiarCampos(){
+             jTIDPropietario.setText("");
+             jTIDPropietarios2.setText("");
+             jTIDPropietarios3.setText("");
+             jTIDPropietarios4.setText("");
+             jTIDPropietarios5.setText("");
+             jTIDPropietarios6.setText("");
+             jrbPropietario.isSelected();
+}
 }
