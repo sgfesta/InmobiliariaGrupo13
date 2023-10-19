@@ -1,30 +1,14 @@
 
 package logica;
 
-import entidades.Contrato;
 import entidades.Estado;
 import entidades.Garante;
 import entidades.Inquilino;
-import entidades.Inspector;
-import entidades.Propiedad;
 import entidades.Propietario;
-import entidades.Servicios;
 import entidades.TipoPropiedad;
 import entidades.Vendedor;
 import entidades.Zona;
-import java.time.LocalDate;
-import java.time.Month;
 import persistencia.ContratoData;
-import persistencia.EstadoData;
-import persistencia.GaranteData;
-import persistencia.InquilinoData;
-import persistencia.InspectorData;
-import persistencia.PropiedadData;
-import persistencia.PropietarioData;
-import persistencia.ServiciosData;
-import persistencia.TipoPropiedadData;
-import persistencia.VendedorData;
-import persistencia.ZonaData;
 
 public class main {
 
@@ -56,9 +40,6 @@ public class main {
 //      ZonaData zd = new ZonaData();
 //      zd.guardarZona(zona);
 //      
-      Servicios servi = new Servicios(1,true, true, true, true, true, true, true, true);
-//      ServiciosData sd = new ServiciosData();
-//      sd.guardarServicios(servi);
 //      
       TipoPropiedad tipo = new TipoPropiedad(1,"Casa", true);
 //      TipoPropiedadData tpd = new TipoPropiedadData();
