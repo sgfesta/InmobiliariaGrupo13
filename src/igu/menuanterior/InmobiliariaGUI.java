@@ -25,7 +25,7 @@ public class InmobiliariaGUI extends javax.swing.JFrame {
     public InmobiliariaGUI() {
         initComponents();
         menusinicio();
-        controlacceso = new ControlAcceso();
+      //  controlacceso = new ControlAcceso();
 
     }
 

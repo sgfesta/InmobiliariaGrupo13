@@ -1,16 +1,20 @@
-
 package igu;
 
+import entidades.Usuario;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JComponent;
+import javax.swing.JOptionPane;
+import persistencia.ControlAcceso;
 
 public class MenuLogin extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form MenuLogin
-     */
-    public MenuLogin() {
+    private ControlAcceso controlacceso;
+
+    private int intentos = 0;
+
+    public MenuLogin(ControlAcceso controlAcceso) {
+        this.controlacceso = controlAcceso;
         initComponents();
         QuitarLaBarraTitulo();
 
@@ -39,9 +43,9 @@ public class MenuLogin extends javax.swing.JInternalFrame {
 
         bg = new javax.swing.JPanel();
         logo2 = new javax.swing.JLabel();
-        userTxt = new javax.swing.JTextField();
+        jTmail = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        passTxt = new javax.swing.JPasswordField();
+        jTpwd = new javax.swing.JPasswordField();
         jSeparator2 = new javax.swing.JSeparator();
         loginBtn = new javax.swing.JPanel();
         loginBtnTxt = new javax.swing.JLabel();
@@ -59,45 +63,45 @@ public class MenuLogin extends javax.swing.JInternalFrame {
         logo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logoceleste.png"))); // NOI18N
         bg.add(logo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 200, 220));
 
-        userTxt.setBackground(new java.awt.Color(51, 51, 51));
-        userTxt.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        userTxt.setForeground(new java.awt.Color(255, 255, 255));
-        userTxt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        userTxt.setText("Ingrese nombre de usuario");
-        userTxt.setBorder(null);
-        userTxt.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        userTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTmail.setBackground(new java.awt.Color(51, 51, 51));
+        jTmail.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTmail.setForeground(new java.awt.Color(255, 255, 255));
+        jTmail.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTmail.setText("sgfesta@gmail.com");
+        jTmail.setBorder(null);
+        jTmail.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        jTmail.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                userTxtMousePressed(evt);
+                jTmailMousePressed(evt);
             }
         });
-        userTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userTxtActionPerformed(evt);
-            }
-        });
-        bg.add(userTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 290, 30));
+        bg.add(jTmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 290, 30));
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         bg.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, 290, 20));
 
-        passTxt.setBackground(new java.awt.Color(51, 51, 51));
-        passTxt.setForeground(new java.awt.Color(255, 255, 255));
-        passTxt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        passTxt.setText("********");
-        passTxt.setBorder(null);
-        passTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTpwd.setBackground(new java.awt.Color(51, 51, 51));
+        jTpwd.setForeground(new java.awt.Color(255, 255, 255));
+        jTpwd.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTpwd.setText("loquito");
+        jTpwd.setBorder(null);
+        jTpwd.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                passTxtMousePressed(evt);
+                jTpwdMousePressed(evt);
             }
         });
-        bg.add(passTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 290, 30));
+        bg.add(jTpwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 290, 30));
 
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         bg.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 460, 290, 20));
 
         loginBtn.setBackground(new java.awt.Color(51, 51, 51));
         loginBtn.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), null));
+        loginBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginBtnMouseClicked(evt);
+            }
+        });
 
         loginBtnTxt.setBackground(new java.awt.Color(255, 255, 255));
         loginBtnTxt.setFont(new java.awt.Font("Roboto Condensed", 1, 14)); // NOI18N
@@ -170,35 +174,38 @@ public class MenuLogin extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_loginBtnTxtMouseEntered
 
     private void loginBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnTxtMouseClicked
-        javax.swing.JOptionPane.showMessageDialog(this, "Intento de login con los datos:\nUsuario: " + userTxt.getText() + "\nContraseña: " + String.valueOf(passTxt.getPassword()), "LOGIN", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        loguear();
+        //javax.swing.JOptionPane.showMessageDialog(this, "Intento de login con los datos:\nUsuario: " + jTmail.getText() + "\nContraseña: " + String.valueOf(jTpwd.getPassword()), "LOGIN", javax.swing.JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_loginBtnTxtMouseClicked
 
-    private void passTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passTxtMousePressed
-        if (String.valueOf(passTxt.getPassword()).equals("********")) {
-            passTxt.setText("");
-            passTxt.setForeground(Color.white);
+    private void jTpwdMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTpwdMousePressed
+        if (String.valueOf(jTpwd.getPassword()).equals("********")) {
+            jTpwd.setText("");
+            jTpwd.setForeground(Color.white);
         }
-        if (userTxt.getText().isEmpty()) {
-            userTxt.setText("Ingrese nombre de usuaio");
-            userTxt.setForeground(Color.white);
+        if (jTmail.getText().isEmpty()) {
+            jTmail.setText("Ingrese nombre de usuaio");
+            jTmail.setForeground(Color.white);
         }
-    }//GEN-LAST:event_passTxtMousePressed
+    }//GEN-LAST:event_jTpwdMousePressed
 
-    private void userTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userTxtActionPerformed
-
-    private void userTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userTxtMousePressed
-        if (userTxt.getText().equals("Ingrese nombre de usuario")) {
-            userTxt.setText("");
-            userTxt.setForeground(Color.white);
+    private void jTmailMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTmailMousePressed
+        if (jTmail.getText().equals("Ingrese nombre de usuario")) {
+            jTmail.setText("");
+            jTmail.setForeground(Color.white);
         }
-        if (String.valueOf(passTxt.getPassword()).isEmpty()) {
-            passTxt.setText("********");
+        if (String.valueOf(jTpwd.getPassword()).isEmpty()) {
+            jTpwd.setText("********");
 
-            passTxt.setForeground(Color.white);
+            jTpwd.setForeground(Color.white);
         }
-    }//GEN-LAST:event_userTxtMousePressed
+       
+
+    }//GEN-LAST:event_jTmailMousePressed
+
+    private void loginBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnMouseClicked
+        loguear();
+    }//GEN-LAST:event_loginBtnMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -207,10 +214,47 @@ public class MenuLogin extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JTextField jTmail;
+    private javax.swing.JPasswordField jTpwd;
     private javax.swing.JPanel loginBtn;
     private javax.swing.JLabel loginBtnTxt;
     private javax.swing.JLabel logo2;
-    private javax.swing.JPasswordField passTxt;
-    private javax.swing.JTextField userTxt;
     // End of variables declaration//GEN-END:variables
+
+  private void loguear(){
+  if (intentos < 3) { // Comprobar si se han realizado menos de 3 intentos
+            String email = jTmail.getText();
+            String pwd = jTpwd.getText();
+            Usuario usuarioActual = controlacceso.iniciarSesion(email, pwd);
+
+            if (usuarioActual != null) {
+                JOptionPane.showMessageDialog(null, "Bienvenido al Sistema " + usuarioActual.getNombre() + " !!");
+
+                // Establecer el usuario actual en el EstadoSesion
+                //  EstadoSesion.setUsuarioActual(usuarioActual);
+                controlacceso.notificarObservadora();
+
+                //Cierro panel de logueo
+                dispose();
+
+            } else {
+                controlacceso.notificarObservadora();
+                intentos++;
+                JOptionPane.showMessageDialog(null, "Vuelva a INTENTAR!, intentos permitidos" + (3 - intentos));
+                // Incrementar el contador de intentos
+                if (intentos == 3) {
+                    // Si se han realizado 3 intentos fallidos
+                    loginBtn.setEnabled(false);
+                }
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se han alcanzado los 3 intentos. Bloqueando el acceso.");
+
+        }
+  
+  
+  
+  }
+
+
 }
