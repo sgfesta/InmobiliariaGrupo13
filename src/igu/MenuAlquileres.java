@@ -55,37 +55,33 @@ ContratoData cd = new ContratoData();
         jLabel28 = new javax.swing.JLabel();
         jLTituloAlquiler = new javax.swing.JLabel();
         jCFiltroTipoAlquiler = new javax.swing.JComboBox<>();
-        jLabel35 = new javax.swing.JLabel();
-        jTIDContrato = new javax.swing.JTextField();
         jBNuevoAlquiler = new javax.swing.JButton();
-        jTIDPropiedad = new javax.swing.JTextField();
-        jLabel36 = new javax.swing.JLabel();
-        jTIDPropietario3 = new javax.swing.JTextField();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        jTIDInquilino = new javax.swing.JTextField();
+        jTIDPropiedadAlquiler = new javax.swing.JTextField();
+        jLIDPropiedad = new javax.swing.JLabel();
+        jTIDPropietarioAlquiler = new javax.swing.JTextField();
+        jLIDPropietarioAlquiler = new javax.swing.JLabel();
+        jLIDInquilinoAlquiler = new javax.swing.JLabel();
+        jTIDInquilinoAlquiler = new javax.swing.JTextField();
         jTIDVendedor = new javax.swing.JTextField();
-        jTIDGarante = new javax.swing.JTextField();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jTVigencia = new javax.swing.JTextField();
-        jTActivo = new javax.swing.JTextField();
+        jTIDGaranteAlquiler = new javax.swing.JTextField();
+        jLIDVendedorAlquiler = new javax.swing.JLabel();
+        jLIDGaranteAlquilino = new javax.swing.JLabel();
+        jLFechaInicioAlquiler = new javax.swing.JLabel();
+        jLFechaFinAlquiler = new javax.swing.JLabel();
+        jLVigenciaAlquiler = new javax.swing.JLabel();
+        jLFechaContratoAlquiler = new javax.swing.JLabel();
+        jTVigenciaAlquiler = new javax.swing.JTextField();
         jLabel45 = new javax.swing.JLabel();
-        jBModificarAlquiler = new javax.swing.JButton();
-        jBEliminarAlquiler = new javax.swing.JButton();
         jBSalirAlquiler = new javax.swing.JButton();
-        jDFechaFin = new com.toedter.calendar.JDateChooser();
-        jDFechaInicio = new com.toedter.calendar.JDateChooser();
-        jDFechaContrato = new com.toedter.calendar.JDateChooser();
+        jDFechaFinAlquiler = new com.toedter.calendar.JDateChooser();
+        jDFechaInicioAlquiler = new com.toedter.calendar.JDateChooser();
+        jDFechaContratoAlquiler = new com.toedter.calendar.JDateChooser();
         jCFiltroZonaalquiler = new javax.swing.JComboBox<>();
         jRPrecioAlquiler = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
         jCListadoFiltradoPropiedadesAlquiler = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
+        jRActivoAlquiler = new javax.swing.JRadioButton();
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -134,18 +130,6 @@ ContratoData cd = new ContratoData();
         jCFiltroTipoAlquiler.setForeground(new java.awt.Color(51, 51, 51));
         jPCardAlquileres.add(jCFiltroTipoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 160, -1));
 
-        jLabel35.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel35.setText("ID Contrato");
-        jLabel35.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 140, -1));
-
-        jTIDContrato.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDContrato.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDContrato.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTIDContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 122, -1));
-
         jBNuevoAlquiler.setBackground(new java.awt.Color(51, 51, 51));
         jBNuevoAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBNuevoAlquiler.setForeground(new java.awt.Color(51, 204, 255));
@@ -156,142 +140,123 @@ ContratoData cd = new ContratoData();
                 jBNuevoAlquilerActionPerformed(evt);
             }
         });
-        jPCardAlquileres.add(jBNuevoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, -1, -1));
+        jPCardAlquileres.add(jBNuevoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 520, -1, -1));
 
-        jTIDPropiedad.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDPropiedad.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDPropiedad.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTIDPropiedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, 122, -1));
+        jTIDPropiedadAlquiler.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDPropiedadAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDPropiedadAlquiler.setForeground(new java.awt.Color(51, 51, 51));
+        jPCardAlquileres.add(jTIDPropiedadAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 122, -1));
 
-        jLabel36.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel36.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel36.setText("ID Propiedad");
-        jLabel36.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 140, -1));
+        jLIDPropiedad.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLIDPropiedad.setForeground(new java.awt.Color(51, 204, 255));
+        jLIDPropiedad.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLIDPropiedad.setText("ID Propiedad");
+        jLIDPropiedad.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPCardAlquileres.add(jLIDPropiedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 140, -1));
 
-        jTIDPropietario3.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDPropietario3.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDPropietario3.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTIDPropietario3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 122, -1));
+        jTIDPropietarioAlquiler.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDPropietarioAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDPropietarioAlquiler.setForeground(new java.awt.Color(51, 51, 51));
+        jPCardAlquileres.add(jTIDPropietarioAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 122, -1));
 
-        jLabel37.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel37.setText("ID Propietario");
-        jLabel37.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, 140, -1));
+        jLIDPropietarioAlquiler.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLIDPropietarioAlquiler.setForeground(new java.awt.Color(51, 204, 255));
+        jLIDPropietarioAlquiler.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLIDPropietarioAlquiler.setText("ID Propietario");
+        jLIDPropietarioAlquiler.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPCardAlquileres.add(jLIDPropietarioAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 140, -1));
 
-        jLabel38.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel38.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel38.setText("ID Inquilino");
-        jLabel38.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 140, -1));
+        jLIDInquilinoAlquiler.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLIDInquilinoAlquiler.setForeground(new java.awt.Color(51, 204, 255));
+        jLIDInquilinoAlquiler.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLIDInquilinoAlquiler.setText("ID Inquilino");
+        jLIDInquilinoAlquiler.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPCardAlquileres.add(jLIDInquilinoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 140, -1));
 
-        jTIDInquilino.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDInquilino.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDInquilino.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTIDInquilino, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 122, -1));
+        jTIDInquilinoAlquiler.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDInquilinoAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDInquilinoAlquiler.setForeground(new java.awt.Color(51, 51, 51));
+        jPCardAlquileres.add(jTIDInquilinoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 122, -1));
 
         jTIDVendedor.setBackground(new java.awt.Color(153, 153, 153));
         jTIDVendedor.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDVendedor.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTIDVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 410, 122, -1));
+        jPCardAlquileres.add(jTIDVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 122, -1));
 
-        jTIDGarante.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDGarante.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTIDGarante, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 380, 122, -1));
+        jTIDGaranteAlquiler.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDGaranteAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDGaranteAlquiler.setForeground(new java.awt.Color(51, 51, 51));
+        jPCardAlquileres.add(jTIDGaranteAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 122, -1));
 
-        jLabel39.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel39.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel39.setText("ID Vendedor");
-        jLabel39.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 140, -1));
+        jLIDVendedorAlquiler.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLIDVendedorAlquiler.setForeground(new java.awt.Color(51, 204, 255));
+        jLIDVendedorAlquiler.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLIDVendedorAlquiler.setText("ID Vendedor");
+        jLIDVendedorAlquiler.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPCardAlquileres.add(jLIDVendedorAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 390, 140, -1));
 
-        jLabel40.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel40.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel40.setText("ID Garante");
-        jLabel40.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 140, -1));
+        jLIDGaranteAlquilino.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLIDGaranteAlquilino.setForeground(new java.awt.Color(51, 204, 255));
+        jLIDGaranteAlquilino.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLIDGaranteAlquilino.setText("ID Garante");
+        jLIDGaranteAlquilino.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPCardAlquileres.add(jLIDGaranteAlquilino, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 140, -1));
 
-        jLabel41.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel41.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel41.setText("Fecha Inicio");
-        jLabel41.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 140, -1));
+        jLFechaInicioAlquiler.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLFechaInicioAlquiler.setForeground(new java.awt.Color(51, 204, 255));
+        jLFechaInicioAlquiler.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLFechaInicioAlquiler.setText("Fecha Inicio");
+        jLFechaInicioAlquiler.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPCardAlquileres.add(jLFechaInicioAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 140, 30));
 
-        jLabel42.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel42.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel42.setText("Fecha Fin");
-        jLabel42.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, 140, -1));
+        jLFechaFinAlquiler.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLFechaFinAlquiler.setForeground(new java.awt.Color(51, 204, 255));
+        jLFechaFinAlquiler.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLFechaFinAlquiler.setText("Fecha Fin");
+        jLFechaFinAlquiler.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPCardAlquileres.add(jLFechaFinAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 299, 140, 30));
 
-        jLabel43.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel43.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel43.setText("Vigencia");
-        jLabel43.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 140, -1));
+        jLVigenciaAlquiler.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLVigenciaAlquiler.setForeground(new java.awt.Color(51, 204, 255));
+        jLVigenciaAlquiler.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLVigenciaAlquiler.setText("Vigencia");
+        jLVigenciaAlquiler.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPCardAlquileres.add(jLVigenciaAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 140, -1));
 
-        jLabel44.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel44.setForeground(new java.awt.Color(51, 204, 255));
-        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel44.setText("Fecha Contrato");
-        jLabel44.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, 140, -1));
+        jLFechaContratoAlquiler.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLFechaContratoAlquiler.setForeground(new java.awt.Color(51, 204, 255));
+        jLFechaContratoAlquiler.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLFechaContratoAlquiler.setText("Fecha Contrato");
+        jLFechaContratoAlquiler.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPCardAlquileres.add(jLFechaContratoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, 140, -1));
 
-        jTVigencia.setBackground(new java.awt.Color(153, 153, 153));
-        jTVigencia.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTVigencia.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTVigencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, 156, -1));
-
-        jTActivo.setBackground(new java.awt.Color(153, 153, 153));
-        jTActivo.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTActivo.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTActivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 410, 156, -1));
+        jTVigenciaAlquiler.setBackground(new java.awt.Color(153, 153, 153));
+        jTVigenciaAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTVigenciaAlquiler.setForeground(new java.awt.Color(51, 51, 51));
+        jPCardAlquileres.add(jTVigenciaAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, 156, -1));
 
         jLabel45.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(51, 204, 255));
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel45.setText("Activo");
         jLabel45.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, 140, -1));
-
-        jBModificarAlquiler.setBackground(new java.awt.Color(51, 51, 51));
-        jBModificarAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBModificarAlquiler.setForeground(new java.awt.Color(51, 204, 255));
-        jBModificarAlquiler.setText("Modificar");
-        jBModificarAlquiler.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPCardAlquileres.add(jBModificarAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 520, -1, -1));
-
-        jBEliminarAlquiler.setBackground(new java.awt.Color(51, 51, 51));
-        jBEliminarAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBEliminarAlquiler.setForeground(new java.awt.Color(51, 204, 255));
-        jBEliminarAlquiler.setText("Eliminar");
-        jBEliminarAlquiler.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPCardAlquileres.add(jBEliminarAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 520, -1, -1));
+        jPCardAlquileres.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 430, 70, -1));
 
         jBSalirAlquiler.setBackground(new java.awt.Color(51, 51, 51));
         jBSalirAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBSalirAlquiler.setForeground(new java.awt.Color(51, 204, 255));
         jBSalirAlquiler.setText("Salir");
         jBSalirAlquiler.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPCardAlquileres.add(jBSalirAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 520, -1, -1));
+        jPCardAlquileres.add(jBSalirAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 520, -1, -1));
 
-        jDFechaFin.setBackground(new java.awt.Color(153, 153, 153));
-        jPCardAlquileres.add(jDFechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, 156, -1));
+        jDFechaFinAlquiler.setBackground(new java.awt.Color(153, 153, 153));
+        jPCardAlquileres.add(jDFechaFinAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, 156, -1));
 
-        jDFechaInicio.setBackground(new java.awt.Color(153, 153, 153));
-        jPCardAlquileres.add(jDFechaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 260, 156, -1));
+        jDFechaInicioAlquiler.setBackground(new java.awt.Color(153, 153, 153));
+        jPCardAlquileres.add(jDFechaInicioAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 260, 156, -1));
 
-        jDFechaContrato.setBackground(new java.awt.Color(153, 153, 153));
-        jPCardAlquileres.add(jDFechaContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, 156, -1));
+        jDFechaContratoAlquiler.setBackground(new java.awt.Color(153, 153, 153));
+        jPCardAlquileres.add(jDFechaContratoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, 156, -1));
 
         jCFiltroZonaalquiler.setBackground(new java.awt.Color(153, 153, 153));
         jCFiltroZonaalquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -332,6 +297,13 @@ ContratoData cd = new ContratoData();
         jTextField1.setText("Precio");
         jPCardAlquileres.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 120, 30));
 
+        jRActivoAlquiler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRActivoAlquilerActionPerformed(evt);
+            }
+        });
+        jPCardAlquileres.add(jRActivoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -358,10 +330,12 @@ ContratoData cd = new ContratoData();
         actualizarPrecio();
     }//GEN-LAST:event_jRPrecioAlquilerStateChanged
 
+    private void jRActivoAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRActivoAlquilerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRActivoAlquilerActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBEliminarAlquiler;
-    private javax.swing.JButton jBModificarAlquiler;
     private javax.swing.JButton jBNuevoAlquiler;
     private javax.swing.JButton jBSalirAlquiler;
     private javax.swing.JButton jButton1;
@@ -369,33 +343,31 @@ ContratoData cd = new ContratoData();
     private javax.swing.JComboBox<Zona> jCFiltroZonaalquiler;
     private javax.swing.JComboBox<String> jCListadoFiltradoPropiedadesAlquiler;
     private javax.swing.JComboBox<String> jComboBox3;
-    private com.toedter.calendar.JDateChooser jDFechaContrato;
-    private com.toedter.calendar.JDateChooser jDFechaFin;
-    private com.toedter.calendar.JDateChooser jDFechaInicio;
+    private com.toedter.calendar.JDateChooser jDFechaContratoAlquiler;
+    private com.toedter.calendar.JDateChooser jDFechaFinAlquiler;
+    private com.toedter.calendar.JDateChooser jDFechaInicioAlquiler;
+    private javax.swing.JLabel jLFechaContratoAlquiler;
+    private javax.swing.JLabel jLFechaFinAlquiler;
+    private javax.swing.JLabel jLFechaInicioAlquiler;
+    private javax.swing.JLabel jLIDGaranteAlquilino;
+    private javax.swing.JLabel jLIDInquilinoAlquiler;
+    private javax.swing.JLabel jLIDPropiedad;
+    private javax.swing.JLabel jLIDPropietarioAlquiler;
+    private javax.swing.JLabel jLIDVendedorAlquiler;
     private javax.swing.JLabel jLTituloAlquiler;
+    private javax.swing.JLabel jLVigenciaAlquiler;
     private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JPanel jPBarraNavegador2;
     private javax.swing.JPanel jPCardAlquileres;
+    private javax.swing.JRadioButton jRActivoAlquiler;
     private javax.swing.JRadioButton jRPrecioAlquiler;
-    private javax.swing.JTextField jTActivo;
-    private javax.swing.JTextField jTIDContrato;
-    private javax.swing.JTextField jTIDGarante;
-    private javax.swing.JTextField jTIDInquilino;
-    private javax.swing.JTextField jTIDPropiedad;
-    private javax.swing.JTextField jTIDPropietario3;
+    private javax.swing.JTextField jTIDGaranteAlquiler;
+    private javax.swing.JTextField jTIDInquilinoAlquiler;
+    private javax.swing.JTextField jTIDPropiedadAlquiler;
+    private javax.swing.JTextField jTIDPropietarioAlquiler;
     private javax.swing.JTextField jTIDVendedor;
-    private javax.swing.JTextField jTVigencia;
+    private javax.swing.JTextField jTVigenciaAlquiler;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
  
@@ -425,10 +397,10 @@ ContratoData cd = new ContratoData();
     
     
      public void agregarContrato(){
-          LocalDate fechaI = jDFechaInicio.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-           LocalDate fechaF = jDFechaFin.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-           LocalDate fechaC = jDFechaContrato.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-           int idContract = Integer.parseInt(jTIDContrato.getText());
+          LocalDate fechaI = jDFechaInicioAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+           LocalDate fechaF = jDFechaFinAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+           LocalDate fechaC = jDFechaContratoAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+           int idContract = Integer.parseInt(jTIDContratoAlquiler.getText());
                 
         JOptionPane.showMessageDialog(this, "Contrato guardado correctamente");
      }
