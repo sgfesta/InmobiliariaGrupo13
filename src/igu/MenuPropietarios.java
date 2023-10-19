@@ -26,6 +26,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         cargarComboPropietarios();
         QuitarLaBarraTitulo();
         limpiarCampos();
+        deshabilitarBotones();
 
     }
     //defino dos métodosdentro del JInternalFrame y lo instanciamos de la siguiente manera.
@@ -152,6 +153,11 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jTIDPropietarios2.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropietarios2.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDPropietarios2.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDPropietarios2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTIDPropietarios2KeyReleased(evt);
+            }
+        });
 
         jLabel17.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(51, 204, 255));
@@ -162,6 +168,11 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jTIDPropietarios3.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropietarios3.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDPropietarios3.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDPropietarios3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTIDPropietarios3KeyReleased(evt);
+            }
+        });
 
         jLabel30.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(51, 204, 255));
@@ -172,6 +183,11 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jTIDPropietarios4.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropietarios4.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDPropietarios4.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDPropietarios4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTIDPropietarios4KeyReleased(evt);
+            }
+        });
 
         jLabel31.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(51, 204, 255));
@@ -182,6 +198,11 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jTIDPropietarios5.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropietarios5.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDPropietarios5.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDPropietarios5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTIDPropietarios5KeyReleased(evt);
+            }
+        });
 
         jLabel32.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(51, 204, 255));
@@ -192,6 +213,11 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jTIDPropietarios6.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropietarios6.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDPropietarios6.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDPropietarios6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTIDPropietarios6KeyReleased(evt);
+            }
+        });
 
         jLabel33.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(51, 204, 255));
@@ -368,18 +394,22 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         modificarPropietario();
         cargarComboPropietarios();
         limpiarCampos();
+        deshabilitarBotones();
     }//GEN-LAST:event_jBModificarPropietarioActionPerformed
 
     private void jBNuevo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevo2ActionPerformed
         agregarPropietario();
         cargarComboPropietarios();
         limpiarCampos();
+        deshabilitarBotones();
     }//GEN-LAST:event_jBNuevo2ActionPerformed
 
     private void jBEliminarPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarPropietarioActionPerformed
         eliminarPropietario();
         cargarComboPropietarios();
         limpiarCampos();
+        deshabilitarBotones();
+        
     }//GEN-LAST:event_jBEliminarPropietarioActionPerformed
 
     private void jBSalirPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirPropietarioActionPerformed
@@ -395,6 +425,45 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
     private void jCBusquedaPropiedades1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBusquedaPropiedades1ItemStateChanged
         rellenarCampos();
     }//GEN-LAST:event_jCBusquedaPropiedades1ItemStateChanged
+
+    private void jTIDPropietarios2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios2KeyReleased
+        if(!jTIDPropietarios3.getText().isEmpty() && !jTIDPropietarios2.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
+               jBNuevo2.setEnabled(true);
+        }else{
+              deshabilitarBotones();
+        }
+    }//GEN-LAST:event_jTIDPropietarios2KeyReleased
+
+    private void jTIDPropietarios3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios3KeyReleased
+        if(!jTIDPropietarios3.getText().isEmpty() && !jTIDPropietarios2.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
+               jBNuevo2.setEnabled(true);
+        }else{
+              deshabilitarBotones();
+        }
+    }//GEN-LAST:event_jTIDPropietarios3KeyReleased
+
+    private void jTIDPropietarios4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios4KeyReleased
+         if(!jTIDPropietarios3.getText().isEmpty() && !jTIDPropietarios2.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
+               jBNuevo2.setEnabled(true);
+        }else{
+              deshabilitarBotones();
+          }
+          
+    }//GEN-LAST:event_jTIDPropietarios4KeyReleased
+
+    private void jTIDPropietarios5KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios5KeyReleased
+         if(!jTIDPropietarios3.getText().isEmpty() && !jTIDPropietarios2.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
+               jBNuevo2.setEnabled(true);
+        }
+    }//GEN-LAST:event_jTIDPropietarios5KeyReleased
+
+    private void jTIDPropietarios6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios6KeyReleased
+          if(!jTIDPropietarios3.getText().isEmpty() && !jTIDPropietarios2.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
+               jBNuevo2.setEnabled(true);
+        }else{
+              deshabilitarBotones();
+        }
+    }//GEN-LAST:event_jTIDPropietarios6KeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -433,7 +502,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
             jCBusquedaPropiedades1.addItem(propietario);
         }
     }
-     public void agregarPropietario(){
+     public void agregarPropietario(){     
              String ap = jTIDPropietarios3.getText();
                 String nom = jTIDPropietarios2.getText();
         String documento = jTIDPropietarios4.getText();
@@ -441,8 +510,9 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                 String dom = jTIDPropietarios6.getText();
                 boolean est = jrbPropietario.isSelected();
                 Propietario nuevo = new Propietario(ap, nom, documento, tel, dom, est);
-                pd.guardarPropietario(nuevo);
+                pd.guardarPropietario(nuevo);        
         JOptionPane.showMessageDialog(this, "Propietario ingresado correctamente");
+         
      }
      
      
@@ -484,6 +554,21 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                  jTIDPropietarios5.setText(String.valueOf(ps.getTelefono()));
                  jTIDPropietarios6.setText(ps.getDomicilio());
                  jrbPropietario.setSelected(ps.isActivo());
+                 
+                 for (int i = 0; i < jCBusquedaPropiedades1.getItemCount(); i++) {
+                Propietario comboPropietario = (Propietario) jCBusquedaPropiedades1.getItemAt(i);
+                if (comboPropietario.getDni().equals(pSelect)) {
+                    jCBusquedaPropiedades1.setSelectedIndex(i);
+                    break;
+                }
+            }
+                                  
+                 if(ps.isActivo() == true){
+                     habilitarBotones();
+                 }else {
+                deshabilitarBotones(); 
+                 jBModificarPropietario.setEnabled(true);
+                 }
              }
      }
          catch(NumberFormatException ex){
@@ -518,4 +603,16 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
              jTIDPropietarios6.setText("");
              jrbPropietario.isSelected();
 }
+    
+   public void habilitarBotones(){
+        jBModificarPropietario.setEnabled(true);
+        jBEliminarPropietario.setEnabled(true);
+         jBNuevo2.setEnabled(false);
+    }
+   
+   public void deshabilitarBotones(){
+        jBNuevo2.setEnabled(false);
+        jBModificarPropietario.setEnabled(false);
+        jBEliminarPropietario.setEnabled(false);
+   }
 }
