@@ -124,14 +124,15 @@ ContratoData cd = new ContratoData();
         jLTituloAlquiler.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLTituloAlquiler.setForeground(new java.awt.Color(51, 204, 255));
         jLTituloAlquiler.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTituloAlquiler.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
+        jLTituloAlquiler.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/contract_icon-icons.com_64813.png"))); // NOI18N
         jLTituloAlquiler.setText("  Formulario Alquiler");
         jLTituloAlquiler.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jPCardAlquileres.add(jLTituloAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 68, -1, -1));
 
         jCFiltroTipoAlquiler.setBackground(new java.awt.Color(153, 153, 153));
         jCFiltroTipoAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        jPCardAlquileres.add(jCFiltroTipoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 150, -1));
+        jCFiltroTipoAlquiler.setForeground(new java.awt.Color(51, 51, 51));
+        jPCardAlquileres.add(jCFiltroTipoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 160, -1));
 
         jLabel35.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(51, 204, 255));
@@ -172,50 +173,50 @@ ContratoData cd = new ContratoData();
         jTIDPropietario3.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropietario3.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDPropietario3.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTIDPropietario3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 122, -1));
+        jPCardAlquileres.add(jTIDPropietario3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 122, -1));
 
         jLabel37.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(51, 204, 255));
         jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel37.setText("ID Propietario");
         jLabel37.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, 140, -1));
+        jPCardAlquileres.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, 140, -1));
 
         jLabel38.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(51, 204, 255));
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel38.setText("ID Inquilino");
         jLabel38.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 140, -1));
+        jPCardAlquileres.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 140, -1));
 
         jTIDInquilino.setBackground(new java.awt.Color(153, 153, 153));
         jTIDInquilino.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDInquilino.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTIDInquilino, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 122, -1));
+        jPCardAlquileres.add(jTIDInquilino, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 122, -1));
 
         jTIDVendedor.setBackground(new java.awt.Color(153, 153, 153));
         jTIDVendedor.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDVendedor.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTIDVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 440, 122, -1));
+        jPCardAlquileres.add(jTIDVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 410, 122, -1));
 
         jTIDGarante.setBackground(new java.awt.Color(153, 153, 153));
         jTIDGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDGarante.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTIDGarante, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, 122, -1));
+        jPCardAlquileres.add(jTIDGarante, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 380, 122, -1));
 
         jLabel39.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(51, 204, 255));
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel39.setText("ID Vendedor");
         jLabel39.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 140, -1));
+        jPCardAlquileres.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 140, -1));
 
         jLabel40.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(51, 204, 255));
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel40.setText("ID Garante");
         jLabel40.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, 140, -1));
+        jPCardAlquileres.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 140, -1));
 
         jLabel41.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(51, 204, 255));
@@ -229,36 +230,31 @@ ContratoData cd = new ContratoData();
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel42.setText("Fecha Fin");
         jLabel42.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, 140, -1));
+        jPCardAlquileres.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, 140, -1));
 
         jLabel43.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel43.setForeground(new java.awt.Color(51, 204, 255));
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel43.setText("Vigencia");
         jLabel43.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, 140, -1));
+        jPCardAlquileres.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 140, -1));
 
         jLabel44.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(51, 204, 255));
         jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel44.setText("Fecha Contrato");
         jLabel44.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 140, -1));
+        jPCardAlquileres.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, 140, -1));
 
         jTVigencia.setBackground(new java.awt.Color(153, 153, 153));
         jTVigencia.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTVigencia.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTVigencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 370, 156, -1));
+        jPCardAlquileres.add(jTVigencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, 156, -1));
 
         jTActivo.setBackground(new java.awt.Color(153, 153, 153));
         jTActivo.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTActivo.setForeground(new java.awt.Color(51, 51, 51));
-        jTActivo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTActivoActionPerformed(evt);
-            }
-        });
-        jPCardAlquileres.add(jTActivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 400, 156, -1));
+        jPCardAlquileres.add(jTActivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 410, 156, -1));
 
         jLabel45.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(51, 204, 255));
@@ -287,13 +283,20 @@ ContratoData cd = new ContratoData();
         jBSalirAlquiler.setText("Salir");
         jBSalirAlquiler.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPCardAlquileres.add(jBSalirAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 520, -1, -1));
+
+        jDFechaFin.setBackground(new java.awt.Color(153, 153, 153));
         jPCardAlquileres.add(jDFechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, 156, -1));
+
+        jDFechaInicio.setBackground(new java.awt.Color(153, 153, 153));
         jPCardAlquileres.add(jDFechaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 260, 156, -1));
-        jPCardAlquileres.add(jDFechaContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, 156, -1));
+
+        jDFechaContrato.setBackground(new java.awt.Color(153, 153, 153));
+        jPCardAlquileres.add(jDFechaContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, 156, -1));
 
         jCFiltroZonaalquiler.setBackground(new java.awt.Color(153, 153, 153));
         jCFiltroZonaalquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jPCardAlquileres.add(jCFiltroZonaalquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 140, 30));
+        jCFiltroZonaalquiler.setForeground(new java.awt.Color(51, 51, 51));
+        jPCardAlquileres.add(jCFiltroZonaalquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 180, 30));
 
         jRPrecioAlquiler.setBackground(new java.awt.Color(51, 51, 51));
         jRPrecioAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -320,13 +323,14 @@ ContratoData cd = new ContratoData();
 
         jCListadoFiltradoPropiedadesAlquiler.setBackground(new java.awt.Color(153, 153, 153));
         jCListadoFiltradoPropiedadesAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jPCardAlquileres.add(jCListadoFiltradoPropiedadesAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 250, 30));
+        jCListadoFiltradoPropiedadesAlquiler.setForeground(new java.awt.Color(51, 51, 51));
+        jPCardAlquileres.add(jCListadoFiltradoPropiedadesAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 250, 30));
 
         jTextField1.setBackground(new java.awt.Color(153, 153, 153));
         jTextField1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 12)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(102, 204, 255));
         jTextField1.setText("Precio");
-        jPCardAlquileres.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 140, 30));
+        jPCardAlquileres.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 120, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -341,10 +345,6 @@ ContratoData cd = new ContratoData();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTActivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTActivoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTActivoActionPerformed
 
     private void jBNuevoAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoAlquilerActionPerformed
        agregarContrato();
