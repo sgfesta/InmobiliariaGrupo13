@@ -2,6 +2,10 @@
 package igu;
 
 import entidades.Contrato;
+import entidades.Estado;
+import entidades.Inspector;
+import entidades.Propiedad;
+import entidades.Propietario;
 import entidades.TipoPropiedad;
 import entidades.Zona;
 import java.awt.Dimension;
@@ -70,7 +74,6 @@ ContratoData cd = new ContratoData();
         jLFechaFinAlquiler = new javax.swing.JLabel();
         jLVigenciaAlquiler = new javax.swing.JLabel();
         jLFechaContratoAlquiler = new javax.swing.JLabel();
-        jTVigenciaAlquiler = new javax.swing.JTextField();
         jLabel45 = new javax.swing.JLabel();
         jBSalirAlquiler = new javax.swing.JButton();
         jDFechaFinAlquiler = new com.toedter.calendar.JDateChooser();
@@ -82,6 +85,7 @@ ContratoData cd = new ContratoData();
         jCListadoFiltradoPropiedadesAlquiler = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
         jRActivoAlquiler = new javax.swing.JRadioButton();
+        jRVigenciaAlquiler = new javax.swing.JRadioButton();
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -140,7 +144,7 @@ ContratoData cd = new ContratoData();
                 jBNuevoAlquilerActionPerformed(evt);
             }
         });
-        jPCardAlquileres.add(jBNuevoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 520, -1, -1));
+        jPCardAlquileres.add(jBNuevoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 520, -1, -1));
 
         jTIDPropiedadAlquiler.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropiedadAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -221,7 +225,7 @@ ContratoData cd = new ContratoData();
         jLVigenciaAlquiler.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLVigenciaAlquiler.setText("Vigencia");
         jLVigenciaAlquiler.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLVigenciaAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 140, -1));
+        jPCardAlquileres.add(jLVigenciaAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, 120, -1));
 
         jLFechaContratoAlquiler.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLFechaContratoAlquiler.setForeground(new java.awt.Color(51, 204, 255));
@@ -230,24 +234,19 @@ ContratoData cd = new ContratoData();
         jLFechaContratoAlquiler.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jPCardAlquileres.add(jLFechaContratoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, 140, -1));
 
-        jTVigenciaAlquiler.setBackground(new java.awt.Color(153, 153, 153));
-        jTVigenciaAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTVigenciaAlquiler.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTVigenciaAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, 156, -1));
-
         jLabel45.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(51, 204, 255));
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel45.setText("Activo");
         jLabel45.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 430, 70, -1));
+        jPCardAlquileres.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, 70, -1));
 
         jBSalirAlquiler.setBackground(new java.awt.Color(51, 51, 51));
         jBSalirAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBSalirAlquiler.setForeground(new java.awt.Color(51, 204, 255));
         jBSalirAlquiler.setText("Salir");
         jBSalirAlquiler.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPCardAlquileres.add(jBSalirAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 520, -1, -1));
+        jPCardAlquileres.add(jBSalirAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 520, -1, -1));
 
         jDFechaFinAlquiler.setBackground(new java.awt.Color(153, 153, 153));
         jPCardAlquileres.add(jDFechaFinAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, 156, -1));
@@ -305,6 +304,9 @@ ContratoData cd = new ContratoData();
             }
         });
         jPCardAlquileres.add(jRActivoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, -1, -1));
+
+        jRVigenciaAlquiler.setOpaque(false);
+        jPCardAlquileres.add(jRVigenciaAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 380, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -364,12 +366,12 @@ ContratoData cd = new ContratoData();
     private javax.swing.JPanel jPCardAlquileres;
     private javax.swing.JRadioButton jRActivoAlquiler;
     private javax.swing.JRadioButton jRPrecioAlquiler;
+    private javax.swing.JRadioButton jRVigenciaAlquiler;
     private javax.swing.JTextField jTIDGaranteAlquiler;
     private javax.swing.JTextField jTIDInquilinoAlquiler;
     private javax.swing.JTextField jTIDPropiedadAlquiler;
     private javax.swing.JTextField jTIDPropietarioAlquiler;
     private javax.swing.JTextField jTIDVendedor;
-    private javax.swing.JTextField jTVigenciaAlquiler;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
  
@@ -399,12 +401,46 @@ ContratoData cd = new ContratoData();
     
     
      public void agregarContrato(){
-          LocalDate fechaI = jDFechaInicioAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-           LocalDate fechaF = jDFechaFinAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-           LocalDate fechaC = jDFechaContratoAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        ContratoData cd=new ContratoData();
+         
+           try {
+            if (!jTIDPropiedadAlquiler.getText().isEmpty() && !jTIDPropietarioAlquiler.getText().isEmpty()
+                    && !jTIDInquilinoAlquiler.getText().isEmpty() && !jTIDGaranteAlquiler.getText().isEmpty()
+                    && !jTIDVendedor.getText().isEmpty() && jRVigenciaAlquiler.isSelected() == true
+                    && jRActivoAlquiler.isSelected() == true) {
+                // habilitarBotones();
+                // Propiedad PSelec = (Propiedad) jCListaTipoPropiedades.getSelectedItem();
+
+                Propietario propietario = (Propietario) jCListaPropietarios.getSelectedItem();
+                String direccion = jTDireccionPropiedades.getText();
+                int altura = Integer.parseInt(jTAlturaPropiedades.getText());
+                TipoPropiedad tipoSelec = (TipoPropiedad) jCListaTipoPropiedades.getSelectedItem();
+                int superficieTotal = Integer.parseInt(jTSuperTotalPropiedades.getText());
+                double precioTasado = Double.parseDouble(jTPrecioTasadoPropiedades.getText());
+                int antiguedad = Integer.parseInt(jTAntiguedadPropiedad.getText());
+                Inspector insSelec = (Inspector) jCListaInspectoresPropiedades.getSelectedItem();
+                Zona zona = (Zona) jCListarZonaPropiedades.getSelectedItem();
+                Estado estado = (Estado) jCListarEstadoPropiedades.getSelectedItem();
+                String observaciones = jTObservacionesPropiedades.getText();
+                boolean disponible = jRDisponibilidadPropiedades.isSelected();
+                boolean activo = jRActivoPropiedades1.isSelected();
+                Propiedad nuevo = new Propiedad(propietario, direccion, altura, tipoSelec, superficieTotal, precioTasado, antiguedad, insSelec, zona, estado, observaciones, disponible, activo);
+                pd.agregarPropiedad(nuevo);
+                JOptionPane.showMessageDialog(this, "Propiedad agregada exitosamente");
+                limpiarCampos();
+                //  desHabilitarBotones();
+                // cargarCombo();
+
+            } else {
+                JOptionPane.showMessageDialog(this, "No debe dejar campos vacios");
+            }
+
+        } catch (NullPointerException e) {
+            JOptionPane.showMessageDialog(this, "No debe dejar campos vacios");
+        }
 
                 
-        JOptionPane.showMessageDialog(this, "Contrato guardado correctamente");
+        
      }
     
      public void actualizarPrecio() {
