@@ -61,7 +61,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jLabel17 = new javax.swing.JLabel();
         jTIDPropietariosAp = new javax.swing.JTextField();
         jLabel30 = new javax.swing.JLabel();
-        idPropietario = new javax.swing.JTextField();
+        jTIDPropietarios4 = new javax.swing.JTextField();
         jLabel31 = new javax.swing.JLabel();
         jTIDPropietarios5 = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
@@ -74,7 +74,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jrbPropietario = new javax.swing.JRadioButton();
         jLabel46 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jTIDPropietarios7 = new javax.swing.JTextField();
+        idPropietario = new javax.swing.JTextField();
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -155,12 +155,12 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jLabel30.setText("Apellido");
         jLabel30.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        idPropietario.setBackground(new java.awt.Color(153, 153, 153));
-        idPropietario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        idPropietario.setForeground(new java.awt.Color(51, 51, 51));
-        idPropietario.addKeyListener(new java.awt.event.KeyAdapter() {
+        jTIDPropietarios4.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDPropietarios4.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDPropietarios4.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDPropietarios4.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                idPropietarioKeyReleased(evt);
+                jTIDPropietarios4KeyReleased(evt);
             }
         });
 
@@ -242,46 +242,44 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jrbPropietario.setSelected(true);
 
         jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-magnifier-search-zoom_110300.png"))); // NOI18N
-        jLabel46.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel46.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel46MouseClicked(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(51, 51, 51));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 204, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trash_bin_delete_remove_icon_191682.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setOpaque(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jTIDPropietarios7.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDPropietarios7.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDPropietarios7.setForeground(new java.awt.Color(51, 51, 51));
-        jTIDPropietarios7.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTIDPropietarios7KeyReleased(evt);
-            }
-        });
+        idPropietario.setEnabled(false);
 
         javax.swing.GroupLayout jPCardPropietariosLayout = new javax.swing.GroupLayout(jPCardPropietarios);
         jPCardPropietarios.setLayout(jPCardPropietariosLayout);
         jPCardPropietariosLayout.setHorizontalGroup(
             jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardPropietariosLayout.createSequentialGroup()
-                .addGap(0, 26, Short.MAX_VALUE)
-                .addComponent(jPBarraNavegador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPCardPropietariosLayout.createSequentialGroup()
                 .addGap(206, 206, 206)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
                     .addGroup(jPCardPropietariosLayout.createSequentialGroup()
+                        .addComponent(jBNuevo2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBModificarPropietario)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBEliminarPropietario)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBSalirPropietario)))
+                .addContainerGap(188, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardPropietariosLayout.createSequentialGroup()
+                .addGap(0, 26, Short.MAX_VALUE)
+                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardPropietariosLayout.createSequentialGroup()
                         .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -296,29 +294,18 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                             .addComponent(jTIDPropietariosNom, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPCardPropietariosLayout.createSequentialGroup()
                                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTIDPropietarios6)
+                                    .addComponent(jTIDPropietarios6, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
                                     .addComponent(jTIDPropietarios5)
                                     .addComponent(jTIDPropietariosAp)
-                                    .addComponent(idPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTIDPropietarios4))
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel46)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(jLabel5)
-                    .addGroup(jPCardPropietariosLayout.createSequentialGroup()
-                        .addComponent(jBNuevo2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBModificarPropietario)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBEliminarPropietario)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBSalirPropietario)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardPropietariosLayout.createSequentialGroup()
-                    .addContainerGap(346, Short.MAX_VALUE)
-                    .addComponent(jTIDPropietarios7, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(289, 289, 289)))
+                                .addGap(38, 38, 38)
+                                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(idPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton1))))
+                        .addGap(66, 66, 66))
+                    .addComponent(jPBarraNavegador1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         jPCardPropietariosLayout.setVerticalGroup(
             jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -327,17 +314,14 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                 .addComponent(jPBarraNavegador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addGap(79, 79, 79)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardPropietariosLayout.createSequentialGroup()
-                        .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel31)
-                            .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(34, 34, 34))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardPropietariosLayout.createSequentialGroup()
-                        .addComponent(idPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                    .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel31)
+                        .addComponent(jTIDPropietarios4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel46)
+                    .addComponent(jButton1))
+                .addGap(18, 18, 18)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
                     .addComponent(jTIDPropietariosNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -357,18 +341,15 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel34)
                     .addComponent(jrbPropietario))
-                .addGap(105, 105, 105)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addComponent(idPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevo2)
                     .addComponent(jBModificarPropietario)
                     .addComponent(jBEliminarPropietario)
                     .addComponent(jBSalirPropietario))
                 .addGap(96, 96, 96))
-            .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPCardPropietariosLayout.createSequentialGroup()
-                    .addGap(200, 200, 200)
-                    .addComponent(jTIDPropietarios7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(446, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -419,7 +400,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jLabel46MouseClicked
 
     private void jTIDPropietariosNomKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietariosNomKeyReleased
-        if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !idPropietario.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
+        if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
                jBNuevo2.setEnabled(true);
         }else{
               deshabilitarBotones();
@@ -427,30 +408,30 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTIDPropietariosNomKeyReleased
 
     private void jTIDPropietariosApKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietariosApKeyReleased
-        if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !idPropietario.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
+        if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
                jBNuevo2.setEnabled(true);
         }else{
               deshabilitarBotones();
         }
     }//GEN-LAST:event_jTIDPropietariosApKeyReleased
 
-    private void idPropietarioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idPropietarioKeyReleased
-         if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !idPropietario.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
+    private void jTIDPropietarios4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios4KeyReleased
+         if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
                jBNuevo2.setEnabled(true);
         }else{
               deshabilitarBotones();
           }
           
-    }//GEN-LAST:event_idPropietarioKeyReleased
+    }//GEN-LAST:event_jTIDPropietarios4KeyReleased
 
     private void jTIDPropietarios5KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios5KeyReleased
-         if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !idPropietario.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
+         if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
                jBNuevo2.setEnabled(true);
         }
     }//GEN-LAST:event_jTIDPropietarios5KeyReleased
 
     private void jTIDPropietarios6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios6KeyReleased
-          if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !idPropietario.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
+          if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
                jBNuevo2.setEnabled(true);
         }else{
               deshabilitarBotones();
@@ -460,10 +441,6 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        limpiarCampos();
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jTIDPropietarios7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios7KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTIDPropietarios7KeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -484,9 +461,9 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPBarraNavegador1;
     private javax.swing.JPanel jPCardPropietarios;
+    private javax.swing.JTextField jTIDPropietarios4;
     private javax.swing.JTextField jTIDPropietarios5;
     private javax.swing.JTextField jTIDPropietarios6;
-    private javax.swing.JTextField jTIDPropietarios7;
     private javax.swing.JTextField jTIDPropietariosAp;
     private javax.swing.JTextField jTIDPropietariosNom;
     private javax.swing.JRadioButton jrbPropietario;
@@ -495,7 +472,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
      public void agregarPropietario(){     
              String ap = jTIDPropietariosAp.getText();
                 String nom = jTIDPropietariosNom.getText();
-        String documento = idPropietario.getText();
+        String documento = jTIDPropietarios4.getText();
         String tel = jTIDPropietarios5.getText();
                 String dom = jTIDPropietarios6.getText();
                 boolean est = jrbPropietario.isSelected();
@@ -517,7 +494,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
             int id = Integer.parseInt(idPropietario.getText());
             String ap = jTIDPropietariosAp.getText();
             String nom = jTIDPropietariosNom.getText();
-            String documento = idPropietario.getText();
+            String documento = jTIDPropietarios4.getText();
             String tel = jTIDPropietarios5.getText();
             String dom = jTIDPropietarios6.getText();
             boolean est = jrbPropietario.isSelected();
@@ -531,7 +508,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
 }
      
      public void eliminarPropietario(){
-          String pSelect = idPropietario.getText();
+          String pSelect = jTIDPropietarios4.getText();
             boolean activo = jrbPropietario.isSelected();
       
          pd.eliminarPropietario(pSelect);
@@ -540,14 +517,14 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
     
      public void buscarPropietario(){
          try {
-            String documento = idPropietario.getText();
+            String documento = jTIDPropietarios4.getText();
             boolean activo = jrbPropietario.isSelected();
            Propietario ps = pd.buscarPropietarioPorDni(documento, activo); 
              if(ps != null){
                  idPropietario.setText(String.valueOf(ps.getIdPropietario()));
                  jTIDPropietariosNom.setText(ps.getNombre());
                  jTIDPropietariosAp.setText(ps.getApellido());
-                 idPropietario.setText(String.valueOf(ps.getDni()));
+                 jTIDPropietarios4.setText(String.valueOf(ps.getDni()));
                  jTIDPropietarios5.setText(String.valueOf(ps.getTelefono()));
                  jTIDPropietarios6.setText(ps.getDomicilio());
                  jrbPropietario.setSelected(ps.isActivo());
@@ -571,7 +548,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
              idPropietario.setText("");
              jTIDPropietariosNom.setText("");
              jTIDPropietariosAp.setText("");
-             idPropietario.setText("");
+             jTIDPropietarios4.setText("");
              jTIDPropietarios5.setText("");
              jTIDPropietarios6.setText("");
              jrbPropietario.isSelected();
@@ -588,4 +565,6 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jBModificarPropietario.setEnabled(false);
         jBEliminarPropietario.setEnabled(false);
    }
+   
+   //ANTES DE MODIFICAR, PREGUNTAR A MATI POR CUALQUIER DUDA, GRACIAS <3
 }
