@@ -122,6 +122,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jTIDPropietario.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropietario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDPropietario.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDPropietario.setEnabled(false);
 
         jBModificarPropietario.setBackground(new java.awt.Color(51, 51, 51));
         jBModificarPropietario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -471,8 +472,14 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                 String dom = jTIDPropietarios6.getText();
                 boolean est = jrbPropietario.isSelected();
                 Propietario nuevo = new Propietario(ap, nom, documento, tel, dom, est);
-                pd.guardarPropietario(nuevo);        
-        JOptionPane.showMessageDialog(this, "Propietario ingresado correctamente");
+                Propietario propietarioExistente = pd.buscarPropietarioPorDni(documento, est);
+                if(propietarioExistente != null){
+                     JOptionPane.showMessageDialog(this, "El propietario con este DNI ya existe");
+                }else{
+                pd.guardarPropietario(nuevo);   
+                JOptionPane.showMessageDialog(this, "Propietario ingresado correctamente");
+                }
+        
          
      }
      
