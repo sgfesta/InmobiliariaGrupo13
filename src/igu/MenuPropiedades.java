@@ -165,6 +165,9 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jTDireccionPropiedades.setBackground(new java.awt.Color(153, 153, 153));
         jTDireccionPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTDireccionPropiedades.setForeground(new java.awt.Color(51, 51, 51));
+        jTDireccionPropiedades.setBorder(null);
+        jTDireccionPropiedades.setMinimumSize(new java.awt.Dimension(14, 24));
+        jTDireccionPropiedades.setPreferredSize(new java.awt.Dimension(14, 24));
 
         jTAlturaPropiedades.setBackground(new java.awt.Color(153, 153, 153));
         jTAlturaPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
