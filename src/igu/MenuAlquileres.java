@@ -3,10 +3,13 @@ package igu;
 
 import entidades.Contrato;
 import entidades.Estado;
+import entidades.Garante;
+import entidades.Inquilino;
 import entidades.Inspector;
 import entidades.Propiedad;
 import entidades.Propietario;
 import entidades.TipoPropiedad;
+import entidades.Vendedor;
 import entidades.Zona;
 import java.awt.Dimension;
 import java.time.LocalDate;
@@ -144,7 +147,7 @@ ContratoData cd = new ContratoData();
                 jBNuevoAlquilerActionPerformed(evt);
             }
         });
-        jPCardAlquileres.add(jBNuevoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 520, -1, -1));
+        jPCardAlquileres.add(jBNuevoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 520, 110, -1));
 
         jTIDPropiedadAlquiler.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropiedadAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -246,7 +249,12 @@ ContratoData cd = new ContratoData();
         jBSalirAlquiler.setForeground(new java.awt.Color(51, 204, 255));
         jBSalirAlquiler.setText("Salir");
         jBSalirAlquiler.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPCardAlquileres.add(jBSalirAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 520, -1, -1));
+        jBSalirAlquiler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSalirAlquilerActionPerformed(evt);
+            }
+        });
+        jPCardAlquileres.add(jBSalirAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 520, 100, -1));
 
         jDFechaFinAlquiler.setBackground(new java.awt.Color(153, 153, 153));
         jPCardAlquileres.add(jDFechaFinAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, 156, -1));
@@ -338,6 +346,15 @@ ContratoData cd = new ContratoData();
         // TODO add your handling code here:
     }//GEN-LAST:event_jRActivoAlquilerActionPerformed
 
+    private void jBSalirAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirAlquilerActionPerformed
+        int respuesta = JOptionPane.showConfirmDialog(this, "Estás seguro que quieres salir?", "Cerrar Ventana", JOptionPane.YES_NO_OPTION);
+
+        if (respuesta == JOptionPane.YES_OPTION) {
+
+            this.dispose();//cierro la ventana
+        }
+    }//GEN-LAST:event_jBSalirAlquilerActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBNuevoAlquiler;
@@ -411,25 +428,36 @@ ContratoData cd = new ContratoData();
                 // habilitarBotones();
                 // Propiedad PSelec = (Propiedad) jCListaTipoPropiedades.getSelectedItem();
 
-                Propietario propietario = (Propietario) jCListaPropietarios.getSelectedItem();
-                String direccion = jTDireccionPropiedades.getText();
-                int altura = Integer.parseInt(jTAlturaPropiedades.getText());
-                TipoPropiedad tipoSelec = (TipoPropiedad) jCListaTipoPropiedades.getSelectedItem();
-                int superficieTotal = Integer.parseInt(jTSuperTotalPropiedades.getText());
-                double precioTasado = Double.parseDouble(jTPrecioTasadoPropiedades.getText());
-                int antiguedad = Integer.parseInt(jTAntiguedadPropiedad.getText());
-                Inspector insSelec = (Inspector) jCListaInspectoresPropiedades.getSelectedItem();
-                Zona zona = (Zona) jCListarZonaPropiedades.getSelectedItem();
-                Estado estado = (Estado) jCListarEstadoPropiedades.getSelectedItem();
-                String observaciones = jTObservacionesPropiedades.getText();
-                boolean disponible = jRDisponibilidadPropiedades.isSelected();
-                boolean activo = jRActivoPropiedades1.isSelected();
-                Propiedad nuevo = new Propiedad(propietario, direccion, altura, tipoSelec, superficieTotal, precioTasado, antiguedad, insSelec, zona, estado, observaciones, disponible, activo);
-                pd.agregarPropiedad(nuevo);
-                JOptionPane.showMessageDialog(this, "Propiedad agregada exitosamente");
+                Contrato alquiler = (Contrato) jCListadoFiltradoPropiedadesAlquiler.getSelectedItem();
+                
+                
+                Propietario idprop=new Propietario();
+                idprop.setIdPropietario(Integer.parseInt(jTIDPropiedadAlquiler.getText()));
+                
+                Propiedad idpro=new Propiedad();
+                idpro.setIdPropiedad(Integer.parseInt(jTIDPropietarioAlquiler.getText()));
+              
+                Inquilino idinqui=new Inquilino();
+                idinqui.setIdInquilino(Integer.parseInt(jTIDInquilinoAlquiler.getText()));
+                
+                Garante idgaran=new Garante();
+                idgaran.setIdGarante(Integer.parseInt(jTIDGaranteAlquiler.getText()));
+                
+                Vendedor idven=new Vendedor();
+                idven.setIdVendedor(Integer.parseInt(jTIDVendedor.getText()));
+                int vendedor=Integer.parseInt(jTIDVendedor.getText());
+                LocalDate fechaInicio = jDFechaInicioAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+                LocalDate fechaFin = jDFechaFinAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+                LocalDate fechaContrato = jDFechaContratoAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+                
+                boolean vigente = jRVigenciaAlquiler.isSelected();
+                boolean activo = jRActivoAlquiler.isSelected();
+                Contrato nuevo = new Contrato(idprop ,  idpro,  idinqui,  idgaran,  idven,  fechaInicio,  fechaFin,  fechaContrato,  vigente,  activo);
+                cd.guardarContrato(nuevo);
+                JOptionPane.showMessageDialog(this, "Alquiler realizado exitosamente");
                 limpiarCampos();
                 //  desHabilitarBotones();
-                // cargarCombo();
+                
 
             } else {
                 JOptionPane.showMessageDialog(this, "No debe dejar campos vacios");
@@ -450,5 +478,18 @@ ContratoData cd = new ContratoData();
             jRPrecioAlquiler.setText("Desde");
         }
     }
+     
+     
+     public void limpiarCampos(){
+         
+         jTIDPropiedadAlquiler.setText("");
+         jTIDPropietarioAlquiler.setText("");
+         jTIDInquilinoAlquiler.setText("");
+         jTIDGaranteAlquiler.setText("");
+         jTIDVendedor.setText("");
+         jDFechaInicioAlquiler.setDate(null);
+         jDFechaFinAlquiler.setDate(null);
+         jDFechaContratoAlquiler.setDate(null);
+     }
      
 }
