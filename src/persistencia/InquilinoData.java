@@ -122,15 +122,14 @@ public class InquilinoData {
         return inquilino;
     }
 
-    public Inquilino buscarInquilinoPorDni(String dni, boolean activo) {
+    public Inquilino buscarInquilinoPorDni(String dni) {
 
-        String sql = "SELECT idInquilino, nombre, apellido, dni, cuit, lugarTrabajo, activo FROM inquilino WHERE dni = ?  AND activo = ?";
+        String sql = "SELECT idInquilino, nombre, apellido, dni, cuit, lugarTrabajo, activo FROM inquilino WHERE dni = ?";
                   
         Inquilino inquilino = null;
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, dni);
-            ps.setBoolean(2, activo); // Establecer el valor de activo
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 inquilino = new Inquilino(); 
@@ -140,7 +139,7 @@ public class InquilinoData {
                 inquilino.setDni(rs.getString("dni"));
                 inquilino.setCuit(rs.getString("cuit"));
                 inquilino.setLugarTrabajo(rs.getString("lugarTrabajo"));
-                inquilino.setActivo(activo);
+                inquilino.setActivo(rs.getBoolean("activo"));
                 
             }
             //Cierro la Conexion

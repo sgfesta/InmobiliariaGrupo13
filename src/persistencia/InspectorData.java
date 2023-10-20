@@ -73,7 +73,7 @@ public class InspectorData {
             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Inspector");
 
         }
-
+        
     }
 
     //Elimino de forma logica Inspector

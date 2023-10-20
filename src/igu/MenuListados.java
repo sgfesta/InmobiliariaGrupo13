@@ -38,7 +38,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
     public MenuListados() {
         initComponents();
         QuitarLaBarraTitulo();
-        cargarCombos();
         borrarCampos();
 
     }
@@ -67,32 +66,8 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jPBarraNavegador3 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPInquilinos = new javax.swing.JPanel();
-        jLTituloInquilinos = new javax.swing.JLabel();
-        jLBusquedaInquilinos = new javax.swing.JLabel();
-        jCBusquedaInquilinos = new javax.swing.JComboBox<>();
-        jLIdInquilinos = new javax.swing.JLabel();
-        jTIDInquilino = new javax.swing.JTextField();
-        jBNuevoInquilinos = new javax.swing.JButton();
-        jBModificarInquilinos = new javax.swing.JButton();
-        jBEliminarInquilinos = new javax.swing.JButton();
-        jBSalirInquilinos = new javax.swing.JButton();
-        jTNombreInquilinos = new javax.swing.JTextField();
-        jLNombreInquilinos = new javax.swing.JLabel();
-        jLApellidoInquilinos = new javax.swing.JLabel();
-        jTApellidoInquilinos = new javax.swing.JTextField();
-        jLDNIInquilinos = new javax.swing.JLabel();
-        jTDNIInquilinos = new javax.swing.JTextField();
-        jLCuitInquilinos = new javax.swing.JLabel();
-        jTLugarTrabajoInquilinos = new javax.swing.JTextField();
-        jLLugarTrabajoInquilinos = new javax.swing.JLabel();
-        jTCuitInquilinos = new javax.swing.JTextField();
-        jLActivoInquilinos = new javax.swing.JLabel();
-        jRInquilino = new javax.swing.JRadioButton();
         jPGarante = new javax.swing.JPanel();
         jLTituloGarante = new javax.swing.JLabel();
-        jLBusquedaGarante = new javax.swing.JLabel();
-        jCBusquedaGarante = new javax.swing.JComboBox<>();
         jBNuevoGarante = new javax.swing.JButton();
         jBModificarGarante = new javax.swing.JButton();
         jBEliminarGarante = new javax.swing.JButton();
@@ -103,14 +78,15 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTNombreGarante = new javax.swing.JTextField();
         jLApellidoGarante = new javax.swing.JLabel();
         jTApellidoGarante = new javax.swing.JTextField();
-        jLDNIGarante = new javax.swing.JLabel();
-        jTDNIGarante = new javax.swing.JTextField();
         jLDomicilio = new javax.swing.JLabel();
         jTDomicilioGarante = new javax.swing.JTextField();
         jLTelefonoGarante = new javax.swing.JLabel();
         jTTelefonoGarante = new javax.swing.JTextField();
         jLActivoGarante = new javax.swing.JLabel();
         jRGarante = new javax.swing.JRadioButton();
+        jLBusquedaGarante = new javax.swing.JLabel();
+        jTDNIGarante = new javax.swing.JTextField();
+        jbBuscarGarante = new javax.swing.JButton();
         jPInspector = new javax.swing.JPanel();
         jLTituloInspector = new javax.swing.JLabel();
         jLBusquedaInspector = new javax.swing.JLabel();
@@ -160,6 +136,27 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jCBusquedaContratos = new javax.swing.JComboBox<>();
         jRVigenciaContrato = new javax.swing.JRadioButton();
         jRActivoContrato = new javax.swing.JRadioButton();
+        jPInquilinos = new javax.swing.JPanel();
+        jLTituloInquilinos = new javax.swing.JLabel();
+        jLBusquedaInquilinos = new javax.swing.JLabel();
+        jLIdInquilinos = new javax.swing.JLabel();
+        jTIDInquilino = new javax.swing.JTextField();
+        jBNuevoInquilinos = new javax.swing.JButton();
+        jBModificarInquilinos = new javax.swing.JButton();
+        jBEliminarInquilinos = new javax.swing.JButton();
+        jBSalirInquilinos = new javax.swing.JButton();
+        jTNombreInquilinos = new javax.swing.JTextField();
+        jLNombreInquilinos = new javax.swing.JLabel();
+        jLApellidoInquilinos = new javax.swing.JLabel();
+        jTApellidoInquilinos = new javax.swing.JTextField();
+        jTDNIInquilinos = new javax.swing.JTextField();
+        jLCuitInquilinos = new javax.swing.JLabel();
+        jTLugarTrabajoInquilinos = new javax.swing.JTextField();
+        jLLugarTrabajoInquilinos = new javax.swing.JLabel();
+        jTCuitInquilinos = new javax.swing.JTextField();
+        jLActivoInquilinos = new javax.swing.JLabel();
+        jRInquilino = new javax.swing.JRadioButton();
+        jbBuscarInquilino = new javax.swing.JButton();
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -199,279 +196,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
-        jPInquilinos.setBackground(new java.awt.Color(51, 51, 51));
-
-        jLTituloInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLTituloInquilinos.setForeground(new java.awt.Color(51, 204, 255));
-        jLTituloInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTituloInquilinos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-individual-man-people-person_107097.png"))); // NOI18N
-        jLTituloInquilinos.setText("  Formulario Inquilinos");
-        jLTituloInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        jLBusquedaInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLBusquedaInquilinos.setForeground(new java.awt.Color(51, 204, 255));
-        jLBusquedaInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLBusquedaInquilinos.setText("Busqueda");
-
-        jCBusquedaInquilinos.setBackground(new java.awt.Color(153, 153, 153));
-        jCBusquedaInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        jCBusquedaInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCBusquedaInquilinosActionPerformed(evt);
-            }
-        });
-
-        jLIdInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLIdInquilinos.setForeground(new java.awt.Color(51, 204, 255));
-        jLIdInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLIdInquilinos.setText("ID Inquilino");
-        jLIdInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        jTIDInquilino.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDInquilino.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDInquilino.setForeground(new java.awt.Color(51, 51, 51));
-        jTIDInquilino.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTIDInquilinoActionPerformed(evt);
-            }
-        });
-
-        jBNuevoInquilinos.setBackground(new java.awt.Color(51, 51, 51));
-        jBNuevoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBNuevoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevoInquilinos.setText("Nuevo");
-        jBNuevoInquilinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBNuevoInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBNuevoInquilinosActionPerformed(evt);
-            }
-        });
-
-        jBModificarInquilinos.setBackground(new java.awt.Color(51, 51, 51));
-        jBModificarInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBModificarInquilinos.setForeground(new java.awt.Color(51, 204, 255));
-        jBModificarInquilinos.setText("Modificar");
-        jBModificarInquilinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBModificarInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBModificarInquilinosActionPerformed(evt);
-            }
-        });
-
-        jBEliminarInquilinos.setBackground(new java.awt.Color(51, 51, 51));
-        jBEliminarInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBEliminarInquilinos.setForeground(new java.awt.Color(51, 204, 255));
-        jBEliminarInquilinos.setText("Eliminar");
-        jBEliminarInquilinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBEliminarInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBEliminarInquilinosActionPerformed(evt);
-            }
-        });
-
-        jBSalirInquilinos.setBackground(new java.awt.Color(51, 51, 51));
-        jBSalirInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jBSalirInquilinos.setForeground(new java.awt.Color(51, 204, 255));
-        jBSalirInquilinos.setText("Salir");
-        jBSalirInquilinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBSalirInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBSalirInquilinosActionPerformed(evt);
-            }
-        });
-
-        jTNombreInquilinos.setBackground(new java.awt.Color(153, 153, 153));
-        jTNombreInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTNombreInquilinos.setForeground(new java.awt.Color(51, 51, 51));
-        jTNombreInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTNombreInquilinosActionPerformed(evt);
-            }
-        });
-
-        jLNombreInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLNombreInquilinos.setForeground(new java.awt.Color(51, 204, 255));
-        jLNombreInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLNombreInquilinos.setText("Nombre");
-        jLNombreInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        jLApellidoInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLApellidoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
-        jLApellidoInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLApellidoInquilinos.setText("Apellido");
-        jLApellidoInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        jTApellidoInquilinos.setBackground(new java.awt.Color(153, 153, 153));
-        jTApellidoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTApellidoInquilinos.setForeground(new java.awt.Color(51, 51, 51));
-        jTApellidoInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTApellidoInquilinosActionPerformed(evt);
-            }
-        });
-
-        jLDNIInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLDNIInquilinos.setForeground(new java.awt.Color(51, 204, 255));
-        jLDNIInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLDNIInquilinos.setText("DNI");
-        jLDNIInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        jTDNIInquilinos.setBackground(new java.awt.Color(153, 153, 153));
-        jTDNIInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTDNIInquilinos.setForeground(new java.awt.Color(51, 51, 51));
-        jTDNIInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTDNIInquilinosActionPerformed(evt);
-            }
-        });
-
-        jLCuitInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLCuitInquilinos.setForeground(new java.awt.Color(51, 204, 255));
-        jLCuitInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLCuitInquilinos.setText("CUIT");
-        jLCuitInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        jTLugarTrabajoInquilinos.setBackground(new java.awt.Color(153, 153, 153));
-        jTLugarTrabajoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTLugarTrabajoInquilinos.setForeground(new java.awt.Color(51, 51, 51));
-        jTLugarTrabajoInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTLugarTrabajoInquilinosActionPerformed(evt);
-            }
-        });
-
-        jLLugarTrabajoInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLLugarTrabajoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
-        jLLugarTrabajoInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLLugarTrabajoInquilinos.setText("Lugar de Trabajo");
-        jLLugarTrabajoInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        jTCuitInquilinos.setBackground(new java.awt.Color(153, 153, 153));
-        jTCuitInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTCuitInquilinos.setForeground(new java.awt.Color(51, 51, 51));
-        jTCuitInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTCuitInquilinosActionPerformed(evt);
-            }
-        });
-
-        jLActivoInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLActivoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
-        jLActivoInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLActivoInquilinos.setText("Activo");
-        jLActivoInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        jRInquilino.setOpaque(false);
-        jRInquilino.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRInquilinoActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPInquilinosLayout = new javax.swing.GroupLayout(jPInquilinos);
-        jPInquilinos.setLayout(jPInquilinosLayout);
-        jPInquilinosLayout.setHorizontalGroup(
-            jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInquilinosLayout.createSequentialGroup()
-                .addContainerGap(248, Short.MAX_VALUE)
-                .addComponent(jLTituloInquilinos)
-                .addGap(242, 242, 242))
-            .addGroup(jPInquilinosLayout.createSequentialGroup()
-                .addGap(192, 192, 192)
-                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPInquilinosLayout.createSequentialGroup()
-                        .addComponent(jBNuevoInquilinos)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBModificarInquilinos)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBEliminarInquilinos)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBSalirInquilinos))
-                    .addGroup(jPInquilinosLayout.createSequentialGroup()
-                        .addComponent(jLBusquedaInquilinos)
-                        .addGap(18, 18, 18)
-                        .addComponent(jCBusquedaInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPInquilinosLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPInquilinosLayout.createSequentialGroup()
-                                .addComponent(jLIdInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTIDInquilino, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPInquilinosLayout.createSequentialGroup()
-                                .addComponent(jLApellidoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTApellidoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPInquilinosLayout.createSequentialGroup()
-                                .addComponent(jLDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPInquilinosLayout.createSequentialGroup()
-                                .addComponent(jLNombreInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTNombreInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPInquilinosLayout.createSequentialGroup()
-                                .addComponent(jLCuitInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTCuitInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPInquilinosLayout.createSequentialGroup()
-                                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLLugarTrabajoInquilinos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLActivoInquilinos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRInquilino)
-                                    .addComponent(jTLugarTrabajoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(0, 210, Short.MAX_VALUE))
-        );
-        jPInquilinosLayout.setVerticalGroup(
-            jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInquilinosLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLTituloInquilinos)
-                .addGap(31, 31, 31)
-                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLBusquedaInquilinos)
-                    .addComponent(jCBusquedaInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
-                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTIDInquilino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLIdInquilinos))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTNombreInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLNombreInquilinos))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTApellidoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLApellidoInquilinos))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLDNIInquilinos))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTCuitInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLCuitInquilinos))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTLugarTrabajoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLLugarTrabajoInquilinos))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLActivoInquilinos)
-                    .addComponent(jRInquilino))
-                .addGap(50, 50, 50)
-                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBSalirInquilinos)
-                    .addComponent(jBNuevoInquilinos)
-                    .addComponent(jBModificarInquilinos)
-                    .addComponent(jBEliminarInquilinos))
-                .addContainerGap(104, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("INQUILINOS", jPInquilinos);
-
         jPGarante.setBackground(new java.awt.Color(51, 51, 51));
 
         jLTituloGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
@@ -480,20 +204,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLTituloGarante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-individual-man-people-person_107097.png"))); // NOI18N
         jLTituloGarante.setText("  Formulario Garante");
         jLTituloGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        jLBusquedaGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLBusquedaGarante.setForeground(new java.awt.Color(51, 204, 255));
-        jLBusquedaGarante.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLBusquedaGarante.setText("Busqueda");
-        jLBusquedaGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        jCBusquedaGarante.setBackground(new java.awt.Color(153, 153, 153));
-        jCBusquedaGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        jCBusquedaGarante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCBusquedaGaranteActionPerformed(evt);
-            }
-        });
 
         jBNuevoGarante.setBackground(new java.awt.Color(51, 51, 51));
         jBNuevoGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -584,21 +294,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
-        jLDNIGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLDNIGarante.setForeground(new java.awt.Color(51, 204, 255));
-        jLDNIGarante.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLDNIGarante.setText("DNI");
-        jLDNIGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        jTDNIGarante.setBackground(new java.awt.Color(153, 153, 153));
-        jTDNIGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTDNIGarante.setForeground(new java.awt.Color(51, 51, 51));
-        jTDNIGarante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTDNIGaranteActionPerformed(evt);
-            }
-        });
-
         jLDomicilio.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLDomicilio.setForeground(new java.awt.Color(51, 204, 255));
         jLDomicilio.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -635,10 +330,36 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLActivoGarante.setText("Activo");
         jLActivoGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        jRGarante.setBorder(null);
         jRGarante.setOpaque(false);
         jRGarante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRGaranteActionPerformed(evt);
+            }
+        });
+
+        jLBusquedaGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLBusquedaGarante.setForeground(new java.awt.Color(51, 204, 255));
+        jLBusquedaGarante.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLBusquedaGarante.setText("Busqueda por DNI");
+
+        jTDNIGarante.setBackground(new java.awt.Color(153, 153, 153));
+        jTDNIGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTDNIGarante.setForeground(new java.awt.Color(51, 51, 51));
+        jTDNIGarante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTDNIGaranteActionPerformed(evt);
+            }
+        });
+
+        jbBuscarGarante.setBackground(new java.awt.Color(255, 153, 102));
+        jbBuscarGarante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Buscar.png"))); // NOI18N
+        jbBuscarGarante.setBorder(null);
+        jbBuscarGarante.setBorderPainted(false);
+        jbBuscarGarante.setOpaque(false);
+        jbBuscarGarante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBuscarGaranteActionPerformed(evt);
             }
         });
 
@@ -647,111 +368,103 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jPGaranteLayout.setHorizontalGroup(
             jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPGaranteLayout.createSequentialGroup()
+                .addGap(136, 136, 136)
                 .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPGaranteLayout.createSequentialGroup()
-                        .addGap(230, 230, 230)
+                        .addComponent(jBNuevoGarante)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jBModificarGarante)
+                        .addGap(36, 36, 36)
+                        .addComponent(jBEliminarGarante)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jBSalirGarante))
+                    .addGroup(jPGaranteLayout.createSequentialGroup()
+                        .addComponent(jLBusquedaGarante)
+                        .addGap(32, 32, 32)
+                        .addComponent(jTDNIGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jbBuscarGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 140, Short.MAX_VALUE))
+            .addGroup(jPGaranteLayout.createSequentialGroup()
+                .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPGaranteLayout.createSequentialGroup()
+                        .addGap(255, 255, 255)
                         .addComponent(jLTituloGarante))
                     .addGroup(jPGaranteLayout.createSequentialGroup()
-                        .addGap(173, 173, 173)
-                        .addComponent(jLBusquedaGarante)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCBusquedaGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(249, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPGaranteLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPGaranteLayout.createSequentialGroup()
-                        .addComponent(jRGarante)
-                        .addGap(331, 331, 331))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPGaranteLayout.createSequentialGroup()
-                        .addComponent(jBNuevoGarante)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBModificarGarante)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBEliminarGarante)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBSalirGarante)
-                        .addGap(170, 170, 170))))
-            .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPGaranteLayout.createSequentialGroup()
-                    .addGap(233, 233, 233)
-                    .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPGaranteLayout.createSequentialGroup()
-                            .addComponent(jLIDGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTIDGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPGaranteLayout.createSequentialGroup()
-                            .addComponent(jLApellidoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTApellidoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPGaranteLayout.createSequentialGroup()
-                            .addComponent(jLDNIGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTDNIGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPGaranteLayout.createSequentialGroup()
-                            .addComponent(jLNombreGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTNombreGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPGaranteLayout.createSequentialGroup()
-                            .addComponent(jLDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTDomicilioGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPGaranteLayout.createSequentialGroup()
-                            .addComponent(jLTelefonoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTTelefonoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPGaranteLayout.createSequentialGroup()
-                            .addComponent(jLActivoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(128, 128, 128)))
-                    .addContainerGap(250, Short.MAX_VALUE)))
+                        .addGap(237, 237, 237)
+                        .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPGaranteLayout.createSequentialGroup()
+                                .addComponent(jLDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTDomicilioGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPGaranteLayout.createSequentialGroup()
+                                .addComponent(jLTelefonoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTTelefonoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPGaranteLayout.createSequentialGroup()
+                                .addComponent(jLActivoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRGarante)
+                                .addGap(102, 102, 102))
+                            .addGroup(jPGaranteLayout.createSequentialGroup()
+                                .addComponent(jLIDGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTIDGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPGaranteLayout.createSequentialGroup()
+                                .addComponent(jLApellidoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTApellidoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPGaranteLayout.createSequentialGroup()
+                                .addComponent(jLNombreGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTNombreGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPGaranteLayout.setVerticalGroup(
             jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPGaranteLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(34, 34, 34)
                 .addComponent(jLTituloGarante)
-                .addGap(37, 37, 37)
-                .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLBusquedaGarante)
-                    .addComponent(jCBusquedaGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
-                .addComponent(jRGarante)
-                .addGap(32, 32, 32)
+                .addGap(18, 18, 18)
+                .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPGaranteLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLBusquedaGarante)
+                            .addComponent(jTDNIGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10))
+                    .addComponent(jbBuscarGarante, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTIDGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLIDGarante))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTNombreGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLNombreGarante))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTApellidoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLApellidoGarante))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTDomicilioGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLDomicilio))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTTelefonoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLTelefonoGarante))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLActivoGarante)
+                    .addComponent(jRGarante))
+                .addGap(49, 49, 49)
                 .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevoGarante)
                     .addComponent(jBModificarGarante)
                     .addComponent(jBEliminarGarante)
                     .addComponent(jBSalirGarante))
-                .addGap(114, 114, 114))
-            .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPGaranteLayout.createSequentialGroup()
-                    .addGap(167, 167, 167)
-                    .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTIDGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLIDGarante))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTNombreGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLNombreGarante))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTApellidoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLApellidoGarante))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTDNIGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLDNIGarante))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTDomicilioGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLDomicilio))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTTelefonoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLTelefonoGarante))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(jLActivoGarante)
-                    .addContainerGap(196, Short.MAX_VALUE)))
+                .addGap(125, 125, 125))
         );
 
         jTabbedPane1.addTab("GARANTES", jPGarante);
@@ -1321,6 +1034,276 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
         jTabbedPane1.addTab("CONTRATOS", jPanel1);
 
+        jPInquilinos.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLTituloInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLTituloInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLTituloInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLTituloInquilinos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-individual-man-people-person_107097.png"))); // NOI18N
+        jLTituloInquilinos.setText("  Formulario Inquilinos");
+        jLTituloInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jLBusquedaInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLBusquedaInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLBusquedaInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLBusquedaInquilinos.setText("Busqueda por DNI");
+
+        jLIdInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLIdInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLIdInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLIdInquilinos.setText("ID Inquilino");
+        jLIdInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTIDInquilino.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDInquilino.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDInquilino.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDInquilino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTIDInquilinoActionPerformed(evt);
+            }
+        });
+
+        jBNuevoInquilinos.setBackground(new java.awt.Color(51, 51, 51));
+        jBNuevoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBNuevoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jBNuevoInquilinos.setText("Nuevo");
+        jBNuevoInquilinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBNuevoInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBNuevoInquilinosActionPerformed(evt);
+            }
+        });
+
+        jBModificarInquilinos.setBackground(new java.awt.Color(51, 51, 51));
+        jBModificarInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBModificarInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jBModificarInquilinos.setText("Modificar");
+        jBModificarInquilinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBModificarInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBModificarInquilinosActionPerformed(evt);
+            }
+        });
+
+        jBEliminarInquilinos.setBackground(new java.awt.Color(51, 51, 51));
+        jBEliminarInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBEliminarInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jBEliminarInquilinos.setText("Eliminar");
+        jBEliminarInquilinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBEliminarInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEliminarInquilinosActionPerformed(evt);
+            }
+        });
+
+        jBSalirInquilinos.setBackground(new java.awt.Color(51, 51, 51));
+        jBSalirInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jBSalirInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jBSalirInquilinos.setText("Salir");
+        jBSalirInquilinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBSalirInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSalirInquilinosActionPerformed(evt);
+            }
+        });
+
+        jTNombreInquilinos.setBackground(new java.awt.Color(153, 153, 153));
+        jTNombreInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTNombreInquilinos.setForeground(new java.awt.Color(51, 51, 51));
+        jTNombreInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTNombreInquilinosActionPerformed(evt);
+            }
+        });
+
+        jLNombreInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLNombreInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLNombreInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLNombreInquilinos.setText("Nombre");
+        jLNombreInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jLApellidoInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLApellidoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLApellidoInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLApellidoInquilinos.setText("Apellido");
+        jLApellidoInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTApellidoInquilinos.setBackground(new java.awt.Color(153, 153, 153));
+        jTApellidoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTApellidoInquilinos.setForeground(new java.awt.Color(51, 51, 51));
+        jTApellidoInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTApellidoInquilinosActionPerformed(evt);
+            }
+        });
+
+        jTDNIInquilinos.setBackground(new java.awt.Color(153, 153, 153));
+        jTDNIInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTDNIInquilinos.setForeground(new java.awt.Color(51, 51, 51));
+        jTDNIInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTDNIInquilinosActionPerformed(evt);
+            }
+        });
+
+        jLCuitInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLCuitInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLCuitInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLCuitInquilinos.setText("CUIT");
+        jLCuitInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTLugarTrabajoInquilinos.setBackground(new java.awt.Color(153, 153, 153));
+        jTLugarTrabajoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTLugarTrabajoInquilinos.setForeground(new java.awt.Color(51, 51, 51));
+        jTLugarTrabajoInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTLugarTrabajoInquilinosActionPerformed(evt);
+            }
+        });
+
+        jLLugarTrabajoInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLLugarTrabajoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLLugarTrabajoInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLLugarTrabajoInquilinos.setText("Lugar de Trabajo");
+        jLLugarTrabajoInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jTCuitInquilinos.setBackground(new java.awt.Color(153, 153, 153));
+        jTCuitInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTCuitInquilinos.setForeground(new java.awt.Color(51, 51, 51));
+        jTCuitInquilinos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTCuitInquilinosActionPerformed(evt);
+            }
+        });
+
+        jLActivoInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLActivoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
+        jLActivoInquilinos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLActivoInquilinos.setText("Activo");
+        jLActivoInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jRInquilino.setOpaque(false);
+        jRInquilino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRInquilinoActionPerformed(evt);
+            }
+        });
+
+        jbBuscarInquilino.setBackground(new java.awt.Color(255, 153, 102));
+        jbBuscarInquilino.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Buscar.png"))); // NOI18N
+        jbBuscarInquilino.setBorder(null);
+        jbBuscarInquilino.setBorderPainted(false);
+        jbBuscarInquilino.setOpaque(false);
+        jbBuscarInquilino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBuscarInquilinoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPInquilinosLayout = new javax.swing.GroupLayout(jPInquilinos);
+        jPInquilinos.setLayout(jPInquilinosLayout);
+        jPInquilinosLayout.setHorizontalGroup(
+            jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPInquilinosLayout.createSequentialGroup()
+                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPInquilinosLayout.createSequentialGroup()
+                        .addGap(240, 240, 240)
+                        .addComponent(jLTituloInquilinos))
+                    .addGroup(jPInquilinosLayout.createSequentialGroup()
+                        .addGap(147, 147, 147)
+                        .addComponent(jBNuevoInquilinos)
+                        .addGap(15, 15, 15)
+                        .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPInquilinosLayout.createSequentialGroup()
+                                .addComponent(jLIdInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTIDInquilino, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPInquilinosLayout.createSequentialGroup()
+                                .addComponent(jLApellidoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTApellidoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPInquilinosLayout.createSequentialGroup()
+                                .addComponent(jLNombreInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTNombreInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPInquilinosLayout.createSequentialGroup()
+                                .addComponent(jLCuitInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTCuitInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPInquilinosLayout.createSequentialGroup()
+                                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLLugarTrabajoInquilinos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLActivoInquilinos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jBModificarInquilinos, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jRInquilino)
+                                    .addComponent(jTLugarTrabajoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInquilinosLayout.createSequentialGroup()
+                                        .addComponent(jBEliminarInquilinos)
+                                        .addGap(11, 11, 11)))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInquilinosLayout.createSequentialGroup()
+                .addContainerGap(147, Short.MAX_VALUE)
+                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jBSalirInquilinos)
+                    .addGroup(jPInquilinosLayout.createSequentialGroup()
+                        .addComponent(jLBusquedaInquilinos)
+                        .addGap(32, 32, 32)
+                        .addComponent(jTDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jbBuscarInquilino, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(129, 129, 129))
+        );
+        jPInquilinosLayout.setVerticalGroup(
+            jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInquilinosLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLTituloInquilinos)
+                .addGap(35, 35, 35)
+                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jbBuscarInquilino, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPInquilinosLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLBusquedaInquilinos)
+                            .addComponent(jTDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10)))
+                .addGap(39, 39, 39)
+                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTIDInquilino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLIdInquilinos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTNombreInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLNombreInquilinos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTApellidoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLApellidoInquilinos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTCuitInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLCuitInquilinos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTLugarTrabajoInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLLugarTrabajoInquilinos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLActivoInquilinos)
+                    .addComponent(jRInquilino))
+                .addGap(52, 52, 52)
+                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBNuevoInquilinos)
+                    .addComponent(jBModificarInquilinos)
+                    .addComponent(jBEliminarInquilinos)
+                    .addComponent(jBSalirInquilinos))
+                .addContainerGap(109, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("INQUILINOS", jPInquilinos);
+
         javax.swing.GroupLayout jPCardListadosLayout = new javax.swing.GroupLayout(jPCardListados);
         jPCardListados.setLayout(jPCardListadosLayout);
         jPCardListadosLayout.setHorizontalGroup(
@@ -1338,8 +1321,8 @@ public class MenuListados extends javax.swing.JInternalFrame {
             .addGroup(jPCardListadosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPBarraNavegador3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(jTabbedPane1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -1397,10 +1380,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTApellidoGaranteActionPerformed
 
-    private void jTDNIGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDNIGaranteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTDNIGaranteActionPerformed
-
     private void jTDomicilioGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDomicilioGaranteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTDomicilioGaranteActionPerformed
@@ -1418,7 +1397,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
         Inspector nuevo = new Inspector(matricula, nombre, apellido, telefono, activo);
         inspectorD.guardarInspector(nuevo);
-
         cargarCombos();
         borrarCampos();
     }//GEN-LAST:event_jBNuevoInspectorActionPerformed
@@ -1446,7 +1424,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private void jBEliminarInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarInspectorActionPerformed
         Inspector inspectorSeleccionado = (Inspector) jCBusquedaInspector.getSelectedItem();
         inspectorD.eliminarInspector(inspectorSeleccionado.getIdInspector());
-
         cargarCombos();
         borrarCampos();
         //Deshabilito botones luego de ejecutar acccion!
@@ -1477,23 +1454,18 @@ public class MenuListados extends javax.swing.JInternalFrame {
         int SelectPestaña = jTabbedPane1.getSelectedIndex();
 
         if (SelectPestaña == 0) {
+            
             borrarCampos();
         } else if (SelectPestaña == 1) {
+            cargarCombos();
             borrarCampos();
         } else if (SelectPestaña == 2) {
+            cargarCombos();
             borrarCampos();
         } else if (SelectPestaña == 3) {
             borrarCampos();
         }
     }//GEN-LAST:event_jTabbedPane1StateChanged
-
-    private void jCBusquedaInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBusquedaInquilinosActionPerformed
-        rellenarCampos();
-    }//GEN-LAST:event_jCBusquedaInquilinosActionPerformed
-
-    private void jCBusquedaGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBusquedaGaranteActionPerformed
-        rellenarCampos();
-    }//GEN-LAST:event_jCBusquedaGaranteActionPerformed
 
     private void jCBusquedaInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBusquedaInspectorActionPerformed
         rellenarCampos();
@@ -1509,7 +1481,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         Inquilino nuevo = new Inquilino(nombre, apellido, dni, cuit, lugarTrabajo, activo);
         inquilinoD.guardarInquilino(nuevo);
 
-        cargarCombos();
         borrarCampos();
     }//GEN-LAST:event_jBNuevoInquilinosActionPerformed
 
@@ -1529,16 +1500,14 @@ public class MenuListados extends javax.swing.JInternalFrame {
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
         }
-        cargarCombos();
+
         borrarCampos();
     }//GEN-LAST:event_jBModificarInquilinosActionPerformed
 
     private void jBEliminarInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarInquilinosActionPerformed
+        String dniInquilino = jTDNIInquilinos.getText();
+        inquilinoD.eliminarInquilino(dniInquilino);
 
-        Inquilino inquilinoSelecionado = (Inquilino) jCBusquedaInquilinos.getSelectedItem();
-        inquilinoD.eliminarInquilino(inquilinoSelecionado.getDni());
-
-        cargarCombos();
         borrarCampos();
         //Deshabilito botones luego de ejecutar acccion!
         //desHabilitarBotones();
@@ -1547,13 +1516,13 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private void jBNuevoGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoGaranteActionPerformed
         String nombre = jTNombreGarante.getText();
         String apellido = jTApellidoGarante.getText();
-        int dni = Integer.parseInt(jTDNIGarante.getText());
+        String dni = jTDNIGarante.getText();
         String domicilio = jTDomicilioGarante.getText();
-        int telefono = Integer.parseInt(jTTelefonoGarante.getText());
+        String telefono = jTTelefonoGarante.getText();
         boolean activo = jRGarante.isSelected();
         Garante nuevo = new Garante(nombre, apellido, dni, domicilio, telefono, activo);
         garanteD.guardarGarante(nuevo);
-        cargarCombos();
+
         borrarCampos();
     }//GEN-LAST:event_jBNuevoGaranteActionPerformed
 
@@ -1563,9 +1532,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
             int idGarante = Integer.parseInt(jTIDGarante.getText());
             String nombre = jTNombreGarante.getText();
             String apellido = jTApellidoGarante.getText();
-            int dni = Integer.parseInt(jTDNIGarante.getText());
+            String dni = jTDNIGarante.getText();
             String domicilio = jTDomicilioGarante.getText();
-            int telefono = Integer.parseInt(jTTelefonoGarante.getText());
+            String telefono = jTTelefonoGarante.getText();
             boolean activo = jRGarante.isSelected();
 
             Garante nuevo = new Garante(idGarante, nombre, apellido, dni, domicilio, telefono, activo);
@@ -1573,16 +1542,15 @@ public class MenuListados extends javax.swing.JInternalFrame {
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
         }
-        cargarCombos();
+
         borrarCampos();
 
     }//GEN-LAST:event_jBModificarGaranteActionPerformed
 
     private void jBEliminarGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarGaranteActionPerformed
-        Garante garanteSelecionado = (Garante) jCBusquedaGarante.getSelectedItem();
-        garanteD.eliminarGarante(garanteSelecionado.getDni());
+        String dniGarante = jTDNIGarante.getText();
+        garanteD.eliminarGarante(dniGarante);
 
-        cargarCombos();
         borrarCampos();
         //Deshabilito botones luego de ejecutar acccion!
         //desHabilitarBotones();
@@ -1637,16 +1605,17 @@ public class MenuListados extends javax.swing.JInternalFrame {
         contratoD.eliminarContrato(contratoSeleccion.getIdContrato());
         cargarCombos();
         borrarCampos();
+        
         //Deshabilito botones luego de ejecutar acccion!
         //desHabilitarBotones();
 
     }//GEN-LAST:event_jBEliminarListadosActionPerformed
 
     private void jBModificarListadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarListadosActionPerformed
-      try {
+        try {
             int idContrato = Integer.parseInt(jTIDContratoListados.getText());
             LocalDate fechaInicio = jDFechaInicioListados.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-            LocalDate fechaFin =  jDFechaFinListados.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+            LocalDate fechaFin = jDFechaFinListados.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
             int idPropiedad = Integer.parseInt(jTIDPropiedadListados.getText());
             Propiedad propiedad = propiedadD.buscarPropiedad(idPropiedad);
             int idPropietario = Integer.parseInt(jTIDPropietarioListados.getText());
@@ -1661,7 +1630,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             boolean activo = jRActivoContrato.isSelected();
             boolean vigente = jRVigenciaContrato.isSelected();
 
-            Contrato nuevo = new Contrato(idContrato, propietario, propiedad, inquilino, garante, vendedor,fechaInicio, fechaFin,fechaContrato, vigente, activo);
+            Contrato nuevo = new Contrato(idContrato, propietario, propiedad, inquilino, garante, vendedor, fechaInicio, fechaFin, fechaContrato, vigente, activo);
             contratoD.modificarContrato(nuevo);
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
@@ -1669,8 +1638,23 @@ public class MenuListados extends javax.swing.JInternalFrame {
         cargarCombos();
         borrarCampos();
 
-   
+
     }//GEN-LAST:event_jBModificarListadosActionPerformed
+
+    private void jbBuscarInquilinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarInquilinoActionPerformed
+
+        rellenarCampos();
+    }//GEN-LAST:event_jbBuscarInquilinoActionPerformed
+
+    private void jTDNIGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDNIGaranteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTDNIGaranteActionPerformed
+
+    private void jbBuscarGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarGaranteActionPerformed
+
+        rellenarCampos();
+
+    }//GEN-LAST:event_jbBuscarGaranteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1690,8 +1674,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private javax.swing.JButton jBSalirInspector;
     private javax.swing.JButton jBSalirListados;
     private javax.swing.JComboBox<Contrato> jCBusquedaContratos;
-    private javax.swing.JComboBox<Garante> jCBusquedaGarante;
-    private javax.swing.JComboBox<Inquilino> jCBusquedaInquilinos;
     private javax.swing.JComboBox<Inspector> jCBusquedaInspector;
     private com.toedter.calendar.JDateChooser jDFechaContratoListados;
     private com.toedter.calendar.JDateChooser jDFechaFinListados;
@@ -1707,8 +1689,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLBusquedaInquilinos;
     private javax.swing.JLabel jLBusquedaInspector;
     private javax.swing.JLabel jLCuitInquilinos;
-    private javax.swing.JLabel jLDNIGarante;
-    private javax.swing.JLabel jLDNIInquilinos;
     private javax.swing.JLabel jLDomicilio;
     private javax.swing.JLabel jLFechaContratoListados;
     private javax.swing.JLabel jLFechaFinListados;
@@ -1771,65 +1751,10 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTTelefonoGarante;
     private javax.swing.JTextField jTTelefonoInspector;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JButton jbBuscarGarante;
+    private javax.swing.JButton jbBuscarInquilino;
     // End of variables declaration//GEN-END:variables
   public void cargarCombos() {
-
-        // combo inquilinos
-        jCBusquedaInquilinos.removeAllItems();
-        InquilinoData inquilinoD = new InquilinoData();
-        ArrayList<Inquilino> inquilinos = new ArrayList<>();
-
-        for (Inquilino inquilino : inquilinoD.listarInquilinos()) {
-            inquilinos.add(inquilino);
-            jCBusquedaInquilinos.addItem(inquilino);
-        }
-        jCBusquedaInquilinos.setRenderer(new DefaultListCellRenderer() {
-            @Override
-            public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-                super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-
-                if (value instanceof Inquilino) {
-                    Inquilino inquilino = (Inquilino) value;
-
-                    if (inquilino.isActivo() == false) {
-                        setForeground(Color.RED); // Cambia el color del texto a rojo si el estado es 0
-                    } else {
-                        setForeground(Color.BLACK); // Restablece el color del texto a negro
-                    }
-                }
-
-                return this;
-            }
-        });
-
-        // combo garantes
-        jCBusquedaGarante.removeAllItems();
-        GaranteData garanteD = new GaranteData();
-        ArrayList<Garante> garantes = new ArrayList<>();
-
-        for (Garante garante : garanteD.listarGarante()) {
-            garantes.add(garante);
-            jCBusquedaGarante.addItem(garante);
-
-        }
-        jCBusquedaGarante.setRenderer(new DefaultListCellRenderer() {
-            @Override
-            public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-                super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-
-                if (value instanceof Garante) {
-                    Garante garante = (Garante) value;
-
-                    if (garante.isActivo() == false) {
-                        setForeground(Color.RED); // Cambia el color del texto a rojo si el estado es 0
-                    } else {
-                        setForeground(Color.BLACK); // Restablece el color del texto a negro
-                    }
-                }
-
-                return this;
-            }
-        });
 
         // combo inspectores
         jCBusquedaInspector.removeAllItems();
@@ -1896,7 +1821,8 @@ public class MenuListados extends javax.swing.JInternalFrame {
     public void rellenarCampos() {
 
         // relleno campos pestaña inquilinos
-        Inquilino inquilinoSelecionado = (Inquilino) jCBusquedaInquilinos.getSelectedItem();
+        String dniInquilino = jTDNIInquilinos.getText();
+        Inquilino inquilinoSelecionado = inquilinoD.buscarInquilinoPorDni(dniInquilino);
         // boolean activo = jrbEstado.isSelected();
 
         if (inquilinoSelecionado != null) {
@@ -1920,17 +1846,17 @@ public class MenuListados extends javax.swing.JInternalFrame {
         }
 
         // relleno campos pestaña garantes
-        Garante garanteSelecionado = (Garante) jCBusquedaGarante.getSelectedItem();
+        String dniGarante = jTDNIGarante.getText();
+        Garante garanteSeleccionado = garanteD.buscarGarantePorDni(dniGarante);
 //            boolean activo = jrbEstado.isSelected();
 
-        if (garanteSelecionado != null) {
-            jTIDGarante.setText(String.valueOf(garanteSelecionado.getIdGarante()));
-            jTNombreGarante.setText(garanteSelecionado.getNombre());
-            jTApellidoGarante.setText(garanteSelecionado.getApellido());
-            jTDNIGarante.setText(String.valueOf(garanteSelecionado.getDni()));
-            jTDomicilioGarante.setText(garanteSelecionado.getDomicilio());
-            jTTelefonoGarante.setText(String.valueOf(garanteSelecionado.getTelefono()));
-            jRGarante.setSelected(garanteSelecionado.isActivo());
+        if (garanteSeleccionado != null) {
+            jTIDGarante.setText(String.valueOf(garanteSeleccionado.getIdGarante()));
+            jTNombreGarante.setText(garanteSeleccionado.getNombre());
+            jTApellidoGarante.setText(garanteSeleccionado.getApellido());
+            jTDomicilioGarante.setText(garanteSeleccionado.getDomicilio());
+            jTTelefonoGarante.setText(garanteSeleccionado.getTelefono());
+            jRGarante.setSelected(garanteSeleccionado.isActivo());
 
             //habilito botones luego de ejecutar acccion!
             //Habilito botones si esta todo OK!
