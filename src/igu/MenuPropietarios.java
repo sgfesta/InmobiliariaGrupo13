@@ -74,7 +74,6 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jrbPropietario = new javax.swing.JRadioButton();
         jLabel46 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        idPropietario = new javax.swing.JTextField();
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -242,44 +241,37 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jrbPropietario.setSelected(true);
 
         jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-magnifier-search-zoom_110300.png"))); // NOI18N
+        jLabel46.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel46.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel46MouseClicked(evt);
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(51, 51, 51));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 204, 255));
-        jButton1.setText("Limpiar");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trash_bin_delete_remove_icon_191682.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setOpaque(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        idPropietario.setEnabled(false);
-
         javax.swing.GroupLayout jPCardPropietariosLayout = new javax.swing.GroupLayout(jPCardPropietarios);
         jPCardPropietarios.setLayout(jPCardPropietariosLayout);
         jPCardPropietariosLayout.setHorizontalGroup(
             jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardPropietariosLayout.createSequentialGroup()
+                .addGap(0, 26, Short.MAX_VALUE)
+                .addComponent(jPBarraNavegador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPCardPropietariosLayout.createSequentialGroup()
                 .addGap(206, 206, 206)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
                     .addGroup(jPCardPropietariosLayout.createSequentialGroup()
-                        .addComponent(jBNuevo2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBModificarPropietario)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBEliminarPropietario)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBSalirPropietario)))
-                .addContainerGap(188, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardPropietariosLayout.createSequentialGroup()
-                .addGap(0, 26, Short.MAX_VALUE)
-                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardPropietariosLayout.createSequentialGroup()
                         .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -294,18 +286,24 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                             .addComponent(jTIDPropietariosNom, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPCardPropietariosLayout.createSequentialGroup()
                                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTIDPropietarios6, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                                    .addComponent(jTIDPropietarios6)
                                     .addComponent(jTIDPropietarios5)
                                     .addComponent(jTIDPropietariosAp)
-                                    .addComponent(jTIDPropietarios4))
+                                    .addComponent(jTIDPropietarios4, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel46)
-                                .addGap(38, 38, 38)
-                                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(idPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton1))))
-                        .addGap(66, 66, 66))
-                    .addComponent(jPBarraNavegador1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jLabel5)
+                    .addGroup(jPCardPropietariosLayout.createSequentialGroup()
+                        .addComponent(jBNuevo2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBModificarPropietario)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBEliminarPropietario)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBSalirPropietario)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPCardPropietariosLayout.setVerticalGroup(
             jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -314,14 +312,14 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                 .addComponent(jPBarraNavegador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(jLabel5)
-                .addGap(79, 79, 79)
-                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel31)
                         .addComponent(jTIDPropietarios4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel46)
-                    .addComponent(jButton1))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
                     .addComponent(jTIDPropietariosNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -341,9 +339,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel34)
                     .addComponent(jrbPropietario))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(idPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(75, 75, 75)
+                .addGap(105, 105, 105)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevo2)
                     .addComponent(jBModificarPropietario)
@@ -444,7 +440,6 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField idPropietario;
     private javax.swing.JButton jBEliminarPropietario;
     private javax.swing.JButton jBModificarPropietario;
     private javax.swing.JButton jBNuevo2;
