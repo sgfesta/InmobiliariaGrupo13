@@ -495,7 +495,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         TipoPropiedad tipoSelec = (TipoPropiedad) jCFiltroTipoAlquiler.getSelectedItem();
         Zona zonaSelec = (Zona) jCFiltroZonaalquiler.getSelectedItem();
         double precio = Double.parseDouble(jTprecioAlquiler.getText());
-
+        jCListadoFiltradoPropiedadesAlquiler.removeAllItems();
 
         for (Propiedad propiedades : pd.filtrado(tipoSelec, zonaSelec)) {
 
@@ -510,7 +510,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
               TipoPropiedad tipoSelec = (TipoPropiedad) jCFiltroTipoAlquiler.getSelectedItem();
         Zona zonaSelec = (Zona) jCFiltroZonaalquiler.getSelectedItem();
         double precio = Double.parseDouble(jTprecioAlquiler.getText());
-
+        jCListadoFiltradoPropiedadesAlquiler.removeAllItems();
 
         for (Propiedad propiedades : pd.filtrado(tipoSelec, zonaSelec)) {
 
