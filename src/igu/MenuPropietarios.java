@@ -7,7 +7,6 @@ package igu;
 
 import entidades.Propietario;
 import java.awt.Dimension;
-import java.util.List;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import persistencia.PropietarioData;

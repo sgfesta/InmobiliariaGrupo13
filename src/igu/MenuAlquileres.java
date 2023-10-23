@@ -26,12 +26,14 @@ import persistencia.ZonaData;
 public class MenuAlquileres extends javax.swing.JInternalFrame {
 ContratoData cd = new ContratoData();
 PropiedadData pd=new PropiedadData();
+Propiedad pSelect = new Propiedad();
    
     public MenuAlquileres() {
         initComponents();
         QuitarLaBarraTitulo();
         cargarComboTipo();
         cargarComboZona();
+         cargarComboPropiedades();
         
 
     }
@@ -275,7 +277,6 @@ PropiedadData pd=new PropiedadData();
         jRPrecioAlquiler.setForeground(new java.awt.Color(51, 153, 255));
         jRPrecioAlquiler.setSelected(true);
         jRPrecioAlquiler.setText("Hasta");
-        jRPrecioAlquiler.setOpaque(false);
         jRPrecioAlquiler.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jRPrecioAlquilerStateChanged(evt);
@@ -304,11 +305,7 @@ PropiedadData pd=new PropiedadData();
         jTprecioAlquiler.setForeground(new java.awt.Color(102, 204, 255));
         jTprecioAlquiler.setText("Precio");
         jPCardAlquileres.add(jTprecioAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 120, 30));
-
-        jRActivoAlquiler.setOpaque(false);
         jPCardAlquileres.add(jRActivoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, -1, -1));
-
-        jRVigenciaAlquiler.setOpaque(false);
         jPCardAlquileres.add(jRVigenciaAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 380, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -357,7 +354,7 @@ PropiedadData pd=new PropiedadData();
     private javax.swing.JButton jBSalirAlquiler;
     private javax.swing.JComboBox<TipoPropiedad> jCFiltroTipoAlquiler;
     private javax.swing.JComboBox<Zona> jCFiltroZonaalquiler;
-    private javax.swing.JComboBox<String> jCListadoFiltradoPropiedadesAlquiler;
+    private javax.swing.JComboBox<Propiedad> jCListadoFiltradoPropiedadesAlquiler;
     private javax.swing.JComboBox<String> jComboBox3;
     private com.toedter.calendar.JDateChooser jDFechaContratoAlquiler;
     private com.toedter.calendar.JDateChooser jDFechaFinAlquiler;
@@ -411,7 +408,16 @@ PropiedadData pd=new PropiedadData();
 
         }
     }
-    
+      
+     public void cargarComboPropiedades(){
+           PropiedadData PropD = new PropiedadData();
+        ArrayList<Propiedad> propiedades = new ArrayList<>();
+
+        for (Propiedad propiedad : PropD.listarPropiedades()) {
+            propiedades.add(propiedad);
+            jCListadoFiltradoPropiedadesAlquiler.addItem(propiedad);
+      }
+      }
     
      public void agregarContrato(){
         ContratoData cd=new ContratoData();
@@ -493,11 +499,12 @@ PropiedadData pd=new PropiedadData();
          TipoPropiedad tipoSelec = (TipoPropiedad) jCFiltroTipoAlquiler.getSelectedItem();
          Zona zonaSelec=(Zona)jCFiltroZonaalquiler.getSelectedItem();
          double precio=Double.parseDouble(jTprecioAlquiler.getText());
-       
+       pSelect = (Propiedad) jCListadoFiltradoPropiedadesAlquiler.getSelectedItem();
+       double precioInmueble = pSelect.getPrecioTasado();
          
          for (Propiedad propiedades : pd.listarPropiedades()) {
-             if(tipoSelec== && zonaSelec== < precio){
-                 jCListadoFiltradoPropiedadesAlquiler.addItem(title);
+             if(precioInmueble < precio){
+                 jCListadoFiltradoPropiedadesAlquiler.addItem(propiedades);
              }
          }
      }
