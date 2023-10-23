@@ -275,6 +275,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jRPrecioAlquiler.setForeground(new java.awt.Color(51, 153, 255));
         jRPrecioAlquiler.setSelected(true);
         jRPrecioAlquiler.setText("Hasta");
+        jRPrecioAlquiler.setOpaque(false);
         jRPrecioAlquiler.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jRPrecioAlquilerStateChanged(evt);
@@ -296,6 +297,11 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jCListadoFiltradoPropiedadesAlquiler.setBackground(new java.awt.Color(153, 153, 153));
         jCListadoFiltradoPropiedadesAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jCListadoFiltradoPropiedadesAlquiler.setForeground(new java.awt.Color(51, 51, 51));
+        jCListadoFiltradoPropiedadesAlquiler.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCListadoFiltradoPropiedadesAlquilerItemStateChanged(evt);
+            }
+        });
         jPCardAlquileres.add(jCListadoFiltradoPropiedadesAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 250, 30));
 
         jTprecioAlquiler.setBackground(new java.awt.Color(153, 153, 153));
@@ -303,7 +309,11 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jTprecioAlquiler.setForeground(new java.awt.Color(102, 204, 255));
         jTprecioAlquiler.setText("Precio");
         jPCardAlquileres.add(jTprecioAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 120, 30));
+
+        jRActivoAlquiler.setOpaque(false);
         jPCardAlquileres.add(jRActivoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, -1, -1));
+
+        jRVigenciaAlquiler.setOpaque(false);
         jPCardAlquileres.add(jRVigenciaAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 380, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -348,6 +358,11 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
             this.dispose();//cierro la ventana
         }
     }//GEN-LAST:event_jBSalirAlquilerActionPerformed
+
+    private void jCListadoFiltradoPropiedadesAlquilerItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCListadoFiltradoPropiedadesAlquilerItemStateChanged
+       rellenarCampos();
+        
+    }//GEN-LAST:event_jCListadoFiltradoPropiedadesAlquilerItemStateChanged
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -506,7 +521,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         }
     }
      
-     public void filtrarDesde(){
+    public void filtrarDesde(){
               TipoPropiedad tipoSelec = (TipoPropiedad) jCFiltroTipoAlquiler.getSelectedItem();
         Zona zonaSelec = (Zona) jCFiltroZonaalquiler.getSelectedItem();
         double precio = Double.parseDouble(jTprecioAlquiler.getText());
@@ -520,5 +535,16 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
             }
         }   
      }
+     
+    public void  rellenarCampos(){
+        
+        Propiedad propiedadSeleccionado = (Propiedad) jCListadoFiltradoPropiedadesAlquiler.getSelectedItem();
+      
+        if (propiedadSeleccionado != null) {
+            jTIDPropiedadAlquiler.setText(String.valueOf(propiedadSeleccionado.getIdPropiedad()));
+            jTIDPropietarioAlquiler.setText(String.valueOf(propiedadSeleccionado.getPropietario()));
+        }    
+          
+    }
 
 }

@@ -3,6 +3,7 @@ package persistencia;
 import entidades.Estado;
 import entidades.Inspector;
 import entidades.Propiedad;
+import entidades.Propietario;
 import entidades.TipoPropiedad;
 import entidades.Zona;
 import java.sql.Connection;
@@ -18,6 +19,7 @@ public class PropiedadData {
 
     //Declaro variable
     private Connection con = null;
+    
 
     //Declaro constructor
     public PropiedadData() {
@@ -277,7 +279,7 @@ public class PropiedadData {
     }
 
     public List<Propiedad> filtrado(TipoPropiedad tipo, Zona zona ) {
-        String sql = "SELECT idPropiedad, direccion, altura, superficieTotal, precioTasado, antiguedad FROM propiedad  WHERE idTipo = ? and idZona = ? ";
+        String sql = "SELECT idPropiedad, idPropietario, direccion, altura, superficieTotal, precioTasado, antiguedad FROM propiedad  WHERE idTipo = ? and idZona = ? ";
         ArrayList<Propiedad> propiedades = new ArrayList<>();
 
         try {
@@ -285,10 +287,16 @@ public class PropiedadData {
             ps.setInt(1, tipo.getIdTipo());
             ps.setInt(2, zona.getIdZona());
             ResultSet rs = ps.executeQuery();
-
+            
             while (rs.next()) {
                 Propiedad pr1 = new Propiedad();
                 pr1.setIdPropiedad(rs.getInt("idPropiedad"));
+                
+                Propietario idprop=new Propietario();
+                idprop.setIdPropietario(rs.getInt("idPropietario"));
+                pr1.setPropietario(idprop);
+                
+                
                 pr1.setDireccion(rs.getString("direccion"));
                 pr1.setAltura(rs.getInt("altura"));
                 pr1.setSuperficieTotal(rs.getInt("superficieTotal"));

@@ -184,7 +184,8 @@ public class Propiedad {
 
     @Override
     public String toString() {
-        return idPropiedad + ") " + direccion + " " + altura;
+       
+        return idPropiedad + ") " + direccion + " " + altura + " "+ "IDProp: "+propietario;
     }
     
     
