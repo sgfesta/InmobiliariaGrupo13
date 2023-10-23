@@ -396,6 +396,7 @@ PropiedadData pd=new PropiedadData();
         for (TipoPropiedad tipo : tipD.listarTipoPropiedadesActivas()) {
             tipoProp.add(tipo);
             jCFiltroTipoAlquiler.addItem(tipo);
+            
 
         }
     }
@@ -488,11 +489,13 @@ PropiedadData pd=new PropiedadData();
      }
      
      public void filtrarHasta(){
-         //tipo
-         //zona
+         
+         TipoPropiedad tipoSelec = (TipoPropiedad) jCFiltroTipoAlquiler.getSelectedItem();
+         Zona zonaSelec=(Zona)jCFiltroZonaalquiler.getSelectedItem();
+       
          
          for (Propiedad propiedades : pd.listarPropiedades()) {
-             if(tipo && zona < jTprecioAlquiler.getText()){
+             if(tipoSelec== && zonaSelec== < jTprecioAlquiler.getText()){
                  jCListadoFiltradoPropiedadesAlquiler.addItem(title);
              }
          }
