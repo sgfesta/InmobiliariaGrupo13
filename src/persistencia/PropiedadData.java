@@ -276,4 +276,33 @@ public class PropiedadData {
         return pr1;
     }
 
+     public List<Propiedad> filtrado(TipoPropiedad tipo, Zona zona, double precio) {
+        String sql = "SELECT idPropiedad, direccion, altura, superficieTotal, precioTasado, antiguedad FROM propiedad  WHERE idTipo = ? and idZona = ? and precioTasado = ? ";
+         ArrayList<Propiedad> propiedades = new ArrayList<>();
+         
+         try {
+            PreparedStatement ps = con.prepareStatement(sql);
+                ps.setInt(1, tipo.getIdTipo()); 
+                ps.setInt(2, zona.getIdZona());
+                ps.setDouble(3, precio);
+             ResultSet rs = ps.executeQuery();
+             
+              while (rs.next()) {
+                Propiedad pr1 = new Propiedad();
+                pr1.setIdPropiedad(rs.getInt("idPropiedad"));
+                pr1.setDireccion(rs.getString("direccion"));
+                pr1.setAltura(rs.getInt("altura"));
+                pr1.setSuperficieTotal(rs.getInt("superficieTotal"));
+                pr1.setPrecioTasado(rs.getDouble("precioTasado"));
+                pr1.setAntiguedad(rs.getInt("antiguedad"));
+                propiedades.add(pr1);
+                
+         }
+                ps.close();
+         }
+         catch(SQLException ex){
+             JOptionPane.showMessageDialog(null, "Error en PropiedadData filtrado");
+         }
+        return propiedades;
+}
 }
