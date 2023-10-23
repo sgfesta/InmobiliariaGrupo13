@@ -492,10 +492,11 @@ PropiedadData pd=new PropiedadData();
          
          TipoPropiedad tipoSelec = (TipoPropiedad) jCFiltroTipoAlquiler.getSelectedItem();
          Zona zonaSelec=(Zona)jCFiltroZonaalquiler.getSelectedItem();
+         double precio=Double.parseDouble(jTprecioAlquiler.getText());
        
          
          for (Propiedad propiedades : pd.listarPropiedades()) {
-             if(tipoSelec== && zonaSelec== < jTprecioAlquiler.getText()){
+             if(tipoSelec== && zonaSelec== < precio){
                  jCListadoFiltradoPropiedadesAlquiler.addItem(title);
              }
          }
