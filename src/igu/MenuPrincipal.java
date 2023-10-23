@@ -97,7 +97,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jLPropietarios.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLPropietarios.setForeground(new java.awt.Color(255, 255, 255));
-        jLPropietarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3289576-individual-man-people-person_107097.png"))); // NOI18N
+        jLPropietarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/User_icon-icons.com_55902.png"))); // NOI18N
         jLPropietarios.setText("   PROPIETARIOS");
         jLPropietarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLPropietarios.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -248,7 +248,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jLbarraNombre.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
         jLbarraNombre.setForeground(new java.awt.Color(255, 255, 255));
-        jLbarraNombre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White_User_icon-icons.com_55902.png"))); // NOI18N
+        jLbarraNombre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White -admin_lock_padlock_icon_205893.png"))); // NOI18N
         jLbarraNombre.setText("Usuario : Desconectado");
         header.add(jLbarraNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
