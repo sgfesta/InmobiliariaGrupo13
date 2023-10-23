@@ -33,6 +33,7 @@ Propiedad pSelect = new Propiedad();
         QuitarLaBarraTitulo();
         cargarComboTipo();
         cargarComboZona();
+         cargarComboPropiedades();
         
 
     }
@@ -408,7 +409,16 @@ Propiedad pSelect = new Propiedad();
         }
     }
       
-  
+     public void cargarComboPropiedades(){
+          jCListadoFiltradoPropiedadesAlquiler.removeAllItems();
+         PropiedadData PropD = new PropiedadData();
+        ArrayList<Propiedad> propiedades = new ArrayList<>();
+
+        for (Propiedad propiedad : PropD.listarPropiedades()) {
+            propiedades.add(propiedad);
+            jCListadoFiltradoPropiedadesAlquiler.addItem(propiedad);
+      }
+      }
     
      public void agregarContrato(){
         ContratoData cd=new ContratoData();
@@ -494,18 +504,17 @@ Propiedad pSelect = new Propiedad();
        double precioInmueble = pSelect.getPrecioTasado();
          
          for (Propiedad propiedades : pd.filtrado(tipoSelec, zonaSelec, precio)) {
+             System.out.println(propiedades);
+             if(precioInmueble < precio){
+                 jCListadoFiltradoPropiedadesAlquiler.removeAllItems();
                  jCListadoFiltradoPropiedadesAlquiler.addItem(propiedades);
-//                 cargarComboPropiedades();
-//                 if(precioInmueble < precio){
-//                      cargarComboPropiedades();
-
-                 
+           
              }
          }
      }
-     
+//     
 //     public void filtrarDesde(){
 //         
 //     }
-//     
-//}
+     
+}
