@@ -325,12 +325,14 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jBNuevoAlquilerActionPerformed
 
     private void jBFiltrarAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFiltrarAlquilerActionPerformed
+       jCListadoFiltradoPropiedadesAlquiler.removeAllItems(); 
+        
         if (jRPrecioAlquiler.isSelected() == true) {
-            jCListadoFiltradoPropiedadesAlquiler.removeAllItems();
+      
             filtrarHasta();
         } else {
-              jCListadoFiltradoPropiedadesAlquiler.repaint();
-  //           filtrarDesde();
+           
+             filtrarDesde();
         }
     }//GEN-LAST:event_jBFiltrarAlquilerActionPerformed
 
@@ -497,15 +499,26 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
 
         for (Propiedad propiedades : pd.filtrado(tipoSelec, zonaSelec)) {
 
-            if (propiedades.getPrecioTasado() < precio) {
+            if (propiedades.getPrecioTasado() <= precio) {
                 jCListadoFiltradoPropiedadesAlquiler.addItem(propiedades);
 
             }
         }
     }
-//     
-//     public void filtrarDesde(){
-//         
-//     }
+     
+     public void filtrarDesde(){
+              TipoPropiedad tipoSelec = (TipoPropiedad) jCFiltroTipoAlquiler.getSelectedItem();
+        Zona zonaSelec = (Zona) jCFiltroZonaalquiler.getSelectedItem();
+        double precio = Double.parseDouble(jTprecioAlquiler.getText());
+
+
+        for (Propiedad propiedades : pd.filtrado(tipoSelec, zonaSelec)) {
+
+            if (propiedades.getPrecioTasado() >= precio) {
+                jCListadoFiltradoPropiedadesAlquiler.addItem(propiedades);
+
+            }
+        }   
+     }
 
 }
