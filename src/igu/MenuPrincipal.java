@@ -63,7 +63,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jLLogin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLLogin.setForeground(new java.awt.Color(255, 255, 255));
-        jLLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/admin_lock_padlock_icon_205893.png"))); // NOI18N
+        jLLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/key-keys-main-password-privilege_113429.png"))); // NOI18N
         jLLogin.setText("   LOGIN");
         jLLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLLogin.addMouseListener(new java.awt.event.MouseAdapter() {
