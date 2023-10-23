@@ -19,14 +19,14 @@ import java.util.List;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import persistencia.ContratoData;
+import persistencia.PropiedadData;
 import persistencia.TipoPropiedadData;
 import persistencia.ZonaData;
 
 public class MenuAlquileres extends javax.swing.JInternalFrame {
 ContratoData cd = new ContratoData();
-    /**
-     * Creates new form MenuAlquileres
-     */
+PropiedadData pd=new PropiedadData();
+   
     public MenuAlquileres() {
         initComponents();
         QuitarLaBarraTitulo();
@@ -84,9 +84,9 @@ ContratoData cd = new ContratoData();
         jDFechaContratoAlquiler = new com.toedter.calendar.JDateChooser();
         jCFiltroZonaalquiler = new javax.swing.JComboBox<>();
         jRPrecioAlquiler = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        jBFiltrarAlquiler = new javax.swing.JButton();
         jCListadoFiltradoPropiedadesAlquiler = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
+        jTprecioAlquiler = new javax.swing.JTextField();
         jRActivoAlquiler = new javax.swing.JRadioButton();
         jRVigenciaAlquiler = new javax.swing.JRadioButton();
 
@@ -283,34 +283,29 @@ ContratoData cd = new ContratoData();
         });
         jPCardAlquileres.add(jRPrecioAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, -1, 30));
 
-        jButton1.setBackground(new java.awt.Color(51, 51, 51));
-        jButton1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(51, 153, 255));
-        jButton1.setText("Filtrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jBFiltrarAlquiler.setBackground(new java.awt.Color(51, 51, 51));
+        jBFiltrarAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+        jBFiltrarAlquiler.setForeground(new java.awt.Color(51, 153, 255));
+        jBFiltrarAlquiler.setText("Filtrar");
+        jBFiltrarAlquiler.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jBFiltrarAlquilerActionPerformed(evt);
             }
         });
-        jPCardAlquileres.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 140, 80, -1));
+        jPCardAlquileres.add(jBFiltrarAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 140, 80, -1));
 
         jCListadoFiltradoPropiedadesAlquiler.setBackground(new java.awt.Color(153, 153, 153));
         jCListadoFiltradoPropiedadesAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jCListadoFiltradoPropiedadesAlquiler.setForeground(new java.awt.Color(51, 51, 51));
         jPCardAlquileres.add(jCListadoFiltradoPropiedadesAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 250, 30));
 
-        jTextField1.setBackground(new java.awt.Color(153, 153, 153));
-        jTextField1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 12)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(102, 204, 255));
-        jTextField1.setText("Precio");
-        jPCardAlquileres.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 120, 30));
+        jTprecioAlquiler.setBackground(new java.awt.Color(153, 153, 153));
+        jTprecioAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 0, 12)); // NOI18N
+        jTprecioAlquiler.setForeground(new java.awt.Color(102, 204, 255));
+        jTprecioAlquiler.setText("Precio");
+        jPCardAlquileres.add(jTprecioAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 120, 30));
 
         jRActivoAlquiler.setOpaque(false);
-        jRActivoAlquiler.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRActivoAlquilerActionPerformed(evt);
-            }
-        });
         jPCardAlquileres.add(jRActivoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, -1, -1));
 
         jRVigenciaAlquiler.setOpaque(false);
@@ -334,17 +329,17 @@ ContratoData cd = new ContratoData();
        agregarContrato();
     }//GEN-LAST:event_jBNuevoAlquilerActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jBFiltrarAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFiltrarAlquilerActionPerformed
+        if (jRPrecioAlquiler.isSelected()==true){
+            filtrarHasta();
+        }else{
+            filtrarDesde();
+        }
+    }//GEN-LAST:event_jBFiltrarAlquilerActionPerformed
 
     private void jRPrecioAlquilerStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jRPrecioAlquilerStateChanged
         actualizarPrecio();
     }//GEN-LAST:event_jRPrecioAlquilerStateChanged
-
-    private void jRActivoAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRActivoAlquilerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRActivoAlquilerActionPerformed
 
     private void jBSalirAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirAlquilerActionPerformed
         int respuesta = JOptionPane.showConfirmDialog(this, "Estás seguro que quieres salir?", "Cerrar Ventana", JOptionPane.YES_NO_OPTION);
@@ -357,9 +352,9 @@ ContratoData cd = new ContratoData();
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBFiltrarAlquiler;
     private javax.swing.JButton jBNuevoAlquiler;
     private javax.swing.JButton jBSalirAlquiler;
-    private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<TipoPropiedad> jCFiltroTipoAlquiler;
     private javax.swing.JComboBox<Zona> jCFiltroZonaalquiler;
     private javax.swing.JComboBox<String> jCListadoFiltradoPropiedadesAlquiler;
@@ -389,7 +384,7 @@ ContratoData cd = new ContratoData();
     private javax.swing.JTextField jTIDPropiedadAlquiler;
     private javax.swing.JTextField jTIDPropietarioAlquiler;
     private javax.swing.JTextField jTIDVendedor;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTprecioAlquiler;
     // End of variables declaration//GEN-END:variables
  
 
@@ -490,6 +485,21 @@ ContratoData cd = new ContratoData();
          jDFechaInicioAlquiler.setDate(null);
          jDFechaFinAlquiler.setDate(null);
          jDFechaContratoAlquiler.setDate(null);
+     }
+     
+     public void filtrarHasta(){
+         //tipo
+         //zona
+         
+         for (Propiedad propiedades : pd.listarPropiedades()) {
+             if(tipo && zona < jTprecioAlquiler.getText()){
+                 jCListadoFiltradoPropiedadesAlquiler.addItem(title);
+             }
+         }
+     }
+     
+     public void filtrarDesde(){
+         
      }
      
 }
