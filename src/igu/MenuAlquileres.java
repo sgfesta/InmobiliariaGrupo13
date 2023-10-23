@@ -33,7 +33,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         QuitarLaBarraTitulo();
         cargarComboTipo();
         cargarComboZona();
-        cargarComboPropiedades();
+
 
     }
     //defino dos métodosdentro del JInternalFrame y lo instanciamos de la siguiente manera.
@@ -335,7 +335,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jBNuevoAlquilerActionPerformed
 
     private void jBFiltrarAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFiltrarAlquilerActionPerformed
-       jCListadoFiltradoPropiedadesAlquiler.removeAllItems(); 
+    
         
         if (jRPrecioAlquiler.isSelected() == true) {
       
@@ -424,16 +424,6 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         }
     }
 
-    public void cargarComboPropiedades() {
-        jCListadoFiltradoPropiedadesAlquiler.removeAllItems();
-        PropiedadData PropD = new PropiedadData();
-        ArrayList<Propiedad> propiedades = new ArrayList<>();
-
-        for (Propiedad propiedad : PropD.listarPropiedades()) {
-            propiedades.add(propiedad);
-            jCListadoFiltradoPropiedadesAlquiler.addItem(propiedad);
-        }
-    }
 
     public void agregarContrato() {
         ContratoData cd = new ContratoData();
@@ -542,7 +532,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
       
         if (propiedadSeleccionado != null) {
             jTIDPropiedadAlquiler.setText(String.valueOf(propiedadSeleccionado.getIdPropiedad()));
-            jTIDPropietarioAlquiler.setText(String.valueOf(propiedadSeleccionado.getPropietario()));
+            jTIDPropietarioAlquiler.setText(String.valueOf(propiedadSeleccionado.getPropietario().getIdPropietario()));
         }    
           
     }
