@@ -329,8 +329,8 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
             jCListadoFiltradoPropiedadesAlquiler.removeAllItems();
             filtrarHasta();
         } else {
-//              jCListadoFiltradoPropiedadesAlquiler.repaint();
-//              filtrarDesde();
+              jCListadoFiltradoPropiedadesAlquiler.repaint();
+  //           filtrarDesde();
         }
     }//GEN-LAST:event_jBFiltrarAlquilerActionPerformed
 
@@ -493,8 +493,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         TipoPropiedad tipoSelec = (TipoPropiedad) jCFiltroTipoAlquiler.getSelectedItem();
         Zona zonaSelec = (Zona) jCFiltroZonaalquiler.getSelectedItem();
         double precio = Double.parseDouble(jTprecioAlquiler.getText());
-//        pSelect = (Propiedad) jCListadoFiltradoPropiedadesAlquiler.getSelectedItem();
-//        double precioInmueble = pSelect.getPrecioTasado();
+
 
         for (Propiedad propiedades : pd.filtrado(tipoSelec, zonaSelec)) {
 
