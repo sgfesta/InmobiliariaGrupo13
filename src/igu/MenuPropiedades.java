@@ -711,7 +711,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTPrecioTasadoPropiedadesKeyTyped
 
     private void jTDireccionPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDireccionPropiedadesKeyReleased
-       if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
+        if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
                     && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
                     && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
                     && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
@@ -719,6 +719,11 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
        }else{
             deshabilitarBotones();
        }
+        jBNuevoPropiedades.setEnabled(true);
+        
+       if (jTDireccionPropiedades.getText().isEmpty()) {
+            deshabilitarBotones();
+        }
     }//GEN-LAST:event_jTDireccionPropiedadesKeyReleased
 
     private void jTAlturaPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTAlturaPropiedadesKeyReleased
@@ -729,18 +734,26 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 jBGuardarPropiedades.setEnabled(true);
        }else{
             deshabilitarBotones();
-       }
+       }    
+        jBNuevoPropiedades.setEnabled(true);
+       if (jTAlturaPropiedades.getText().isEmpty()){ 
+            deshabilitarBotones();
+        }
     }//GEN-LAST:event_jTAlturaPropiedadesKeyReleased
 
     private void jTSuperTotalPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTSuperTotalPropiedadesKeyReleased
-       if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
+        if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
                     && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
                     && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
                     && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
                  jBGuardarPropiedades.setEnabled(true);
        }else{
+            deshabilitarBotones(); 
+        }
+        jBNuevoPropiedades.setEnabled(true);
+       if (jTSuperTotalPropiedades.getText().isEmpty()) {
             deshabilitarBotones();
-       }
+        }
     }//GEN-LAST:event_jTSuperTotalPropiedadesKeyReleased
 
     private void jTPrecioTasadoPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTPrecioTasadoPropiedadesKeyReleased
@@ -750,8 +763,12 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                     && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
                  jBGuardarPropiedades.setEnabled(true);
        }else{
+            deshabilitarBotones(); 
+        }
+        jBNuevoPropiedades.setEnabled(true);
+        if (jTPrecioTasadoPropiedades.getText().isEmpty()) {
             deshabilitarBotones();
-       }
+        }
     }//GEN-LAST:event_jTPrecioTasadoPropiedadesKeyReleased
 
     private void jTAntiguedadPropiedadKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTAntiguedadPropiedadKeyReleased
@@ -763,6 +780,10 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
        }else{
             deshabilitarBotones();
        }
+        jBNuevoPropiedades.setEnabled(true);
+        if (jTAntiguedadPropiedad.getText().isEmpty()) {
+            deshabilitarBotones();
+        }
     }//GEN-LAST:event_jTAntiguedadPropiedadKeyReleased
 
 
