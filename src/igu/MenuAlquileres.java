@@ -307,6 +307,11 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jTprecioAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 0, 12)); // NOI18N
         jTprecioAlquiler.setForeground(new java.awt.Color(102, 204, 255));
         jTprecioAlquiler.setText("Precio");
+        jTprecioAlquiler.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTprecioAlquilerFocusGained(evt);
+            }
+        });
         jTprecioAlquiler.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTprecioAlquilerKeyTyped(evt);
@@ -339,15 +344,18 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jBNuevoAlquilerActionPerformed
 
     private void jBFiltrarAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFiltrarAlquilerActionPerformed
-    
-        
-        if (jRPrecioAlquiler.isSelected() == true) {
-      
-            filtrarHasta();
+       
+      if (jTprecioAlquiler.getText().equals("Precio") || jTprecioAlquiler.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "El campo 'Precio de Alquiler' debe ser modificado. No puede estar vacío ni contener la palabra 'Precio'.");
         } else {
-           
-             filtrarDesde();
+            if (jRPrecioAlquiler.isSelected()) {
+                filtrarHasta();
+            } else {
+                filtrarDesde();
+            }
         }
+      
+
     }//GEN-LAST:event_jBFiltrarAlquilerActionPerformed
 
     private void jRPrecioAlquilerStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jRPrecioAlquilerStateChanged
@@ -376,6 +384,10 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
             evt.consume();
         }
     }//GEN-LAST:event_jTprecioAlquilerKeyTyped
+
+    private void jTprecioAlquilerFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTprecioAlquilerFocusGained
+        jTprecioAlquiler.setText("");
+    }//GEN-LAST:event_jTprecioAlquilerFocusGained
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -539,15 +551,23 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         }   
      }
      
-    public void  rellenarCampos(){
-        
+    public void rellenarCampos() {
+
         Propiedad propiedadSeleccionado = (Propiedad) jCListadoFiltradoPropiedadesAlquiler.getSelectedItem();
-      
+
         if (propiedadSeleccionado != null) {
-            jTIDPropiedadAlquiler.setText(String.valueOf(propiedadSeleccionado.getIdPropiedad()));
-            jTIDPropietarioAlquiler.setText(String.valueOf(propiedadSeleccionado.getPropietario().getIdPropietario()));
-        }    
-          
+            String mensaje = "Sup Total: " + propiedadSeleccionado.getSuperficieTotal() + " m²\n"
+                    + "Precio Tasado: $" + propiedadSeleccionado.getPrecioTasado() + "\n"
+                    + "Antigüedad: " + propiedadSeleccionado.getAntiguedad() + " años\n"
+                    + "Observaciones: " + propiedadSeleccionado.getObservaciones();
+
+            JOptionPane.showMessageDialog(null, mensaje, "Detalles de la Propiedad", JOptionPane.INFORMATION_MESSAGE);
+        }
+
+//        if (propiedadSeleccionado != null) {
+//            jTIDPropiedadAlquiler.setText(String.valueOf(propiedadSeleccionado.getIdPropiedad()));
+//            jTIDPropietarioAlquiler.setText(String.valueOf(propiedadSeleccionado.getPropietario().getIdPropietario()));
+//        }    
     }
 
 }

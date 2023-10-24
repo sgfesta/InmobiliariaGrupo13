@@ -620,6 +620,7 @@
             <Property name="text" type="java.lang.String" value="Precio"/>
           </Properties>
           <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTprecioAlquilerFocusGained"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTprecioAlquilerKeyTyped"/>
           </Events>
           <Constraints>
