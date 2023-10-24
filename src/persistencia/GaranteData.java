@@ -181,6 +181,9 @@ public class GaranteData {
                 garante.setDomicilio(rs.getString("domicilio"));
                 garante.setTelefono(rs.getString("telefono"));
                 garante.setActivo(rs.getBoolean("activo"));
+            } else {
+                JOptionPane.showMessageDialog(null, "No existe un Garante con ese DNI");
+                
             }
              //Cierro la Conexion
             ps.close();

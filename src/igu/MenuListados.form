@@ -519,7 +519,7 @@
                       <Color blue="ff" green="cc" red="33" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="Activo"/>
+                    <Property name="text" type="java.lang.String" value="Inactivo"/>
                     <Property name="verticalAlignment" type="int" value="3"/>
                   </Properties>
                 </Component>
@@ -530,6 +530,9 @@
                     </Property>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jRGaranteItemStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLBusquedaGarante">
                   <Properties>
@@ -615,10 +618,6 @@
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jRInspector" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="333" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
                                   <Component id="jBNuevoInspector" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jBModificarInspector" min="-2" max="-2" attributes="0"/>
@@ -627,6 +626,10 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jBSalirInspector" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jRInspector" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="358" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -679,9 +682,9 @@
                               <Component id="jLBusquedaInspector" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jCBusquedaInspector" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="226" max="32767" attributes="0"/>
+                          <EmptySpace pref="214" max="32767" attributes="0"/>
                           <Component id="jRInspector" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jBNuevoInspector" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBModificarInspector" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1002,8 +1005,14 @@
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRInspector">
                   <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="null"/>
+                    </Property>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jRInspectorItemStateChanged"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1055,7 +1064,7 @@
                                   <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                                   <Component id="jTIDVendedorListados" min="-2" pref="122" max="-2" attributes="0"/>
                                   <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                  <Component id="jLActivoListados" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="jLActivoContrato" min="-2" pref="140" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jRActivoContrato" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -1167,7 +1176,7 @@
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                   <Component id="jLIDVendedorListados" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTIDVendedorListados" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLActivoListados" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLActivoContrato" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jRActivoContrato" min="-2" max="-2" attributes="0"/>
@@ -1400,7 +1409,7 @@
                     <Property name="verticalAlignment" type="int" value="3"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLActivoListados">
+                <Component class="javax.swing.JLabel" name="jLActivoContrato">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI Black" size="14" style="1"/>
@@ -1557,6 +1566,9 @@
                     </Property>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jRActivoContratoItemStateChanged"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1979,6 +1991,9 @@
                   <Properties>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jRInquilinoItemStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jbBuscarInquilino">
                   <Properties>
