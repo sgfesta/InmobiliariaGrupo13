@@ -104,7 +104,6 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel28.setText("Inicio > Alquileres");
-        jLabel28.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout jPBarraNavegador2Layout = new javax.swing.GroupLayout(jPBarraNavegador2);
         jPBarraNavegador2.setLayout(jPBarraNavegador2Layout);
@@ -112,17 +111,15 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
             jPBarraNavegador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPBarraNavegador2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 731, Short.MAX_VALUE))
+                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(616, Short.MAX_VALUE))
         );
         jPBarraNavegador2Layout.setVerticalGroup(
             jPBarraNavegador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPBarraNavegador2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        jPCardAlquileres.add(jPBarraNavegador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 6, -1, -1));
+        jPCardAlquileres.add(jPBarraNavegador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 8, 750, 30));
 
         jLTituloAlquiler.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLTituloAlquiler.setForeground(new java.awt.Color(51, 204, 255));

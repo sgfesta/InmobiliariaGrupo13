@@ -306,7 +306,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jLNavegacionEnBarra.setForeground(new java.awt.Color(255, 255, 255));
         jLNavegacionEnBarra.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLNavegacionEnBarra.setText("Inicio > Propiedades");
-        jLNavegacionEnBarra.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout jPBarraNavegadorLayout = new javax.swing.GroupLayout(jPBarraNavegador);
         jPBarraNavegador.setLayout(jPBarraNavegadorLayout);
@@ -314,15 +313,12 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             jPBarraNavegadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPBarraNavegadorLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLNavegacionEnBarra, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLNavegacionEnBarra, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPBarraNavegadorLayout.setVerticalGroup(
             jPBarraNavegadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPBarraNavegadorLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLNavegacionEnBarra)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jLNavegacionEnBarra, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
         );
 
         jRDisponibilidadPropiedades.setBackground(new java.awt.Color(51, 51, 51));
@@ -330,6 +326,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jRDisponibilidadPropiedades.setForeground(new java.awt.Color(255, 255, 255));
         jRDisponibilidadPropiedades.setSelected(true);
         jRDisponibilidadPropiedades.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jRDisponibilidadPropiedades.setOpaque(false);
         jRDisponibilidadPropiedades.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jRDisponibilidadPropiedadesItemStateChanged(evt);
@@ -344,6 +341,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jRActivoPropiedades1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
         jRActivoPropiedades1.setForeground(new java.awt.Color(255, 255, 255));
         jRActivoPropiedades1.setSelected(true);
+        jRActivoPropiedades1.setOpaque(false);
         jRActivoPropiedades1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jRActivoPropiedades1ItemStateChanged(evt);
@@ -420,7 +418,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addGroup(jPPropiedadesLayout.createSequentialGroup()
                                                 .addGap(18, 18, 18)
-                                                .addComponent(jCListarZonaPropiedades, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addComponent(jCListarZonaPropiedades, 0, 188, Short.MAX_VALUE))
                                             .addGroup(jPPropiedadesLayout.createSequentialGroup()
                                                 .addGap(18, 18, 18)
                                                 .addComponent(jCListarEstadoPropiedades, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -493,7 +491,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jPPropiedadesLayout.setVerticalGroup(
             jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
+                .addGap(16, 16, 16)
                 .addComponent(jPBarraNavegador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
                 .addComponent(jLTituloPropiedades)
@@ -552,7 +550,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                                     .addComponent(jCListarEstadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLEstadoPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jBGuardarPropiedades)
