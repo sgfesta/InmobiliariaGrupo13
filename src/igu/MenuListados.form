@@ -149,15 +149,6 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="jBNuevoGarante" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jBModificarGarante" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jBEliminarGarante" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jBSalirGarante" min="-2" pref="67" max="-2" attributes="0"/>
-                              </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
@@ -171,15 +162,16 @@
                                       <EmptySpace min="-2" pref="255" max="-2" attributes="0"/>
                                       <Component id="jLTituloGarante" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="292" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLActivoGarante" min="-2" pref="140" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="jRGarante" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Component id="jLDomicilio" min="-2" pref="140" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
@@ -207,7 +199,16 @@
                                               </Group>
                                           </Group>
                                       </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jBNuevoGarante" min="-2" pref="80" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jBModificarGarante" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jBEliminarGarante" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jBSalirGarante" min="-2" pref="67" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="146" max="32767" attributes="0"/>
@@ -231,7 +232,7 @@
                               </Group>
                               <Component id="jbBuscarGarante" alignment="1" min="-2" pref="47" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="63" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jTIDGarante" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLIDGarante" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -261,7 +262,7 @@
                               <Component id="jLActivoGarante" min="-2" max="-2" attributes="0"/>
                               <Component id="jRGarante" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                          <EmptySpace pref="64" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jBNuevoGarante" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBModificarGarante" alignment="3" min="-2" max="-2" attributes="0"/>
