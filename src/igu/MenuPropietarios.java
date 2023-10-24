@@ -263,6 +263,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
             }
         });
 
+        idPropietario.setBorder(null);
         idPropietario.setEnabled(false);
 
         javax.swing.GroupLayout jPCardPropietariosLayout = new javax.swing.GroupLayout(jPCardPropietarios);
@@ -348,7 +349,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel34)
                     .addComponent(jrbPropietario))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addComponent(idPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(70, 70, 70)
                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

@@ -154,7 +154,7 @@
                       <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
                       <Component id="jrbPropietario" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="8" max="32767" attributes="0"/>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
                   <Component id="idPropietario" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -501,6 +501,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="idPropietario">
           <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
