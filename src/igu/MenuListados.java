@@ -190,6 +190,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         );
 
         jTabbedPane1.setBackground(new java.awt.Color(51, 51, 51));
+        jTabbedPane1.setForeground(new java.awt.Color(51, 204, 255));
         jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jTabbedPane1StateChanged(evt);
@@ -353,7 +354,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         });
 
         jbBuscarGarante.setBackground(new java.awt.Color(255, 153, 102));
-        jbBuscarGarante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Buscar.png"))); // NOI18N
+        jbBuscarGarante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-magnifier-search-zoom_110300.png"))); // NOI18N
         jbBuscarGarante.setBorder(null);
         jbBuscarGarante.setBorderPainted(false);
         jbBuscarGarante.setOpaque(false);
@@ -384,7 +385,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addComponent(jTDNIGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jbBuscarGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 140, Short.MAX_VALUE))
+                .addGap(0, 145, Short.MAX_VALUE))
             .addGroup(jPGaranteLayout.createSequentialGroup()
                 .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPGaranteLayout.createSequentialGroup()
@@ -638,7 +639,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addComponent(jLBusquedaInspector)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jCBusquedaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(241, Short.MAX_VALUE))
+                .addContainerGap(247, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInspectorLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -681,7 +682,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addGroup(jPInspectorLayout.createSequentialGroup()
                             .addComponent(jLActivoInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(128, 128, 128)))
-                    .addContainerGap(250, Short.MAX_VALUE)))
+                    .addContainerGap(256, Short.MAX_VALUE)))
         );
         jPInspectorLayout.setVerticalGroup(
             jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -914,7 +915,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addComponent(jBSalirListados)
                 .addGap(232, 232, 232))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(86, Short.MAX_VALUE)
+                .addContainerGap(92, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1190,7 +1191,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         });
 
         jbBuscarInquilino.setBackground(new java.awt.Color(255, 153, 102));
-        jbBuscarInquilino.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Buscar.png"))); // NOI18N
+        jbBuscarInquilino.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-magnifier-search-zoom_110300.png"))); // NOI18N
         jbBuscarInquilino.setBorder(null);
         jbBuscarInquilino.setBorderPainted(false);
         jbBuscarInquilino.setOpaque(false);
@@ -1244,7 +1245,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                                         .addGap(11, 11, 11)))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInquilinosLayout.createSequentialGroup()
-                .addContainerGap(147, Short.MAX_VALUE)
+                .addContainerGap(153, Short.MAX_VALUE)
                 .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jBSalirInquilinos)
                     .addGroup(jPInquilinosLayout.createSequentialGroup()
@@ -1312,7 +1313,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPBarraNavegador3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPCardListadosLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
