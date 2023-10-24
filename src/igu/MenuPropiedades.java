@@ -206,7 +206,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jTAntiguedadPropiedad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTAntiguedadPropiedad.setMinimumSize(new java.awt.Dimension(14, 23));
         jTAntiguedadPropiedad.setPreferredSize(new java.awt.Dimension(14, 23));
-        jTAntiguedadPropiedad.setRequestFocusEnabled(false);
 
         jLEstadoPropiedad.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLEstadoPropiedad.setForeground(new java.awt.Color(51, 204, 255));
@@ -533,7 +532,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                                     .addComponent(jCListarEstadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLEstadoPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jBGuardarPropiedades)
@@ -582,20 +581,25 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
     private void jBModificarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarPropiedadesActionPerformed
         modificarPropiedad(); // Llama al método modificar solo si se ha seleccionado una propiedad
-        
+
 
     }//GEN-LAST:event_jBModificarPropiedadesActionPerformed
 
     private void jBEliminarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarPropiedadesActionPerformed
-        Propiedad propiedadSeleccionado = (Propiedad) jCListaPropiedades.getSelectedItem();
-        pd.darBajaAPropiedad(propiedadSeleccionado);
-        limpiarCampos();
-        cargarComboPropiedades();
-
+        int respuesta = JOptionPane.showConfirmDialog(this,"\n\n¿Estás seguro que deseas eliminar la propiedad?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
+        
+        if (respuesta == JOptionPane.YES_OPTION){
+         Propiedad propiedadSeleccionado = (Propiedad) jCListaPropiedades.getSelectedItem();
+         pd.darBajaAPropiedad(propiedadSeleccionado);
+         limpiarCampos();
+         cargarComboPropiedades();
+        }
+            
+        
     }//GEN-LAST:event_jBEliminarPropiedadesActionPerformed
 
     private void jCListaPropietariosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCListaPropietariosItemStateChanged
-         int idPropietario = -1;
+        int idPropietario = -1;
         Object selectedItem = jCListaPropietarios.getSelectedItem();
         if (selectedItem != null) {
             if (selectedItem instanceof Propietario) { //USO UN instanceof PARA VERIFICAR SI EL OBJETO ES UNA INSTANCIA DE LA CALSE PROPIETARIO, LO CASTEO Y SACO EL ID DEL PROPIETARIO
@@ -630,7 +634,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jRActivoPropiedades1ItemStateChanged
 
     private void jBNuevoPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoPropiedadesActionPerformed
-       limpiarCampos();
+        limpiarCampos();
     }//GEN-LAST:event_jBNuevoPropiedadesActionPerformed
 
     private void jTSuperTotalPropiedadesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTSuperTotalPropiedadesKeyTyped
@@ -819,10 +823,9 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             jTPrecioTasadoPropiedades.setText(String.valueOf(propiedadSeleccionado.getPrecioTasado()));
             jTAntiguedadPropiedad.setText(String.valueOf(propiedadSeleccionado.getAntiguedad()));
             jTObservacionesPropiedades.setText(String.valueOf(propiedadSeleccionado.getObservaciones()));
-            
+
             //combos
             // jCListaTipoPropiedades 
-
             for (int i = 0; i < jCListaTipoPropiedades.getItemCount(); i++) {
                 TipoPropiedad x = jCListaTipoPropiedades.getItemAt(i);
                 if (x.getIdTipo() == propiedadSeleccionado.getTipo().getIdTipo()) {
@@ -853,52 +856,64 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                     jCListarEstadoPropiedades.setSelectedIndex(i);
                 }
             }
-             // Botones Radiales
-             
+            // Botones Radiales
+
             actualizarDisponibilidad();
-            
+
             if (propiedadSeleccionado.isDisponible() == true) {
                 jRDisponibilidadPropiedades.setSelected(true);
             } else {
                 jRDisponibilidadPropiedades.setSelected(false);
             }
-            
 
             actualizarActivo();
-            
+
             if (propiedadSeleccionado.isActivo() == true) {
                 jRActivoPropiedades1.setSelected(true);
             } else {
-                
+
                 jRActivoPropiedades1.setSelected(false);
             }
 
-             
         }
     }
 
     public void modificarPropiedad() {
 
         try {
-            PropietarioData prod = new PropietarioData();
-            Propiedad propiedadSeleccionada = (Propiedad) jCListaPropiedades.getSelectedItem();
-            int id = propiedadSeleccionada.getIdPropiedad();
-            Propietario propietario = (Propietario) jCListaPropietarios.getSelectedItem();
-            String direccion = jTDireccionPropiedades.getText();
-            int altura = Integer.parseInt(jTAlturaPropiedades.getText());
-            TipoPropiedad tipoSelec = (TipoPropiedad) jCListaTipoPropiedades.getSelectedItem();
-            int superficieTotal = Integer.parseInt(jTSuperTotalPropiedades.getText());
-            double precioTasado = Double.parseDouble(jTPrecioTasadoPropiedades.getText());
-            int antiguedad = Integer.parseInt(jTAntiguedadPropiedad.getText());
-            Inspector insSelec = (Inspector) jCListaInspectoresPropiedades.getSelectedItem();
-            Zona zona = (Zona) jCListarZonaPropiedades.getSelectedItem();
-            Estado estado = (Estado) jCListarEstadoPropiedades.getSelectedItem();
-            String observaciones = jTObservacionesPropiedades.getText();
-            boolean disponible = jRDisponibilidadPropiedades.isSelected();
-            boolean activo = jRActivoPropiedades1.isSelected();
-            Propiedad nuevoP = new Propiedad(id, propietario, direccion, altura, tipoSelec, superficieTotal, precioTasado, antiguedad, insSelec, zona, estado, observaciones, disponible, activo);
-            pd.modificarPropiedad(nuevoP);
-            JOptionPane.showMessageDialog(this, "Propiedad modificada exitosamente");
+            if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
+                    && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
+                    && !jTAntiguedadPropiedad.getText().isEmpty() && !jTObservacionesPropiedades.getText().isEmpty()) {
+
+                PropietarioData prod = new PropietarioData();
+                Propiedad propiedadSeleccionada = (Propiedad) jCListaPropiedades.getSelectedItem();
+                int id = propiedadSeleccionada.getIdPropiedad();
+                Propietario propietario = (Propietario) jCListaPropietarios.getSelectedItem();
+                String direccion = jTDireccionPropiedades.getText();
+                int altura = Integer.parseInt(jTAlturaPropiedades.getText());
+                TipoPropiedad tipoSelec = (TipoPropiedad) jCListaTipoPropiedades.getSelectedItem();
+                int superficieTotal = Integer.parseInt(jTSuperTotalPropiedades.getText());
+                double precioTasado = Double.parseDouble(jTPrecioTasadoPropiedades.getText());
+                int antiguedad = Integer.parseInt(jTAntiguedadPropiedad.getText());
+                Inspector insSelec = (Inspector) jCListaInspectoresPropiedades.getSelectedItem();
+                Zona zona = (Zona) jCListarZonaPropiedades.getSelectedItem();
+                Estado estado = (Estado) jCListarEstadoPropiedades.getSelectedItem();
+                String observaciones = jTObservacionesPropiedades.getText();
+                boolean disponible = jRDisponibilidadPropiedades.isSelected();
+                boolean activo = jRActivoPropiedades1.isSelected();
+                Propiedad nuevoP = new Propiedad(id, propietario, direccion, altura, tipoSelec, superficieTotal, precioTasado, antiguedad, insSelec, zona, estado, observaciones, disponible, activo);
+                //pd.modificarPropiedad(nuevoP);
+
+                int respuesta = JOptionPane.showConfirmDialog(this, "\n\n¿Estás seguro que deseas guardar los cambios?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
+                if (respuesta == JOptionPane.YES_OPTION) {
+                    pd.modificarPropiedad(nuevoP); // Guardo el cambio
+                    JOptionPane.showMessageDialog(this, "Modificado exitosamente");
+                }else{
+                    limpiarCampos();
+                    rellenarCampos();
+                    JOptionPane.showMessageDialog(this, "Campos reestablecidos");
+                }
+            }
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
         }
@@ -919,9 +934,9 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             jLActivoPropiedades.setText("Inactiva");
         }
     }
-    
-    public void cargarComboPropiedades(){
-         int idPropietario = -1;
+
+    public void cargarComboPropiedades() {
+        int idPropietario = -1;
         Object selectedItem = jCListaPropietarios.getSelectedItem();
         if (selectedItem != null) {
             if (selectedItem instanceof Propietario) { //USO UN instanceof PARA VERIFICAR SI EL OBJETO ES UNA INSTANCIA DE LA CALSE PROPIETARIO, LO CASTEO Y SACO EL ID DEL PROPIETARIO

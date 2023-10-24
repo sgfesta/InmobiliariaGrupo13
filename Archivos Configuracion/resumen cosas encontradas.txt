@@ -3,22 +3,23 @@ resumen cosas encontradas
 Menu propiedades
 1-Cuando pasas de un propietario a otro , se ve bien, pero cuando un propietario no tiene propiedades, las listas tipo, inspector, zona y estado siguen cargadas
 2-Los campos superficie y precio admiten letras (listo)
-3-Antiguedad no se puede modificar
-4-boton modificar esta siempre activo, no verifica si hay campos vacios, ni pregunta si estas seguro si deseas modificar
-5-boton guargar hace lo mismo
-6-boton eliminar , hace bien la tarea, pero no te pregunta si estas seguro
+3-Antiguedad no se puede modificar (listo)
+4-boton modificar esta siempre activo, no verifica si hay campos vacios, 
+4.1 ni pregunta si estas seguro si deseas modificar (listo)
+5-boton guargar hace lo mismo (listo verificacion)
+6-boton eliminar , hace bien la tarea, pero no te pregunta si estas seguro (listo)
 
 deberiamos idear com activar los botones y en que momento desactivarlos
 
 Menu Propietario
 1-Boton dni acepta letras (listo)
 2-Boton telefono acepta letras (listo)
-3- debemos asegurarnos que el usuario esta decidido a borrar o modificar..
-4- Cuando salgo el color del formulario cambia a gris. ver boton salir
+3- debemos asegurarnos que el usuario esta decidido a borrar o modificar..(listo)
+4- Cuando salgo el color del formulario cambia a gris. ver boton salir (listo)
 
 MenuAlqu1leres
 1-Boton precio acepta letras(listo)
-2- los campos ID aceptan poner cosas no deberian.
+2- los campos ID aceptan poner cosas no deberian. (listo) (los campos idpropiedad e idpropietario son deshabilitados ya que se rellenan solos cuando selec propiedad, los demas quedan habilitados)
 
 MenuListados
 garante

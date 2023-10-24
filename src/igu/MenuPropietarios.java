@@ -16,13 +16,15 @@ import persistencia.PropietarioData;
  * @author Pirrupi
  */
 public class MenuPropietarios extends javax.swing.JInternalFrame {
+
     PropietarioData pd = new PropietarioData();
-     Propietario pSelect = new Propietario();
+    Propietario pSelect = new Propietario();
+
     /**
      * Creates new form MenuPropietarios
      */
     public MenuPropietarios() {
-        initComponents(); 
+        initComponents();
         idPropietario.setVisible(false);
         QuitarLaBarraTitulo();
         limpiarCampos();
@@ -245,6 +247,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         });
 
         jrbPropietario.setSelected(true);
+        jrbPropietario.setOpaque(false);
 
         jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-magnifier-search-zoom_110300.png"))); // NOI18N
         jLabel46.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -296,10 +299,13 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                                     .addComponent(jTIDPropietarios4, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel46)
-                                .addGap(38, 38, 38)
                                 .addGroup(jPCardPropietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(idPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addGroup(jPCardPropietariosLayout.createSequentialGroup()
+                                        .addGap(38, 38, 38)
+                                        .addComponent(idPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPCardPropietariosLayout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addComponent(jLabel5)
                     .addGroup(jPCardPropietariosLayout.createSequentialGroup()
                         .addComponent(jBNuevo2)
@@ -390,13 +396,18 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         eliminarPropietario();
         limpiarCampos();
         deshabilitarBotones();
-        
+
     }//GEN-LAST:event_jBEliminarPropietarioActionPerformed
 
     private void jBSalirPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirPropietarioActionPerformed
-        
-        jPCardPropietarios.setVisible(false);
-        
+
+        int respuesta = JOptionPane.showConfirmDialog(this, "Estás seguro que quieres salir?", "Cerrar Ventana", JOptionPane.YES_NO_OPTION);
+
+        if (respuesta == JOptionPane.YES_OPTION) {
+
+            this.dispose();//cierro la ventana
+        }
+
     }//GEN-LAST:event_jBSalirPropietarioActionPerformed
 
     private void jLabel46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel46MouseClicked
@@ -404,46 +415,46 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jLabel46MouseClicked
 
     private void jTIDPropietariosNomKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietariosNomKeyReleased
-        if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
-               jBNuevo2.setEnabled(true);
-        }else{
-              deshabilitarBotones();
+        if (!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty() && !jTIDPropietarios6.getText().isEmpty()) {
+            jBNuevo2.setEnabled(true);
+        } else {
+            deshabilitarBotones();
         }
     }//GEN-LAST:event_jTIDPropietariosNomKeyReleased
 
     private void jTIDPropietariosApKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietariosApKeyReleased
-        if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
-               jBNuevo2.setEnabled(true);
-        }else{
-              deshabilitarBotones();
+        if (!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty() && !jTIDPropietarios6.getText().isEmpty()) {
+            jBNuevo2.setEnabled(true);
+        } else {
+            deshabilitarBotones();
         }
     }//GEN-LAST:event_jTIDPropietariosApKeyReleased
 
     private void jTIDPropietarios4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios4KeyReleased
-         if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
-               jBNuevo2.setEnabled(true);
-        }else{
-              deshabilitarBotones();
-          }
-          
+        if (!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty() && !jTIDPropietarios6.getText().isEmpty()) {
+            jBNuevo2.setEnabled(true);
+        } else {
+            deshabilitarBotones();
+        }
+
     }//GEN-LAST:event_jTIDPropietarios4KeyReleased
 
     private void jTIDPropietarios5KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios5KeyReleased
-         if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
-               jBNuevo2.setEnabled(true);
+        if (!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty() && !jTIDPropietarios6.getText().isEmpty()) {
+            jBNuevo2.setEnabled(true);
         }
     }//GEN-LAST:event_jTIDPropietarios5KeyReleased
 
     private void jTIDPropietarios6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios6KeyReleased
-          if(!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty()  && !jTIDPropietarios6.getText().isEmpty()){
-               jBNuevo2.setEnabled(true);
-        }else{
-              deshabilitarBotones();
+        if (!jTIDPropietariosAp.getText().isEmpty() && !jTIDPropietariosNom.getText().isEmpty() && !jTIDPropietarios4.getText().isEmpty() && !jTIDPropietarios5.getText().isEmpty() && !jTIDPropietarios6.getText().isEmpty()) {
+            jBNuevo2.setEnabled(true);
+        } else {
+            deshabilitarBotones();
         }
     }//GEN-LAST:event_jTIDPropietarios6KeyReleased
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       limpiarCampos();
+        limpiarCampos();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTIDPropietarios4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios4KeyTyped
@@ -456,7 +467,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTIDPropietarios4KeyTyped
 
     private void jTIDPropietarios5KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios5KeyTyped
-         //Solo dejo introducir numeros y -
+        //Solo dejo introducir numeros y -
         int key = evt.getKeyChar();
         boolean numero = (key >= 48 && key <= 57) || key == 45;
         if (!numero) {
@@ -490,28 +501,26 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTIDPropietariosNom;
     private javax.swing.JRadioButton jrbPropietario;
     // End of variables declaration//GEN-END:variables
- 
-     public void agregarPropietario(){     
-             String ap = jTIDPropietariosAp.getText();
-                String nom = jTIDPropietariosNom.getText();
+
+    public void agregarPropietario() {
+        String ap = jTIDPropietariosAp.getText();
+        String nom = jTIDPropietariosNom.getText();
         String documento = jTIDPropietarios4.getText();
         String tel = jTIDPropietarios5.getText();
-                String dom = jTIDPropietarios6.getText();
-                boolean est = jrbPropietario.isSelected();
-                Propietario nuevo = new Propietario(ap, nom, documento, tel, dom, est);
-                Propietario propietarioExistente = pd.buscarPropietarioPorDni(documento, est);
-                if(propietarioExistente != null){
-                     JOptionPane.showMessageDialog(this, "El propietario con este DNI ya existe");
-                }else{
-                pd.guardarPropietario(nuevo);   
-                JOptionPane.showMessageDialog(this, "Propietario ingresado correctamente");
-                }
-        
-         
-     }
-     
-     
-     public void modificarPropietario() {      
+        String dom = jTIDPropietarios6.getText();
+        boolean est = jrbPropietario.isSelected();
+        Propietario nuevo = new Propietario(ap, nom, documento, tel, dom, est);
+        Propietario propietarioExistente = pd.buscarPropietarioPorDni(documento, est);
+        if (propietarioExistente != null) {
+            JOptionPane.showMessageDialog(this, "El propietario con este DNI ya existe");
+        } else {
+            pd.guardarPropietario(nuevo);
+            JOptionPane.showMessageDialog(this, "Propietario ingresado correctamente");
+        }
+
+    }
+
+    public void modificarPropietario() {
         try {
             int id = Integer.parseInt(idPropietario.getText());
             String ap = jTIDPropietariosAp.getText();
@@ -521,72 +530,77 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
             String dom = jTIDPropietarios6.getText();
             boolean est = jrbPropietario.isSelected();
             Propietario nuevoM = new Propietario(id, nom, ap, documento, tel, dom, est);
-            pd.modificarPropietario(nuevoM);
-             JOptionPane.showMessageDialog(this, "Propietario modificado exitosamente");
+            //pd.modificarPropietario(nuevoM);
+            int respuesta = JOptionPane.showConfirmDialog(this, "\n\n¿Estás seguro que deseas guardar los cambios?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
+            if (respuesta == JOptionPane.YES_OPTION) {
+                pd.modificarPropietario(nuevoM); // Guardo el cambio
+                JOptionPane.showMessageDialog(this, "Propietario modificado exitosamente.");
+            }
+        } catch (NullPointerException ex) {
+            JOptionPane.showMessageDialog(this, "Error al modificar " + ex.getMessage());
         }
-        catch(NullPointerException ex){
-            JOptionPane.showMessageDialog(this, "Error al modificar "+ex.getMessage());
+    }
+
+    public void eliminarPropietario() {
+        String pSelect = jTIDPropietarios4.getText();
+        boolean activo = jrbPropietario.isSelected();
+
+        //pd.eliminarPropietario(pSelect);
+         int respuesta = JOptionPane.showConfirmDialog(this, "\n\n¿Estás seguro que deseas eliminar a propietario?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
+        if (respuesta == JOptionPane.YES_OPTION) {
+            pd.eliminarPropietario(pSelect); // Guardo el cambio
+            JOptionPane.showMessageDialog(this, "Propietario eliminado exitosamente.");
         }
-}
-     
-     public void eliminarPropietario(){
-          String pSelect = jTIDPropietarios4.getText();
-            boolean activo = jrbPropietario.isSelected();
-      
-         pd.eliminarPropietario(pSelect);
-            JOptionPane.showMessageDialog(this, "Propietario eliminado");
-     }
-    
-     public void buscarPropietario(){
-         try {
+    }
+
+    public void buscarPropietario() {
+        try {
             String documento = jTIDPropietarios4.getText();
             boolean activo = jrbPropietario.isSelected();
-           Propietario ps = pd.buscarPropietarioPorDni(documento, activo); 
-             if(ps != null){
-                 idPropietario.setText(String.valueOf(ps.getIdPropietario()));
-                 jTIDPropietariosNom.setText(ps.getNombre());
-                 jTIDPropietariosAp.setText(ps.getApellido());
-                 jTIDPropietarios4.setText(String.valueOf(ps.getDni()));
-                 jTIDPropietarios5.setText(String.valueOf(ps.getTelefono()));
-                 jTIDPropietarios6.setText(ps.getDomicilio());
-                 jrbPropietario.setSelected(ps.isActivo());
-                 
-                 if(ps.isActivo() == true){
-                     habilitarBotones();
-                 }else {
-                deshabilitarBotones(); 
-                 jBModificarPropietario.setEnabled(true);
-                 }
-             }
-     }
-         catch(NumberFormatException ex){
-             JOptionPane.showMessageDialog(this, "Error al buscar "+ex.getMessage());
-         }
-     
-         
-}
+            Propietario ps = pd.buscarPropietarioPorDni(documento, activo);
+            if (ps != null) {
+                idPropietario.setText(String.valueOf(ps.getIdPropietario()));
+                jTIDPropietariosNom.setText(ps.getNombre());
+                jTIDPropietariosAp.setText(ps.getApellido());
+                jTIDPropietarios4.setText(String.valueOf(ps.getDni()));
+                jTIDPropietarios5.setText(String.valueOf(ps.getTelefono()));
+                jTIDPropietarios6.setText(ps.getDomicilio());
+                jrbPropietario.setSelected(ps.isActivo());
 
-    public void limpiarCampos(){
-             idPropietario.setText("");
-             jTIDPropietariosNom.setText("");
-             jTIDPropietariosAp.setText("");
-             jTIDPropietarios4.setText("");
-             jTIDPropietarios5.setText("");
-             jTIDPropietarios6.setText("");
-             jrbPropietario.isSelected();
-}
-    
-   public void habilitarBotones(){
+                if (ps.isActivo() == true) {
+                    habilitarBotones();
+                } else {
+                    deshabilitarBotones();
+                    jBModificarPropietario.setEnabled(true);
+                }
+            }
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(this, "Error al buscar " + ex.getMessage());
+        }
+
+    }
+
+    public void limpiarCampos() {
+        idPropietario.setText("");
+        jTIDPropietariosNom.setText("");
+        jTIDPropietariosAp.setText("");
+        jTIDPropietarios4.setText("");
+        jTIDPropietarios5.setText("");
+        jTIDPropietarios6.setText("");
+        jrbPropietario.isSelected();
+    }
+
+    public void habilitarBotones() {
         jBModificarPropietario.setEnabled(true);
         jBEliminarPropietario.setEnabled(true);
-         jBNuevo2.setEnabled(false);
+        jBNuevo2.setEnabled(false);
     }
-   
-   public void deshabilitarBotones(){
+
+    public void deshabilitarBotones() {
         jBNuevo2.setEnabled(false);
         jBModificarPropietario.setEnabled(false);
         jBEliminarPropietario.setEnabled(false);
-   }
-   
-   //ANTES DE MODIFICAR, PREGUNTAR A MATI POR CUALQUIER DUDA, GRACIAS <3
+    }
+
+    //ANTES DE MODIFICAR, PREGUNTAR A MATI POR CUALQUIER DUDA, GRACIAS <3
 }
