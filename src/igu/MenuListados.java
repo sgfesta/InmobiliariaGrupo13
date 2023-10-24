@@ -259,11 +259,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTIDGarante.setBackground(new java.awt.Color(153, 153, 153));
         jTIDGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDGarante.setForeground(new java.awt.Color(51, 51, 51));
-        jTIDGarante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTIDGaranteActionPerformed(evt);
-            }
-        });
 
         jLNombreGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLNombreGarante.setForeground(new java.awt.Color(51, 204, 255));
@@ -274,11 +269,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTNombreGarante.setBackground(new java.awt.Color(153, 153, 153));
         jTNombreGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTNombreGarante.setForeground(new java.awt.Color(51, 51, 51));
-        jTNombreGarante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTNombreGaranteActionPerformed(evt);
-            }
-        });
 
         jLApellidoGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLApellidoGarante.setForeground(new java.awt.Color(51, 204, 255));
@@ -289,11 +279,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTApellidoGarante.setBackground(new java.awt.Color(153, 153, 153));
         jTApellidoGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTApellidoGarante.setForeground(new java.awt.Color(51, 51, 51));
-        jTApellidoGarante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTApellidoGaranteActionPerformed(evt);
-            }
-        });
 
         jLDomicilio.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLDomicilio.setForeground(new java.awt.Color(51, 204, 255));
@@ -304,11 +289,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTDomicilioGarante.setBackground(new java.awt.Color(153, 153, 153));
         jTDomicilioGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTDomicilioGarante.setForeground(new java.awt.Color(51, 51, 51));
-        jTDomicilioGarante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTDomicilioGaranteActionPerformed(evt);
-            }
-        });
 
         jLTelefonoGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLTelefonoGarante.setForeground(new java.awt.Color(51, 204, 255));
@@ -319,9 +299,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTTelefonoGarante.setBackground(new java.awt.Color(153, 153, 153));
         jTTelefonoGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTTelefonoGarante.setForeground(new java.awt.Color(51, 51, 51));
-        jTTelefonoGarante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTTelefonoGaranteActionPerformed(evt);
+        jTTelefonoGarante.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTTelefonoGaranteKeyTyped(evt);
             }
         });
 
@@ -333,11 +313,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
         jRGarante.setBorder(null);
         jRGarante.setOpaque(false);
-        jRGarante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRGaranteActionPerformed(evt);
-            }
-        });
 
         jLBusquedaGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLBusquedaGarante.setForeground(new java.awt.Color(51, 204, 255));
@@ -347,9 +322,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTDNIGarante.setBackground(new java.awt.Color(153, 153, 153));
         jTDNIGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTDNIGarante.setForeground(new java.awt.Color(51, 51, 51));
-        jTDNIGarante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTDNIGaranteActionPerformed(evt);
+        jTDNIGarante.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTDNIGaranteKeyTyped(evt);
             }
         });
 
@@ -385,7 +360,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addComponent(jTDNIGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jbBuscarGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 145, Short.MAX_VALUE))
+                .addGap(0, 146, Short.MAX_VALUE))
             .addGroup(jPGaranteLayout.createSequentialGroup()
                 .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPGaranteLayout.createSequentialGroup()
@@ -435,7 +410,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                             .addComponent(jTDNIGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(10, 10, 10))
                     .addComponent(jbBuscarGarante, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTIDGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLIDGarante))
@@ -456,7 +431,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                     .addComponent(jTTelefonoGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLTelefonoGarante))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLActivoGarante)
                     .addComponent(jRGarante))
                 .addGap(49, 49, 49)
@@ -546,11 +521,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTIDInspector.setBackground(new java.awt.Color(153, 153, 153));
         jTIDInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDInspector.setForeground(new java.awt.Color(51, 51, 51));
-        jTIDInspector.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTIDInspectorActionPerformed(evt);
-            }
-        });
 
         jLMatriculaInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLMatriculaInspector.setForeground(new java.awt.Color(51, 204, 255));
@@ -561,11 +531,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTMatriculaInspector.setBackground(new java.awt.Color(153, 153, 153));
         jTMatriculaInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTMatriculaInspector.setForeground(new java.awt.Color(51, 51, 51));
-        jTMatriculaInspector.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTMatriculaInspectorActionPerformed(evt);
-            }
-        });
 
         jLNombreInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLNombreInspector.setForeground(new java.awt.Color(51, 204, 255));
@@ -576,11 +541,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTNombreInspector.setBackground(new java.awt.Color(153, 153, 153));
         jTNombreInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTNombreInspector.setForeground(new java.awt.Color(51, 51, 51));
-        jTNombreInspector.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTNombreInspectorActionPerformed(evt);
-            }
-        });
 
         jLApellidoInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLApellidoInspector.setForeground(new java.awt.Color(51, 204, 255));
@@ -591,11 +551,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTApellidoInspector.setBackground(new java.awt.Color(153, 153, 153));
         jTApellidoInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTApellidoInspector.setForeground(new java.awt.Color(51, 51, 51));
-        jTApellidoInspector.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTApellidoInspectorActionPerformed(evt);
-            }
-        });
 
         jLTelefonoInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLTelefonoInspector.setForeground(new java.awt.Color(51, 204, 255));
@@ -606,9 +561,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTTelefonoInspector.setBackground(new java.awt.Color(153, 153, 153));
         jTTelefonoInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTTelefonoInspector.setForeground(new java.awt.Color(51, 51, 51));
-        jTTelefonoInspector.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTTelefonoInspectorActionPerformed(evt);
+        jTTelefonoInspector.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTTelefonoInspectorKeyTyped(evt);
             }
         });
 
@@ -619,11 +574,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLActivoInspector.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jRInspector.setOpaque(false);
-        jRInspector.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRInspectorActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPInspectorLayout = new javax.swing.GroupLayout(jPInspector);
         jPInspector.setLayout(jPInspectorLayout);
@@ -885,19 +835,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
         jRVigenciaContrato.setBorder(null);
         jRVigenciaContrato.setOpaque(false);
-        jRVigenciaContrato.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRVigenciaContratoActionPerformed(evt);
-            }
-        });
 
         jRActivoContrato.setBorder(null);
         jRActivoContrato.setOpaque(false);
-        jRActivoContrato.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRActivoContratoActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1058,11 +998,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTIDInquilino.setBackground(new java.awt.Color(153, 153, 153));
         jTIDInquilino.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDInquilino.setForeground(new java.awt.Color(51, 51, 51));
-        jTIDInquilino.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTIDInquilinoActionPerformed(evt);
-            }
-        });
 
         jBNuevoInquilinos.setBackground(new java.awt.Color(51, 51, 51));
         jBNuevoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -1111,11 +1046,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTNombreInquilinos.setBackground(new java.awt.Color(153, 153, 153));
         jTNombreInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTNombreInquilinos.setForeground(new java.awt.Color(51, 51, 51));
-        jTNombreInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTNombreInquilinosActionPerformed(evt);
-            }
-        });
 
         jLNombreInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLNombreInquilinos.setForeground(new java.awt.Color(51, 204, 255));
@@ -1132,18 +1062,13 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTApellidoInquilinos.setBackground(new java.awt.Color(153, 153, 153));
         jTApellidoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTApellidoInquilinos.setForeground(new java.awt.Color(51, 51, 51));
-        jTApellidoInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTApellidoInquilinosActionPerformed(evt);
-            }
-        });
 
         jTDNIInquilinos.setBackground(new java.awt.Color(153, 153, 153));
         jTDNIInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTDNIInquilinos.setForeground(new java.awt.Color(51, 51, 51));
-        jTDNIInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTDNIInquilinosActionPerformed(evt);
+        jTDNIInquilinos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTDNIInquilinosKeyTyped(evt);
             }
         });
 
@@ -1156,11 +1081,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTLugarTrabajoInquilinos.setBackground(new java.awt.Color(153, 153, 153));
         jTLugarTrabajoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTLugarTrabajoInquilinos.setForeground(new java.awt.Color(51, 51, 51));
-        jTLugarTrabajoInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTLugarTrabajoInquilinosActionPerformed(evt);
-            }
-        });
 
         jLLugarTrabajoInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLLugarTrabajoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
@@ -1171,9 +1091,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTCuitInquilinos.setBackground(new java.awt.Color(153, 153, 153));
         jTCuitInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTCuitInquilinos.setForeground(new java.awt.Color(51, 51, 51));
-        jTCuitInquilinos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTCuitInquilinosActionPerformed(evt);
+        jTCuitInquilinos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTCuitInquilinosKeyTyped(evt);
             }
         });
 
@@ -1184,11 +1104,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLActivoInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jRInquilino.setOpaque(false);
-        jRInquilino.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRInquilinoActionPerformed(evt);
-            }
-        });
 
         jbBuscarInquilino.setBackground(new java.awt.Color(255, 153, 102));
         jbBuscarInquilino.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-magnifier-search-zoom_110300.png"))); // NOI18N
@@ -1313,7 +1228,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPBarraNavegador3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPCardListadosLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
                 .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
@@ -1344,50 +1258,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTIDInquilinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTIDInquilinoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTIDInquilinoActionPerformed
-
-    private void jTNombreInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNombreInquilinosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTNombreInquilinosActionPerformed
-
-    private void jTApellidoInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTApellidoInquilinosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTApellidoInquilinosActionPerformed
-
-    private void jTDNIInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDNIInquilinosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTDNIInquilinosActionPerformed
-
-    private void jTLugarTrabajoInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTLugarTrabajoInquilinosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTLugarTrabajoInquilinosActionPerformed
-
-    private void jTCuitInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTCuitInquilinosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTCuitInquilinosActionPerformed
-
-    private void jTIDGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTIDGaranteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTIDGaranteActionPerformed
-
-    private void jTNombreGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNombreGaranteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTNombreGaranteActionPerformed
-
-    private void jTApellidoGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTApellidoGaranteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTApellidoGaranteActionPerformed
-
-    private void jTDomicilioGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDomicilioGaranteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTDomicilioGaranteActionPerformed
-
-    private void jTTelefonoGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTTelefonoGaranteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTTelefonoGaranteActionPerformed
 
     private void jBNuevoInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoInspectorActionPerformed
         String matricula = jTMatriculaInspector.getText();
@@ -1430,26 +1300,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         //Deshabilito botones luego de ejecutar acccion!
         //desHabilitarBotones();
     }//GEN-LAST:event_jBEliminarInspectorActionPerformed
-
-    private void jTIDInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTIDInspectorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTIDInspectorActionPerformed
-
-    private void jTMatriculaInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTMatriculaInspectorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTMatriculaInspectorActionPerformed
-
-    private void jTNombreInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNombreInspectorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTNombreInspectorActionPerformed
-
-    private void jTApellidoInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTApellidoInspectorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTApellidoInspectorActionPerformed
-
-    private void jTTelefonoInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTTelefonoInspectorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTTelefonoInspectorActionPerformed
 
     private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
         int SelectPestaña = jTabbedPane1.getSelectedIndex();
@@ -1572,29 +1422,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
 //     jPCardFondo.setVisible(true);
     }//GEN-LAST:event_jBSalirInspectorActionPerformed
 
-    private void jRInquilinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRInquilinoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRInquilinoActionPerformed
-
-    private void jRGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRGaranteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRGaranteActionPerformed
-
-    private void jRInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRInspectorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRInspectorActionPerformed
-
     private void jCBusquedaContratosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBusquedaContratosActionPerformed
         rellenarCampos();
     }//GEN-LAST:event_jCBusquedaContratosActionPerformed
-
-    private void jRVigenciaContratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRVigenciaContratoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRVigenciaContratoActionPerformed
-
-    private void jRActivoContratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRActivoContratoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRActivoContratoActionPerformed
 
     private void jBSalirListadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirListadosActionPerformed
         this.dispose();
@@ -1647,15 +1477,56 @@ public class MenuListados extends javax.swing.JInternalFrame {
         rellenarCampos();
     }//GEN-LAST:event_jbBuscarInquilinoActionPerformed
 
-    private void jTDNIGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDNIGaranteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTDNIGaranteActionPerformed
-
     private void jbBuscarGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarGaranteActionPerformed
 
         rellenarCampos();
 
     }//GEN-LAST:event_jbBuscarGaranteActionPerformed
+
+    private void jTDNIGaranteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDNIGaranteKeyTyped
+        //Solo dejo introducir numeros 
+        int key = evt.getKeyChar();
+        boolean numero = key >= 48 && key <= 57;
+        if (!numero) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTDNIGaranteKeyTyped
+
+    private void jTDNIInquilinosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDNIInquilinosKeyTyped
+        //Solo dejo introducir numeros 
+        int key = evt.getKeyChar();
+        boolean numero = key >= 48 && key <= 57;
+        if (!numero) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTDNIInquilinosKeyTyped
+
+    private void jTTelefonoGaranteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTTelefonoGaranteKeyTyped
+            //Solo dejo introducir numerosy -
+        int key = evt.getKeyChar();
+        boolean numero = (key >= 48 && key <= 57) || key == 45;
+        if (!numero) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTTelefonoGaranteKeyTyped
+
+    private void jTTelefonoInspectorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTTelefonoInspectorKeyTyped
+            //Solo dejo introducir numeros y -
+        int key = evt.getKeyChar();
+        boolean numero = (key >= 48 && key <= 57) || key == 45;
+        if (!numero) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTTelefonoInspectorKeyTyped
+
+    private void jTCuitInquilinosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCuitInquilinosKeyTyped
+             //Solo dejo introducir numeros 
+        int key = evt.getKeyChar();
+        boolean numero = key >= 48 && key <= 57;
+        if (!numero) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTCuitInquilinosKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -1,0 +1,42 @@
+resumen cosas encontradas
+
+Menu propiedades
+1-Cuando pasas de un propietario a otro , se ve bien, pero cuando un propietario no tiene propiedades, las listas tipo, inspector, zona y estado siguen cargadas
+2-Los campos superficie y precio admiten letras (listo)
+3-Antiguedad no se puede modificar
+4-boton modificar esta siempre activo, no verifica si hay campos vacios, ni pregunta si estas seguro si deseas modificar
+5-boton guargar hace lo mismo
+6-boton eliminar , hace bien la tarea, pero no te pregunta si estas seguro
+
+deberiamos idear com activar los botones y en que momento desactivarlos
+
+Menu Propietario
+1-Boton dni acepta letras (listo)
+2-Boton telefono acepta letras (listo)
+3- debemos asegurarnos que el usuario esta decidido a borrar o modificar..
+4- Cuando salgo el color del formulario cambia a gris. ver boton salir
+
+MenuAlqu1leres
+1-Boton precio acepta letras(listo)
+2- los campos ID aceptan poner cosas no deberian.
+
+MenuListados
+garante
+1-Cuando buscas un garante por dni, no te informa que no existe
+2- los botones siempre estan activos.
+3- no borra los campos cuando cambio el estado del txtDni.
+4-El txtdni acepta letras (listo)
+5- Los radio buton deberian cambiar el texto de activo a inactivo
+
+Inspector
+1- Hay un combobox, no es igual que en garante
+2- El idinspector, no deberia estar
+3- los botones siempre estan activos, deberiamos generar una combinacion
+4- Los radio buton deberian cambiar el texto de activo a inactivo
+
+
+Contratos
+1- Los campos ID , estan llenos de numeros , que no identifican al usuario de que se trata, deberian tener la informacion completa
+2- los botones siempre estan activos, deberiamos generar una combinacion
+3- Los radio buton deberian cambiar el texto de activo a inactivo
+

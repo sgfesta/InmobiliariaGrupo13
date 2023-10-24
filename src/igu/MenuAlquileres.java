@@ -308,6 +308,11 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jTprecioAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 0, 12)); // NOI18N
         jTprecioAlquiler.setForeground(new java.awt.Color(102, 204, 255));
         jTprecioAlquiler.setText("Precio");
+        jTprecioAlquiler.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTprecioAlquilerKeyTyped(evt);
+            }
+        });
         jPCardAlquileres.add(jTprecioAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 120, 30));
 
         jRActivoAlquiler.setOpaque(false);
@@ -363,6 +368,15 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
        rellenarCampos();
         
     }//GEN-LAST:event_jCListadoFiltradoPropiedadesAlquilerItemStateChanged
+
+    private void jTprecioAlquilerKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTprecioAlquilerKeyTyped
+          //Solo dejo introducir numeros , puntos y comas
+        int key = evt.getKeyChar();
+        boolean numero = (key >= 48 && key <= 57) || key == 46 || key == 44;
+        if (!numero) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTprecioAlquilerKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

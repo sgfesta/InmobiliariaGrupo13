@@ -167,11 +167,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jTDireccionPropiedades.setMinimumSize(new java.awt.Dimension(14, 23));
         jTDireccionPropiedades.setName(""); // NOI18N
         jTDireccionPropiedades.setPreferredSize(new java.awt.Dimension(14, 23));
-        jTDireccionPropiedades.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTDireccionPropiedadesActionPerformed(evt);
-            }
-        });
 
         jTAlturaPropiedades.setBackground(new java.awt.Color(153, 153, 153));
         jTAlturaPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -179,11 +174,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jTAlturaPropiedades.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTAlturaPropiedades.setMinimumSize(new java.awt.Dimension(14, 23));
         jTAlturaPropiedades.setPreferredSize(new java.awt.Dimension(14, 23));
-        jTAlturaPropiedades.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTAlturaPropiedadesActionPerformed(evt);
-            }
-        });
 
         jTSuperTotalPropiedades.setBackground(new java.awt.Color(153, 153, 153));
         jTSuperTotalPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -192,9 +182,9 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jTSuperTotalPropiedades.setMinimumSize(new java.awt.Dimension(14, 23));
         jTSuperTotalPropiedades.setName(""); // NOI18N
         jTSuperTotalPropiedades.setPreferredSize(new java.awt.Dimension(14, 23));
-        jTSuperTotalPropiedades.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTSuperTotalPropiedadesActionPerformed(evt);
+        jTSuperTotalPropiedades.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTSuperTotalPropiedadesKeyTyped(evt);
             }
         });
 
@@ -204,9 +194,9 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jTPrecioTasadoPropiedades.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTPrecioTasadoPropiedades.setMinimumSize(new java.awt.Dimension(14, 23));
         jTPrecioTasadoPropiedades.setPreferredSize(new java.awt.Dimension(14, 23));
-        jTPrecioTasadoPropiedades.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTPrecioTasadoPropiedadesActionPerformed(evt);
+        jTPrecioTasadoPropiedades.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTPrecioTasadoPropiedadesKeyTyped(evt);
             }
         });
 
@@ -217,11 +207,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jTAntiguedadPropiedad.setMinimumSize(new java.awt.Dimension(14, 23));
         jTAntiguedadPropiedad.setPreferredSize(new java.awt.Dimension(14, 23));
         jTAntiguedadPropiedad.setRequestFocusEnabled(false);
-        jTAntiguedadPropiedad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTAntiguedadPropiedadActionPerformed(evt);
-            }
-        });
 
         jLEstadoPropiedad.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLEstadoPropiedad.setForeground(new java.awt.Color(51, 204, 255));
@@ -351,11 +336,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jCListaPropietarios.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jCListaPropietariosItemStateChanged(evt);
-            }
-        });
-        jCListaPropietarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCListaPropietariosActionPerformed(evt);
             }
         });
 
@@ -553,7 +533,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                                     .addComponent(jCListarEstadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLEstadoPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jBGuardarPropiedades)
@@ -636,10 +616,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jCListaPropietariosItemStateChanged
 
-    private void jCListaPropietariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCListaPropietariosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCListaPropietariosActionPerformed
-
     private void jCListaPropiedadesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCListaPropiedadesItemStateChanged
         limpiarCampos();
         rellenarCampos();
@@ -657,25 +633,23 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
        limpiarCampos();
     }//GEN-LAST:event_jBNuevoPropiedadesActionPerformed
 
-    private void jTDireccionPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDireccionPropiedadesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTDireccionPropiedadesActionPerformed
+    private void jTSuperTotalPropiedadesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTSuperTotalPropiedadesKeyTyped
+        //Solo dejo introducir numeros , puntos y comas
+        int key = evt.getKeyChar();
+        boolean numero = (key >= 48 && key <= 57) || key == 46 || key == 44;
+        if (!numero) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTSuperTotalPropiedadesKeyTyped
 
-    private void jTAntiguedadPropiedadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTAntiguedadPropiedadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTAntiguedadPropiedadActionPerformed
-
-    private void jTAlturaPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTAlturaPropiedadesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTAlturaPropiedadesActionPerformed
-
-    private void jTSuperTotalPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTSuperTotalPropiedadesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTSuperTotalPropiedadesActionPerformed
-
-    private void jTPrecioTasadoPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTPrecioTasadoPropiedadesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTPrecioTasadoPropiedadesActionPerformed
+    private void jTPrecioTasadoPropiedadesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTPrecioTasadoPropiedadesKeyTyped
+        //Solo dejo introducir numeros , puntos y comas
+        int key = evt.getKeyChar();
+        boolean numero = (key >= 48 && key <= 57) || key == 46 || key == 44;
+        if (!numero) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTPrecioTasadoPropiedadesKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

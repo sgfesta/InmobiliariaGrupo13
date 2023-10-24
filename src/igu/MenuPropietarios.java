@@ -161,6 +161,9 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTIDPropietarios4KeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTIDPropietarios4KeyTyped(evt);
+            }
         });
 
         jLabel31.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -175,6 +178,9 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jTIDPropietarios5.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTIDPropietarios5KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTIDPropietarios5KeyTyped(evt);
             }
         });
 
@@ -251,7 +257,6 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jButton1.setForeground(new java.awt.Color(51, 204, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trash_bin_delete_remove_icon_191682.png"))); // NOI18N
         jButton1.setBorder(null);
-        jButton1.setOpaque(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -440,6 +445,24 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        limpiarCampos();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTIDPropietarios4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios4KeyTyped
+        //Solo dejo introducir numeros 
+        int key = evt.getKeyChar();
+        boolean numero = key >= 48 && key <= 57;
+        if (!numero) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTIDPropietarios4KeyTyped
+
+    private void jTIDPropietarios5KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIDPropietarios5KeyTyped
+         //Solo dejo introducir numeros y -
+        int key = evt.getKeyChar();
+        boolean numero = (key >= 48 && key <= 57) || key == 45;
+        if (!numero) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTIDPropietarios5KeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
