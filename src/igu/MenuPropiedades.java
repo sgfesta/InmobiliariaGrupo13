@@ -272,6 +272,11 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jBModificarPropiedades.setForeground(new java.awt.Color(51, 204, 255));
         jBModificarPropiedades.setText("Modificar");
         jBModificarPropiedades.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBModificarPropiedades.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jBModificarPropiedadesItemStateChanged(evt);
+            }
+        });
         jBModificarPropiedades.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBModificarPropiedadesActionPerformed(evt);
@@ -622,7 +627,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         int idPropietario = -1;
         Object selectedItem = jCListaPropietarios.getSelectedItem();
         if (selectedItem != null) {
-            if (selectedItem instanceof Propietario) { //USO UN instanceof PARA VERIFICAR SI EL OBJETO ES UNA INSTANCIA DE LA CALSE PROPIETARIO, LO CASTEO Y SACO EL ID DEL PROPIETARIO
+            if (selectedItem instanceof Propietario) { //USO UN instanceof PARA VERIFICAR SI EL OBJETO ES UNA INSTANCIA DE LA CLASE PROPIETARIO, LO CASTEO Y SACO EL ID DEL PROPIETARIO
                 Propietario propietarioSeleccionado = (Propietario) selectedItem;
                 idPropietario = propietarioSeleccionado.getIdPropietario(); //UNA VEZ TENGO EL ID, LLAMO, LIMPIO LOS CAMPOS DEL COMBO BOX DE PROPIEDADES Y CARGO LAS PROPIEDADES
                 jCListaPropiedades.removeAllItems();
@@ -641,14 +646,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                  habilitarBotones();
        }else{
             deshabilitarBotones();
-            if(!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-                    && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-                    && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-                    && jRDisponibilidadPropiedades.isSelected() == true && !jTObservacionesPropiedades.getText().isEmpty()){
-            jBGuardarPropiedades.setEnabled(true);
-       }else{
-                deshabilitarBotones();
-            }
                 }
                 
 
@@ -668,15 +665,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                  habilitarBotones();
        }else{
             deshabilitarBotones();
-        
-            if(!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-                    && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-                    && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-                    && jRDisponibilidadPropiedades.isSelected() == true && !jTObservacionesPropiedades.getText().isEmpty()) {
-            jBGuardarPropiedades.setEnabled(true);
-       }else{
-                deshabilitarBotones();
-            }
         }
     }//GEN-LAST:event_jCListaPropiedadesItemStateChanged
 
@@ -785,6 +773,10 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             deshabilitarBotones();
         }
     }//GEN-LAST:event_jTAntiguedadPropiedadKeyReleased
+
+    private void jBModificarPropiedadesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jBModificarPropiedadesItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBModificarPropiedadesItemStateChanged
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
