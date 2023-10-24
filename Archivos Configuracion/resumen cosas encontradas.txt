@@ -4,12 +4,12 @@ Menu propiedades
 1-Cuando pasas de un propietario a otro , se ve bien, pero cuando un propietario no tiene propiedades, las listas tipo, inspector, zona y estado siguen cargadas
 2-Los campos superficie y precio admiten letras (listo)
 3-Antiguedad no se puede modificar (listo)
-4-boton modificar esta siempre activo, no verifica si hay campos vacios, 
+4-boton modificar esta siempre activo, no verifica si hay campos vacios, (no lo consegui)
 4.1 ni pregunta si estas seguro si deseas modificar (listo)
 5-boton guargar hace lo mismo (listo verificacion)
 6-boton eliminar , hace bien la tarea, pero no te pregunta si estas seguro (listo)
 
-deberiamos idear com activar los botones y en que momento desactivarlos
+deberiamos idear com activar los botones y en que momento desactivarlos (maty me perdi con la logica, hize los dos metodos, pero me confunde donde ponerlas, porfi terminalo vos)
 
 Menu Propietario
 1-Boton dni acepta letras (listo)

@@ -162,6 +162,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jLIDPropiedad.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jPCardAlquileres.add(jLIDPropiedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 140, -1));
 
+        jTIDPropietarioAlquiler.setEditable(false);
         jTIDPropietarioAlquiler.setBackground(new java.awt.Color(153, 153, 153));
         jTIDPropietarioAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDPropietarioAlquiler.setForeground(new java.awt.Color(51, 51, 51));

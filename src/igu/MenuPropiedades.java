@@ -37,6 +37,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         cargarComboEstado();
         cargarComboInspector();
         cargarComboPropietarios();
+         deshabilitarBotones();
 
     }
 
@@ -455,8 +456,8 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                         .addComponent(jCListaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(45, 45, 45))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jBNuevoPropiedades)
+                .addGap(183, 183, 183)
+                .addComponent(jBNuevoPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jBGuardarPropiedades)
                 .addGap(20, 20, 20)
@@ -586,16 +587,16 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jBModificarPropiedadesActionPerformed
 
     private void jBEliminarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarPropiedadesActionPerformed
-        int respuesta = JOptionPane.showConfirmDialog(this,"\n\n¿Estás seguro que deseas eliminar la propiedad?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
-        
-        if (respuesta == JOptionPane.YES_OPTION){
-         Propiedad propiedadSeleccionado = (Propiedad) jCListaPropiedades.getSelectedItem();
-         pd.darBajaAPropiedad(propiedadSeleccionado);
-         limpiarCampos();
-         cargarComboPropiedades();
+        int respuesta = JOptionPane.showConfirmDialog(this, "\n\n¿Estás seguro que deseas eliminar la propiedad?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
+
+        if (respuesta == JOptionPane.YES_OPTION) {
+            Propiedad propiedadSeleccionado = (Propiedad) jCListaPropiedades.getSelectedItem();
+            pd.darBajaAPropiedad(propiedadSeleccionado);
+            limpiarCampos();
+            cargarComboPropiedades();
         }
-            
-        
+
+
     }//GEN-LAST:event_jBEliminarPropiedadesActionPerformed
 
     private void jCListaPropietariosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCListaPropietariosItemStateChanged
@@ -706,9 +707,8 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                     && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
                     && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
                     && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
-                // habilitarBotones();
+                 habilitarBotones();
                 // Propiedad PSelec = (Propiedad) jCListaTipoPropiedades.getSelectedItem();
-
                 Propietario propietario = (Propietario) jCListaPropietarios.getSelectedItem();
                 String direccion = jTDireccionPropiedades.getText();
                 int altura = Integer.parseInt(jTAlturaPropiedades.getText());
@@ -908,7 +908,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 if (respuesta == JOptionPane.YES_OPTION) {
                     pd.modificarPropiedad(nuevoP); // Guardo el cambio
                     JOptionPane.showMessageDialog(this, "Modificado exitosamente");
-                }else{
+                } else {
                     limpiarCampos();
                     rellenarCampos();
                     JOptionPane.showMessageDialog(this, "Campos reestablecidos");
@@ -955,6 +955,21 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 JOptionPane.showMessageDialog(this, "Seleccione un propietario válido");
             }
         }
+    }
+
+    public void deshabilitarBotones() {
+        jBNuevoPropiedades.setEnabled(false);
+        jBGuardarPropiedades.setEnabled(false);
+        jBModificarPropiedades.setEnabled(false);
+        jBEliminarPropiedades.setEnabled(false);
+
+    }
+
+    public void habilitarBotones() {
+        jBNuevoPropiedades.setEnabled(true);
+        jBGuardarPropiedades.setEnabled(true);
+        jBModificarPropiedades.setEnabled(true);
+        jBEliminarPropiedades.setEnabled(true);
     }
 
 }
