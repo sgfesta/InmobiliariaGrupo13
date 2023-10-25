@@ -279,7 +279,7 @@ public class PropiedadData {
     }
 
     public List<Propiedad> filtrado(TipoPropiedad tipo, Zona zona ) {
-        String sql = "SELECT idPropiedad, idPropietario, direccion, altura, superficieTotal, precioTasado, antiguedad FROM propiedad  WHERE idTipo = ? and idZona = ? ";
+        String sql = "SELECT idPropiedad, idPropietario, direccion, altura, superficieTotal, precioTasado, antiguedad, observaciones FROM propiedad  WHERE idTipo = ? and idZona = ? ";
         ArrayList<Propiedad> propiedades = new ArrayList<>();
 
         try {
@@ -302,6 +302,7 @@ public class PropiedadData {
                 pr1.setSuperficieTotal(rs.getInt("superficieTotal"));
                 pr1.setPrecioTasado(rs.getDouble("precioTasado"));
                 pr1.setAntiguedad(rs.getInt("antiguedad"));
+                pr1.setObservaciones(rs.getString("observaciones"));
                 propiedades.add(pr1);
 
             }
