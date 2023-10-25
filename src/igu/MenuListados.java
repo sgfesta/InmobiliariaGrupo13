@@ -1829,13 +1829,13 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTDNIInquilinos.setText("");
         jTCuitInquilinos.setText("");
         jTLugarTrabajoInquilinos.setText("");
-        jRInquilino.setSelected(false);
+//        jRInquilino.setSelected(false);
 
         jTMatriculaInspector.setText("");
         jTNombreInspector.setText("");
         jTApellidoInspector.setText("");
         jTTelefonoInspector.setText("");
-        jRInspector.setSelected(false);
+//        jRInspector.setSelected(false);
 
         jTIDGarante.setText("");
         jTNombreGarante.setText("");
@@ -1843,7 +1843,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTDNIGarante.setText("");
         jTDomicilioGarante.setText("");
         jTTelefonoGarante.setText("");
-        jRGarante.setSelected(false);
+//        jRGarante.setSelected(false);
 
         jTIDContratoListados.setText("");
         jDFechaInicioListados.setDate(null);
@@ -1854,8 +1854,8 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTIDGaranteListados.setText("");
         jTIDUsuarioContrato.setText("");
         jDFechaContratoListados.setDate(null);
-        jRActivoContrato.setSelected(false);
-        jRVigenciaContrato.setSelected(false);
+//        jRActivoContrato.setSelected(false);
+//        jRVigenciaContrato.setSelected(false);
 
     }
 
