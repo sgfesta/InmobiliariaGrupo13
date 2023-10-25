@@ -17,6 +17,7 @@ public class MenuLogin extends javax.swing.JInternalFrame {
         this.controlacceso = controlAcceso;
         initComponents();
         QuitarLaBarraTitulo();
+        OCULTAR.setVisible(true);
 
     }
     //defino dos métodosdentro del JInternalFrame y lo instanciamos de la siguiente manera.
@@ -49,6 +50,8 @@ public class MenuLogin extends javax.swing.JInternalFrame {
         jSeparator2 = new javax.swing.JSeparator();
         loginBtn = new javax.swing.JPanel();
         loginBtnTxt = new javax.swing.JLabel();
+        VER = new javax.swing.JLabel();
+        OCULTAR = new javax.swing.JLabel();
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -65,7 +68,7 @@ public class MenuLogin extends javax.swing.JInternalFrame {
         jTmail.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jTmail.setForeground(new java.awt.Color(255, 255, 255));
         jTmail.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTmail.setText("sgfesta@gmail.com");
+        jTmail.setText("Admin@grupo13.com");
         jTmail.setBorder(null);
         jTmail.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jTmail.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -81,7 +84,7 @@ public class MenuLogin extends javax.swing.JInternalFrame {
         jTpwd.setBackground(new java.awt.Color(51, 51, 51));
         jTpwd.setForeground(new java.awt.Color(255, 255, 255));
         jTpwd.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTpwd.setText("loquito");
+        jTpwd.setText("1234");
         jTpwd.setBorder(null);
         jTpwd.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -136,6 +139,22 @@ public class MenuLogin extends javax.swing.JInternalFrame {
         );
 
         bg.add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 500, 130, 40));
+
+        VER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3844476-eye-see-show-view-watch_110339.png"))); // NOI18N
+        VER.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                VERMouseClicked(evt);
+            }
+        });
+        bg.add(VER, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 430, -1, -1));
+
+        OCULTAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3844477-disable-eye-inactive-see-show-view-watch_110343.png"))); // NOI18N
+        OCULTAR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OCULTARMouseClicked(evt);
+            }
+        });
+        bg.add(OCULTAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 430, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -195,8 +214,22 @@ public class MenuLogin extends javax.swing.JInternalFrame {
         loguear();
     }//GEN-LAST:event_loginBtnMouseClicked
 
+    private void VERMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VERMouseClicked
+        VER.setVisible(false);
+        OCULTAR.setVisible(true);
+        jTpwd.setEchoChar((char)0);
+    }//GEN-LAST:event_VERMouseClicked
+
+    private void OCULTARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OCULTARMouseClicked
+       VER.setVisible(true);
+        OCULTAR.setVisible(false);
+        jTpwd.setEchoChar('●');
+    }//GEN-LAST:event_OCULTARMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel OCULTAR;
+    private javax.swing.JLabel VER;
     private javax.swing.JPanel bg;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
