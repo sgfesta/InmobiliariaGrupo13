@@ -40,6 +40,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         initComponents();
         QuitarLaBarraTitulo();
         borrarCampos();
+        deshabilitarBotonesGarante();
 
     }
     //defino dos métodosdentro del JInternalFrame y lo instanciamos de la siguiente manera.
@@ -251,6 +252,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLIDGarante.setText("ID Garante");
         jLIDGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        jTIDGarante.setEditable(false);
         jTIDGarante.setBackground(new java.awt.Color(153, 153, 153));
         jTIDGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDGarante.setForeground(new java.awt.Color(51, 51, 51));
@@ -264,6 +266,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTNombreGarante.setBackground(new java.awt.Color(153, 153, 153));
         jTNombreGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTNombreGarante.setForeground(new java.awt.Color(51, 51, 51));
+        jTNombreGarante.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTNombreGaranteKeyReleased(evt);
+            }
+        });
 
         jLApellidoGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLApellidoGarante.setForeground(new java.awt.Color(51, 204, 255));
@@ -274,6 +281,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTApellidoGarante.setBackground(new java.awt.Color(153, 153, 153));
         jTApellidoGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTApellidoGarante.setForeground(new java.awt.Color(51, 51, 51));
+        jTApellidoGarante.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTApellidoGaranteKeyReleased(evt);
+            }
+        });
 
         jLDomicilio.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLDomicilio.setForeground(new java.awt.Color(51, 204, 255));
@@ -284,6 +296,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTDomicilioGarante.setBackground(new java.awt.Color(153, 153, 153));
         jTDomicilioGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTDomicilioGarante.setForeground(new java.awt.Color(51, 51, 51));
+        jTDomicilioGarante.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTDomicilioGaranteKeyReleased(evt);
+            }
+        });
 
         jLTelefonoGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLTelefonoGarante.setForeground(new java.awt.Color(51, 204, 255));
@@ -295,6 +312,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTTelefonoGarante.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTTelefonoGarante.setForeground(new java.awt.Color(51, 51, 51));
         jTTelefonoGarante.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTTelefonoGaranteKeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTTelefonoGaranteKeyTyped(evt);
             }
@@ -1380,6 +1400,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
             Garante nuevo = new Garante(idGarante, nombre, apellido, dni, domicilio, telefono, activo);
             garanteD.modificarGarante(nuevo);
+            deshabilitarBotonesGarante();
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
         }
@@ -1391,10 +1412,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private void jBEliminarGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarGaranteActionPerformed
         String dniGarante = jTDNIGarante.getText();
         garanteD.eliminarGarante(dniGarante);
-
+        deshabilitarBotonesGarante();
         borrarCampos();
-        //Deshabilito botones luego de ejecutar acccion!
-        //desHabilitarBotones();
+
     }//GEN-LAST:event_jBEliminarGaranteActionPerformed
 
     private void jBSalirGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirGaranteActionPerformed
@@ -1427,8 +1447,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         cargarCombos();
         borrarCampos();
 
-        //Deshabilito botones luego de ejecutar acccion!
-        //desHabilitarBotones();
 
     }//GEN-LAST:event_jBEliminarListadosActionPerformed
 
@@ -1452,7 +1470,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             boolean vigente = jRVigenciaContrato.isSelected();
 
             Contrato nuevo = new Contrato(idContrato, propietario, propiedad, inquilino, garante, usuario, fechaInicio, fechaFin, fechaContrato, vigente, activo);
-            contratoD.modificarContrato(nuevo);
+            contratoD.modificarContrato(nuevo);  
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
         }
@@ -1553,6 +1571,38 @@ public class MenuListados extends javax.swing.JInternalFrame {
             jLActivoInquilinos.setText("Inactivo");
         }
     }//GEN-LAST:event_jRInquilinoItemStateChanged
+
+    private void jTNombreGaranteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNombreGaranteKeyReleased
+        if(!jTNombreGarante.getText().isEmpty() && !jTApellidoGarante.getText().isEmpty() && !jTDomicilioGarante.getText().isEmpty() && !jTTelefonoGarante.getText().isEmpty()){
+             jBNuevoGarante.setEnabled(true);
+        }else{
+            deshabilitarBotonesGarante();
+        }
+    }//GEN-LAST:event_jTNombreGaranteKeyReleased
+
+    private void jTApellidoGaranteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTApellidoGaranteKeyReleased
+        if(!jTNombreGarante.getText().isEmpty() && !jTApellidoGarante.getText().isEmpty() && !jTDomicilioGarante.getText().isEmpty() && !jTTelefonoGarante.getText().isEmpty()){
+             jBNuevoGarante.setEnabled(true);
+        }else{
+            deshabilitarBotonesGarante();
+        }
+    }//GEN-LAST:event_jTApellidoGaranteKeyReleased
+
+    private void jTDomicilioGaranteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDomicilioGaranteKeyReleased
+       if(!jTNombreGarante.getText().isEmpty() && !jTApellidoGarante.getText().isEmpty() && !jTDomicilioGarante.getText().isEmpty() && !jTTelefonoGarante.getText().isEmpty()){
+             jBNuevoGarante.setEnabled(true);
+        }else{
+            deshabilitarBotonesGarante();
+        }
+    }//GEN-LAST:event_jTDomicilioGaranteKeyReleased
+
+    private void jTTelefonoGaranteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTTelefonoGaranteKeyReleased
+        if(!jTNombreGarante.getText().isEmpty() && !jTApellidoGarante.getText().isEmpty() && !jTDomicilioGarante.getText().isEmpty() && !jTTelefonoGarante.getText().isEmpty()){
+             jBNuevoGarante.setEnabled(true);
+        }else{
+            deshabilitarBotonesGarante();
+        }
+    }//GEN-LAST:event_jTTelefonoGaranteKeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1754,7 +1804,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             jTDomicilioGarante.setText(garanteSeleccionado.getDomicilio());
             jTTelefonoGarante.setText(garanteSeleccionado.getTelefono());
             jRGarante.setSelected(garanteSeleccionado.isActivo());
-
+habilitarBotonesGarante();
             //habilito botones luego de ejecutar acccion!
             //Habilito botones si esta todo OK!
 //                if (ae.isActivo() == true) {
@@ -1858,5 +1908,16 @@ public class MenuListados extends javax.swing.JInternalFrame {
 //        jRVigenciaContrato.setSelected(false);
 
     }
+ public void habilitarBotonesGarante() {
+        jBModificarGarante.setEnabled(true);
+        jBEliminarGarante.setEnabled(true);
+        jBNuevoGarante.setEnabled(false);
+    }
 
+    public void deshabilitarBotonesGarante() {
+        jBNuevoGarante.setEnabled(false);
+        jBModificarGarante.setEnabled(false);
+        jBEliminarGarante.setEnabled(false);
+    }
+    
 }
