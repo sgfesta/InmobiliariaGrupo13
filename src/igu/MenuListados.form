@@ -519,10 +519,10 @@
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRGarante">
                   <Properties>
+                    <Property name="selected" type="boolean" value="true"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
-                    <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
                   <Events>
                     <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jRGaranteItemStateChanged"/>
@@ -568,7 +568,6 @@
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
-                    <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbBuscarGaranteActionPerformed"/>
@@ -954,10 +953,10 @@
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRInspector">
                   <Properties>
+                    <Property name="selected" type="boolean" value="true"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
-                    <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
                   <Events>
                     <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jRInspectorItemStateChanged"/>
@@ -1504,18 +1503,18 @@
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRVigenciaContrato">
                   <Properties>
+                    <Property name="selected" type="boolean" value="true"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
-                    <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRActivoContrato">
                   <Properties>
+                    <Property name="selected" type="boolean" value="true"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
-                    <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
                   <Events>
                     <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jRActivoContratoItemStateChanged"/>
@@ -1939,7 +1938,7 @@
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRInquilino">
                   <Properties>
-                    <Property name="opaque" type="boolean" value="false"/>
+                    <Property name="selected" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jRInquilinoItemStateChanged"/>
@@ -1957,7 +1956,6 @@
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
-                    <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbBuscarInquilinoActionPerformed"/>

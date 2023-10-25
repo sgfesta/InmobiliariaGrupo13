@@ -306,8 +306,8 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLActivoGarante.setText("Inactivo");
         jLActivoGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        jRGarante.setSelected(true);
         jRGarante.setBorder(null);
-        jRGarante.setOpaque(false);
         jRGarante.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jRGaranteItemStateChanged(evt);
@@ -332,7 +332,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jbBuscarGarante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-magnifier-search-zoom_110300.png"))); // NOI18N
         jbBuscarGarante.setBorder(null);
         jbBuscarGarante.setBorderPainted(false);
-        jbBuscarGarante.setOpaque(false);
         jbBuscarGarante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbBuscarGaranteActionPerformed(evt);
@@ -561,8 +560,8 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLActivoInspector.setText("Activo");
         jLActivoInspector.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        jRInspector.setSelected(true);
         jRInspector.setBorder(null);
-        jRInspector.setOpaque(false);
         jRInspector.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jRInspectorItemStateChanged(evt);
@@ -813,11 +812,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jRVigenciaContrato.setSelected(true);
         jRVigenciaContrato.setBorder(null);
-        jRVigenciaContrato.setOpaque(false);
 
+        jRActivoContrato.setSelected(true);
         jRActivoContrato.setBorder(null);
-        jRActivoContrato.setOpaque(false);
         jRActivoContrato.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jRActivoContratoItemStateChanged(evt);
@@ -1089,7 +1088,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLActivoInquilinos.setText("Activo");
         jLActivoInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jRInquilino.setOpaque(false);
+        jRInquilino.setSelected(true);
         jRInquilino.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jRInquilinoItemStateChanged(evt);
@@ -1100,7 +1099,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jbBuscarInquilino.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-magnifier-search-zoom_110300.png"))); // NOI18N
         jbBuscarInquilino.setBorder(null);
         jbBuscarInquilino.setBorderPainted(false);
-        jbBuscarInquilino.setOpaque(false);
         jbBuscarInquilino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbBuscarInquilinoActionPerformed(evt);
