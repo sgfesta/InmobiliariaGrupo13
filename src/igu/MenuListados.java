@@ -1801,11 +1801,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
             jTIDContratoListados.setText(String.valueOf(contratoSelecionado.getIdContrato()));
             jDFechaInicioListados.setDate(java.sql.Date.valueOf(contratoSelecionado.getFechaInicio()));
             jDFechaFinListados.setDate(java.sql.Date.valueOf(contratoSelecionado.getFechaFin()));
-            jTIDPropiedadListados.setText(String.valueOf(contratoSelecionado.getPropiedad().getIdPropiedad()));
-            jTIDPropietarioListados.setText(String.valueOf(contratoSelecionado.getPropietario().getIdPropietario()));
-            jTIDInquilinoListados.setText(String.valueOf(contratoSelecionado.getInquilino().getIdInquilino()));
-            jTIDGaranteListados.setText(String.valueOf(contratoSelecionado.getGarante().getIdGarante()));
-            jTIDUsuarioContrato.setText(String.valueOf(contratoSelecionado.getUsuario().getIdUsuario()));
+            jTIDPropiedadListados.setText(String.valueOf(contratoSelecionado.getPropiedad().toString()));
+            jTIDPropietarioListados.setText(String.valueOf(contratoSelecionado.getPropietario().toStringSinDNI()));
+            jTIDInquilinoListados.setText(String.valueOf(contratoSelecionado.getInquilino().toString()));
+            jTIDGaranteListados.setText(String.valueOf(contratoSelecionado.getGarante().toString()));
+            jTIDUsuarioContrato.setText(String.valueOf(contratoSelecionado.getUsuario().toStringUsuario()));
             jDFechaContratoListados.setDate(java.sql.Date.valueOf(contratoSelecionado.getFechaContrato()));
             jRActivoContrato.setSelected(contratoSelecionado.isActivo());
             jRVigenciaContrato.setSelected(contratoSelecionado.isVigente());

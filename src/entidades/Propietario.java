@@ -100,6 +100,9 @@ public class Propietario {
     public String toString() {
         return idPropietario + ") " + apellido + ", " + nombre + " - " + dni;
     }
- 
- 
+    
+ public String toStringSinDNI() {
+        return idPropietario + ") " + apellido + ", " + nombre;
+    }
 }
+
