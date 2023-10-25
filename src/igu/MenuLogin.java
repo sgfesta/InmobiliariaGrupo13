@@ -140,7 +140,7 @@ public class MenuLogin extends javax.swing.JInternalFrame {
 
         bg.add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 500, 130, 40));
 
-        VER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3844476-eye-see-show-view-watch_110339.png"))); // NOI18N
+        VER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disable-eye-inactive-see-show-view-watch.png"))); // NOI18N
         VER.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 VERMouseClicked(evt);

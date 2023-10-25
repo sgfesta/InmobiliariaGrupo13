@@ -213,7 +213,7 @@
         <Component class="javax.swing.JLabel" name="VER">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagenes/3844476-eye-see-show-view-watch_110339.png"/>
+              <Image iconType="3" name="/imagenes/disable-eye-inactive-see-show-view-watch.png"/>
             </Property>
           </Properties>
           <Events>
