@@ -1,14 +1,12 @@
 package igu;
 
 import entidades.Contrato;
-import entidades.Estado;
 import entidades.Garante;
 import entidades.Inquilino;
-import entidades.Inspector;
 import entidades.Propiedad;
 import entidades.Propietario;
 import entidades.TipoPropiedad;
-import entidades.Vendedor;
+import entidades.Usuario;
 import entidades.Zona;
 import java.awt.Dimension;
 import java.awt.event.ItemEvent;
@@ -16,7 +14,6 @@ import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
-import java.util.List;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import persistencia.ContratoData;
@@ -72,7 +69,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jLIDPropietarioAlquiler = new javax.swing.JLabel();
         jLIDInquilinoAlquiler = new javax.swing.JLabel();
         jTIDInquilinoAlquiler = new javax.swing.JTextField();
-        jTIDVendedor = new javax.swing.JTextField();
+        jTIDUsuario = new javax.swing.JTextField();
         jTIDGaranteAlquiler = new javax.swing.JTextField();
         jLIDVendedorAlquiler = new javax.swing.JLabel();
         jLIDGaranteAlquilino = new javax.swing.JLabel();
@@ -195,10 +192,10 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jTIDInquilinoAlquiler.setForeground(new java.awt.Color(51, 51, 51));
         jPCardAlquileres.add(jTIDInquilinoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 122, -1));
 
-        jTIDVendedor.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDVendedor.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDVendedor.setForeground(new java.awt.Color(51, 51, 51));
-        jPCardAlquileres.add(jTIDVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 590, 122, -1));
+        jTIDUsuario.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDUsuario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDUsuario.setForeground(new java.awt.Color(51, 51, 51));
+        jPCardAlquileres.add(jTIDUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 590, 122, -1));
 
         jTIDGaranteAlquiler.setBackground(new java.awt.Color(153, 153, 153));
         jTIDGaranteAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -529,7 +526,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTIDInquilinoAlquiler;
     private javax.swing.JTextField jTIDPropiedadAlquiler;
     private javax.swing.JTextField jTIDPropietarioAlquiler;
-    private javax.swing.JTextField jTIDVendedor;
+    private javax.swing.JTextField jTIDUsuario;
     private javax.swing.JTextField jTprecioAlquiler;
     private javax.swing.JButton jbBuscarGarante;
     private javax.swing.JButton jbBuscarGarante2;
@@ -565,7 +562,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         try {
             if (!jTIDPropiedadAlquiler.getText().isEmpty() && !jTIDPropietarioAlquiler.getText().isEmpty()
                     && !jTIDInquilinoAlquiler.getText().isEmpty() && !jTIDGaranteAlquiler.getText().isEmpty()
-                    && !jTIDVendedor.getText().isEmpty() && jRVigenciaAlquiler.isSelected() == true
+                    && !jTIDUsuario.getText().isEmpty() && jRVigenciaAlquiler.isSelected() == true
                     && jRActivoAlquiler.isSelected() == true) {
                 // habilitarBotones();
                 // Propiedad PSelec = (Propiedad) jCListaTipoPropiedades.getSelectedItem();
@@ -584,16 +581,16 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
                 Garante idgaran = new Garante();
                 idgaran.setIdGarante(Integer.parseInt(jTIDGaranteAlquiler.getText()));
 
-                Vendedor idven = new Vendedor();
-                idven.setIdVendedor(Integer.parseInt(jTIDVendedor.getText()));
-                int vendedor = Integer.parseInt(jTIDVendedor.getText());
+                Usuario idUsuario = new Usuario();
+                idUsuario.setIdUsuario(Integer.parseInt(jTIDUsuario.getText()));
+                int usuario = Integer.parseInt(jTIDUsuario.getText());
                 LocalDate fechaInicio = jDFechaInicioAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
                 LocalDate fechaFin = jDFechaFinAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
                 LocalDate fechaContrato = jDFechaContratoAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 
                 boolean vigente = jRVigenciaAlquiler.isSelected();
                 boolean activo = jRActivoAlquiler.isSelected();
-                Contrato nuevo = new Contrato(idprop, idpro, idinqui, idgaran, idven, fechaInicio, fechaFin, fechaContrato, vigente, activo);
+                Contrato nuevo = new Contrato(idprop, idpro, idinqui, idgaran, idUsuario, fechaInicio, fechaFin, fechaContrato, vigente, activo);
                 cd.guardarContrato(nuevo);
                 JOptionPane.showMessageDialog(this, "Alquiler realizado exitosamente");
                 limpiarCampos();
@@ -623,7 +620,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jTIDPropietarioAlquiler.setText("");
         jTIDInquilinoAlquiler.setText("");
         jTIDGaranteAlquiler.setText("");
-        jTIDVendedor.setText("");
+        jTIDUsuario.setText("");
         jDFechaInicioAlquiler.setDate(null);
         jDFechaFinAlquiler.setDate(null);
         jDFechaContratoAlquiler.setDate(null);

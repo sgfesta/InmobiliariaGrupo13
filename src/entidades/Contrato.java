@@ -13,7 +13,7 @@ public class Contrato {
     private Propiedad propiedad;
     private Inquilino inquilino;
     private Garante garante;
-    private Vendedor vendedor;
+    private Usuario usuario;
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
     private LocalDate fechaContrato;
@@ -22,13 +22,13 @@ public class Contrato {
     
     //Declaro los Constructores
 
-    public Contrato(int idContrato, Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Vendedor vendedor, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, boolean vigente, boolean activo) {
+    public Contrato(int idContrato, Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Usuario usuario, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, boolean vigente, boolean activo) {
         this.idContrato = idContrato;
         this.propietario = propietario;
         this.propiedad = propiedad;
         this.inquilino = inquilino;
         this.garante = garante;
-        this.vendedor = vendedor;
+        this.usuario = usuario;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.fechaContrato = fechaContrato;
@@ -36,12 +36,12 @@ public class Contrato {
         this.activo = activo;
     }
 
-    public Contrato(Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Vendedor vendedor, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, boolean vigente, boolean activo) {
+    public Contrato(Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Usuario usuario, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, boolean vigente, boolean activo) {
         this.propietario = propietario;
         this.propiedad = propiedad;
         this.inquilino = inquilino;
         this.garante = garante;
-        this.vendedor = vendedor;
+        this.usuario = usuario;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.fechaContrato = fechaContrato;
@@ -95,13 +95,14 @@ public class Contrato {
         this.garante = garante;
     }
 
-    public Vendedor getVendedor() {
-        return vendedor;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setVendedor(Vendedor vendedor) {
-        this.vendedor = vendedor;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
+
 
     public LocalDate getFechaInicio() {
         return fechaInicio;

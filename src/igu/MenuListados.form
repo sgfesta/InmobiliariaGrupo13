@@ -1009,9 +1009,9 @@
                                   <Component id="jDFechaInicioListados" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLIDVendedorListados" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="jLIDUsuarioContrato" min="-2" pref="140" max="-2" attributes="0"/>
                                   <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                  <Component id="jTIDVendedorListados" min="-2" pref="122" max="-2" attributes="0"/>
+                                  <Component id="jTIDUsuarioContrato" min="-2" pref="122" max="-2" attributes="0"/>
                                   <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                                   <Component id="jLActivoContrato" min="-2" pref="140" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -1123,9 +1123,9 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                  <Component id="jLIDVendedorListados" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTIDVendedorListados" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTIDUsuarioContrato" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLActivoContrato" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLIDUsuarioContrato" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jRActivoContrato" min="-2" max="-2" attributes="0"/>
@@ -1334,7 +1334,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTIDVendedorListados">
+                <Component class="javax.swing.JTextField" name="jTIDUsuarioContrato">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="99" green="99" red="99" type="rgb"/>
@@ -1347,7 +1347,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLIDVendedorListados">
+                <Component class="javax.swing.JLabel" name="jLIDUsuarioContrato">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI Black" size="14" style="1"/>

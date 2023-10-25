@@ -94,12 +94,12 @@ public class UsuarioData {
 
     }
     
-        public Usuario buscarGarante(String nombre) {
-        String sql = "SELECT idUsuario, nombre,email, password, activo, nivelAcceso FROM usuario WHERE nombre=?";
+        public Usuario buscarUsuario(int idUsuario) {
+        String sql = "SELECT idUsuario, nombre,email, password, activo, nivelAcceso FROM usuario WHERE idUsuario=?";
         Usuario usuario = null;
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setString(1, nombre);
+            ps.setInt(1, idUsuario);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 usuario = new Usuario();
