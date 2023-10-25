@@ -6,7 +6,7 @@ import entidades.Garante;
 import entidades.Inquilino;
 import entidades.Propiedad;
 import entidades.Propietario;
-import entidades.Vendedor;
+import entidades.Usuario;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -34,14 +34,14 @@ public class ContratoData {
     //Guardo Contrato de manera individual
     public void guardarContrato(Contrato contrato){
         //Sentencia Sql
-        String sql = "UPDATE Contrato SET idPropiedad =?, idPropietario=?, idInquilino=?, idGarante=?, idVendedor=?, fechaInicio=?, fechaFin=?, fechaContrato=?, vigente=?, activo=? VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
+        String sql = "UPDATE Contrato SET idPropiedad =?, idPropietario=?, idInquilino=?, idGarante=?, idUsuario=?, fechaInicio=?, fechaFin=?, fechaContrato=?, vigente=?, activo=? VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, contrato.getPropiedad().getIdPropiedad());
             ps.setInt(2,  contrato.getPropietario().getIdPropietario());
             ps.setInt(3,  contrato.getInquilino().getIdInquilino());
             ps.setInt(4,  contrato.getGarante().getIdGarante());
-            ps.setInt(5,  contrato.getVendedor().getIdVendedor());
+            ps.setInt(5,  contrato.getUsuario().getIdUsuario());
             ps.setDate(6, Date.valueOf(contrato.getFechaInicio()));
             ps.setDate(7, Date.valueOf(contrato.getFechaFin()));
             ps.setDate(8, Date.valueOf(contrato.getFechaContrato()));
@@ -67,14 +67,14 @@ public class ContratoData {
     //Modifico Contrato de manera individual
     public void modificarContrato(Contrato contrato) {
     // Sentencia SQL
-    String sql = "UPDATE Contrato SET idPropiedad =?, idPropietario=?, idInquilino=?, idGarante=?, idVendedor=?, fechaInicio=?, fechaFin=?, fechaContrato=?, vigente=?, activo=? WHERE idContrato =?";
+    String sql = "UPDATE Contrato SET idPropiedad =?, idPropietario=?, idInquilino=?, idGarante=?, idUsuario=?, fechaInicio=?, fechaFin=?, fechaContrato=?, vigente=?, activo=? WHERE idContrato =?";
     try {
         PreparedStatement ps = con.prepareStatement(sql);
         ps.setInt(1, contrato.getPropiedad().getIdPropiedad());
         ps.setInt(2, contrato.getPropietario().getIdPropietario());
         ps.setInt(3, contrato.getInquilino().getIdInquilino());
         ps.setInt(4, contrato.getGarante().getIdGarante());
-        ps.setInt(5, contrato.getVendedor().getIdVendedor());
+        ps.setInt(5, contrato.getUsuario().getIdUsuario());
         ps.setDate(6, Date.valueOf(contrato.getFechaInicio()));
         ps.setDate(7, Date.valueOf(contrato.getFechaFin()));
         ps.setDate(8, Date.valueOf(contrato.getFechaContrato()));
@@ -145,7 +145,7 @@ public class ContratoData {
             int idInquilino = rs.getInt("idInquilino");
             int idPropietario = rs.getInt("idPropietario");
             int idPropiedad = rs.getInt("idPropiedad");
-            int idVendedor = rs.getInt("idVendedor");
+            int idUsuario = rs.getInt("idUsuario");
             
             
             InquilinoData id= new InquilinoData();
@@ -164,9 +164,9 @@ public class ContratoData {
             Garante garante= gd.buscarGarante(idPropiedad);
             c1.setGarante(garante);
             
-            VendedorData vd= new VendedorData();
-            Vendedor vendedor= vd.buscarVendedor(idVendedor);
-            c1.setVendedor(vendedor);
+            UsuarioData ud= new UsuarioData();
+            Usuario usuario= ud.buscarUsuario(idUsuario);
+            c1.setUsuario(usuario);
             
             c1.setFechaContrato(rs.getDate("fechaContrato").toLocalDate());
             c1.setFechaInicio(rs.getDate("fechaInicio").toLocalDate());
@@ -196,7 +196,7 @@ public class ContratoData {
             int idInquilino = rs.getInt("idInquilino");
             int idPropietario = rs.getInt("idPropietario");
             int idPropiedad = rs.getInt("idPropiedad");
-            int idVendedor = rs.getInt("idVendedor");
+            int idUsuario = rs.getInt("idUsuario");
             
             InquilinoData id= new InquilinoData();
             Inquilino inquilino = id.buscarInquilino(idInquilino);
@@ -214,9 +214,9 @@ public class ContratoData {
             Garante garante= gd.buscarGarante(idPropiedad);
             contrato.setGarante(garante);
             
-            VendedorData vd= new VendedorData();
-            Vendedor vendedor= vd.buscarVendedor(idVendedor);
-            contrato.setVendedor(vendedor);
+            UsuarioData ud= new UsuarioData();
+            Usuario usuario= ud.buscarUsuario(idUsuario);
+            contrato.setUsuario(usuario);
             
             contrato.setFechaContrato(rs.getDate("fechaContrato").toLocalDate());
             contrato.setFechaInicio(rs.getDate("fechaInicio").toLocalDate());
@@ -251,7 +251,7 @@ public class ContratoData {
             int idInquilino = rs.getInt("idInquilino");
             int idPropietario = rs.getInt("idPropietario");
             int idPropiedad = rs.getInt("idPropiedad");
-            int idVendedor = rs.getInt("idVendedor");
+            int idUsuario = rs.getInt("idUsuario");
             
             
             InquilinoData id= new InquilinoData();
@@ -270,9 +270,9 @@ public class ContratoData {
             Garante garante= gd.buscarGarante(idPropiedad);
             c1.setGarante(garante);
             
-            VendedorData vd= new VendedorData();
-            Vendedor vendedor= vd.buscarVendedor(idVendedor);
-            c1.setVendedor(vendedor);
+            UsuarioData ud= new UsuarioData();
+            Usuario usuario= ud.buscarUsuario(idUsuario);
+            c1.setUsuario(usuario);
             
             c1.setFechaContrato(rs.getDate("fechaContrato").toLocalDate());
             c1.setFechaInicio(rs.getDate("fechaInicio").toLocalDate());

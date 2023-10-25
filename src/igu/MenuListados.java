@@ -6,7 +6,7 @@ import entidades.Inquilino;
 import entidades.Inspector;
 import entidades.Propiedad;
 import entidades.Propietario;
-import entidades.Vendedor;
+import entidades.Usuario;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
@@ -23,7 +23,8 @@ import persistencia.InquilinoData;
 import persistencia.InspectorData;
 import persistencia.PropiedadData;
 import persistencia.PropietarioData;
-import persistencia.VendedorData;
+import persistencia.UsuarioData;
+
 
 public class MenuListados extends javax.swing.JInternalFrame {
 
@@ -33,7 +34,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
     PropiedadData propiedadD = new PropiedadData();
     ContratoData contratoD = new ContratoData();
     PropietarioData propietarioD = new PropietarioData();
-    VendedorData vendedorD = new VendedorData();
+    UsuarioData  usuarioD =new UsuarioData();
 
     public MenuListados() {
         initComponents();
@@ -121,8 +122,8 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTIDInquilinoListados = new javax.swing.JTextField();
         jLIDGaranteListados = new javax.swing.JLabel();
         jTIDGaranteListados = new javax.swing.JTextField();
-        jTIDVendedorListados = new javax.swing.JTextField();
-        jLIDVendedorListados = new javax.swing.JLabel();
+        jTIDUsuarioContrato = new javax.swing.JTextField();
+        jLIDUsuarioContrato = new javax.swing.JLabel();
         jLActivoContrato = new javax.swing.JLabel();
         jLVigenciaListados = new javax.swing.JLabel();
         jLFechaContratoListados = new javax.swing.JLabel();
@@ -735,15 +736,15 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTIDGaranteListados.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDGaranteListados.setForeground(new java.awt.Color(51, 51, 51));
 
-        jTIDVendedorListados.setBackground(new java.awt.Color(153, 153, 153));
-        jTIDVendedorListados.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
-        jTIDVendedorListados.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDUsuarioContrato.setBackground(new java.awt.Color(153, 153, 153));
+        jTIDUsuarioContrato.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jTIDUsuarioContrato.setForeground(new java.awt.Color(51, 51, 51));
 
-        jLIDVendedorListados.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLIDVendedorListados.setForeground(new java.awt.Color(51, 204, 255));
-        jLIDVendedorListados.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLIDVendedorListados.setText("ID Vendedor");
-        jLIDVendedorListados.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLIDUsuarioContrato.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLIDUsuarioContrato.setForeground(new java.awt.Color(51, 204, 255));
+        jLIDUsuarioContrato.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLIDUsuarioContrato.setText("ID Vendedor");
+        jLIDUsuarioContrato.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jLActivoContrato.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLActivoContrato.setForeground(new java.awt.Color(51, 204, 255));
@@ -850,9 +851,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jDFechaInicioListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLIDVendedorListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLIDUsuarioContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addComponent(jTIDVendedorListados, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTIDUsuarioContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLActivoContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -941,9 +942,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLIDVendedorListados)
-                        .addComponent(jTIDVendedorListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLActivoContrato))
+                        .addComponent(jTIDUsuarioContrato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLActivoContrato)
+                        .addComponent(jLIDUsuarioContrato))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jRActivoContrato)
                         .addGap(5, 5, 5)))
@@ -1446,13 +1447,13 @@ public class MenuListados extends javax.swing.JInternalFrame {
             Inquilino inquilino = inquilinoD.buscarInquilino(idInquilino);
             int idGarante = Integer.parseInt(jTIDGaranteListados.getText());
             Garante garante = garanteD.buscarGarante(idGarante);
-            int idVendedor = Integer.parseInt(jTIDVendedorListados.getText());
-            Vendedor vendedor = vendedorD.buscarVendedor(idVendedor);
+            int idUsuario = Integer.parseInt(jTIDUsuarioContrato.getText());
+            Usuario usuario = usuarioD.buscarUsuario(idUsuario);
             LocalDate fechaContrato = jDFechaContratoListados.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
             boolean activo = jRActivoContrato.isSelected();
             boolean vigente = jRVigenciaContrato.isSelected();
 
-            Contrato nuevo = new Contrato(idContrato, propietario, propiedad, inquilino, garante, vendedor, fechaInicio, fechaFin, fechaContrato, vigente, activo);
+            Contrato nuevo = new Contrato(idContrato, propietario, propiedad, inquilino, garante, usuario, fechaInicio, fechaFin, fechaContrato, vigente, activo);
             contratoD.modificarContrato(nuevo);
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
@@ -1597,7 +1598,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLIDGaranteListados;
     private javax.swing.JLabel jLIDInquilinoListados;
     private javax.swing.JLabel jLIDPropietarioListados;
-    private javax.swing.JLabel jLIDVendedorListados;
+    private javax.swing.JLabel jLIDUsuarioContrato;
     private javax.swing.JLabel jLIDpropiedadListados;
     private javax.swing.JLabel jLIdInquilinos;
     private javax.swing.JLabel jLLugarTrabajoInquilinos;
@@ -1639,7 +1640,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTIDInquilinoListados;
     private javax.swing.JTextField jTIDPropiedadListados;
     private javax.swing.JTextField jTIDPropietarioListados;
-    private javax.swing.JTextField jTIDVendedorListados;
+    private javax.swing.JTextField jTIDUsuarioContrato;
     private javax.swing.JTextField jTLugarTrabajoInquilinos;
     private javax.swing.JTextField jTMatriculaInspector;
     private javax.swing.JTextField jTNombreGarante;
@@ -1806,7 +1807,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             jTIDPropietarioListados.setText(String.valueOf(contratoSelecionado.getPropietario().getIdPropietario()));
             jTIDInquilinoListados.setText(String.valueOf(contratoSelecionado.getInquilino().getIdInquilino()));
             jTIDGaranteListados.setText(String.valueOf(contratoSelecionado.getGarante().getIdGarante()));
-            jTIDVendedorListados.setText(String.valueOf(contratoSelecionado.getVendedor().getIdVendedor()));
+            jTIDUsuarioContrato.setText(String.valueOf(contratoSelecionado.getUsuario().getIdUsuario()));
             jDFechaContratoListados.setDate(java.sql.Date.valueOf(contratoSelecionado.getFechaContrato()));
             jRActivoContrato.setSelected(contratoSelecionado.isActivo());
             jRVigenciaContrato.setSelected(contratoSelecionado.isVigente());
@@ -1853,7 +1854,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTIDPropietarioListados.setText("");
         jTIDInquilinoListados.setText("");
         jTIDGaranteListados.setText("");
-        jTIDVendedorListados.setText("");
+        jTIDUsuarioContrato.setText("");
         jDFechaContratoListados.setDate(null);
         jRActivoContrato.setSelected(false);
         jRVigenciaContrato.setSelected(false);
