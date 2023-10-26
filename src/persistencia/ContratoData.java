@@ -64,7 +64,7 @@ public class ContratoData {
     //Modifico Contrato de manera individual
     public void modificarContrato(Contrato contrato) {
         // Sentencia SQL
-        String sql = "UPDATE contrato SET idPropiedad =?, idPropietario=?, idInquilino=?, idGarante=?, idUsuario=?, fechaInicio=?, fechaFin=?, fechaContrato=?, vigente=?, activo=?, renovado=? WHERE idContrato =?";
+        String sql = "UPDATE contrato SET idPropiedad =?, idPropietario=?, idInquilino=?, idGarante=?, idUsuario=?, fechaInicio=?, fechaFin=?, fechaContrato=?, montoContrato=?, vigente=?, activo=?, renovado=? WHERE idContrato =?";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -81,9 +81,10 @@ public class ContratoData {
             ps.setBoolean(11, contrato.isActivo());
             ps.setBoolean(12, contrato.isRenovado());
             ps.setInt(13, contrato.getIdContrato()); // Asegúrate de configurar este parámetro correctamente
-            ps.executeUpdate();
-
-            JOptionPane.showMessageDialog(null, "Contrato actualizado correctamente");
+            int exito = ps.executeUpdate();
+            if (exito == 1) {
+                JOptionPane.showMessageDialog(null, "Contrato actualizado correctamente");
+            }  
             // Cierra la conexión
             ps.close();
         } catch (SQLIntegrityConstraintViolationException e) {
