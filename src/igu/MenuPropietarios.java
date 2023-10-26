@@ -259,6 +259,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
         jButton1.setForeground(new java.awt.Color(51, 204, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trash_bin_delete_remove_icon_191682.png"))); // NOI18N
         jButton1.setBorder(null);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setOpaque(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -559,6 +560,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
             String documento = jTIDPropietarios4.getText();
             boolean activo = jrbPropietario.isSelected();
             Propietario ps = pd.buscarPropietarioPorDni(documento, activo);
+           
             if (ps != null) {
                 idPropietario.setText(String.valueOf(ps.getIdPropietario()));
                 jTIDPropietariosNom.setText(ps.getNombre());
@@ -574,6 +576,9 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                     deshabilitarBotones();
                     jBModificarPropietario.setEnabled(true);
                 }
+            } else {
+                JOptionPane.showMessageDialog(null, "No se encontro Propietario con ese DNI", "Sin Resultados", JOptionPane.INFORMATION_MESSAGE);
+                jTIDPropietarios4.setText("");
             }
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(this, "Error al buscar " + ex.getMessage());
