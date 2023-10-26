@@ -44,6 +44,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         deshabilitarBotonesGarante();
         deshabilitarBotonesInspectores();
         deshabilitarBotonesInquilinos();
+        deshabilitarBotonesContrato();
 
     }
     //defino dos métodosdentro del JInternalFrame y lo instanciamos de la siguiente manera.
@@ -752,13 +753,13 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLIDpropiedadListados.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLIDpropiedadListados.setForeground(new java.awt.Color(51, 204, 255));
         jLIDpropiedadListados.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLIDpropiedadListados.setText("ID Propiedad");
+        jLIDpropiedadListados.setText("Propiedad");
         jLIDpropiedadListados.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jLIDPropietarioListados.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLIDPropietarioListados.setForeground(new java.awt.Color(51, 204, 255));
         jLIDPropietarioListados.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLIDPropietarioListados.setText("ID Propietario");
+        jLIDPropietarioListados.setText("Propietario");
         jLIDPropietarioListados.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jTIDPropietarioListados.setBackground(new java.awt.Color(153, 153, 153));
@@ -768,7 +769,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLIDInquilinoListados.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLIDInquilinoListados.setForeground(new java.awt.Color(51, 204, 255));
         jLIDInquilinoListados.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLIDInquilinoListados.setText("ID Inquilino");
+        jLIDInquilinoListados.setText("Inquilino");
         jLIDInquilinoListados.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jTIDInquilinoListados.setBackground(new java.awt.Color(153, 153, 153));
@@ -778,7 +779,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLIDGaranteListados.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLIDGaranteListados.setForeground(new java.awt.Color(51, 204, 255));
         jLIDGaranteListados.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLIDGaranteListados.setText("ID Garante");
+        jLIDGaranteListados.setText("Garante");
         jLIDGaranteListados.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jTIDGaranteListados.setBackground(new java.awt.Color(153, 153, 153));
@@ -792,7 +793,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLIDUsuarioContrato.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLIDUsuarioContrato.setForeground(new java.awt.Color(51, 204, 255));
         jLIDUsuarioContrato.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLIDUsuarioContrato.setText("ID Vendedor");
+        jLIDUsuarioContrato.setText("Vendedor");
         jLIDUsuarioContrato.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jLActivoContrato.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -856,6 +857,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jCBusquedaContratos.setBackground(new java.awt.Color(153, 153, 153));
         jCBusquedaContratos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jCBusquedaContratos.setForeground(new java.awt.Color(51, 51, 51));
+        jCBusquedaContratos.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCBusquedaContratosItemStateChanged(evt);
+            }
+        });
         jCBusquedaContratos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCBusquedaContratosActionPerformed(evt);
@@ -1773,6 +1779,12 @@ deshabilitarBotonesInquilinos();
     rellenarCamposInspectores();
     }//GEN-LAST:event_jCBusquedaInspectorItemStateChanged
 
+    private void jCBusquedaContratosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBusquedaContratosItemStateChanged
+        if(!jTIDPropiedadListados.getText().isEmpty() && !jTIDPropietarioListados.getText().isEmpty() && !jTIDInquilinoListados.getText().isEmpty() && !jTIDGaranteListados.getText().isEmpty() && !jTIDUsuarioContrato.getText().isEmpty() && !jTMontoContrato.getText().isEmpty()){
+            habilitarBotonesContrato();
+        }
+    }//GEN-LAST:event_jCBusquedaContratosItemStateChanged
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBEliminarGarante;
@@ -2115,4 +2127,14 @@ habilitarBotonesGarante();
         jBModificarInquilinos.setEnabled(false);
         jBEliminarInquilinos.setEnabled(false);
     }
+    
+    public void deshabilitarBotonesContrato() {
+        jBModificarListados.setEnabled(false);
+        jBEliminarListados.setEnabled(false);
+    }
+    public void habilitarBotonesContrato() {
+        jBModificarListados.setEnabled(true);
+        jBEliminarListados.setEnabled(true);
+    }
+    
 }

@@ -1294,7 +1294,7 @@
                       <Color blue="ff" green="cc" red="33" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="ID Propiedad"/>
+                    <Property name="text" type="java.lang.String" value="Propiedad"/>
                     <Property name="verticalAlignment" type="int" value="3"/>
                   </Properties>
                 </Component>
@@ -1307,7 +1307,7 @@
                       <Color blue="ff" green="cc" red="33" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="ID Propietario"/>
+                    <Property name="text" type="java.lang.String" value="Propietario"/>
                     <Property name="verticalAlignment" type="int" value="3"/>
                   </Properties>
                 </Component>
@@ -1333,7 +1333,7 @@
                       <Color blue="ff" green="cc" red="33" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="ID Inquilino"/>
+                    <Property name="text" type="java.lang.String" value="Inquilino"/>
                     <Property name="verticalAlignment" type="int" value="3"/>
                   </Properties>
                 </Component>
@@ -1359,7 +1359,7 @@
                       <Color blue="ff" green="cc" red="33" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="ID Garante"/>
+                    <Property name="text" type="java.lang.String" value="Garante"/>
                     <Property name="verticalAlignment" type="int" value="3"/>
                   </Properties>
                 </Component>
@@ -1398,7 +1398,7 @@
                       <Color blue="ff" green="cc" red="33" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="ID Vendedor"/>
+                    <Property name="text" type="java.lang.String" value="Vendedor"/>
                     <Property name="verticalAlignment" type="int" value="3"/>
                   </Properties>
                 </Component>
@@ -1538,6 +1538,7 @@
                     </Property>
                   </Properties>
                   <Events>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCBusquedaContratosItemStateChanged"/>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBusquedaContratosActionPerformed"/>
                   </Events>
                   <AuxValues>
