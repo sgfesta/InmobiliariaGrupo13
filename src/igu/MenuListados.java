@@ -1523,7 +1523,7 @@ deshabilitarBotonesInquilinos();
     }//GEN-LAST:event_jBSalirInspectorActionPerformed
 
     private void jCBusquedaContratosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBusquedaContratosActionPerformed
-        rellenarCamposContratos();
+//        rellenarCamposContratos();
     }//GEN-LAST:event_jCBusquedaContratosActionPerformed
 
     private void jBSalirListadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirListadosActionPerformed
@@ -1780,9 +1780,12 @@ deshabilitarBotonesInquilinos();
     }//GEN-LAST:event_jCBusquedaInspectorItemStateChanged
 
     private void jCBusquedaContratosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBusquedaContratosItemStateChanged
-        if(!jTIDPropiedadListados.getText().isEmpty() && !jTIDPropietarioListados.getText().isEmpty() && !jTIDInquilinoListados.getText().isEmpty() && !jTIDGaranteListados.getText().isEmpty() && !jTIDUsuarioContrato.getText().isEmpty() && !jTMontoContrato.getText().isEmpty()){
+        if(!jTIDPropiedadListados.getText().isEmpty() && !jTIDPropietarioListados.getText().isEmpty() && !jTIDInquilinoListados.getText().isEmpty() && !jTIDGaranteListados.getText().isEmpty() && !jTIDUsuarioContrato.getText().isEmpty()){
             habilitarBotonesContrato();
+        }else{
+            deshabilitarBotonesContrato();
         }
+rellenarCamposContratos();
     }//GEN-LAST:event_jCBusquedaContratosItemStateChanged
 
 
@@ -2043,7 +2046,6 @@ habilitarBotonesGarante();
             jRActivoContrato.setSelected(contratoSelecionado.isActivo());
             jRVigenciaContrato.setSelected(contratoSelecionado.isVigente());
             jTMontoContrato.setText(String.valueOf(contratoSelecionado.getMontoContrato()));
-//
 //        //habilito botones luego de ejecutar acccion!
 //        //Habilito botones si esta todo OK!
 ////                if (ae.isActivo() == true) {
