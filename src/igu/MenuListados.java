@@ -39,8 +39,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
     public MenuListados() {
         initComponents();
         QuitarLaBarraTitulo();
+        deshabilitarBotonesInspectores();
         borrarCampos();
         deshabilitarBotonesGarante();
+        deshabilitarBotonesInspectores();
+        deshabilitarBotonesInquilinos();
 
     }
     //defino dos métodosdentro del JInternalFrame y lo instanciamos de la siguiente manera.
@@ -482,6 +485,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
         jCBusquedaInspector.setBackground(new java.awt.Color(153, 153, 153));
         jCBusquedaInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+        jCBusquedaInspector.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCBusquedaInspectorItemStateChanged(evt);
+            }
+        });
         jCBusquedaInspector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCBusquedaInspectorActionPerformed(evt);
@@ -541,6 +549,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTMatriculaInspector.setBackground(new java.awt.Color(153, 153, 153));
         jTMatriculaInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTMatriculaInspector.setForeground(new java.awt.Color(51, 51, 51));
+        jTMatriculaInspector.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTMatriculaInspectorKeyReleased(evt);
+            }
+        });
 
         jLNombreInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLNombreInspector.setForeground(new java.awt.Color(51, 204, 255));
@@ -551,6 +564,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTNombreInspector.setBackground(new java.awt.Color(153, 153, 153));
         jTNombreInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTNombreInspector.setForeground(new java.awt.Color(51, 51, 51));
+        jTNombreInspector.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTNombreInspectorKeyReleased(evt);
+            }
+        });
 
         jLApellidoInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLApellidoInspector.setForeground(new java.awt.Color(51, 204, 255));
@@ -561,6 +579,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTApellidoInspector.setBackground(new java.awt.Color(153, 153, 153));
         jTApellidoInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTApellidoInspector.setForeground(new java.awt.Color(51, 51, 51));
+        jTApellidoInspector.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTApellidoInspectorKeyReleased(evt);
+            }
+        });
 
         jLTelefonoInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLTelefonoInspector.setForeground(new java.awt.Color(51, 204, 255));
@@ -572,6 +595,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTTelefonoInspector.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTTelefonoInspector.setForeground(new java.awt.Color(51, 51, 51));
         jTTelefonoInspector.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTTelefonoInspectorKeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTTelefonoInspectorKeyTyped(evt);
             }
@@ -1034,6 +1060,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLIdInquilinos.setText("ID Inquilino");
         jLIdInquilinos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        jTIDInquilino.setEditable(false);
         jTIDInquilino.setBackground(new java.awt.Color(153, 153, 153));
         jTIDInquilino.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDInquilino.setForeground(new java.awt.Color(51, 51, 51));
@@ -1085,6 +1112,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTNombreInquilinos.setBackground(new java.awt.Color(153, 153, 153));
         jTNombreInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTNombreInquilinos.setForeground(new java.awt.Color(51, 51, 51));
+        jTNombreInquilinos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTNombreInquilinosKeyReleased(evt);
+            }
+        });
 
         jLNombreInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLNombreInquilinos.setForeground(new java.awt.Color(51, 204, 255));
@@ -1101,6 +1133,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTApellidoInquilinos.setBackground(new java.awt.Color(153, 153, 153));
         jTApellidoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTApellidoInquilinos.setForeground(new java.awt.Color(51, 51, 51));
+        jTApellidoInquilinos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTApellidoInquilinosKeyReleased(evt);
+            }
+        });
 
         jTDNIInquilinos.setBackground(new java.awt.Color(153, 153, 153));
         jTDNIInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -1120,6 +1157,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTLugarTrabajoInquilinos.setBackground(new java.awt.Color(153, 153, 153));
         jTLugarTrabajoInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTLugarTrabajoInquilinos.setForeground(new java.awt.Color(51, 51, 51));
+        jTLugarTrabajoInquilinos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTLugarTrabajoInquilinosKeyReleased(evt);
+            }
+        });
 
         jLLugarTrabajoInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLLugarTrabajoInquilinos.setForeground(new java.awt.Color(51, 204, 255));
@@ -1131,6 +1173,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTCuitInquilinos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTCuitInquilinos.setForeground(new java.awt.Color(51, 51, 51));
         jTCuitInquilinos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTCuitInquilinosKeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTCuitInquilinosKeyTyped(evt);
             }
@@ -1314,6 +1359,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         inspectorD.guardarInspector(nuevo);
         cargarCombos();
         borrarCampos();
+        deshabilitarBotonesInspectores();
     }//GEN-LAST:event_jBNuevoInspectorActionPerformed
 
     private void jBModificarInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarInspectorActionPerformed
@@ -1329,6 +1375,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
             Inspector nuevo = new Inspector(idInspector, matricula, nombre, apellido, telefono, activo);
             inspectorD.modificarInspector(nuevo);
+            deshabilitarBotonesInspectores();
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
         }
@@ -1340,6 +1387,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private void jBEliminarInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarInspectorActionPerformed
         Inspector inspectorSeleccionado = (Inspector) jCBusquedaInspector.getSelectedItem();
         inspectorD.eliminarInspector(inspectorSeleccionado.getIdInspector());
+        deshabilitarBotonesInspectores();
         cargarCombos();
         borrarCampos();
         //Deshabilito botones luego de ejecutar acccion!
@@ -1364,7 +1412,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTabbedPane1StateChanged
 
     private void jCBusquedaInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBusquedaInspectorActionPerformed
-        rellenarCamposInspectores();
+       
     }//GEN-LAST:event_jCBusquedaInspectorActionPerformed
 
     private void jBNuevoInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoInquilinosActionPerformed
@@ -1376,7 +1424,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         boolean activo = jRInquilino.isSelected();
         Inquilino nuevo = new Inquilino(nombre, apellido, dni, cuit, lugarTrabajo, activo);
         inquilinoD.guardarInquilino(nuevo);
-
+deshabilitarBotonesInquilinos();
         borrarCampos();
     }//GEN-LAST:event_jBNuevoInquilinosActionPerformed
 
@@ -1393,6 +1441,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
             Inquilino nuevo = new Inquilino(idInquilino, nombre, apellido, dni, cuit, lugarTrabajo, activo);
             inquilinoD.modificarInquilino(nuevo);
+            deshabilitarBotonesInquilinos();
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
         }
@@ -1403,7 +1452,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private void jBEliminarInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarInquilinosActionPerformed
         String dniInquilino = jTDNIInquilinos.getText();
         inquilinoD.eliminarInquilino(dniInquilino);
-
+deshabilitarBotonesInquilinos();
         borrarCampos();
         //Deshabilito botones luego de ejecutar acccion!
         //desHabilitarBotones();
@@ -1649,6 +1698,81 @@ public class MenuListados extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRVigenciaContratoActionPerformed
 
+    private void jTMatriculaInspectorKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTMatriculaInspectorKeyReleased
+        if(!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()){
+            jBNuevoInspector.setEnabled(true); 
+        }else{
+            deshabilitarBotonesInspectores();
+        }
+    }//GEN-LAST:event_jTMatriculaInspectorKeyReleased
+
+    private void jTNombreInspectorKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNombreInspectorKeyReleased
+       if(!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()){
+            jBNuevoInspector.setEnabled(true); 
+        }else{
+            deshabilitarBotonesInspectores();
+        }
+    }//GEN-LAST:event_jTNombreInspectorKeyReleased
+
+    private void jTApellidoInspectorKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTApellidoInspectorKeyReleased
+       if(!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()){
+            jBNuevoInspector.setEnabled(true); 
+        }else{
+            deshabilitarBotonesInspectores();
+        }
+    }//GEN-LAST:event_jTApellidoInspectorKeyReleased
+
+    private void jTTelefonoInspectorKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTTelefonoInspectorKeyReleased
+        if(!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()){
+            jBNuevoInspector.setEnabled(true); 
+        }else{
+            deshabilitarBotonesInspectores();
+        }
+    }//GEN-LAST:event_jTTelefonoInspectorKeyReleased
+
+    private void jTNombreInquilinosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNombreInquilinosKeyReleased
+       if(!jTNombreInquilinos.getText().isEmpty() && !jTApellidoInquilinos.getText().isEmpty() && !jTCuitInquilinos.getText().isEmpty() && !jTLugarTrabajoInquilinos.getText().isEmpty()){
+            jBNuevoInquilinos.setEnabled(true); 
+        }else{
+            deshabilitarBotonesInquilinos();
+        }
+    }//GEN-LAST:event_jTNombreInquilinosKeyReleased
+
+    private void jTApellidoInquilinosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTApellidoInquilinosKeyReleased
+       if(!jTNombreInquilinos.getText().isEmpty() && !jTApellidoInquilinos.getText().isEmpty() && !jTCuitInquilinos.getText().isEmpty() && !jTLugarTrabajoInquilinos.getText().isEmpty()){
+            jBNuevoInquilinos.setEnabled(true); 
+        }else{
+            deshabilitarBotonesInquilinos();
+        }
+    }//GEN-LAST:event_jTApellidoInquilinosKeyReleased
+
+    private void jTCuitInquilinosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCuitInquilinosKeyReleased
+       if(!jTNombreInquilinos.getText().isEmpty() && !jTApellidoInquilinos.getText().isEmpty() && !jTCuitInquilinos.getText().isEmpty() && !jTLugarTrabajoInquilinos.getText().isEmpty()){
+            jBNuevoInquilinos.setEnabled(true); 
+        }else{
+            deshabilitarBotonesInquilinos();
+        }
+    }//GEN-LAST:event_jTCuitInquilinosKeyReleased
+
+    private void jTLugarTrabajoInquilinosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTLugarTrabajoInquilinosKeyReleased
+        if(!jTNombreInquilinos.getText().isEmpty() && !jTApellidoInquilinos.getText().isEmpty() && !jTCuitInquilinos.getText().isEmpty() && !jTLugarTrabajoInquilinos.getText().isEmpty()){
+            jBNuevoInquilinos.setEnabled(true); 
+        }else{
+            deshabilitarBotonesInquilinos();
+        }
+    }//GEN-LAST:event_jTLugarTrabajoInquilinosKeyReleased
+
+    private void jCBusquedaInspectorItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBusquedaInspectorItemStateChanged
+     if(!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()){
+        habilitarBotonesInspectores();  
+        
+     }else{
+         rellenarCamposInspectores();
+           deshabilitarBotonesInspectores(); 
+        }
+    rellenarCamposInspectores();
+    }//GEN-LAST:event_jCBusquedaInspectorItemStateChanged
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBEliminarGarante;
@@ -1826,7 +1950,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             jTCuitInquilinos.setText(String.valueOf(inquilinoSelecionado.getCuit()));
             jTLugarTrabajoInquilinos.setText(inquilinoSelecionado.getLugarTrabajo());
             jRInquilino.setSelected(inquilinoSelecionado.isActivo());
-
+habilitarBotonesInquilinos();
             //habilito botones luego de ejecutar acccion!
             //Habilito botones si esta todo OK!
 //                if (ae.isActivo() == true) {
@@ -1929,7 +2053,7 @@ habilitarBotonesGarante();
         jTLugarTrabajoInquilinos.setText("");
 //        jRInquilino.setSelected(false);
 
-        jTMatriculaInspector.setText("");
+         jTMatriculaInspector.setText("");
         jTNombreInspector.setText("");
         jTApellidoInspector.setText("");
         jTTelefonoInspector.setText("");
@@ -1968,4 +2092,27 @@ habilitarBotonesGarante();
         jBEliminarGarante.setEnabled(false);
     }
     
+    public void habilitarBotonesInspectores() {
+        jBModificarInspector.setEnabled(true);
+        jBEliminarInspector.setEnabled(true);
+        jBNuevoInspector.setEnabled(false);
+    }
+
+    public void deshabilitarBotonesInspectores() {
+        jBNuevoInspector.setEnabled(false);
+        jBModificarInspector.setEnabled(false);
+        jBEliminarInspector.setEnabled(false);
+    }
+    
+        public void habilitarBotonesInquilinos() {
+        jBModificarInquilinos.setEnabled(true);
+        jBEliminarInquilinos.setEnabled(true);
+        jBNuevoInquilinos.setEnabled(false);
+    }
+
+    public void deshabilitarBotonesInquilinos() {
+        jBNuevoInquilinos.setEnabled(false);
+        jBModificarInquilinos.setEnabled(false);
+        jBEliminarInquilinos.setEnabled(false);
+    }
 }
