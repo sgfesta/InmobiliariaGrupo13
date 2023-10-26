@@ -8,10 +8,14 @@ import entidades.Zona;
 import java.awt.Dimension;
 import java.awt.event.ItemEvent;
 import java.text.NumberFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import persistencia.ContratoData;
+import persistencia.ControlAcceso;
 import persistencia.GaranteData;
 import persistencia.InquilinoData;
 import persistencia.PropiedadData;
@@ -19,18 +23,21 @@ import persistencia.TipoPropiedadData;
 import persistencia.ZonaData;
 
 public class MenuAlquileres extends javax.swing.JInternalFrame {
-
+    private ControlAcceso controlacceso;
     ContratoData cd = new ContratoData();
     PropiedadData pd = new PropiedadData();
     Propiedad pSelect = new Propiedad();
     InquilinoData inquilinoD = new InquilinoData();
     GaranteData garanteD = new GaranteData();
 
-    public MenuAlquileres() {
+    public MenuAlquileres(ControlAcceso controlAcceso) {
+        this.controlacceso = controlAcceso;
+        
         initComponents();
         QuitarLaBarraTitulo();
         cargarComboTipo();
         cargarComboZona();
+        limpiarLabel();
 
     }
     //defino dos métodosdentro del JInternalFrame y lo instanciamos de la siguiente manera.
@@ -88,7 +95,9 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jLIDInquilinoAlquiler = new javax.swing.JLabel();
         jLIDInquilinoBuscado = new javax.swing.JLabel();
         jLMontoAlquiler = new javax.swing.JLabel();
-        jTMontoAlquiler = new javax.swing.JTextField();
+        jTMontotasado = new javax.swing.JTextField();
+        jLMontoAlquiler1 = new javax.swing.JLabel();
+        jTMontoContrato = new javax.swing.JTextField();
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -149,8 +158,9 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jLIDGaranteBuscado.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLIDGaranteBuscado.setForeground(new java.awt.Color(51, 204, 255));
         jLIDGaranteBuscado.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLIDGaranteBuscado.setText("Garanre Buscado");
         jLIDGaranteBuscado.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLIDGaranteBuscado, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 390, 90, -1));
+        jPCardAlquileres.add(jLIDGaranteBuscado, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 360, 180, -1));
 
         jTIDInquilinoAlquiler.setBackground(new java.awt.Color(153, 153, 153));
         jTIDInquilinoAlquiler.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -225,11 +235,6 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jRPrecioAlquiler.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jRPrecioAlquilerStateChanged(evt);
-            }
-        });
-        jRPrecioAlquiler.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRPrecioAlquilerActionPerformed(evt);
             }
         });
         jPCardAlquileres.add(jRPrecioAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, -1, 30));
@@ -340,18 +345,36 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         jLIDInquilinoBuscado.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLIDInquilinoBuscado.setForeground(new java.awt.Color(51, 204, 255));
         jLIDInquilinoBuscado.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLIDInquilinoBuscado.setText("InquilinoBuscado");
         jLIDInquilinoBuscado.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLIDInquilinoBuscado, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 160, -1));
+        jPCardAlquileres.add(jLIDInquilinoBuscado, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 180, 20));
 
         jLMontoAlquiler.setBackground(new java.awt.Color(51, 51, 51));
         jLMontoAlquiler.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLMontoAlquiler.setForeground(new java.awt.Color(51, 204, 255));
-        jLMontoAlquiler.setText("Monto Alquiler");
+        jLMontoAlquiler.setText("Monto Tasado");
         jLMontoAlquiler.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPCardAlquileres.add(jLMontoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 510, -1, 20));
+        jPCardAlquileres.add(jLMontoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 510, -1, 20));
 
-        jTMontoAlquiler.setBackground(new java.awt.Color(153, 153, 153));
-        jPCardAlquileres.add(jTMontoAlquiler, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 510, 100, -1));
+        jTMontotasado.setBackground(new java.awt.Color(153, 153, 153));
+        jTMontotasado.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTMontotasado.setDisabledTextColor(new java.awt.Color(102, 204, 255));
+        jTMontotasado.setDragEnabled(true);
+        jTMontotasado.setEnabled(false);
+        jPCardAlquileres.add(jTMontotasado, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 510, 100, -1));
+
+        jLMontoAlquiler1.setBackground(new java.awt.Color(51, 51, 51));
+        jLMontoAlquiler1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLMontoAlquiler1.setForeground(new java.awt.Color(51, 204, 255));
+        jLMontoAlquiler1.setText("Monto Contrato");
+        jLMontoAlquiler1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPCardAlquileres.add(jLMontoAlquiler1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 510, -1, 20));
+
+        jTMontoContrato.setBackground(new java.awt.Color(153, 153, 153));
+        jTMontoContrato.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTMontoContrato.setForeground(new java.awt.Color(102, 204, 255));
+        jTMontoContrato.setText("Precio");
+        jPCardAlquileres.add(jTMontoContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 510, 100, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -378,13 +401,6 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         } else {
 
             filtrarPropiedades();
-
-            //no se usa mas
-//            if (jRPrecioAlquiler.isSelected()) {
-//                filtrarHasta();
-//            } else {
-//                filtrarDesde();
-//            }
         }
 
 
@@ -465,10 +481,6 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jbBuscarGaranteActionPerformed
 
-    private void jRPrecioAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRPrecioAlquilerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRPrecioAlquilerActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBFiltrarAlquiler;
@@ -493,6 +505,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLIDInquilinoAlquiler;
     private javax.swing.JLabel jLIDInquilinoBuscado;
     private javax.swing.JLabel jLMontoAlquiler;
+    private javax.swing.JLabel jLMontoAlquiler1;
     private javax.swing.JLabel jLTituloAlquiler;
     private javax.swing.JLabel jLTituloAlquiler1;
     private javax.swing.JLabel jLabel28;
@@ -501,7 +514,8 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
     private javax.swing.JRadioButton jRPrecioAlquiler;
     private javax.swing.JTextField jTIDGaranteAlquiler;
     private javax.swing.JTextField jTIDInquilinoAlquiler;
-    private javax.swing.JTextField jTMontoAlquiler;
+    private javax.swing.JTextField jTMontoContrato;
+    private javax.swing.JTextField jTMontotasado;
     private javax.swing.JTextField jTprecioAlquiler;
     private javax.swing.JButton jbBuscarGarante;
     private javax.swing.JButton jbBuscarInquilino;
@@ -531,49 +545,57 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
     }
 
     public void agregarContrato() {
-        ContratoData cd = new ContratoData();
+    ContratoData cd = new ContratoData();
+    // valor del contrato
+    String textoMontoContrato = jTMontoContrato.getText();
+    String textoMontoTasado = jTMontotasado.getText();
 
-//        try {
-//            if (!jTIDInquilinoAlquiler.getText().isEmpty() && !jTIDGaranteAlquiler.getText().isEmpty()) {
-//                // habilitarBotones();
-//                // Propiedad PSelec = (Propiedad) jCListaTipoPropiedades.getSelectedItem();
-//
-//                Contrato alquiler = (Contrato) jCListadoFiltradoPropiedadesAlquiler.getSelectedItem();
-//
-//                Propietario idprop = new Propietario();
-//                idprop.setIdPropietario(Integer.parseInt(jTIDPropiedadAlquiler.getText()));
-//
-//                Propiedad idpro = new Propiedad();
-//                idpro.setIdPropiedad(Integer.parseInt(jTIDPropietarioAlquiler.getText()));
-//
-//                Inquilino idinqui = new Inquilino();
-//                idinqui.setIdInquilino(Integer.parseInt(jTIDInquilinoAlquiler.getText()));
-//
-//                Garante idgaran = new Garante();
-//                idgaran.setIdGarante(Integer.parseInt(jTIDGaranteAlquiler.getText()));
-//
-//                Vendedor idven = new Vendedor();
-//                idven.setIdVendedor(Integer.parseInt(jTIDVendedor.getText()));
-//                int vendedor = Integer.parseInt(jTIDVendedor.getText());
-//                LocalDate fechaInicio = jDFechaInicioAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-//                LocalDate fechaFin = jDFechaFinAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-//                LocalDate fechaContrato = jDFechaContratoAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-//
-//                boolean vigente = jRVigenciaAlquiler.isSelected();
-//                boolean activo = jRActivoAlquiler.isSelected();
-//                Contrato nuevo = new Contrato(idprop, idpro, idinqui, idgaran, idven, fechaInicio, fechaFin, fechaContrato, vigente, activo);
-//                cd.guardarContrato(nuevo);
-//                JOptionPane.showMessageDialog(this, "Alquiler realizado exitosamente");
-//                limpiarCampos();
-//                //  desHabilitarBotones();
-//
-//            } else {
-//                JOptionPane.showMessageDialog(this, "No debe dejar campos vacios");
-//            }
-//
-//        } catch (NullPointerException e) {
-//            JOptionPane.showMessageDialog(this, "No debe dejar campos vacios");
-//        }
+    double precio = (textoMontoContrato.isEmpty() || textoMontoContrato.equals("Precio")) ? Double.parseDouble(textoMontoTasado) : Double.parseDouble(textoMontoContrato);
+    // Obtener los valores de los campos de la interfaz de usuario
+    String dniInquilino = jTIDInquilinoAlquiler.getText();
+    String dniGarante = jTIDGaranteAlquiler.getText();
+   // LocalDate fechaInicio = jDFechaInicioListados.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+   LocalDate fechaInicio = jDFechaInicioAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+   LocalDate fechaFin = jDFechaFinAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+   LocalDate fechaContrato1 = jDFechaContratoAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+    Date fechaInicioAlquiler = jDFechaInicioAlquiler.getDate();
+    Date fechaFinAlquiler = jDFechaFinAlquiler.getDate();
+    Date fechaContrato = jDFechaContratoAlquiler.getDate();
+
+    // Realizar la búsqueda de inquilino y garante utilizando los DNIs
+    Inquilino inquilino = inquilinoD.buscarInquilinoPorDni(dniInquilino);
+    Garante garante = garanteD.buscarGarantePorDni(dniGarante);
+
+    // Obtener la propiedad seleccionada desde el ComboBox
+    Propiedad propiedadSeleccionada = (Propiedad) jCListadoFiltradoPropiedadesAlquiler.getSelectedItem();
+
+    // Asegurarse de que todas las partes del contrato estén disponibles y válidas
+    if (inquilino != null && garante != null && propiedadSeleccionada != null
+            && fechaInicioAlquiler != null && fechaFinAlquiler != null && fechaContrato != null) {
+        
+        String mensaje = "ID Propiedad : " + propiedadSeleccionada.getIdPropiedad() + "\n"
+                    + "ID Propietario: " + propiedadSeleccionada.getPropietario().getIdPropietario() + "\n"
+                    + "ID Inquilino: " + inquilino.getIdInquilino() + "\n"
+                    + "ID garante: " + garante.getIdGarante() + "\n"
+                    + "ID Usuario: " + controlacceso.getIdUsuarioActual() + "\n"
+                    + "Fecha usando DATE: " + "\n"
+                    + "Fecha Inicio: " + fechaInicioAlquiler + "\n"
+                    + "Fecha Fin: " + fechaFinAlquiler + "\n"
+                    + "Fecha Contrato: " + fechaContrato + "\n"
+                     + "Fecha usando LocalDate: " + "\n"
+                    + "Fecha Inicio: " + fechaInicio + "\n"
+                    + "Fecha Fin: " + fechaFin + "\n"
+                    + "Fecha Contrato: " + fechaContrato1 + "\n"               
+                    + "Monto Contrato: " + precio + "\n"
+                    + "Vigente: " + "AL ser nuevo siemrpe va a estar Vigente" + "\n"
+                    + "Renovado: " +"AL ser nuevo siemrpe no va a estar renovado" + "\n"
+                    + "Activo : " + "AL ser nuevo siemrpe va a estar activo";
+                   
+        
+        JOptionPane.showMessageDialog(null, mensaje, "Exito", JOptionPane.WARNING_MESSAGE);
+    } else {
+        JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos requeridos y verifique la información.", "Campos Incompletos", JOptionPane.WARNING_MESSAGE);
+    }
 
     }
 
@@ -610,6 +632,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
                     + "Observaciones: " + propiedadSeleccionado.getObservaciones();
 
             JOptionPane.showMessageDialog(null, mensaje, "Detalles de la Propiedad", JOptionPane.INFORMATION_MESSAGE);
+            jTMontotasado.setText(String.valueOf(propiedadSeleccionado.getPrecioTasado()));
         }
     }
 
@@ -634,6 +657,10 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "No se encontraron propiedades que cumplan con los criterios de búsqueda.", "Sin Resultados", JOptionPane.INFORMATION_MESSAGE);
         }
     }
-
+    private void limpiarLabel(){
+        
+        jLIDInquilinoBuscado.setText("");
+        jLIDGaranteBuscado.setText("");
+    }
 
 }

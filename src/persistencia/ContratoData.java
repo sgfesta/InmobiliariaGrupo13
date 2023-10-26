@@ -15,6 +15,7 @@ import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import javax.swing.JOptionPane;
 
@@ -34,7 +35,7 @@ public class ContratoData {
     //Guardo Contrato de manera individual
     public void guardarContrato(Contrato contrato){
         //Sentencia Sql
-        String sql = "UPDATE Contrato SET idPropiedad =?, idPropietario=?, idInquilino=?, idGarante=?, idUsuario=?, fechaInicio=?, fechaFin=?, fechaContrato=?, vigente=?, activo=? VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
+        String sql = "UPDATE Contrato SET idPropiedad =?, idPropietario=?, idInquilino=?, idGarante=?, idUsuario=?, fechaInicio=?, fechaFin=?, fechaContrato=?, montoContrato=?, vigente=?, activo=? VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, contrato.getPropiedad().getIdPropiedad());
@@ -45,8 +46,9 @@ public class ContratoData {
             ps.setDate(6, Date.valueOf(contrato.getFechaInicio()));
             ps.setDate(7, Date.valueOf(contrato.getFechaFin()));
             ps.setDate(8, Date.valueOf(contrato.getFechaContrato()));
-            ps.setBoolean(9, contrato.isVigente());
-            ps.setBoolean(10, contrato.isActivo());
+            ps.setDouble(9, contrato.getIdContrato());
+            ps.setBoolean(10, contrato.isVigente());
+            ps.setBoolean(11, contrato.isActivo());
             ps.executeUpdate();
 
             ResultSet rs = ps.getGeneratedKeys();
@@ -78,9 +80,10 @@ public class ContratoData {
         ps.setDate(6, Date.valueOf(contrato.getFechaInicio()));
         ps.setDate(7, Date.valueOf(contrato.getFechaFin()));
         ps.setDate(8, Date.valueOf(contrato.getFechaContrato()));
-        ps.setBoolean(9, contrato.isVigente());
-        ps.setBoolean(10, contrato.isActivo());
-        ps.setInt(11, contrato.getIdContrato()); // Asegúrate de configurar este parámetro correctamente
+        ps.setDouble(9, contrato.getMontoContrato());
+        ps.setBoolean(10, contrato.isVigente());
+        ps.setBoolean(11, contrato.isActivo());
+        ps.setInt(12, contrato.getIdContrato()); // Asegúrate de configurar este parámetro correctamente
         ps.executeUpdate();
 
         JOptionPane.showMessageDialog(null, "Contrato actualizado correctamente");
@@ -170,7 +173,8 @@ public class ContratoData {
             
             c1.setFechaContrato(rs.getDate("fechaContrato").toLocalDate());
             c1.setFechaInicio(rs.getDate("fechaInicio").toLocalDate());
-            c1.setFechaFin(rs.getDate("fechaFin").toLocalDate());  
+            c1.setFechaFin(rs.getDate("fechaFin").toLocalDate()); 
+            c1.setMontoContrato(rs.getDouble("montoContrato"));            
             c1.setActivo(rs.getBoolean("activo"));
             c1.setVigente(rs.getBoolean("vigente"));
             contratosVigentes.add(c1);
@@ -221,6 +225,7 @@ public class ContratoData {
             contrato.setFechaContrato(rs.getDate("fechaContrato").toLocalDate());
             contrato.setFechaInicio(rs.getDate("fechaInicio").toLocalDate());
             contrato.setFechaFin(rs.getDate("fechaFin").toLocalDate());  
+            contrato.setMontoContrato(rs.getDouble("montoContrato"));
             contrato.setActivo(rs.getBoolean("activo"));
             contrato.setVigente(rs.getBoolean("vigente"));
             
@@ -277,6 +282,7 @@ public class ContratoData {
             c1.setFechaContrato(rs.getDate("fechaContrato").toLocalDate());
             c1.setFechaInicio(rs.getDate("fechaInicio").toLocalDate());
             c1.setFechaFin(rs.getDate("fechaFin").toLocalDate());  
+            c1.setMontoContrato(rs.getDouble("montoContrato")); 
             c1.setActivo(rs.getBoolean("activo"));
             c1.setVigente(rs.getBoolean("vigente"));
             contratosVigentes.add(c1);

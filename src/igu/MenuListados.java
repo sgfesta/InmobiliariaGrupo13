@@ -137,7 +137,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jRVigenciaContrato = new javax.swing.JRadioButton();
         jRActivoContrato = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTMontoContrato = new javax.swing.JTextField();
         jPInquilinos = new javax.swing.JPanel();
         jLTituloInquilinos = new javax.swing.JLabel();
         jLBusquedaInquilinos = new javax.swing.JLabel();
@@ -864,8 +864,8 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLabel1.setForeground(new java.awt.Color(51, 204, 255));
         jLabel1.setText("Monto Alquiler");
 
-        jTextField1.setBackground(new java.awt.Color(153, 153, 153));
-        jTextField1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 12)); // NOI18N
+        jTMontoContrato.setBackground(new java.awt.Color(153, 153, 153));
+        jTMontoContrato.setFont(new java.awt.Font("Segoe UI Semilight", 0, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -918,7 +918,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jDFechaFinListados, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
                             .addComponent(jDFechaContratoListados, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
-                            .addComponent(jTextField1)))
+                            .addComponent(jTMontoContrato)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLIDUsuarioContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
@@ -987,7 +987,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jTIDGaranteListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jTMontoContrato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(7, 7, 7)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTIDUsuarioContrato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1501,10 +1501,12 @@ public class MenuListados extends javax.swing.JInternalFrame {
             int idUsuario = Integer.parseInt(jTIDUsuarioContrato.getText());
             Usuario usuario = usuarioD.buscarUsuario(idUsuario);
             LocalDate fechaContrato = jDFechaContratoListados.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+            double montoContrato = Double.parseDouble(jTMontoContrato.getText());
+
             boolean activo = jRActivoContrato.isSelected();
             boolean vigente = jRVigenciaContrato.isSelected();
 
-            Contrato nuevo = new Contrato(idContrato, propietario, propiedad, inquilino, garante, usuario, fechaInicio, fechaFin, fechaContrato, vigente, activo);
+            Contrato nuevo = new Contrato(idContrato, propietario, propiedad, inquilino, garante, usuario, fechaInicio, fechaFin, fechaContrato, montoContrato, vigente, activo);
             contratoD.modificarContrato(nuevo);  
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
@@ -1735,13 +1737,13 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTIDUsuarioContrato;
     private javax.swing.JTextField jTLugarTrabajoInquilinos;
     private javax.swing.JTextField jTMatriculaInspector;
+    private javax.swing.JTextField jTMontoContrato;
     private javax.swing.JTextField jTNombreGarante;
     private javax.swing.JTextField jTNombreInquilinos;
     private javax.swing.JTextField jTNombreInspector;
     private javax.swing.JTextField jTTelefonoGarante;
     private javax.swing.JTextField jTTelefonoInspector;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton jbBuscarGarante;
     private javax.swing.JButton jbBuscarInquilino;
     // End of variables declaration//GEN-END:variables
@@ -1904,6 +1906,7 @@ habilitarBotonesGarante();
             jDFechaContratoListados.setDate(java.sql.Date.valueOf(contratoSelecionado.getFechaContrato()));
             jRActivoContrato.setSelected(contratoSelecionado.isActivo());
             jRVigenciaContrato.setSelected(contratoSelecionado.isVigente());
+            jTMontoContrato.setText(String.valueOf(contratoSelecionado.getMontoContrato()));
 //
 //        //habilito botones luego de ejecutar acccion!
 //        //Habilito botones si esta todo OK!

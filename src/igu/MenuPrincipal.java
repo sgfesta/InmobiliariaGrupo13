@@ -381,7 +381,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         if (jLAlquileres.isEnabled()) {
             jPCardFondo.removeAll();
             jPCardFondo.repaint();
-            malquileres = new MenuAlquileres();
+            malquileres = new MenuAlquileres(controlAcceso);
             malquileres.setVisible(true);
             jPCardFondo.add(malquileres);
             jPCardFondo.setComponentZOrder(malquileres, 0);
@@ -425,7 +425,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             cerrarSession();
             this.dispose(); // cierra la ventana
 
-        }   // TODO add your handling code here:
+        }   // TODO ccesadd your handling code here:
     }//GEN-LAST:event_jLSalirMouseClicked
 
     private void jLSalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLSalirMouseEntered
