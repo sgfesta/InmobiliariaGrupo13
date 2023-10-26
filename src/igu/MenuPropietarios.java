@@ -576,8 +576,12 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
                     deshabilitarBotones();
                     jBModificarPropietario.setEnabled(true);
                 }
-            } else {
-                JOptionPane.showMessageDialog(null, "No se encontro Propietario con ese DNI", "Sin Resultados", JOptionPane.INFORMATION_MESSAGE);
+            } else if(jTIDPropietarios4.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Debe ingresar un DNI antes de realizar una busqueda");
+                jTIDPropietarios4.setText("");
+            
+            } else if(ps == null) {
+                JOptionPane.showMessageDialog(this, "No se encontro Propietario con ese DNI", "Sin Resultados", JOptionPane.INFORMATION_MESSAGE);
                 jTIDPropietarios4.setText("");
             }
         } catch (NumberFormatException ex) {
