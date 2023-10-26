@@ -25,7 +25,6 @@ import persistencia.PropiedadData;
 import persistencia.PropietarioData;
 import persistencia.UsuarioData;
 
-
 public class MenuListados extends javax.swing.JInternalFrame {
 
     InquilinoData inquilinoD = new InquilinoData();
@@ -34,7 +33,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
     PropiedadData propiedadD = new PropiedadData();
     ContratoData contratoD = new ContratoData();
     PropietarioData propietarioD = new PropietarioData();
-    UsuarioData  usuarioD =new UsuarioData();
+    UsuarioData usuarioD = new UsuarioData();
 
     public MenuListados() {
         initComponents();
@@ -93,6 +92,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLBusquedaGarante = new javax.swing.JLabel();
         jTDNIGarante = new javax.swing.JTextField();
         jbBuscarGarante = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jPInspector = new javax.swing.JPanel();
         jLTituloInspector = new javax.swing.JLabel();
         jLBusquedaInspector = new javax.swing.JLabel();
@@ -111,6 +111,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTTelefonoInspector = new javax.swing.JTextField();
         jLActivoInspector = new javax.swing.JLabel();
         jRInspector = new javax.swing.JRadioButton();
+        jButton3 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLTituloContratoListados = new javax.swing.JLabel();
         jLIDContratoListados = new javax.swing.JLabel();
@@ -142,6 +143,13 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jRActivoContrato = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
         jTMontoContrato = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jRRenovado = new javax.swing.JRadioButton();
+        jIDp = new javax.swing.JLabel();
+        jIdPROPIEDAD = new javax.swing.JLabel();
+        jIGARANTE = new javax.swing.JLabel();
+        jIVendedor = new javax.swing.JLabel();
+        jIInquilino = new javax.swing.JLabel();
         jPInquilinos = new javax.swing.JPanel();
         jLTituloInquilinos = new javax.swing.JLabel();
         jLBusquedaInquilinos = new javax.swing.JLabel();
@@ -163,6 +171,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLActivoInquilinos = new javax.swing.JLabel();
         jRInquilino = new javax.swing.JRadioButton();
         jbBuscarInquilino = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -365,6 +374,19 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(51, 51, 51));
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(51, 204, 255));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trash_bin_delete_remove_icon_191682.png"))); // NOI18N
+        jButton4.setBorder(null);
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4.setOpaque(false);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPGaranteLayout = new javax.swing.GroupLayout(jPGarante);
         jPGarante.setLayout(jPGaranteLayout);
         jPGaranteLayout.setHorizontalGroup(
@@ -418,22 +440,26 @@ public class MenuListados extends javax.swing.JInternalFrame {
                                 .addComponent(jBEliminarGarante)))
                         .addGap(18, 18, 18)
                         .addComponent(jBSalirGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         jPGaranteLayout.setVerticalGroup(
             jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPGaranteLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(jLTituloGarante)
-                .addGap(18, 18, 18)
-                .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPGaranteLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLBusquedaGarante)
-                            .addComponent(jTDNIGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(10, 10, 10))
-                    .addComponent(jbBuscarGarante, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPGaranteLayout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLBusquedaGarante)
+                                .addComponent(jTDNIGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(10, 10, 10))
+                        .addComponent(jbBuscarGarante, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTIDGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -458,7 +484,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLActivoGarante)
                     .addComponent(jRGarante))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
                 .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevoGarante)
                     .addComponent(jBModificarGarante)
@@ -619,6 +645,19 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(51, 51, 51));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(51, 204, 255));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trash_bin_delete_remove_icon_191682.png"))); // NOI18N
+        jButton3.setBorder(null);
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.setOpaque(false);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPInspectorLayout = new javax.swing.GroupLayout(jPInspector);
         jPInspector.setLayout(jPInspectorLayout);
         jPInspectorLayout.setHorizontalGroup(
@@ -629,11 +668,13 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addGap(209, 209, 209)
                         .addComponent(jLBusquedaInspector)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCBusquedaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jCBusquedaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPInspectorLayout.createSequentialGroup()
                         .addGap(248, 248, 248)
                         .addComponent(jLTituloInspector)))
-                .addContainerGap(219, Short.MAX_VALUE))
+                .addContainerGap(163, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInspectorLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -674,13 +715,18 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jPInspectorLayout.setVerticalGroup(
             jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPInspectorLayout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
+                .addContainerGap(75, Short.MAX_VALUE)
                 .addComponent(jLTituloInspector)
-                .addGap(41, 41, 41)
-                .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLBusquedaInspector)
-                    .addComponent(jCBusquedaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
+                .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPInspectorLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLBusquedaInspector)
+                            .addComponent(jCBusquedaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPInspectorLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(37, 37, 37)
                 .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTMatriculaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLMatriculaInspector))
@@ -850,9 +896,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
         });
 
         jLRenovadoListados.setBackground(new java.awt.Color(51, 51, 51));
-        jLRenovadoListados.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        jLRenovadoListados.setForeground(new java.awt.Color(255, 51, 51));
-        jLRenovadoListados.setText("No Renovado");
+        jLRenovadoListados.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLRenovadoListados.setForeground(new java.awt.Color(51, 204, 255));
+        jLRenovadoListados.setText("Renovado");
 
         jCBusquedaContratos.setBackground(new java.awt.Color(153, 153, 153));
         jCBusquedaContratos.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
@@ -899,121 +945,199 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTMontoContrato.setBackground(new java.awt.Color(153, 153, 153));
         jTMontoContrato.setFont(new java.awt.Font("Segoe UI Semilight", 0, 12)); // NOI18N
 
+        jButton1.setBackground(new java.awt.Color(51, 51, 51));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 204, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trash_bin_delete_remove_icon_191682.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setOpaque(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jRRenovado.setBackground(new java.awt.Color(51, 51, 51));
+        jRRenovado.setBorder(null);
+        jRRenovado.setOpaque(false);
+        jRRenovado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRRenovadoActionPerformed(evt);
+            }
+        });
+
+        jIDp.setBackground(new java.awt.Color(51, 51, 51));
+        jIDp.setForeground(new java.awt.Color(51, 51, 51));
+        jIDp.setText("jLabel2");
+
+        jIdPROPIEDAD.setBackground(new java.awt.Color(51, 51, 51));
+        jIdPROPIEDAD.setForeground(new java.awt.Color(51, 51, 51));
+        jIdPROPIEDAD.setText("jIPropiedad");
+
+        jIGARANTE.setBackground(new java.awt.Color(51, 51, 51));
+        jIGARANTE.setForeground(new java.awt.Color(51, 51, 51));
+        jIGARANTE.setText("jLabel2");
+
+        jIVendedor.setBackground(new java.awt.Color(51, 51, 51));
+        jIVendedor.setForeground(new java.awt.Color(51, 51, 51));
+        jIVendedor.setText("jLabel2");
+
+        jIInquilino.setBackground(new java.awt.Color(51, 51, 51));
+        jIInquilino.setForeground(new java.awt.Color(51, 51, 51));
+        jIInquilino.setText("jLabel2");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(203, 203, 203)
+                .addComponent(jCBusquedaContratos, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
+                .addComponent(jIGARANTE)
+                .addContainerGap(61, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 262, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLRenovadoListados)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jBModificarListados)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBEliminarListados)))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jBModificarListados)
+                .addGap(18, 18, 18)
+                .addComponent(jBEliminarListados)
                 .addGap(20, 20, 20)
                 .addComponent(jBSalirListados)
                 .addGap(232, 232, 232))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(92, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jTIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLFechaInicioListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jDFechaInicioListados, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLIDpropiedadListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLIDPropietarioListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLIDInquilinoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(10, 10, 10)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTIDPropiedadListados, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTIDPropietarioListados, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTIDInquilinoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLIDGaranteListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(10, 10, 10)
-                                .addComponent(jTIDGaranteListados, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLFechaFinListados, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                            .addComponent(jLFechaContratoListados, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jDFechaFinListados, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
-                            .addComponent(jDFechaContratoListados, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
-                            .addComponent(jTMontoContrato)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLIDUsuarioContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTIDUsuarioContrato, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                            .addComponent(jLVigenciaListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRVigenciaContrato)
-                        .addGap(54, 54, 54)
-                        .addComponent(jLActivoContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRActivoContrato)))
-                .addGap(73, 73, 73))
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(230, 230, 230)
+                .addComponent(jLTituloContratoListados)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jIVendedor)
+                .addGap(44, 44, 44))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(230, 230, 230)
-                        .addComponent(jLTituloContratoListados))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(197, 197, 197)
-                        .addComponent(jCBusquedaContratos, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLIDpropiedadListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLIDPropietarioListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLIDInquilinoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(10, 10, 10)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jTIDPropiedadListados, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTIDPropietarioListados, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTIDInquilinoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLIDGaranteListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jTIDGaranteListados, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLFechaFinListados, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                                    .addComponent(jLFechaContratoListados, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jDFechaFinListados, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                                    .addComponent(jDFechaContratoListados, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                                    .addComponent(jTMontoContrato)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLIDUsuarioContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLRenovadoListados)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRRenovado)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jTIDUsuarioContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLVigenciaListados)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jRVigenciaContrato)
+                                        .addGap(100, 100, 100)
+                                        .addComponent(jLActivoContrato)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jRActivoContrato)
+                                        .addGap(65, 65, 65))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jTIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLFechaInicioListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jDFechaInicioListados, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jIDp)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jIdPROPIEDAD)
+                                        .addGap(28, 28, 28)))))
+                        .addGap(73, 73, 73))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jIInquilino)
+                        .addGap(107, 107, 107))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jLTituloContratoListados)
-                .addGap(18, 18, 18)
-                .addComponent(jCBusquedaContratos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLIDContratoListados)
-                    .addComponent(jTIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jDFechaInicioListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLFechaInicioListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(22, 22, 22)
+                .addComponent(jIInquilino)
                 .addGap(1, 1, 1)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLTituloContratoListados)
+                    .addComponent(jIVendedor))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLIDpropiedadListados)
-                        .addGap(11, 11, 11)
-                        .addComponent(jLIDPropietarioListados)
-                        .addGap(11, 11, 11)
-                        .addComponent(jLIDInquilinoListados))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jTIDPropiedadListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jCBusquedaContratos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jIDp)
+                            .addComponent(jIdPROPIEDAD))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLIDContratoListados)
+                            .addComponent(jTIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jDFechaInicioListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLFechaInicioListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(1, 1, 1)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLIDpropiedadListados)
+                                .addGap(11, 11, 11)
+                                .addComponent(jLIDPropietarioListados)
+                                .addGap(11, 11, 11)
+                                .addComponent(jLIDInquilinoListados))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jTIDPropiedadListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(jTIDPropietarioListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(jTIDInquilinoListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(jLFechaFinListados, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLFechaContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jDFechaFinListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(11, 11, 11)
+                                .addComponent(jDFechaContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(6, 6, 6)
-                        .addComponent(jTIDPropietarioListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(jTIDInquilinoListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLFechaFinListados, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLFechaContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jDFechaFinListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(11, 11, 11)
-                        .addComponent(jDFechaContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(6, 6, 6)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLIDGaranteListados)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1024,24 +1148,28 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTIDUsuarioContrato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLIDUsuarioContrato))
-                        .addGap(14, 14, 14)
+                        .addGap(31, 31, 31)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLVigenciaListados)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLActivoContrato)
-                                .addComponent(jRActivoContrato))))
+                            .addComponent(jLRenovadoListados)
+                            .addComponent(jRRenovado)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLActivoContrato)
+                                    .addComponent(jRActivoContrato)
+                                    .addComponent(jRVigenciaContrato)
+                                    .addComponent(jLVigenciaListados))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jBEliminarListados)
+                                .addComponent(jBModificarListados))
+                            .addComponent(jBSalirListados))
+                        .addGap(127, 127, 127))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jRVigenciaContrato)
-                        .addGap(1, 1, 1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(jLRenovadoListados)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jBEliminarListados)
-                        .addComponent(jBModificarListados))
-                    .addComponent(jBSalirListados))
-                .addGap(127, 127, 127))
+                        .addGap(23, 23, 23)
+                        .addComponent(jIGARANTE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         jTabbedPane1.addTab("CONTRATOS", jPanel1);
@@ -1211,6 +1339,19 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(51, 51, 51));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(51, 204, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trash_bin_delete_remove_icon_191682.png"))); // NOI18N
+        jButton2.setBorder(null);
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setOpaque(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPInquilinosLayout = new javax.swing.GroupLayout(jPInquilinos);
         jPInquilinos.setLayout(jPInquilinosLayout);
         jPInquilinosLayout.setHorizontalGroup(
@@ -1264,7 +1405,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addComponent(jTDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jbBuscarInquilino, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(129, 129, 129))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(79, 79, 79))
         );
         jPInquilinosLayout.setVerticalGroup(
             jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1272,14 +1415,16 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addGap(38, 38, 38)
                 .addComponent(jLTituloInquilinos)
                 .addGap(35, 35, 35)
-                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jbBuscarInquilino, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPInquilinosLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLBusquedaInquilinos)
-                            .addComponent(jTDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(10, 10, 10)))
+                .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jbBuscarInquilino, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPInquilinosLayout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLBusquedaInquilinos)
+                                .addComponent(jTDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(10, 10, 10)))
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTIDInquilino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1310,7 +1455,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                     .addComponent(jBModificarInquilinos)
                     .addComponent(jBEliminarInquilinos)
                     .addComponent(jBSalirInquilinos))
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("INQUILINOS", jPInquilinos);
@@ -1331,7 +1476,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             .addGroup(jPCardListadosLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addComponent(jPBarraNavegador3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -1418,7 +1563,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTabbedPane1StateChanged
 
     private void jCBusquedaInspectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBusquedaInspectorActionPerformed
-       
+
     }//GEN-LAST:event_jCBusquedaInspectorActionPerformed
 
     private void jBNuevoInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoInquilinosActionPerformed
@@ -1430,7 +1575,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         boolean activo = jRInquilino.isSelected();
         Inquilino nuevo = new Inquilino(nombre, apellido, dni, cuit, lugarTrabajo, activo);
         inquilinoD.guardarInquilino(nuevo);
-deshabilitarBotonesInquilinos();
+        deshabilitarBotonesInquilinos();
         borrarCampos();
     }//GEN-LAST:event_jBNuevoInquilinosActionPerformed
 
@@ -1458,7 +1603,7 @@ deshabilitarBotonesInquilinos();
     private void jBEliminarInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarInquilinosActionPerformed
         String dniInquilino = jTDNIInquilinos.getText();
         inquilinoD.eliminarInquilino(dniInquilino);
-deshabilitarBotonesInquilinos();
+        deshabilitarBotonesInquilinos();
         borrarCampos();
         //Deshabilito botones luego de ejecutar acccion!
         //desHabilitarBotones();
@@ -1523,7 +1668,7 @@ deshabilitarBotonesInquilinos();
     }//GEN-LAST:event_jBSalirInspectorActionPerformed
 
     private void jCBusquedaContratosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBusquedaContratosActionPerformed
-//        rellenarCamposContratos();
+
     }//GEN-LAST:event_jCBusquedaContratosActionPerformed
 
     private void jBSalirListadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirListadosActionPerformed
@@ -1545,24 +1690,23 @@ deshabilitarBotonesInquilinos();
             int idContrato = Integer.parseInt(jTIDContratoListados.getText());
             LocalDate fechaInicio = jDFechaInicioListados.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
             LocalDate fechaFin = jDFechaFinListados.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-            int idPropiedad = Integer.parseInt(jTIDPropiedadListados.getText());
+            int idPropiedad = Integer.parseInt(jIdPROPIEDAD.getText());
             Propiedad propiedad = propiedadD.buscarPropiedad(idPropiedad);
-            int idPropietario = Integer.parseInt(jTIDPropietarioListados.getText());
+            int idPropietario = Integer.parseInt(jIDp.getText());
             Propietario propietario = propietarioD.buscarPropietario(idPropietario);
-            int idInquilino = Integer.parseInt(jTIDInquilinoListados.getText());
+            int idInquilino = Integer.parseInt(jIInquilino.getText());
             Inquilino inquilino = inquilinoD.buscarInquilino(idInquilino);
-            int idGarante = Integer.parseInt(jTIDGaranteListados.getText());
+            int idGarante = Integer.parseInt(jIGARANTE.getText());
             Garante garante = garanteD.buscarGarante(idGarante);
-            int idUsuario = Integer.parseInt(jTIDUsuarioContrato.getText());
+            int idUsuario = Integer.parseInt(jIVendedor.getText());
             Usuario usuario = usuarioD.buscarUsuario(idUsuario);
             LocalDate fechaContrato = jDFechaContratoListados.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
             double montoContrato = Double.parseDouble(jTMontoContrato.getText());
-
             boolean activo = jRActivoContrato.isSelected();
             boolean vigente = jRVigenciaContrato.isSelected();
-
-            Contrato nuevo = new Contrato(idContrato, propietario, propiedad, inquilino, garante, usuario, fechaInicio, fechaFin, fechaContrato, montoContrato, vigente, activo);
-            contratoD.modificarContrato(nuevo);  
+            boolean renovado = jRRenovado.isSelected();
+            Contrato nuevo = new Contrato(idContrato, propietario, propiedad, inquilino, garante, usuario, fechaInicio, fechaFin, fechaContrato, montoContrato, vigente, activo, renovado);
+            contratoD.modificarContrato(nuevo);
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
         }
@@ -1665,33 +1809,33 @@ deshabilitarBotonesInquilinos();
     }//GEN-LAST:event_jRInquilinoItemStateChanged
 
     private void jTNombreGaranteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNombreGaranteKeyReleased
-        if(!jTNombreGarante.getText().isEmpty() && !jTApellidoGarante.getText().isEmpty() && !jTDomicilioGarante.getText().isEmpty() && !jTTelefonoGarante.getText().isEmpty()){
-             jBNuevoGarante.setEnabled(true);
-        }else{
+        if (!jTNombreGarante.getText().isEmpty() && !jTApellidoGarante.getText().isEmpty() && !jTDomicilioGarante.getText().isEmpty() && !jTTelefonoGarante.getText().isEmpty()) {
+            jBNuevoGarante.setEnabled(true);
+        } else {
             deshabilitarBotonesGarante();
         }
     }//GEN-LAST:event_jTNombreGaranteKeyReleased
 
     private void jTApellidoGaranteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTApellidoGaranteKeyReleased
-        if(!jTNombreGarante.getText().isEmpty() && !jTApellidoGarante.getText().isEmpty() && !jTDomicilioGarante.getText().isEmpty() && !jTTelefonoGarante.getText().isEmpty()){
-             jBNuevoGarante.setEnabled(true);
-        }else{
+        if (!jTNombreGarante.getText().isEmpty() && !jTApellidoGarante.getText().isEmpty() && !jTDomicilioGarante.getText().isEmpty() && !jTTelefonoGarante.getText().isEmpty()) {
+            jBNuevoGarante.setEnabled(true);
+        } else {
             deshabilitarBotonesGarante();
         }
     }//GEN-LAST:event_jTApellidoGaranteKeyReleased
 
     private void jTDomicilioGaranteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDomicilioGaranteKeyReleased
-       if(!jTNombreGarante.getText().isEmpty() && !jTApellidoGarante.getText().isEmpty() && !jTDomicilioGarante.getText().isEmpty() && !jTTelefonoGarante.getText().isEmpty()){
-             jBNuevoGarante.setEnabled(true);
-        }else{
+        if (!jTNombreGarante.getText().isEmpty() && !jTApellidoGarante.getText().isEmpty() && !jTDomicilioGarante.getText().isEmpty() && !jTTelefonoGarante.getText().isEmpty()) {
+            jBNuevoGarante.setEnabled(true);
+        } else {
             deshabilitarBotonesGarante();
         }
     }//GEN-LAST:event_jTDomicilioGaranteKeyReleased
 
     private void jTTelefonoGaranteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTTelefonoGaranteKeyReleased
-        if(!jTNombreGarante.getText().isEmpty() && !jTApellidoGarante.getText().isEmpty() && !jTDomicilioGarante.getText().isEmpty() && !jTTelefonoGarante.getText().isEmpty()){
-             jBNuevoGarante.setEnabled(true);
-        }else{
+        if (!jTNombreGarante.getText().isEmpty() && !jTApellidoGarante.getText().isEmpty() && !jTDomicilioGarante.getText().isEmpty() && !jTTelefonoGarante.getText().isEmpty()) {
+            jBNuevoGarante.setEnabled(true);
+        } else {
             deshabilitarBotonesGarante();
         }
     }//GEN-LAST:event_jTTelefonoGaranteKeyReleased
@@ -1705,88 +1849,109 @@ deshabilitarBotonesInquilinos();
     }//GEN-LAST:event_jRVigenciaContratoActionPerformed
 
     private void jTMatriculaInspectorKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTMatriculaInspectorKeyReleased
-        if(!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()){
-            jBNuevoInspector.setEnabled(true); 
-        }else{
+        if (!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()) {
+            jBNuevoInspector.setEnabled(true);
+        } else {
             deshabilitarBotonesInspectores();
         }
     }//GEN-LAST:event_jTMatriculaInspectorKeyReleased
 
     private void jTNombreInspectorKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNombreInspectorKeyReleased
-       if(!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()){
-            jBNuevoInspector.setEnabled(true); 
-        }else{
+        if (!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()) {
+            jBNuevoInspector.setEnabled(true);
+        } else {
             deshabilitarBotonesInspectores();
         }
     }//GEN-LAST:event_jTNombreInspectorKeyReleased
 
     private void jTApellidoInspectorKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTApellidoInspectorKeyReleased
-       if(!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()){
-            jBNuevoInspector.setEnabled(true); 
-        }else{
+        if (!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()) {
+            jBNuevoInspector.setEnabled(true);
+        } else {
             deshabilitarBotonesInspectores();
         }
     }//GEN-LAST:event_jTApellidoInspectorKeyReleased
 
     private void jTTelefonoInspectorKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTTelefonoInspectorKeyReleased
-        if(!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()){
-            jBNuevoInspector.setEnabled(true); 
-        }else{
+        if (!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()) {
+            jBNuevoInspector.setEnabled(true);
+        } else {
             deshabilitarBotonesInspectores();
         }
     }//GEN-LAST:event_jTTelefonoInspectorKeyReleased
 
     private void jTNombreInquilinosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNombreInquilinosKeyReleased
-       if(!jTNombreInquilinos.getText().isEmpty() && !jTApellidoInquilinos.getText().isEmpty() && !jTCuitInquilinos.getText().isEmpty() && !jTLugarTrabajoInquilinos.getText().isEmpty()){
-            jBNuevoInquilinos.setEnabled(true); 
-        }else{
+        if (!jTNombreInquilinos.getText().isEmpty() && !jTApellidoInquilinos.getText().isEmpty() && !jTCuitInquilinos.getText().isEmpty() && !jTLugarTrabajoInquilinos.getText().isEmpty()) {
+            jBNuevoInquilinos.setEnabled(true);
+        } else {
             deshabilitarBotonesInquilinos();
         }
     }//GEN-LAST:event_jTNombreInquilinosKeyReleased
 
     private void jTApellidoInquilinosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTApellidoInquilinosKeyReleased
-       if(!jTNombreInquilinos.getText().isEmpty() && !jTApellidoInquilinos.getText().isEmpty() && !jTCuitInquilinos.getText().isEmpty() && !jTLugarTrabajoInquilinos.getText().isEmpty()){
-            jBNuevoInquilinos.setEnabled(true); 
-        }else{
+        if (!jTNombreInquilinos.getText().isEmpty() && !jTApellidoInquilinos.getText().isEmpty() && !jTCuitInquilinos.getText().isEmpty() && !jTLugarTrabajoInquilinos.getText().isEmpty()) {
+            jBNuevoInquilinos.setEnabled(true);
+        } else {
             deshabilitarBotonesInquilinos();
         }
     }//GEN-LAST:event_jTApellidoInquilinosKeyReleased
 
     private void jTCuitInquilinosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCuitInquilinosKeyReleased
-       if(!jTNombreInquilinos.getText().isEmpty() && !jTApellidoInquilinos.getText().isEmpty() && !jTCuitInquilinos.getText().isEmpty() && !jTLugarTrabajoInquilinos.getText().isEmpty()){
-            jBNuevoInquilinos.setEnabled(true); 
-        }else{
+        if (!jTNombreInquilinos.getText().isEmpty() && !jTApellidoInquilinos.getText().isEmpty() && !jTCuitInquilinos.getText().isEmpty() && !jTLugarTrabajoInquilinos.getText().isEmpty()) {
+            jBNuevoInquilinos.setEnabled(true);
+        } else {
             deshabilitarBotonesInquilinos();
         }
     }//GEN-LAST:event_jTCuitInquilinosKeyReleased
 
     private void jTLugarTrabajoInquilinosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTLugarTrabajoInquilinosKeyReleased
-        if(!jTNombreInquilinos.getText().isEmpty() && !jTApellidoInquilinos.getText().isEmpty() && !jTCuitInquilinos.getText().isEmpty() && !jTLugarTrabajoInquilinos.getText().isEmpty()){
-            jBNuevoInquilinos.setEnabled(true); 
-        }else{
+        if (!jTNombreInquilinos.getText().isEmpty() && !jTApellidoInquilinos.getText().isEmpty() && !jTCuitInquilinos.getText().isEmpty() && !jTLugarTrabajoInquilinos.getText().isEmpty()) {
+            jBNuevoInquilinos.setEnabled(true);
+        } else {
             deshabilitarBotonesInquilinos();
         }
     }//GEN-LAST:event_jTLugarTrabajoInquilinosKeyReleased
 
     private void jCBusquedaInspectorItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBusquedaInspectorItemStateChanged
-     if(!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()){
-        habilitarBotonesInspectores();  
-        
-     }else{
-         rellenarCamposInspectores();
-           deshabilitarBotonesInspectores(); 
+        if (!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()) {
+            habilitarBotonesInspectores();
+
+        } else {
+            rellenarCamposInspectores();
+            deshabilitarBotonesInspectores();
         }
-    rellenarCamposInspectores();
+        rellenarCamposInspectores();
     }//GEN-LAST:event_jCBusquedaInspectorItemStateChanged
 
     private void jCBusquedaContratosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBusquedaContratosItemStateChanged
-        if(!jTIDPropiedadListados.getText().isEmpty() && !jTIDPropietarioListados.getText().isEmpty() && !jTIDInquilinoListados.getText().isEmpty() && !jTIDGaranteListados.getText().isEmpty() && !jTIDUsuarioContrato.getText().isEmpty()){
+
+        if (!jTIDPropiedadListados.getText().isEmpty() && !jTIDPropietarioListados.getText().isEmpty() && !jTIDInquilinoListados.getText().isEmpty() && !jTIDGaranteListados.getText().isEmpty() && !jTIDUsuarioContrato.getText().isEmpty()) {
             habilitarBotonesContrato();
-        }else{
+        } else {
             deshabilitarBotonesContrato();
         }
-rellenarCamposContratos();
+        rellenarCamposContratos();
     }//GEN-LAST:event_jCBusquedaContratosItemStateChanged
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        borrarCampos();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        borrarCampos();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        borrarCampos();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        borrarCampos();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jRRenovadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRRenovadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRRenovadoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1805,11 +1970,20 @@ rellenarCamposContratos();
     private javax.swing.JButton jBSalirInquilinos;
     private javax.swing.JButton jBSalirInspector;
     private javax.swing.JButton jBSalirListados;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<Contrato> jCBusquedaContratos;
     private javax.swing.JComboBox<Inspector> jCBusquedaInspector;
     private com.toedter.calendar.JDateChooser jDFechaContratoListados;
     private com.toedter.calendar.JDateChooser jDFechaFinListados;
     private com.toedter.calendar.JDateChooser jDFechaInicioListados;
+    private javax.swing.JLabel jIDp;
+    private javax.swing.JLabel jIGARANTE;
+    private javax.swing.JLabel jIInquilino;
+    private javax.swing.JLabel jIVendedor;
+    private javax.swing.JLabel jIdPROPIEDAD;
     private javax.swing.JLabel jLActivoContrato;
     private javax.swing.JLabel jLActivoGarante;
     private javax.swing.JLabel jLActivoInquilinos;
@@ -1858,6 +2032,7 @@ rellenarCamposContratos();
     private javax.swing.JRadioButton jRGarante;
     private javax.swing.JRadioButton jRInquilino;
     private javax.swing.JRadioButton jRInspector;
+    private javax.swing.JRadioButton jRRenovado;
     private javax.swing.JRadioButton jRVigenciaContrato;
     private javax.swing.JTextField jTApellidoGarante;
     private javax.swing.JTextField jTApellidoInquilinos;
@@ -1965,16 +2140,8 @@ rellenarCamposContratos();
             jTCuitInquilinos.setText(String.valueOf(inquilinoSelecionado.getCuit()));
             jTLugarTrabajoInquilinos.setText(inquilinoSelecionado.getLugarTrabajo());
             jRInquilino.setSelected(inquilinoSelecionado.isActivo());
-habilitarBotonesInquilinos();
-            //habilito botones luego de ejecutar acccion!
-            //Habilito botones si esta todo OK!
-//                if (ae.isActivo() == true) {
-//                    habilitarBusquedaBotones();
-//                } else {
-//                    desHabilitarBotones();
-//                    jbModificar.setEnabled(true);
-//
-//                }
+            habilitarBotonesInquilinos();
+
         }
     }
 
@@ -1990,16 +2157,8 @@ habilitarBotonesInquilinos();
             jTDomicilioGarante.setText(garanteSeleccionado.getDomicilio());
             jTTelefonoGarante.setText(garanteSeleccionado.getTelefono());
             jRGarante.setSelected(garanteSeleccionado.isActivo());
-habilitarBotonesGarante();
-            //habilito botones luego de ejecutar acccion!
-            //Habilito botones si esta todo OK!
-//                if (ae.isActivo() == true) {
-//                    habilitarBusquedaBotones();
-//                } else {
-//                    desHabilitarBotones();
-//                    jbModificar.setEnabled(true);
-//
-//                }
+            habilitarBotonesGarante();
+
         } else {
             jTDNIGarante.setText("");
         }
@@ -2017,44 +2176,32 @@ habilitarBotonesGarante();
             jTTelefonoInspector.setText(String.valueOf(inspectorSelecionado.getTelefono()));
             jRInspector.setSelected(inspectorSelecionado.isActivo());
 
-            //habilito botones luego de ejecutar acccion!
-            //Habilito botones si esta todo OK!
-//                if (ae.isActivo() == true) {
-//                    habilitarBusquedaBotones();
-//                } else {
-//                    desHabilitarBotones();
-//                    jbModificar.setEnabled(true);
-//
-//                }
         }
     }
 
     public void rellenarCamposContratos() {
         // relleno campos pestaña contratos
-        Contrato contratoSelecionado = (Contrato) jCBusquedaContratos.getSelectedItem();
+        Contrato contratoSeleccionado = (Contrato) jCBusquedaContratos.getSelectedItem();
 
-        if (contratoSelecionado != null) {
-            jTIDContratoListados.setText(String.valueOf(contratoSelecionado.getIdContrato()));
-            jDFechaInicioListados.setDate(java.sql.Date.valueOf(contratoSelecionado.getFechaInicio()));
-            jDFechaFinListados.setDate(java.sql.Date.valueOf(contratoSelecionado.getFechaFin()));
-            jTIDPropiedadListados.setText(String.valueOf(contratoSelecionado.getPropiedad().toString()));
-            jTIDPropietarioListados.setText(String.valueOf(contratoSelecionado.getPropietario().toStringSinDNI()));
-            jTIDInquilinoListados.setText(String.valueOf(contratoSelecionado.getInquilino().toString()));
-            jTIDGaranteListados.setText(String.valueOf(contratoSelecionado.getGarante().toString()));
-            jTIDUsuarioContrato.setText(String.valueOf(contratoSelecionado.getUsuario().toStringUsuario()));
-            jDFechaContratoListados.setDate(java.sql.Date.valueOf(contratoSelecionado.getFechaContrato()));
-            jRActivoContrato.setSelected(contratoSelecionado.isActivo());
-            jRVigenciaContrato.setSelected(contratoSelecionado.isVigente());
-            jTMontoContrato.setText(String.valueOf(contratoSelecionado.getMontoContrato()));
-//        //habilito botones luego de ejecutar acccion!
-//        //Habilito botones si esta todo OK!
-////                if (ae.isActivo() == true) {
-////                    habilitarBusquedaBotones();
-////                } else {
-////                    desHabilitarBotones();
-////                    jbModificar.setEnabled(true);
-////
-////                }
+        if (contratoSeleccionado != null) {
+            jTIDContratoListados.setText(String.valueOf(contratoSeleccionado.getIdContrato()));
+            jDFechaInicioListados.setDate(java.sql.Date.valueOf(contratoSeleccionado.getFechaInicio()));
+            jDFechaFinListados.setDate(java.sql.Date.valueOf(contratoSeleccionado.getFechaFin()));
+            jTIDPropiedadListados.setText(String.valueOf(contratoSeleccionado.getPropiedad().toString()));
+            jTIDPropietarioListados.setText(String.valueOf(contratoSeleccionado.getPropietario().toStringSinDNI()));
+            jTIDInquilinoListados.setText(String.valueOf(contratoSeleccionado.getInquilino().toString()));
+            jTIDGaranteListados.setText(String.valueOf(contratoSeleccionado.getGarante().toString()));
+            jTIDUsuarioContrato.setText(String.valueOf(contratoSeleccionado.getUsuario().toStringUsuario()));
+            jDFechaContratoListados.setDate(java.sql.Date.valueOf(contratoSeleccionado.getFechaContrato()));
+            jRActivoContrato.setSelected(contratoSeleccionado.isActivo());
+            jRVigenciaContrato.setSelected(contratoSeleccionado.isVigente());
+            jTMontoContrato.setText(String.valueOf(contratoSeleccionado.getMontoContrato()));
+            jRRenovado.setSelected(contratoSeleccionado.isRenovado());
+            jIDp.setText(String.valueOf(contratoSeleccionado.getPropietario().getIdPropietario()));
+            jIdPROPIEDAD.setText(String.valueOf(contratoSeleccionado.getPropiedad().getIdPropiedad()));
+            jIGARANTE.setText(String.valueOf(contratoSeleccionado.getGarante().getIdGarante()));
+            jIVendedor.setText(String.valueOf(contratoSeleccionado.getUsuario().getIdUsuario()));
+            jIInquilino.setText(String.valueOf(contratoSeleccionado.getInquilino().getIdInquilino()));
         }
     }
 
@@ -2067,7 +2214,7 @@ habilitarBotonesGarante();
         jTLugarTrabajoInquilinos.setText("");
 //        jRInquilino.setSelected(false);
 
-         jTMatriculaInspector.setText("");
+        jTMatriculaInspector.setText("");
         jTNombreInspector.setText("");
         jTApellidoInspector.setText("");
         jTTelefonoInspector.setText("");
@@ -2090,11 +2237,13 @@ habilitarBotonesGarante();
         jTIDGaranteListados.setText("");
         jTIDUsuarioContrato.setText("");
         jDFechaContratoListados.setDate(null);
-//        jRActivoContrato.setSelected(false);
-//        jRVigenciaContrato.setSelected(false);
+        jRActivoContrato.setSelected(false);
+        jRVigenciaContrato.setSelected(false);
+        jRRenovado.setSelected(false);
 
     }
- public void habilitarBotonesGarante() {
+
+    public void habilitarBotonesGarante() {
         jBModificarGarante.setEnabled(true);
         jBEliminarGarante.setEnabled(true);
         jBNuevoGarante.setEnabled(false);
@@ -2105,7 +2254,7 @@ habilitarBotonesGarante();
         jBModificarGarante.setEnabled(false);
         jBEliminarGarante.setEnabled(false);
     }
-    
+
     public void habilitarBotonesInspectores() {
         jBModificarInspector.setEnabled(true);
         jBEliminarInspector.setEnabled(true);
@@ -2117,8 +2266,8 @@ habilitarBotonesGarante();
         jBModificarInspector.setEnabled(false);
         jBEliminarInspector.setEnabled(false);
     }
-    
-        public void habilitarBotonesInquilinos() {
+
+    public void habilitarBotonesInquilinos() {
         jBModificarInquilinos.setEnabled(true);
         jBEliminarInquilinos.setEnabled(true);
         jBNuevoInquilinos.setEnabled(false);
@@ -2129,14 +2278,15 @@ habilitarBotonesGarante();
         jBModificarInquilinos.setEnabled(false);
         jBEliminarInquilinos.setEnabled(false);
     }
-    
+
     public void deshabilitarBotonesContrato() {
         jBModificarListados.setEnabled(false);
         jBEliminarListados.setEnabled(false);
     }
+
     public void habilitarBotonesContrato() {
         jBModificarListados.setEnabled(true);
         jBEliminarListados.setEnabled(true);
     }
-    
+
 }

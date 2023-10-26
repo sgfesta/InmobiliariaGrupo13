@@ -20,10 +20,11 @@ public class Contrato {
     private double montoContrato;
     private boolean vigente;
     private boolean activo;
+    private boolean renovado;
     
     //Declaro los Constructores
 
-    public Contrato(int idContrato, Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Usuario usuario, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, double montoContrato, boolean vigente, boolean activo) {
+    public Contrato(int idContrato, Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Usuario usuario, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, double montoContrato, boolean vigente, boolean activo, boolean renovado) {
         this.idContrato = idContrato;
         this.propietario = propietario;
         this.propiedad = propiedad;
@@ -36,9 +37,10 @@ public class Contrato {
         this.montoContrato = montoContrato;
         this.vigente = vigente;
         this.activo = activo;
+        this.renovado = renovado;
     }
 
-    public Contrato(Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Usuario usuario, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, double montoContrato, boolean vigente, boolean activo) {
+    public Contrato(Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Usuario usuario, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, double montoContrato, boolean vigente, boolean activo, boolean renovado) {
         this.propietario = propietario;
         this.propiedad = propiedad;
         this.inquilino = inquilino;
@@ -47,10 +49,13 @@ public class Contrato {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.fechaContrato = fechaContrato;
-         this.montoContrato = montoContrato;
+        this.montoContrato = montoContrato;
         this.vigente = vigente;
         this.activo = activo;
+        this.renovado = renovado;
     }
+
+   
 
   
     public Contrato() {
@@ -106,7 +111,6 @@ public class Contrato {
         this.usuario = usuario;
     }
 
-
     public LocalDate getFechaInicio() {
         return fechaInicio;
     }
@@ -138,8 +142,6 @@ public class Contrato {
     public void setMontoContrato(double montoContrato) {
         this.montoContrato = montoContrato;
     }
-    
-    
 
     public boolean isVigente() {
         return vigente;
@@ -148,7 +150,7 @@ public class Contrato {
     public void setVigente(boolean vigente) {
         this.vigente = vigente;
     }
-    
+
     public boolean isActivo() {
         return activo;
     }
@@ -156,6 +158,16 @@ public class Contrato {
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
+
+    public boolean isRenovado() {
+        return renovado;
+    }
+
+    public void setRenovado(boolean renovado) {
+        this.renovado = renovado;
+    }
+
+   
 
     @Override
     public String toString() {

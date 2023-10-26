@@ -69,7 +69,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Component id="jPBarraNavegador3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="jTabbedPane1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -211,7 +211,9 @@
                                   <Component id="jBSalirGarante" min="-2" pref="67" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="146" max="32767" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jButton4" min="-2" pref="38" max="-2" attributes="0"/>
+                          <EmptySpace pref="96" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -220,17 +222,20 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                           <Component id="jLTituloGarante" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLBusquedaGarante" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTDNIGarante" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLBusquedaGarante" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTDNIGarante" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                  <Component id="jbBuscarGarante" alignment="1" min="-2" pref="47" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jbBuscarGarante" alignment="1" min="-2" pref="47" max="-2" attributes="0"/>
+                              <Component id="jButton4" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -262,7 +267,7 @@
                               <Component id="jLActivoGarante" min="-2" max="-2" attributes="0"/>
                               <Component id="jRGarante" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="66" max="32767" attributes="0"/>
+                          <EmptySpace pref="93" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jBNuevoGarante" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBModificarGarante" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -587,6 +592,32 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbBuscarGaranteActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JButton" name="jButton4">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="12" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="cc" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imagenes/trash_bin_delete_remove_icon_191682.png"/>
+                    </Property>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="null"/>
+                    </Property>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
+                    <Property name="opaque" type="boolean" value="false"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPInspector">
@@ -613,13 +644,15 @@
                                   <Component id="jLBusquedaInspector" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jCBusquedaInspector" min="-2" pref="222" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jButton3" min="-2" pref="38" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="248" max="-2" attributes="0"/>
                                   <Component id="jLTituloInspector" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="219" max="32767" attributes="0"/>
+                          <EmptySpace pref="163" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
@@ -672,14 +705,22 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace pref="48" max="32767" attributes="0"/>
+                          <EmptySpace pref="75" max="32767" attributes="0"/>
                           <Component id="jLTituloInspector" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLBusquedaInspector" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCBusquedaInspector" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLBusquedaInspector" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCBusquedaInspector" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="jButton3" min="-2" pref="50" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jTMatriculaInspector" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLMatriculaInspector" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -990,6 +1031,32 @@
                     <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jRInspectorItemStateChanged"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JButton" name="jButton3">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="12" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="cc" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imagenes/trash_bin_delete_remove_icon_191682.png"/>
+                    </Property>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="null"/>
+                    </Property>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
+                    <Property name="opaque" type="boolean" value="false"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel1">
@@ -1009,144 +1076,191 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="203" max="-2" attributes="0"/>
+                          <Component id="jCBusquedaContratos" min="-2" pref="341" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jButton1" min="-2" pref="38" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                          <Component id="jIGARANTE" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="61" max="32767" attributes="0"/>
+                      </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="262" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jLRenovadoListados" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jBModificarListados" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jBEliminarListados" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jBModificarListados" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jBEliminarListados" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                           <Component id="jBSalirListados" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="232" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="92" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLIDContratoListados" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                  <Component id="jTIDContratoListados" min="-2" pref="122" max="-2" attributes="0"/>
-                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                  <Component id="jLFechaInicioListados" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jDFechaInicioListados" pref="156" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLIDpropiedadListados" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                              <Component id="jLIDPropietarioListados" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                              <Component id="jLIDInquilinoListados" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTIDPropiedadListados" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
-                                              <Component id="jTIDPropietarioListados" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
-                                              <Component id="jTIDInquilinoListados" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLIDGaranteListados" min="-2" pref="140" max="-2" attributes="0"/>
-                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                          <Component id="jTIDGaranteListados" min="-2" pref="122" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jLFechaFinListados" alignment="0" pref="140" max="32767" attributes="0"/>
-                                      <Component id="jLFechaContratoListados" alignment="0" pref="140" max="32767" attributes="0"/>
-                                      <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jDFechaFinListados" alignment="0" pref="156" max="32767" attributes="0"/>
-                                      <Component id="jDFechaContratoListados" alignment="0" pref="156" max="32767" attributes="0"/>
-                                      <Component id="jTMontoContrato" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLIDUsuarioContrato" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTIDUsuarioContrato" pref="122" max="32767" attributes="0"/>
-                                      <Component id="jLVigenciaListados" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jRVigenciaContrato" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                                  <Component id="jLActivoContrato" min="-2" pref="117" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jRActivoContrato" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="230" max="-2" attributes="0"/>
-                                  <Component id="jLTituloContratoListados" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
-                                  <Component id="jCBusquedaContratos" min="-2" pref="341" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="230" max="-2" attributes="0"/>
+                          <Component id="jLTituloContratoListados" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jIVendedor" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLIDpropiedadListados" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                                      <Component id="jLIDPropietarioListados" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                                      <Component id="jLIDInquilinoListados" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jTIDPropiedadListados" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                                                      <Component id="jTIDPropietarioListados" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                                                      <Component id="jTIDInquilinoListados" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLIDGaranteListados" min="-2" pref="140" max="-2" attributes="0"/>
+                                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                                  <Component id="jTIDGaranteListados" min="-2" pref="122" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="jLFechaFinListados" alignment="0" pref="140" max="32767" attributes="0"/>
+                                              <Component id="jLFechaContratoListados" alignment="0" pref="140" max="32767" attributes="0"/>
+                                              <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="jDFechaFinListados" alignment="0" pref="156" max="32767" attributes="0"/>
+                                              <Component id="jDFechaContratoListados" alignment="0" pref="156" max="32767" attributes="0"/>
+                                              <Component id="jTMontoContrato" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLIDUsuarioContrato" min="-2" pref="140" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="jLRenovadoListados" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jRRenovado" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                                  <Component id="jTIDUsuarioContrato" min="-2" pref="122" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jLVigenciaListados" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="jRVigenciaContrato" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                                                  <Component id="jLActivoContrato" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="jRActivoContrato" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLIDContratoListados" min="-2" pref="140" max="-2" attributes="0"/>
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jTIDContratoListados" min="-2" pref="122" max="-2" attributes="0"/>
+                                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                                  <Component id="jLFechaInicioListados" min="-2" pref="140" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jDFechaInicioListados" pref="156" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jIDp" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jIdPROPIEDAD" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jIInquilino" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                          <Component id="jLTituloContratoListados" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jCBusquedaContratos" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="22" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jLIDContratoListados" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTIDContratoListados" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jDFechaInicioListados" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jLFechaInicioListados" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          <Component id="jIInquilino" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLIDpropiedadListados" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                                  <Component id="jLIDPropietarioListados" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                                  <Component id="jLIDInquilinoListados" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTIDPropiedadListados" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                  <Component id="jTIDPropietarioListados" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                  <Component id="jTIDInquilinoListados" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="jLFechaFinListados" min="-2" pref="22" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jLFechaContratoListados" min="-2" pref="25" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                  <Component id="jDFechaFinListados" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                                  <Component id="jDFechaContratoListados" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jLTituloContratoListados" min="-2" max="-2" attributes="0"/>
+                              <Component id="jIVendedor" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jCBusquedaContratos" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                          <Component id="jButton1" min="-2" pref="44" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jIDp" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jIdPROPIEDAD" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jLIDContratoListados" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTIDContratoListados" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jDFechaInicioListados" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jLFechaInicioListados" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLIDpropiedadListados" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                                          <Component id="jLIDPropietarioListados" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                                          <Component id="jLIDInquilinoListados" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jTIDPropiedadListados" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                          <Component id="jTIDPropietarioListados" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                          <Component id="jTIDInquilinoListados" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="jLFechaFinListados" min="-2" pref="22" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jLFechaContratoListados" min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jDFechaFinListados" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                                          <Component id="jDFechaContratoListados" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLIDGaranteListados" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
@@ -1160,31 +1274,36 @@
                                       <Component id="jTIDUsuarioContrato" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLIDUsuarioContrato" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLVigenciaListados" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                          <Component id="jLActivoContrato" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jRActivoContrato" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLRenovadoListados" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRRenovado" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLActivoContrato" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRActivoContrato" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRVigenciaContrato" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLVigenciaListados" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
+                                  <EmptySpace pref="35" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                          <Component id="jBEliminarListados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jBModificarListados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jBSalirListados" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jRVigenciaContrato" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="jIGARANTE" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="28" max="32767" attributes="0"/>
-                          <Component id="jLRenovadoListados" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="jBEliminarListados" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jBModificarListados" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jBSalirListados" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1514,12 +1633,12 @@
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI Semilight" size="14" style="1"/>
+                      <Font name="Segoe UI Black" size="14" style="1"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="33" green="33" red="ff" type="rgb"/>
+                      <Color blue="ff" green="cc" red="33" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="No Renovado"/>
+                    <Property name="text" type="java.lang.String" value="Renovado"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jCBusquedaContratos">
@@ -1596,6 +1715,101 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI Semilight" size="12" style="0"/>
                     </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButton1">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="12" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="cc" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imagenes/trash_bin_delete_remove_icon_191682.png"/>
+                    </Property>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="null"/>
+                    </Property>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
+                    <Property name="opaque" type="boolean" value="false"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRRenovado">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="null"/>
+                    </Property>
+                    <Property name="opaque" type="boolean" value="false"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRRenovadoActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jIDp">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="jLabel2"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jIdPROPIEDAD">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="jIPropiedad"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jIGARANTE">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="jLabel2"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jIVendedor">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="jLabel2"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jIInquilino">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="jLabel2"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -1680,7 +1894,9 @@
                           <Component id="jTDNIInquilinos" min="-2" pref="206" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jbBuscarInquilino" min="-2" pref="40" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jButton2" min="-2" pref="38" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1690,16 +1906,19 @@
                           <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                           <Component id="jLTituloInquilinos" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jbBuscarInquilino" alignment="1" min="-2" pref="47" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLBusquedaInquilinos" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTDNIInquilinos" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jbBuscarInquilino" alignment="1" min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLBusquedaInquilinos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTDNIInquilinos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                               </Group>
+                              <Component id="jButton2" min="-2" pref="44" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -1738,7 +1957,7 @@
                               <Component id="jBEliminarInquilinos" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBSalirInquilinos" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="119" max="32767" attributes="0"/>
+                          <EmptySpace pref="146" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2051,6 +2270,32 @@
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbBuscarInquilinoActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButton2">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="12" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="cc" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imagenes/trash_bin_delete_remove_icon_191682.png"/>
+                    </Property>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="null"/>
+                    </Property>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
+                    <Property name="opaque" type="boolean" value="false"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
