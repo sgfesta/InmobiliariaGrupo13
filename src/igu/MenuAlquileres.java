@@ -1,9 +1,11 @@
 package igu;
 
+import entidades.Contrato;
 import entidades.Garante;
 import entidades.Inquilino;
 import entidades.Propiedad;
 import entidades.TipoPropiedad;
+import entidades.Usuario;
 import entidades.Zona;
 import java.awt.Dimension;
 import java.awt.event.ItemEvent;
@@ -481,9 +483,9 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
                     + "Dni : " + garanteSeleccionado.getDni() + "\n"
                     + "Domicilio : " + garanteSeleccionado.getDomicilio() + "\n"
                     + "Telefono : " + garanteSeleccionado.getTelefono();
-
-            JOptionPane.showMessageDialog(null, mensaje, "Detalles del Garante", JOptionPane.INFORMATION_MESSAGE);
             jLIDGaranteBuscado.setText(garanteSeleccionado.getNombre() + " ," + garanteSeleccionado.getApellido());
+            JOptionPane.showMessageDialog(null, mensaje, "Detalles del Garante", JOptionPane.INFORMATION_MESSAGE);
+            
 
         } else {
             JOptionPane.showMessageDialog(null, "No se encontro garante con ese DNI", "Sin Resultados", JOptionPane.INFORMATION_MESSAGE);
@@ -568,18 +570,37 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
     }
 
     public void agregarContrato() {
-        
-        try {
-            
-   
+    try {
         ContratoData cd = new ContratoData();
+
+        // Obtener los valores de los campos de la interfaz de usuario
+        String textoMontoContrato = jTMontoContrato.getText();
+        String textoMontoTasado = jTMontotasado.getText();
+
+        double precio = (textoMontoContrato.isEmpty() || textoMontoContrato.equals("Precio")) ? Double.parseDouble(textoMontoTasado) : Double.parseDouble(textoMontoContrato);
+        // Obtener las fechas de la interfaz de usuario
+        LocalDate fechaInicioAlquiler = jDFechaInicioAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        LocalDate fechaFinAlquiler = jDFechaFinAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        LocalDate fechaContrato = jDFechaContratoAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+
+        // Realizar la búsqueda de inquilino y garante utilizando los DNIs
+        String dniInquilino = jTIDInquilinoAlquiler.getText();
+        String dniGarante = jTIDGaranteAlquiler.getText();
+        Inquilino inquilino = inquilinoD.buscarInquilinoPorDni(dniInquilino);
+        Garante garante = garanteD.buscarGarantePorDni(dniGarante);
+        Usuario usuario = controlacceso.getUsuarioActual();
+        
+
+        // Obtener la propiedad seleccionada desde el ComboBox
+        Propiedad propiedadSeleccionada = (Propiedad) jCListadoFiltradoPropiedadesAlquiler.getSelectedItem();
+
         // Verificar que los componentes no estén vacíos
         if (jCListadoFiltradoPropiedadesAlquiler.getSelectedItem() == null ||
-            jTIDInquilinoAlquiler.getText().isEmpty() ||
-            jTIDGaranteAlquiler.getText().isEmpty() ||
-            jDFechaInicioAlquiler.getDate() == null ||
-            jDFechaFinAlquiler.getDate() == null ||
-            jDFechaContratoAlquiler.getDate() == null) {
+            dniInquilino.isEmpty() ||
+            dniGarante.isEmpty() ||
+            fechaInicioAlquiler == null ||
+            fechaFinAlquiler == null ||
+            fechaContrato == null) {
             JOptionPane.showMessageDialog(
                 null,
                 "Por favor, complete todos los campos requeridos.",
@@ -589,64 +610,68 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
             return; // Terminar la función si algún campo está vacío
         }
         
-        // valor del contrato
-        String textoMontoContrato = jTMontoContrato.getText();
-        String textoMontoTasado = jTMontotasado.getText();
-
-        double precio = (textoMontoContrato.isEmpty() || textoMontoContrato.equals("Precio")) ? Double.parseDouble(textoMontoTasado) : Double.parseDouble(textoMontoContrato);
-        // Obtener los valores de los campos de la interfaz de usuario
-        String dniInquilino = jTIDInquilinoAlquiler.getText();
-        String dniGarante = jTIDGaranteAlquiler.getText();
-        // LocalDate fechaInicio = jDFechaInicioListados.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        LocalDate fechaInicioAlquiler = jDFechaInicioAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        LocalDate fechaFinAlquiler = jDFechaFinAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        LocalDate fechaContrato = jDFechaContratoAlquiler.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        
-        // Realizar la búsqueda de inquilino y garante utilizando los DNIs
-        Inquilino inquilino = inquilinoD.buscarInquilinoPorDni(dniInquilino);
-        Garante garante = garanteD.buscarGarantePorDni(dniGarante);
-
-        // Obtener la propiedad seleccionada desde el ComboBox
-        Propiedad propiedadSeleccionada = (Propiedad) jCListadoFiltradoPropiedadesAlquiler.getSelectedItem();
+        // Verificar que la fecha de inicio sea anterior a la fecha de fin
+        if (fechaInicioAlquiler.isAfter(fechaFinAlquiler)) {
+            JOptionPane.showMessageDialog(
+                null,
+                "La fecha de inicio del contrato debe ser anterior a la fecha de fin del contrato.",
+                "Fecha Incorrecta",
+                JOptionPane.WARNING_MESSAGE
+            );
+            return; // Terminar la función si la fecha de inicio es posterior a la fecha de fin
+        }
 
         // Asegurarse de que todas las partes del contrato estén disponibles y válidas
-        if (inquilino != null && garante != null && propiedadSeleccionada != null
-                && fechaInicioAlquiler != null && fechaFinAlquiler != null && fechaContrato != null) {
-
+        if (inquilino != null && garante != null && propiedadSeleccionada != null) {
             String mensaje = "ID Propiedad : " + propiedadSeleccionada.getIdPropiedad() + "\n"
                     + "ID Propietario: " + propiedadSeleccionada.getPropietario().getIdPropietario() + "\n"
                     + "ID Inquilino: " + inquilino.getIdInquilino() + "\n"
                     + "ID garante: " + garante.getIdGarante() + "\n"
-                    + "ID Usuario: " + controlacceso.getIdUsuarioActual() + "\n"
+                    + "ID Usuario: " + usuario.getIdUsuario() + "\n"
                     + "Fecha usando LocalDate: " + "\n"
                     + "Fecha Inicio: " + fechaInicioAlquiler + "\n"
                     + "Fecha Fin: " + fechaFinAlquiler + "\n"
                     + "Fecha Contrato: " + fechaContrato + "\n"
                     + "Monto Contrato: " + precio + "\n"
-                    + "Vigente: " + "AL ser nuevo siemrpe va a estar Vigente" + "\n"
-                    + "Renovado: " + "AL ser nuevo siemrpe no va a estar renovado" + "\n"
-                    + "Activo : " + "AL ser nuevo siemrpe va a estar activo";
+                    + "Vigente: " + "AL ser nuevo siempre va a estar Vigente" + "\n"
+                    + "Renovado: " + "AL ser nuevo siempre no va a estar renovado" + "\n"
+                    + "Activo : " + "AL ser nuevo siempre va a estar activo";
 
-            //JOptionPane.showMessageDialog(null, mensaje, "Exito", JOptionPane.WARNING_MESSAGE);
-            
-           //desHabilitoCampos();
-            
             int respuesta = JOptionPane.showConfirmDialog(null, mensaje + "\n\n¿Desea guardar el Contrato?", "Confirmación", JOptionPane.YES_NO_OPTION);
 
-
             if (respuesta == JOptionPane.YES_OPTION) {
-                // Ejecuta el método aceptarPROPIEDAD
-                desHabilitoCampos();
+              
+                // Asegurarse de que todas las partes del contrato estén disponibles y válidas
+        if (inquilino != null && garante != null && propiedadSeleccionada != null) {
+            Contrato contrato = new Contrato(
+                propiedadSeleccionada.getPropietario(),
+                propiedadSeleccionada,
+                inquilino,
+                garante,
+                usuario,
+                fechaInicioAlquiler,
+                fechaFinAlquiler,
+                fechaContrato,
+                precio,
+                true,
+                false,    
+                true // Cambiado a "true" para que el contrato sea activo
+            );
+            cd.guardarContrato(contrato);
+            desHabilitoCampos();
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos requeridos y verifique la información.", "Campos Incompletos BD", JOptionPane.WARNING_MESSAGE);
+        }
+                
             }
         } else {
             JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos requeridos y verifique la información.", "Campos Incompletos", JOptionPane.WARNING_MESSAGE);
         }
 
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error : " + e, "Error", JOptionPane.WARNING_MESSAGE);
-        }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Error : " + e, "Error", JOptionPane.WARNING_MESSAGE);
     }
+}
 
     public void actualizarPrecio() {
         if (jRPrecioAlquiler.isSelected()) {

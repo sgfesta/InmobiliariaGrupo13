@@ -120,11 +120,10 @@ public class ControlAcceso {
         }
 
     }
-    public int getIdUsuarioActual() {
-    if (usuarioActual != null) {
-        return usuarioActual.getIdUsuario();
-    }
-    return -1; // -1 para indicar que no hay usuario conectado.
+    public Usuario getUsuarioActual() {
+    
+        return usuarioActual;
+    
     }
 
 }
