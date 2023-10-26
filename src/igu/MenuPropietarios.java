@@ -242,9 +242,11 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
             }
         });
 
+        jrbPropietario.setBackground(new java.awt.Color(51, 51, 51));
         jrbPropietario.setSelected(true);
         jrbPropietario.setOpaque(false);
 
+        jLabel46.setBackground(new java.awt.Color(51, 51, 51));
         jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-magnifier-search-zoom_110300.png"))); // NOI18N
         jLabel46.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -252,6 +254,7 @@ public class MenuPropietarios extends javax.swing.JInternalFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(51, 51, 51));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 204, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trash_bin_delete_remove_icon_191682.png"))); // NOI18N
