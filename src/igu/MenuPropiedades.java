@@ -101,10 +101,11 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(755, 699));
 
         jPPropiedades.setBackground(new java.awt.Color(55, 55, 54));
-        jPPropiedades.setMinimumSize(new java.awt.Dimension(748, 635));
-        jPPropiedades.setPreferredSize(new java.awt.Dimension(748, 635));
+        jPPropiedades.setMinimumSize(new java.awt.Dimension(755, 592));
+        jPPropiedades.setPreferredSize(new java.awt.Dimension(755, 592));
 
         jLTituloPropiedades.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLTituloPropiedades.setForeground(new java.awt.Color(51, 204, 255));
@@ -330,7 +331,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jRDisponibilidadPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
         jRDisponibilidadPropiedades.setForeground(new java.awt.Color(255, 255, 255));
         jRDisponibilidadPropiedades.setSelected(true);
-        jRDisponibilidadPropiedades.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jRDisponibilidadPropiedades.setBorder(null);
         jRDisponibilidadPropiedades.setOpaque(false);
         jRDisponibilidadPropiedades.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -346,6 +347,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jRActivoPropiedades1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
         jRActivoPropiedades1.setForeground(new java.awt.Color(255, 255, 255));
         jRActivoPropiedades1.setSelected(true);
+        jRActivoPropiedades1.setBorder(null);
         jRActivoPropiedades1.setOpaque(false);
         jRActivoPropiedades1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -397,235 +399,214 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jPPropiedades.setLayout(jPPropiedadesLayout);
         jPPropiedadesLayout.setHorizontalGroup(
             jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
-                                .addComponent(jLTipoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jCListaInspectoresPropiedades, javax.swing.GroupLayout.Alignment.LEADING, 0, 187, Short.MAX_VALUE)
-                                            .addComponent(jCListaTipoPropiedades, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jCListarZonaPropiedades, 0, 188, Short.MAX_VALUE))
-                                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jCListarEstadoPropiedades, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                        .addGap(86, 86, 86)))
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLEstadoPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLInspectorPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                            .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLSuperTotalPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLAlturaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGap(18, 18, 18)
-                                            .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jTAlturaPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                                                .addComponent(jTSuperTotalPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                        .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                            .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLPrecioTasadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLAntiguedadPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGap(18, 18, 18)
-                                            .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jTPrecioTasadoPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                                                .addComponent(jTAntiguedadPropiedad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLActivoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLDisponibilidadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(30, 30, 30)
-                                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jRDisponibilidadPropiedades)
-                                            .addComponent(jRActivoPropiedades1))
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLObservacionesPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(61, 61, 61))))))
-                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                .addGap(34, 34, 34)
-                                .addComponent(jLDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                .addGap(230, 230, 230)
-                                .addComponent(jLTituloPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(45, 45, 45))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
                 .addGap(8, 8, 8)
                 .addComponent(jPBarraNavegador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
+            .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGap(21, 22, Short.MAX_VALUE)
-                        .addComponent(jLIDPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCListaPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26))
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLIDPropiedades)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jCListaPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(55, 55, 55))
+                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPPropiedadesLayout.createSequentialGroup()
+                                        .addComponent(jLSuperTotalPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jTSuperTotalPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPPropiedadesLayout.createSequentialGroup()
+                                        .addComponent(jLAlturaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jTAlturaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPPropiedadesLayout.createSequentialGroup()
+                                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLPrecioTasadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLAntiguedadPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jTAntiguedadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTPrecioTasadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(37, 37, 37))
+                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jBEliminarPropiedades)
+                                    .addComponent(jLObservacionesPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jLActivoPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLDisponibilidadPropiedad, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jRActivoPropiedades1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jRDisponibilidadPropiedades)))
+                                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                        .addComponent(jCListaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(28, 28, 28)
+                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(60, 60, 60))))
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jBGuardarPropiedades)
-                        .addGap(85, 85, 85)
-                        .addComponent(jBModificarPropiedades)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                    .addComponent(jLTipoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jCListaTipoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                    .addComponent(jLInspectorPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jCListaInspectoresPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                    .addComponent(jLZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jCListarZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                    .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jBGuardarPropiedades)
+                                        .addComponent(jLEstadoPropiedad, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                            .addGap(39, 39, 39)
+                                            .addComponent(jCListarEstadoPropiedades, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                            .addGap(102, 102, 102)
+                                            .addComponent(jBModificarPropiedades)
+                                            .addGap(0, 0, Short.MAX_VALUE))))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jBSalirPropiedades)
+                        .addGap(100, 100, 100))
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addComponent(jBEliminarPropiedades)
-                        .addGap(85, 85, 85)
-                        .addComponent(jBSalirPropiedades))
-                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addComponent(jCListaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(19, 19, 19))
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                .addComponent(jLDireccionPropiedades)
+                                .addGap(75, 75, 75)
+                                .addComponent(jTDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                .addGap(195, 195, 195)
+                                .addComponent(jLTituloPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())))
         );
         jPPropiedadesLayout.setVerticalGroup(
             jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPPropiedadesLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jPBarraNavegador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jLTituloPropiedades)
                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jLTituloPropiedades)
-                        .addGap(56, 56, 56)
+                        .addGap(20, 20, 20)
                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLIDPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCListaPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCListaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(36, 36, 36)
-                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLDisponibilidadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRDisponibilidadPropiedades))
-                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTAlturaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLAlturaPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLSuperTotalPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTSuperTotalPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLActivoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jRActivoPropiedades1))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jCListaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(1, 1, 1)
+                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLPrecioTasadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTPrecioTasadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(8, 8, 8)
+                            .addComponent(jTDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLDisponibilidadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jRDisponibilidadPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLActivoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTAlturaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLAlturaPropiedades))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRActivoPropiedades1)))
+                .addGap(3, 3, 3)
+                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLSuperTotalPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTSuperTotalPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(6, 6, 6)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTPrecioTasadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLPrecioTasadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTAntiguedadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLAntiguedadPropiedades))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jCListaTipoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLTipoPropiedades))
-                                .addGap(9, 9, 9)
-                                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLInspectorPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCListaInspectoresPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(11, 11, 11)
-                                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCListarZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(9, 9, 9)
-                                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jCListarEstadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLEstadoPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(34, 34, 34)
                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jBModificarPropiedades)
-                            .addComponent(jBGuardarPropiedades)
-                            .addComponent(jBEliminarPropiedades)
-                            .addComponent(jBSalirPropiedades))
-                        .addGap(53, 53, 53))
+                            .addComponent(jCListaTipoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLTipoPropiedades))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCListaInspectoresPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLInspectorPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCListarZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLZonaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCListarEstadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLEstadoPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGap(128, 128, 128)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(150, 150, 150)
                         .addComponent(jLObservacionesPropiedades)
-                        .addGap(280, 280, 280))))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(33, 33, 33)
+                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jBGuardarPropiedades)
+                        .addComponent(jBModificarPropiedades))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jBSalirPropiedades)
+                        .addComponent(jBEliminarPropiedades)))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(jPPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 758, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+            .addComponent(jPPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, 627, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jBSalirPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirPropiedadesActionPerformed
-        int respuesta = JOptionPane.showConfirmDialog(this, "Estás seguro que quieres salir?", "Cerrar Ventana", JOptionPane.YES_NO_OPTION);
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        limpiarCampos();
+        deshabilitarBotones();
+    }//GEN-LAST:event_jButton4ActionPerformed
 
-        if (respuesta == JOptionPane.YES_OPTION) {
-
-            this.dispose();//cierro la ventana
+    private void jCListaPropiedadesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCListaPropiedadesItemStateChanged
+        limpiarCampos();
+        rellenarCampos();
+        if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
+            && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
+            && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
+            && jRDisponibilidadPropiedades.isSelected() == true && !jTObservacionesPropiedades.getText().isEmpty()) {
+            habilitarBotones();
+        }else{
+            deshabilitarBotones();
         }
-    }//GEN-LAST:event_jBSalirPropiedadesActionPerformed
-
-    private void jBGuardarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarPropiedadesActionPerformed
-        guardarPropiedad();
-    }//GEN-LAST:event_jBGuardarPropiedadesActionPerformed
-
-    private void jBModificarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarPropiedadesActionPerformed
-        modificarPropiedad(); // Llama al método modificar solo si se ha seleccionado una propiedad
-
-
-    }//GEN-LAST:event_jBModificarPropiedadesActionPerformed
-
-    private void jBEliminarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarPropiedadesActionPerformed
-        int respuesta = JOptionPane.showConfirmDialog(this, "\n\n¿Estás seguro que deseas eliminar la propiedad?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
-
-        if (respuesta == JOptionPane.YES_OPTION) {
-            Propiedad propiedadSeleccionado = (Propiedad) jCListaPropiedades.getSelectedItem();
-            pd.darBajaAPropiedad(propiedadSeleccionado);
-            limpiarCampos();
-            cargarComboPropiedades();
-        }
-
-
-    }//GEN-LAST:event_jBEliminarPropiedadesActionPerformed
+    }//GEN-LAST:event_jCListaPropiedadesItemStateChanged
 
     private void jCListaPropietariosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCListaPropietariosItemStateChanged
         int idPropietario = -1;
@@ -642,16 +623,15 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 }
                 limpiarCampos();
                 rellenarCampos();
-               
+
                 if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
                     && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
                     && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-                     && jRDisponibilidadPropiedades.isSelected() == true && !jTObservacionesPropiedades.getText().isEmpty()) {
-                 habilitarBotones();
-       }else{
-            deshabilitarBotones();
+                    && jRDisponibilidadPropiedades.isSelected() == true && !jTObservacionesPropiedades.getText().isEmpty()) {
+                    habilitarBotones();
+                }else{
+                    deshabilitarBotones();
                 }
-                
 
             } else {
                 JOptionPane.showMessageDialog(this, "Seleccione un propietario válido");
@@ -659,35 +639,62 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jCListaPropietariosItemStateChanged
 
-    private void jCListaPropiedadesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCListaPropiedadesItemStateChanged
-        limpiarCampos();
-        rellenarCampos();
-        if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-                    && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-                    && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-                     && jRDisponibilidadPropiedades.isSelected() == true && !jTObservacionesPropiedades.getText().isEmpty()) {
-                 habilitarBotones();
-       }else{
-            deshabilitarBotones();
-        }
-    }//GEN-LAST:event_jCListaPropiedadesItemStateChanged
+    private void jRActivoPropiedades1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRActivoPropiedades1ItemStateChanged
+        actualizarActivo();
+    }//GEN-LAST:event_jRActivoPropiedades1ItemStateChanged
 
     private void jRDisponibilidadPropiedadesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRDisponibilidadPropiedadesItemStateChanged
         actualizarDisponibilidad();
     }//GEN-LAST:event_jRDisponibilidadPropiedadesItemStateChanged
 
-    private void jRActivoPropiedades1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRActivoPropiedades1ItemStateChanged
-        actualizarActivo();
-    }//GEN-LAST:event_jRActivoPropiedades1ItemStateChanged
+    private void jBSalirPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirPropiedadesActionPerformed
+        int respuesta = JOptionPane.showConfirmDialog(this, "Estás seguro que quieres salir?", "Cerrar Ventana", JOptionPane.YES_NO_OPTION);
 
-    private void jTSuperTotalPropiedadesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTSuperTotalPropiedadesKeyTyped
-        //Solo dejo introducir numeros , puntos y comas
-        int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <= 57) || key == 46 || key == 44;
-        if (!numero) {
-            evt.consume();
+        if (respuesta == JOptionPane.YES_OPTION) {
+
+            this.dispose();//cierro la ventana
         }
-    }//GEN-LAST:event_jTSuperTotalPropiedadesKeyTyped
+    }//GEN-LAST:event_jBSalirPropiedadesActionPerformed
+
+    private void jBEliminarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarPropiedadesActionPerformed
+        int respuesta = JOptionPane.showConfirmDialog(this, "\n\n¿Estás seguro que deseas eliminar la propiedad?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
+
+        if (respuesta == JOptionPane.YES_OPTION) {
+            Propiedad propiedadSeleccionado = (Propiedad) jCListaPropiedades.getSelectedItem();
+            pd.darBajaAPropiedad(propiedadSeleccionado);
+            limpiarCampos();
+            cargarComboPropiedades();
+        }
+
+    }//GEN-LAST:event_jBEliminarPropiedadesActionPerformed
+
+    private void jBModificarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarPropiedadesActionPerformed
+        modificarPropiedad(); // Llama al método modificar solo si se ha seleccionado una propiedad
+
+    }//GEN-LAST:event_jBModificarPropiedadesActionPerformed
+
+    private void jBModificarPropiedadesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jBModificarPropiedadesItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBModificarPropiedadesItemStateChanged
+
+    private void jBGuardarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarPropiedadesActionPerformed
+        guardarPropiedad();
+    }//GEN-LAST:event_jBGuardarPropiedadesActionPerformed
+
+    private void jTAntiguedadPropiedadKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTAntiguedadPropiedadKeyReleased
+        if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
+            && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
+            && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
+            && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
+            jBGuardarPropiedades.setEnabled(true);
+        }else{
+            deshabilitarBotones();
+        }
+
+        if (jTAntiguedadPropiedad.getText().isEmpty()) {
+            deshabilitarBotones();
+        }
+    }//GEN-LAST:event_jTAntiguedadPropiedadKeyReleased
 
     private void jTPrecioTasadoPropiedadesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTPrecioTasadoPropiedadesKeyTyped
         //Solo dejo introducir numeros , puntos y comas
@@ -698,90 +705,74 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jTPrecioTasadoPropiedadesKeyTyped
 
-    private void jTDireccionPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDireccionPropiedadesKeyReleased
-        if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-                    && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-                    && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-                    && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
-                 jBGuardarPropiedades.setEnabled(true);
-       }else{
-            deshabilitarBotones();
-       }
-      
-        
-       if (jTDireccionPropiedades.getText().isEmpty()) {
-            deshabilitarBotones();
-        }
-    }//GEN-LAST:event_jTDireccionPropiedadesKeyReleased
-
-    private void jTAlturaPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTAlturaPropiedadesKeyReleased
-        if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-                    && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-                    && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-                    && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
-                jBGuardarPropiedades.setEnabled(true);
-       }else{
-            deshabilitarBotones();
-       }    
-      
-       if (jTAlturaPropiedades.getText().isEmpty()){ 
-            deshabilitarBotones();
-        }
-    }//GEN-LAST:event_jTAlturaPropiedadesKeyReleased
-
-    private void jTSuperTotalPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTSuperTotalPropiedadesKeyReleased
-        if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-                    && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-                    && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-                    && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
-                 jBGuardarPropiedades.setEnabled(true);
-       }else{
-            deshabilitarBotones(); 
-        }
-       
-       if (jTSuperTotalPropiedades.getText().isEmpty()) {
-            deshabilitarBotones();
-        }
-    }//GEN-LAST:event_jTSuperTotalPropiedadesKeyReleased
-
     private void jTPrecioTasadoPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTPrecioTasadoPropiedadesKeyReleased
         if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-                    && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-                    && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-                    && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
-                 jBGuardarPropiedades.setEnabled(true);
-       }else{
-            deshabilitarBotones(); 
+            && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
+            && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
+            && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
+            jBGuardarPropiedades.setEnabled(true);
+        }else{
+            deshabilitarBotones();
         }
-      
+
         if (jTPrecioTasadoPropiedades.getText().isEmpty()) {
             deshabilitarBotones();
         }
     }//GEN-LAST:event_jTPrecioTasadoPropiedadesKeyReleased
 
-    private void jTAntiguedadPropiedadKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTAntiguedadPropiedadKeyReleased
+    private void jTSuperTotalPropiedadesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTSuperTotalPropiedadesKeyTyped
+        //Solo dejo introducir numeros , puntos y comas
+        int key = evt.getKeyChar();
+        boolean numero = (key >= 48 && key <= 57) || key == 46 || key == 44;
+        if (!numero) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTSuperTotalPropiedadesKeyTyped
+
+    private void jTSuperTotalPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTSuperTotalPropiedadesKeyReleased
         if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-                    && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-                    && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-                    && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
-                 jBGuardarPropiedades.setEnabled(true);
-       }else{
-            deshabilitarBotones();
-       }
-        
-        if (jTAntiguedadPropiedad.getText().isEmpty()) {
+            && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
+            && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
+            && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
+            jBGuardarPropiedades.setEnabled(true);
+        }else{
             deshabilitarBotones();
         }
-    }//GEN-LAST:event_jTAntiguedadPropiedadKeyReleased
 
-    private void jBModificarPropiedadesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jBModificarPropiedadesItemStateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBModificarPropiedadesItemStateChanged
+        if (jTSuperTotalPropiedades.getText().isEmpty()) {
+            deshabilitarBotones();
+        }
+    }//GEN-LAST:event_jTSuperTotalPropiedadesKeyReleased
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-       limpiarCampos();
-       deshabilitarBotones();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void jTAlturaPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTAlturaPropiedadesKeyReleased
+        if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
+            && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
+            && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
+            && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
+            jBGuardarPropiedades.setEnabled(true);
+        }else{
+            deshabilitarBotones();
+        }
+
+        if (jTAlturaPropiedades.getText().isEmpty()){
+            deshabilitarBotones();
+        }
+    }//GEN-LAST:event_jTAlturaPropiedadesKeyReleased
+
+    private void jTDireccionPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDireccionPropiedadesKeyReleased
+        if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
+            && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
+            && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
+            && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
+            jBGuardarPropiedades.setEnabled(true);
+        }else{
+            deshabilitarBotones();
+        }
+
+        if (jTDireccionPropiedades.getText().isEmpty()) {
+            deshabilitarBotones();
+        }
+    }//GEN-LAST:event_jTDireccionPropiedadesKeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
