@@ -93,9 +93,9 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jCListaPropietarios = new javax.swing.JComboBox<>();
         jCListarEstadoPropiedades = new javax.swing.JComboBox<>();
         jCListaPropiedades = new javax.swing.JComboBox<>();
-        jBNuevoPropiedades = new javax.swing.JButton();
         jCListarZonaPropiedades = new javax.swing.JComboBox<>();
         jCListaInspectoresPropiedades = new javax.swing.JComboBox<>();
+        jButton4 = new javax.swing.JButton();
 
         jPasswordField1.setText("jPasswordField1");
 
@@ -373,15 +373,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             }
         });
 
-        jBNuevoPropiedades.setBackground(new java.awt.Color(51, 51, 51));
-        jBNuevoPropiedades.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevoPropiedades.setText("Nuevo");
-        jBNuevoPropiedades.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBNuevoPropiedadesActionPerformed(evt);
-            }
-        });
-
         jCListarZonaPropiedades.setBackground(new java.awt.Color(153, 153, 153));
         jCListarZonaPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jCListarZonaPropiedades.setForeground(new java.awt.Color(51, 51, 51));
@@ -390,23 +381,24 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jCListaInspectoresPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jCListaInspectoresPropiedades.setForeground(new java.awt.Color(51, 51, 51));
 
+        jButton4.setBackground(new java.awt.Color(51, 51, 51));
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trash_bin_delete_remove_icon_191682.png"))); // NOI18N
+        jButton4.setBorder(null);
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4.setOpaque(false);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPPropiedadesLayout = new javax.swing.GroupLayout(jPPropiedades);
         jPPropiedades.setLayout(jPPropiedadesLayout);
         jPPropiedadesLayout.setHorizontalGroup(
             jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPPropiedadesLayout.createSequentialGroup()
                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                .addGap(230, 230, 230)
-                                .addComponent(jLTituloPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                .addGap(34, 34, 34)
-                                .addComponent(jLDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -455,54 +447,68 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                                .addComponent(jLDisponibilidadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(36, 36, 36)
-                                                .addComponent(jRDisponibilidadPropiedades))
-                                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                                .addComponent(jLActivoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jRActivoPropiedades1)))
+                                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLActivoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLDisponibilidadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(30, 30, 30)
+                                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jRDisponibilidadPropiedades)
+                                            .addComponent(jRActivoPropiedades1))
                                         .addGap(0, 0, Short.MAX_VALUE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jLObservacionesPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(61, 61, 61))))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jLIDPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCListaPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50)
-                        .addComponent(jCListaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                .addGap(34, 34, 34)
+                                .addComponent(jLDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                                .addGap(230, 230, 230)
+                                .addComponent(jLTituloPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(45, 45, 45))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
-                .addGap(183, 183, 183)
-                .addComponent(jBNuevoPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jBGuardarPropiedades)
-                .addGap(20, 20, 20)
-                .addComponent(jBModificarPropiedades)
-                .addGap(22, 22, 22)
-                .addComponent(jBEliminarPropiedades)
-                .addGap(20, 20, 20)
-                .addComponent(jBSalirPropiedades)
-                .addGap(112, 112, 112))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
                 .addGap(8, 8, 8)
                 .addComponent(jPBarraNavegador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
+                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(21, 22, Short.MAX_VALUE)
+                        .addComponent(jLIDPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jCListaPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(jBGuardarPropiedades)
+                        .addGap(85, 85, 85)
+                        .addComponent(jBModificarPropiedades)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addComponent(jBEliminarPropiedades)
+                        .addGap(85, 85, 85)
+                        .addComponent(jBSalirPropiedades))
+                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
+                        .addComponent(jCListaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(19, 19, 19))
         );
         jPPropiedadesLayout.setVerticalGroup(
             jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPPropiedadesLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jPBarraNavegador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
-                .addComponent(jLTituloPropiedades)
                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGap(28, 28, 28)
+                        .addGap(48, 48, 48)
+                        .addComponent(jLTituloPropiedades)
+                        .addGap(56, 56, 56)
                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLIDPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCListaPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -555,17 +561,17 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                                     .addComponent(jCListarEstadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLEstadoPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jBGuardarPropiedades)
-                                .addComponent(jBNuevoPropiedades))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jBModificarPropiedades)
+                            .addComponent(jBGuardarPropiedades)
                             .addComponent(jBEliminarPropiedades)
                             .addComponent(jBSalirPropiedades))
                         .addGap(53, 53, 53))
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGap(202, 202, 202)
+                        .addGap(128, 128, 128)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(150, 150, 150)
                         .addComponent(jLObservacionesPropiedades)
                         .addGap(280, 280, 280))))
         );
@@ -674,10 +680,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         actualizarActivo();
     }//GEN-LAST:event_jRActivoPropiedades1ItemStateChanged
 
-    private void jBNuevoPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoPropiedadesActionPerformed
-        limpiarCampos();
-    }//GEN-LAST:event_jBNuevoPropiedadesActionPerformed
-
     private void jTSuperTotalPropiedadesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTSuperTotalPropiedadesKeyTyped
         //Solo dejo introducir numeros , puntos y comas
         int key = evt.getKeyChar();
@@ -705,7 +707,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
        }else{
             deshabilitarBotones();
        }
-        jBNuevoPropiedades.setEnabled(true);
+      
         
        if (jTDireccionPropiedades.getText().isEmpty()) {
             deshabilitarBotones();
@@ -721,7 +723,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
        }else{
             deshabilitarBotones();
        }    
-        jBNuevoPropiedades.setEnabled(true);
+      
        if (jTAlturaPropiedades.getText().isEmpty()){ 
             deshabilitarBotones();
         }
@@ -736,7 +738,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
        }else{
             deshabilitarBotones(); 
         }
-        jBNuevoPropiedades.setEnabled(true);
+       
        if (jTSuperTotalPropiedades.getText().isEmpty()) {
             deshabilitarBotones();
         }
@@ -751,7 +753,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
        }else{
             deshabilitarBotones(); 
         }
-        jBNuevoPropiedades.setEnabled(true);
+      
         if (jTPrecioTasadoPropiedades.getText().isEmpty()) {
             deshabilitarBotones();
         }
@@ -766,7 +768,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
        }else{
             deshabilitarBotones();
        }
-        jBNuevoPropiedades.setEnabled(true);
+        
         if (jTAntiguedadPropiedad.getText().isEmpty()) {
             deshabilitarBotones();
         }
@@ -776,13 +778,18 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jBModificarPropiedadesItemStateChanged
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+       limpiarCampos();
+       deshabilitarBotones();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBEliminarPropiedades;
     private javax.swing.JButton jBGuardarPropiedades;
     private javax.swing.JButton jBModificarPropiedades;
-    private javax.swing.JButton jBNuevoPropiedades;
     private javax.swing.JButton jBSalirPropiedades;
+    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<Inspector> jCListaInspectoresPropiedades;
     private javax.swing.JComboBox<Propiedad> jCListaPropiedades;
     private javax.swing.JComboBox<Propietario> jCListaPropietarios;
@@ -1079,7 +1086,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     }
 
     public void deshabilitarBotones() {
-        jBNuevoPropiedades.setEnabled(false);
+
         jBGuardarPropiedades.setEnabled(false);
         jBModificarPropiedades.setEnabled(false);
         jBEliminarPropiedades.setEnabled(false);
@@ -1087,7 +1094,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
     }
 
     public void habilitarBotones() {
-        jBNuevoPropiedades.setEnabled(true);
+
         jBGuardarPropiedades.setEnabled(false);
         jBModificarPropiedades.setEnabled(true);
         jBEliminarPropiedades.setEnabled(true);
