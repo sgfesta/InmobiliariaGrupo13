@@ -24,7 +24,7 @@ public class Contrato {
     
     //Declaro los Constructores
 
-    public Contrato(int idContrato, Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Usuario usuario, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, double montoContrato, boolean vigente, boolean activo, boolean renovado) {
+    public Contrato(int idContrato, Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Usuario usuario, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, double montoContrato, boolean vigente, boolean renovado, boolean activo) {
         this.idContrato = idContrato;
         this.propietario = propietario;
         this.propiedad = propiedad;
@@ -36,11 +36,12 @@ public class Contrato {
         this.fechaContrato = fechaContrato;
         this.montoContrato = montoContrato;
         this.vigente = vigente;
-        this.activo = activo;
         this.renovado = renovado;
+        this.activo = activo;
+        
     }
 
-    public Contrato(Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Usuario usuario, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, double montoContrato, boolean vigente, boolean activo, boolean renovado) {
+    public Contrato(Propietario propietario, Propiedad propiedad, Inquilino inquilino, Garante garante, Usuario usuario, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaContrato, double montoContrato, boolean vigente, boolean renovado, boolean activo) {
         this.propietario = propietario;
         this.propiedad = propiedad;
         this.inquilino = inquilino;
@@ -51,8 +52,9 @@ public class Contrato {
         this.fechaContrato = fechaContrato;
         this.montoContrato = montoContrato;
         this.vigente = vigente;
-        this.activo = activo;
         this.renovado = renovado;
+        this.activo = activo;
+        
     }
 
    
