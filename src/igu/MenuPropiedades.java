@@ -38,7 +38,8 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         cargarComboInspector();
         cargarComboPropietarios();
         deshabilitarBotones();
-        combosEnBlanco();
+//        combosEnBlanco();
+        limpiarCampos();
 
     }
 
@@ -920,6 +921,10 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jRDisponibilidadPropiedades.isSelected();
         jRActivoPropiedades1.isSelected();
         jTObservacionesPropiedades.setText("");
+        jCListaInspectoresPropiedades.setSelectedItem(null);
+        jCListarZonaPropiedades.setSelectedItem(null);
+        jCListarEstadoPropiedades.setSelectedItem(null);
+        jCListaTipoPropiedades.setSelectedItem(null);
 
     }
 
