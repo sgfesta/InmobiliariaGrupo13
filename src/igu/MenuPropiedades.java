@@ -37,7 +37,8 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         cargarComboEstado();
         cargarComboInspector();
         cargarComboPropietarios();
-         deshabilitarBotones();
+        deshabilitarBotones();
+        combosEnBlanco();
 
     }
 
@@ -260,7 +261,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jBGuardarPropiedades.setBackground(new java.awt.Color(51, 51, 51));
         jBGuardarPropiedades.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBGuardarPropiedades.setForeground(new java.awt.Color(51, 204, 255));
-        jBGuardarPropiedades.setText("Guardar");
+        jBGuardarPropiedades.setText("Nuevo");
         jBGuardarPropiedades.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBGuardarPropiedades.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -332,7 +333,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jRDisponibilidadPropiedades.setForeground(new java.awt.Color(255, 255, 255));
         jRDisponibilidadPropiedades.setSelected(true);
         jRDisponibilidadPropiedades.setBorder(null);
-        jRDisponibilidadPropiedades.setOpaque(false);
         jRDisponibilidadPropiedades.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jRDisponibilidadPropiedadesItemStateChanged(evt);
@@ -348,7 +348,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jRActivoPropiedades1.setForeground(new java.awt.Color(255, 255, 255));
         jRActivoPropiedades1.setSelected(true);
         jRActivoPropiedades1.setBorder(null);
-        jRActivoPropiedades1.setOpaque(false);
         jRActivoPropiedades1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jRActivoPropiedades1ItemStateChanged(evt);
@@ -388,7 +387,6 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trash_bin_delete_remove_icon_191682.png"))); // NOI18N
         jButton4.setBorder(null);
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton4.setOpaque(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -420,17 +418,21 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(jTSuperTotalPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPPropiedadesLayout.createSequentialGroup()
-                                        .addComponent(jLAlturaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTAlturaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPPropiedadesLayout.createSequentialGroup()
                                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLPrecioTasadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLAntiguedadPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(18, 18, 18)
                                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jTAntiguedadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTPrecioTasadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(jTPrecioTasadoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPPropiedadesLayout.createSequentialGroup()
+                                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLAlturaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLDireccionPropiedades))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jTDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTAlturaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
@@ -485,14 +487,8 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                         .addComponent(jBSalirPropiedades)
                         .addGap(100, 100, 100))
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                .addComponent(jLDireccionPropiedades)
-                                .addGap(75, 75, 75)
-                                .addComponent(jTDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                                .addGap(195, 195, 195)
-                                .addComponent(jLTituloPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(195, 195, 195)
+                        .addComponent(jLTituloPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
         );
         jPPropiedadesLayout.setVerticalGroup(
@@ -512,17 +508,16 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
                         .addGap(11, 11, 11)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(1, 1, 1)
                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addGap(19, 19, 19)
+                        .addComponent(jRDisponibilidadPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLDisponibilidadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jRDisponibilidadPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLDisponibilidadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLActivoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -580,11 +575,11 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
+            .addComponent(jPPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, 627, Short.MAX_VALUE)
+            .addComponent(jPPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
         );
 
         pack();
@@ -1090,5 +1085,12 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jBModificarPropiedades.setEnabled(true);
         jBEliminarPropiedades.setEnabled(true);
     }
-
+public void combosEnBlanco(){
+         jCListaPropietarios.setSelectedItem(null);
+         jCListaPropiedades.setSelectedItem(null);
+        jCListaInspectoresPropiedades.setSelectedItem(null);
+        jCListarZonaPropiedades.setSelectedItem(null);
+        jCListarEstadoPropiedades.setSelectedItem(null);
+        jCListaTipoPropiedades.setSelectedItem(null);
+    }
 }
