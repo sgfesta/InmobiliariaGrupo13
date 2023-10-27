@@ -589,6 +589,9 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
         Inquilino inquilino = inquilinoD.buscarInquilinoPorDni(dniInquilino);
         Garante garante = garanteD.buscarGarantePorDni(dniGarante);
         Usuario usuario = controlacceso.getUsuarioActual();
+        boolean vigente = true;
+        boolean renovado = false;
+        boolean activo = true;
         
 
         // Obtener la propiedad seleccionada desde el ComboBox
@@ -633,9 +636,9 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
                     + "Fecha Fin: " + fechaFinAlquiler + "\n"
                     + "Fecha Contrato: " + fechaContrato + "\n"
                     + "Monto Contrato: " + precio + "\n"
-                    + "Vigente: " + "AL ser nuevo siempre va a estar Vigente" + "\n"
-                    + "Renovado: " + "AL ser nuevo siempre no va a estar renovado" + "\n"
-                    + "Activo : " + "AL ser nuevo siempre va a estar activo";
+                    + "Vigente: " + vigente + "\n"
+                    + "Renovado: " + renovado + "\n"
+                    + "Activo : " + activo;
 
             int respuesta = JOptionPane.showConfirmDialog(null, mensaje + "\n\n¿Desea guardar el Contrato?", "Confirmación", JOptionPane.YES_NO_OPTION);
 
@@ -653,9 +656,9 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
                 fechaFinAlquiler,
                 fechaContrato,
                 precio,
-                true,
-                false,    
-                true // Cambiado a "true" para que el contrato sea activo
+                vigente,
+                renovado,    
+                activo // Cambiado a "true" para que el contrato sea activo
             );
             cd.guardarContrato(contrato);
             desHabilitoCampos();

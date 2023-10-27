@@ -30,7 +30,9 @@ public class ContratoData {
     //Guardo Contrato de manera individual
     public void guardarContrato(Contrato contrato) {
         //Sentencia Sql
-        String sql = "UPDATE Contrato SET idPropiedad =?, idPropietario=?, idInquilino=?, idGarante=?, idUsuario=?, fechaInicio=?, fechaFin=?, fechaContrato=?, montoContrato=?, vigente=?, activo=? VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
+        String sql = "INSERT INTO contrato(idPropiedad, idPropietario, idInquilino, idGarante, idUsuario, fechaInicio, fechaFin, fechaContrato, montoContrato, vigente, renovado, activo) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        
+        
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, contrato.getPropiedad().getIdPropiedad());
@@ -41,9 +43,10 @@ public class ContratoData {
             ps.setDate(6, Date.valueOf(contrato.getFechaInicio()));
             ps.setDate(7, Date.valueOf(contrato.getFechaFin()));
             ps.setDate(8, Date.valueOf(contrato.getFechaContrato()));
-            ps.setDouble(9, contrato.getIdContrato());
+            ps.setDouble(9, contrato.getMontoContrato());
             ps.setBoolean(10, contrato.isVigente());
-            ps.setBoolean(11, contrato.isActivo());
+            ps.setBoolean(11, contrato.isRenovado());
+            ps.setBoolean(12, contrato.isActivo());
             ps.executeUpdate();
 
             ResultSet rs = ps.getGeneratedKeys();
@@ -57,7 +60,7 @@ public class ContratoData {
         } catch (SQLIntegrityConstraintViolationException e) {
             JOptionPane.showMessageDialog(null, "El Contrato ya existe");
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Contrato");
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Contrato"+ex);
         }
     }
 
