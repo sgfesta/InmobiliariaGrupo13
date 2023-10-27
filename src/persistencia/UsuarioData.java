@@ -121,5 +121,32 @@ public class UsuarioData {
         }
         return usuario;
     }
+        
+     public Usuario listarUsuario() {
+        String sql = "SELECT idUsuario, nombre,email, password, activo, nivelAcceso FROM usuario";
+        Usuario usuario = null;
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                usuario = new Usuario();
+                usuario.setIdUsuario(rs.getInt("idUsuario"));
+                usuario.setNombre(rs.getString("nombre"));
+                usuario.setEmail(rs.getString("email"));
+                usuario.setPassword(rs.getString("password"));
+                usuario.setActivo(rs.getBoolean("activo"));
+                usuario.setNivelAcceso(rs.getInt("nivelAcceso"));
+
+            } else {
+                JOptionPane.showMessageDialog(null, "No existe un usuario");
+            }
+            //Cierro la Conexion
+            ps.close();
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Usuario");
+        }
+        return usuario;
+    }    
 
 }

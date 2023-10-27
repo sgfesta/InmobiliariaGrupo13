@@ -662,6 +662,7 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
             );
             cd.guardarContrato(contrato);
             desHabilitoCampos();
+            limpiarDNuevo();
         } else {
             JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos requeridos y verifique la información.", "Campos Incompletos BD", JOptionPane.WARNING_MESSAGE);
         }
@@ -752,6 +753,17 @@ public class MenuAlquileres extends javax.swing.JInternalFrame {
     private void aceptarPropiedad(){
         System.out.println("hola acepte la propiedad");
     
+    }
+    
+    private void limpiarDNuevo(){       
+        
+        jTIDInquilinoAlquiler.setText("");
+        jTIDGaranteAlquiler.setText("");
+        jDFechaInicioAlquiler.setDate(null);
+        jDFechaFinAlquiler.setDate(null);
+        jDFechaContratoAlquiler.setDate(null);
+        jTMontoContrato.setText("Precio");
+        
     }
     
     private void desHabilitoCampos(){
