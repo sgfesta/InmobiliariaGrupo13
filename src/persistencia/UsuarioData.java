@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 public class UsuarioData {
@@ -122,31 +124,30 @@ public class UsuarioData {
         return usuario;
     }
         
-     public Usuario listarUsuario() {
-        String sql = "SELECT idUsuario, nombre,email, password, activo, nivelAcceso FROM usuario";
-        Usuario usuario = null;
+    public List<Usuario> listarUsuario() {
+        String sql = "SELECT idUsuario, nombre, email, password, activo, nivelAcceso FROM usuario";
+        ArrayList<Usuario> usuarios = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
-                usuario = new Usuario();
+
+            while (rs.next()) {
+                Usuario usuario = new Usuario();
                 usuario.setIdUsuario(rs.getInt("idUsuario"));
                 usuario.setNombre(rs.getString("nombre"));
                 usuario.setEmail(rs.getString("email"));
                 usuario.setPassword(rs.getString("password"));
                 usuario.setActivo(rs.getBoolean("activo"));
-                usuario.setNivelAcceso(rs.getInt("nivelAcceso"));
-
-            } else {
-                JOptionPane.showMessageDialog(null, "No existe un usuario");
+                usuario.setNivelAcceso(rs.getInt("nivelAcceso"));                
+                usuarios.add(usuario);
             }
-            //Cierro la Conexion
+             //Cierro la Conexion
             ps.close();
-
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Usuario");
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Usuarios ");
+
         }
-        return usuario;
-    }    
+        return usuarios;
+    }
 
 }

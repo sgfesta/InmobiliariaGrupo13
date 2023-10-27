@@ -6,9 +6,13 @@
 package igu;
 
 import entidades.Usuario;
+import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
-import java.util.ArrayList;
+import java.util.List;
+import javax.swing.DefaultListCellRenderer;
 import javax.swing.JComponent;
+import javax.swing.JList;
 import persistencia.UsuarioData;
 
 /**
@@ -17,7 +21,7 @@ import persistencia.UsuarioData;
  */
 public class MenuUsuario extends javax.swing.JInternalFrame {
 
-    UsuarioData usuarioD = new UsuarioData();
+   
 
     /**
      * Creates new form MenuPropietarios
@@ -25,9 +29,9 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
     public MenuUsuario() {
         initComponents();
        
-        AutoCompleteDecorator.decorate(jCBusquedaUsuario);
+       
         
-        /cargarComboUsuarios();
+        cargarCombos();
         QuitarLaBarraTitulo();
 
     }
@@ -364,7 +368,7 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
     private javax.swing.JButton jBEliminarUsuario;
     private javax.swing.JButton jBModificarUsuario;
     private javax.swing.JButton jBNuevo;
-    private javax.swing.JComboBox<String> jCBusquedaUsuario;
+    private javax.swing.JComboBox<Usuario> jCBusquedaUsuario;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel23;
@@ -385,68 +389,40 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
     // End of variables declaration//GEN-END:variables
 
     public void cargarCombos() {
-
-        // combo inspectores
+      
         jCBusquedaUsuario.removeAllItems();
-        ArrayList<Usuario> usuarios = new ArrayList<>();
+       // alumnoData ad = new alumnoData();
+        UsuarioData usuarioD = new UsuarioData();
+        List<Usuario> usuarios = usuarioD.listarUsuario();
 
-        for (Usuario usuario : usuarioD.listarUsuario()) {
-            usuarios.add(usuario);
+        jCBusquedaUsuario.setRenderer(new DefaultListCellRenderer() {
+            @Override
+            public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+                super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+
+                if (value instanceof Usuario) {
+                    Usuario usuario = (Usuario) value;
+
+                    if (usuario.isActivo() == false) {
+                        setForeground(Color.RED); // Cambia el color del texto a rojo si el estado es 0
+                    } else {
+                        setForeground(Color.BLACK); // Restablece el color del texto a negro
+                    }
+                }
+
+                return this;
+            }
+        });
+
+        for (Usuario usuario : usuarios) {
+
             jCBusquedaUsuario.addItem(usuario);
-
         }
-
-        jCBusquedaInspector.setRenderer(new DefaultListCellRenderer() {
-            @Override
-            public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-                super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-
-                if (value instanceof Inspector) {
-                    Inspector inspector = (Inspector) value;
-
-                    if (inspector.isActivo() == false) {
-                        setForeground(Color.RED); // Cambia el color del texto a rojo si el estado es 0
-                    } else {
-                        setForeground(Color.BLACK); // Restablece el color del texto a negro
-                    }
-                }
-
-                return this;
-            }
-        });
-
-        // combo contratos
-        jCBusquedaContratos.removeAllItems();
-        ContratoData contratoD = new ContratoData();
-        ArrayList<Contrato> contratos = new ArrayList<>();
-
-        for (Contrato contrato : contratoD.listarContratos()) {
-            contratos.add(contrato);
-            jCBusquedaContratos.addItem(contrato);
-
-        }
-
-        jCBusquedaContratos.setRenderer(new DefaultListCellRenderer() {
-            @Override
-            public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-                super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-
-                if (value instanceof Contrato) {
-                    Contrato contrato = (Contrato) value;
-
-                    if (contrato.isActivo() == false) {
-                        setForeground(Color.RED); // Cambia el color del texto a rojo si el estado es 0
-                    } else {
-                        setForeground(Color.BLACK); // Restablece el color del texto a negro
-                    }
-                }
-
-                return this;
-            }
-        });
+    }
+     
 
     }
 
     
     
-}
+
