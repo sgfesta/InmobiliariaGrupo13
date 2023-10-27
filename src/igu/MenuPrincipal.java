@@ -15,6 +15,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private MenuPropietarios mpropietario;
     private MenuAlquileres malquileres;
     private MenuListados malistados;
+    private MenuUsuario musuario;
 
     int xMouse, yMouse;
 
@@ -41,6 +42,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jListados = new javax.swing.JLabel();
         jLSalir = new javax.swing.JLabel();
         exitTxt = new javax.swing.JLabel();
+        jLUsuario = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
         jLbarraNombre = new javax.swing.JLabel();
         jBcerrarSesion = new javax.swing.JButton();
@@ -182,6 +184,24 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jLUsuario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        jLUsuario.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3289576-individual-man-people-person_107097.png"))); // NOI18N
+        jLUsuario.setText("   USUARIO");
+        jLUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLUsuarioMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLUsuarioMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLUsuarioMouseExited(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPMenuLateralLayout = new javax.swing.GroupLayout(jPMenuLateral);
         jPMenuLateral.setLayout(jPMenuLateralLayout);
         jPMenuLateralLayout.setHorizontalGroup(
@@ -191,7 +211,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPMenuLateralLayout.createSequentialGroup()
                         .addGap(0, 8, Short.MAX_VALUE)
                         .addGroup(jPMenuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLSalir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jListados, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPMenuLateralLayout.createSequentialGroup()
                                 .addGap(6, 6, 6)
@@ -206,8 +225,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
                                 .addGap(6, 6, 6)
                                 .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(exitTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPMenuLateralLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(jPMenuLateralLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPMenuLateralLayout.setVerticalGroup(
             jPMenuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,8 +253,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jListados, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(204, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
 
         Fondo.add(jPMenuLateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 670));
@@ -468,6 +496,25 @@ public class MenuPrincipal extends javax.swing.JFrame {
         cerrarSession();
     }//GEN-LAST:event_jBcerrarSesionActionPerformed
 
+    private void jLUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLUsuarioMouseClicked
+        if (jLUsuario.isEnabled()) {
+            jPCardFondo.removeAll();
+            jPCardFondo.repaint();
+            musuario = new MenuUsuario();
+            musuario.setVisible(true);
+            jPCardFondo.add(musuario);
+            jPCardFondo.setComponentZOrder(musuario, 0);
+        }
+    }//GEN-LAST:event_jLUsuarioMouseClicked
+
+    private void jLUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLUsuarioMouseEntered
+        jListados.setForeground(new Color(102, 102, 102));
+    }//GEN-LAST:event_jLUsuarioMouseEntered
+
+    private void jLUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLUsuarioMouseExited
+        exitTxt.setForeground(new Color(255, 255, 255));
+    }//GEN-LAST:event_jLUsuarioMouseExited
+
 //    /**
 //     * @param args the command line arguments
 //     */
@@ -513,6 +560,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLPropiedades;
     private javax.swing.JLabel jLPropietarios;
     private javax.swing.JLabel jLSalir;
+    private javax.swing.JLabel jLUsuario;
     private javax.swing.JLabel jLbarraAcesso;
     private javax.swing.JLabel jLbarraNombre;
     private javax.swing.JLabel jListados;
@@ -530,6 +578,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLPropietarios.setVisible(false);
         jListados.setVisible(false);
         jBcerrarSesion.setEnabled(false);
+        jLUsuario.setVisible(false);
     }
 
     public void cargarmenu(int nivelAcceso) {
@@ -540,6 +589,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLPropiedades.setVisible(true);
         jLPropietarios.setVisible(true);
         jListados.setVisible(true);
+        jLUsuario.setVisible(true);
         switch (nivelAcceso) {
             case 10:
                 //Administrador
@@ -549,7 +599,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 jLPropietarios.setEnabled(true);
                 jListados.setEnabled(true);
                 jBcerrarSesion.setEnabled(true);
-
+                jLUsuario.setEnabled(true);
                 break;
             case 20:
                 //Solo listados                
@@ -559,6 +609,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 jLPropietarios.setEnabled(true);
                 jListados.setEnabled(true);
                 jBcerrarSesion.setEnabled(true);
+                jLUsuario.setEnabled(false);
                 break;
             case 30:
                 jLLogin.setEnabled(false);
@@ -567,7 +618,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 jLPropietarios.setEnabled(false);
                 jListados.setEnabled(true);
                 jBcerrarSesion.setEnabled(true);
-
+                jLUsuario.setEnabled(false);
                 break;
             default:
 
@@ -577,7 +628,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     public void actualizarJLabel(String nombreUsuario, String acesso) {
         jLbarraNombre.setText("Usuario: " + nombreUsuario);
-        jLbarraAcesso.setText("Acesso: " +acesso);
+        jLbarraAcesso.setText("Acesso: " + acesso);
     }
 
     private void cerrarSession() {
@@ -588,7 +639,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         //Pongo la barra lateral en Off modo logueo
         barraLateralOFF();
         //Pongo el usuario a Desconectado
-        actualizarJLabel("Desconectado","");
+        actualizarJLabel("Desconectado", "");
         //Libero Instancias
         liberarIntancias();
     }

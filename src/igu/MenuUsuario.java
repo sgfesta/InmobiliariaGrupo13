@@ -350,9 +350,8 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jBEliminarUsuarioActionPerformed
 
     private void jBSalirUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirUsuarioActionPerformed
-
-        jPCardUsuarios.setVisible(false);
-
+        this.dispose();
+      
     }//GEN-LAST:event_jBSalirUsuarioActionPerformed
 
     private void jCBusquedaUsuarioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBusquedaUsuarioItemStateChanged
