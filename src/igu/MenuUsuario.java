@@ -5,6 +5,7 @@
  */
 package igu;
 
+import entidades.Propietario;
 import entidades.Usuario;
 import java.awt.Color;
 import java.awt.Component;
@@ -13,6 +14,7 @@ import java.util.List;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JComponent;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import persistencia.UsuarioData;
 
 /**
@@ -21,11 +23,9 @@ import persistencia.UsuarioData;
  */
 public class MenuUsuario extends javax.swing.JInternalFrame {
 
-   
+    UsuarioData ud=new UsuarioData();
 
-    /**
-     * Creates new form MenuPropietarios
-     */
+     
     public MenuUsuario() {
         initComponents();
        
@@ -83,7 +83,7 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
-        jPCardUsuarios.setBackground(new java.awt.Color(55, 55, 55));
+        jPCardUsuarios.setBackground(new java.awt.Color(51, 51, 51));
         jPCardUsuarios.setMinimumSize(new java.awt.Dimension(748, 635));
 
         jPBarraNavegador1.setBackground(new java.awt.Color(153, 153, 153));
@@ -106,16 +106,15 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         jPBarraNavegador1Layout.setVerticalGroup(
             jPBarraNavegador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPBarraNavegador1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel23)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel23))
         );
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 204, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casita.png"))); // NOI18N
-        jLabel5.setText("  Formulario Usuarios");
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/White-individual-man-people-person_107097.png"))); // NOI18N
+        jLabel5.setText("  Creacion de Usuarios");
         jLabel5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
@@ -183,7 +182,7 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         jBNuevo.setBackground(new java.awt.Color(51, 51, 51));
         jBNuevo.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jBNuevo.setForeground(new java.awt.Color(51, 204, 255));
-        jBNuevo.setText("Nuevo");
+        jBNuevo.setText("Crear");
         jBNuevo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,6 +212,7 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
             }
         });
 
+        jrbUAvtivo.setBackground(new java.awt.Color(51, 51, 51));
         jrbUAvtivo.setSelected(true);
 
         jCBusquedaUsuario.setToolTipText("");
@@ -244,18 +244,13 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
                         .addComponent(jLabel6)
                         .addGap(18, 18, 18)
                         .addComponent(jCBusquedaUsuario, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel5)
                     .addGroup(jPCardUsuariosLayout.createSequentialGroup()
-                        .addComponent(jBNuevo)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBModificarUsuario)
-                        .addGap(26, 26, 26)
-                        .addComponent(jBEliminarUsuario)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBSalirUsuario)))
+                        .addGap(58, 58, 58)
+                        .addComponent(jLabel5)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(200, 200, 200))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardUsuariosLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 52, Short.MAX_VALUE)
                 .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardUsuariosLayout.createSequentialGroup()
                         .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -277,15 +272,25 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
                                 .addComponent(jTNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(226, 226, 226))
                     .addComponent(jPBarraNavegador1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardUsuariosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jBNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jBModificarUsuario)
+                .addGap(26, 26, 26)
+                .addComponent(jBEliminarUsuario)
+                .addGap(18, 18, 18)
+                .addComponent(jBSalirUsuario)
+                .addGap(159, 159, 159))
         );
         jPCardUsuariosLayout.setVerticalGroup(
             jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPCardUsuariosLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(12, 12, 12)
                 .addComponent(jPBarraNavegador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(27, 27, 27)
                 .addComponent(jLabel5)
-                .addGap(48, 48, 48)
+                .addGap(49, 49, 49)
                 .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jCBusquedaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -313,20 +318,20 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
                 .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel34)
                     .addComponent(jrbUAvtivo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addGap(76, 76, 76)
                 .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevo)
                     .addComponent(jBEliminarUsuario)
                     .addComponent(jBSalirUsuario)
                     .addComponent(jBModificarUsuario))
-                .addGap(56, 56, 56))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 774, Short.MAX_VALUE)
+            .addGap(0, 786, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPCardUsuarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -341,16 +346,22 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoActionPerformed
-
+       agregarUsuario();
+       limpiarCampos();
     }//GEN-LAST:event_jBNuevoActionPerformed
 
     private void jBEliminarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarUsuarioActionPerformed
-        // eliminarPropietario();
-       // cargarComboUsuarios();
+        eliminarUsuario();
+        cargarCombos();
     }//GEN-LAST:event_jBEliminarUsuarioActionPerformed
 
     private void jBSalirUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirUsuarioActionPerformed
-        this.dispose();
+         int respuesta = JOptionPane.showConfirmDialog(this, "Estás seguro que quieres salir?", "Cerrar Ventana", JOptionPane.YES_NO_OPTION);
+
+        if (respuesta == JOptionPane.YES_OPTION) {
+
+            this.dispose();//cierro la ventana
+        }
       
     }//GEN-LAST:event_jBSalirUsuarioActionPerformed
 
@@ -359,7 +370,8 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jCBusquedaUsuarioItemStateChanged
 
     private void jBModificarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarUsuarioActionPerformed
-        // TODO add your handling code here:
+        modificarUsuario();
+        limpiarCampos();
     }//GEN-LAST:event_jBModificarUsuarioActionPerformed
 
 
@@ -418,6 +430,75 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
             jCBusquedaUsuario.addItem(usuario);
         }
     }
+    
+    public void agregarUsuario() {
+        
+        String nombre = jTNombre.getText();
+        String email = jTIEmail.getText();
+        String password = jTPwd.getText();
+        boolean activo = jrbUAvtivo.isSelected();
+        int nivelAcceso = Integer.parseInt(jTNacceso.getText());
+        
+        Usuario nuevo = new Usuario(nombre, email, password, activo, nivelAcceso);
+        
+        int idUsuario=Integer.parseInt(jTIDUsuario.getText());
+        
+        Usuario usuarioExistente = ud.buscarUsuario(idUsuario);
+        
+        if (usuarioExistente != null) {
+            JOptionPane.showMessageDialog(this, "El usuario ya existe");
+        } else {
+            ud.guardarUsuario(nuevo);
+            JOptionPane.showMessageDialog(this, "Usuario ingresado correctamente");
+        }
+
+    }
+    
+    public void limpiarCampos(){
+        
+        jTIDUsuario.setText("");
+        jTNombre.setText("");
+        jTIEmail.setText("");
+        jTPwd.setText("");
+        jTNacceso.setText("");
+        jrbUAvtivo.setSelected(true);
+    }
+    
+    public void modificarUsuario() {
+        try {
+            int id = Integer.parseInt(jTIDUsuario.getText());
+            String nombre = jTNombre.getText();
+            String email = jTIEmail.getText();
+            String contraseña = jTPwd.getText();
+            int nivelAcceso =Integer.parseInt(jTNacceso.getText());
+           boolean activo = jrbUAvtivo.isSelected();
+            Usuario nuevoU = new Usuario(id, nombre, email, contraseña, activo, nivelAcceso);
+            //pd.modificarPropietario(nuevoM);
+            int respuesta = JOptionPane.showConfirmDialog(this, "\n\n¿Estás seguro que deseas guardar los cambios?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
+            if (respuesta == JOptionPane.YES_OPTION) {
+                ud.modificarUsuario(nuevoU); // Guardo el cambio
+                JOptionPane.showMessageDialog(this, "Usuario modificado exitosamente.");
+            }
+        } catch (NullPointerException ex) {
+            JOptionPane.showMessageDialog(this, "Error al modificar " + ex.getMessage());
+        }
+    }
+     
+    public void eliminarUsuario() {
+        String uSelect = jTIDUsuario.getText();
+        boolean activo = jrbUAvtivo.isSelected();
+
+        //pd.eliminarPropietario(pSelect);
+         int respuesta = JOptionPane.showConfirmDialog(this, "\n\n¿Estás seguro que deseas eliminar al usuario?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
+        if (respuesta == JOptionPane.YES_OPTION) {
+            ud.eliminarUsuario(respuesta); // Guardo el cambio
+            JOptionPane.showMessageDialog(this, "Usuario eliminado exitosamente.");
+        }
+    }
+      
+    
+    
+      
      
 
     }

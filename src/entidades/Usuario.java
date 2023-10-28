@@ -27,6 +27,16 @@ public class Usuario {
         this.nivelAcceso = nivelAcceso;
     }
 
+    public Usuario(String nombre, String email, String password, boolean activo, int nivelAcceso) {
+        this.nombre = nombre;
+        this.email = email;
+        this.password = password;
+        this.activo = activo;
+        this.nivelAcceso = nivelAcceso;
+    }
+    
+    
+
     public int getIdUsuario() {
         return idUsuario;
     }
