@@ -105,7 +105,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(755, 699));
 
-        jPPropiedades.setBackground(new java.awt.Color(55, 55, 54));
+        jPPropiedades.setBackground(new java.awt.Color(51, 51, 51));
         jPPropiedades.setMinimumSize(new java.awt.Dimension(755, 592));
         jPPropiedades.setPreferredSize(new java.awt.Dimension(755, 592));
 
@@ -454,8 +454,8 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
                                         .addComponent(jCListaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(28, 28, 28)
-                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(60, 60, 60))))
+                                        .addComponent(jButton4)))
+                                .addGap(66, 66, 66))))
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
                         .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -499,16 +499,14 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 .addComponent(jPBarraNavegador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jLTituloPropiedades)
+                .addGap(20, 20, 20)
                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLIDPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCListaPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCListaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPPropiedadesLayout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLIDPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jCListaPropietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jCListaPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
                         .addGap(19, 19, 19)
@@ -580,7 +578,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
+            .addComponent(jPPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, 679, Short.MAX_VALUE)
         );
 
         pack();

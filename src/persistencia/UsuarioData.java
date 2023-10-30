@@ -35,10 +35,10 @@ public class UsuarioData {
 
             ResultSet rs = ps.getGeneratedKeys();
 
-            if (rs.next()) {
+           /* if (rs.next()) {
                 usuario.setIdUsuario(rs.getInt(1));
                 JOptionPane.showMessageDialog(null, "Usuario guardado exitosamente");
-            }
+            }*/
             //Cierro la Conexion
             ps.close();
 
@@ -78,7 +78,7 @@ public class UsuarioData {
     //Elimino de forma logica Usuario
     public void eliminarUsuario(int idUsuario) {
         //borrado logico
-        String sql = "UPDATE usuario SET activo=0 WHERE idVendedor= ?";
+        String sql = "UPDATE usuario SET activo=0 WHERE idUsuario= ?";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
