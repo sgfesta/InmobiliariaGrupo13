@@ -52,9 +52,9 @@ public class UsuarioData {
     //Modifico Usuario de forma individual
     public void modificarUsuario(Usuario usuario) {
         //Sentencia SQL
-        String sql = "UPDATE usuario SET nombre = ?, email = ?, password = ?, activo = ? nivelAcceso = ? WHERE idUsuario = ?";
+        String sql = "UPDATE usuario SET nombre = ?, email = ?, password = ?, activo = ?, nivelAcceso = ? WHERE idUsuario = ?";
         try {
-            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, usuario.getNombre());
             ps.setString(2, usuario.getEmail());
             ps.setString(3, usuario.getPassword());
@@ -64,15 +64,13 @@ public class UsuarioData {
             int exito = ps.executeUpdate();
 
             if (exito == 1) {//para avisar de que funciono correctamente.
-                JOptionPane.showMessageDialog(null, "Usuario modificado exitosamente");
+//                JOptionPane.showMessageDialog(null, "Usuario modificado exitosamente");
             }
             //Cierro la Conexion
             ps.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Usuario");
-
         }
-
     }
 
     //Elimino de forma logica Usuario
@@ -86,7 +84,6 @@ public class UsuarioData {
             int exito = ps.executeUpdate();
 
             if (exito == 1) {
-                JOptionPane.showMessageDialog(null, "Usuario eliminado exitosamente");
             }
             //Cierro la Conexion
             ps.close();

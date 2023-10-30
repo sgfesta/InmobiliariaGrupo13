@@ -27,10 +27,7 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
 
      
     public MenuUsuario() {
-        initComponents();
-       
-       
-        
+        initComponents(); 
         cargarCombos();
         QuitarLaBarraTitulo();
 
@@ -362,6 +359,7 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
     private void jBNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoActionPerformed
        agregarUsuario();
        limpiarCampos();
+        cargarCombos();
     }//GEN-LAST:event_jBNuevoActionPerformed
 
     private void jBEliminarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarUsuarioActionPerformed
@@ -387,7 +385,8 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
     private void jBModificarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarUsuarioActionPerformed
         modificarUsuario();
         limpiarCampos();
-        rellenarCampos();
+        cargarCombos();
+        rellenarCampos(); 
     }//GEN-LAST:event_jBModificarUsuarioActionPerformed
 
     private void jBLimpiezaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimpiezaUsuarioActionPerformed
@@ -500,7 +499,6 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
             int nivelAcceso =Integer.parseInt(jTNacceso.getText());
            boolean activo = jrbUAvtivo.isSelected();
             Usuario nuevoU = new Usuario(id, nombre, email, contraseña, activo, nivelAcceso);
-            //pd.modificarPropietario(nuevoM);
             int respuesta = JOptionPane.showConfirmDialog(this, "\n\n¿Estás seguro que deseas guardar los cambios?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
             if (respuesta == JOptionPane.YES_OPTION) {
                 ud.modificarUsuario(nuevoU); // Guardo el cambio
@@ -512,13 +510,12 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
     }
      
     public void eliminarUsuario() {
-        String uSelect = jTIDUsuario.getText();
+        int uSelect = Integer.parseInt(jTIDUsuario.getText());
         boolean activo = jrbUAvtivo.isSelected();
 
-        //pd.eliminarPropietario(pSelect);
          int respuesta = JOptionPane.showConfirmDialog(this, "\n\n¿Estás seguro que deseas eliminar al usuario?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
         if (respuesta == JOptionPane.YES_OPTION) {
-            ud.eliminarUsuario(respuesta); // Guardo el cambio
+            ud.eliminarUsuario(uSelect); // Guardo el cambio
             JOptionPane.showMessageDialog(this, "Usuario eliminado exitosamente.");
         }
     }
@@ -530,7 +527,6 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
 
         if (usuarioSeleccionado != null) {
 
-            
             jTIDUsuario.setText(String.valueOf(usuarioSeleccionado.getIdUsuario()));
             jTNombre.setText(String.valueOf(usuarioSeleccionado.getNombre()));
             jTIEmail.setText(String.valueOf(usuarioSeleccionado.getEmail()));
