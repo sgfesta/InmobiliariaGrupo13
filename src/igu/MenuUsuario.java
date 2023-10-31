@@ -5,7 +5,6 @@
  */
 package igu;
 
-import entidades.Propietario;
 import entidades.Usuario;
 import java.awt.Color;
 import java.awt.Component;
@@ -29,6 +28,7 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         initComponents();
         cargarCombos();
         QuitarLaBarraTitulo();
+        deshabilitarBotones();
 
     }
     //defino dos métodosdentro del JInternalFrame y lo instanciamos de la siguiente manera.
@@ -134,6 +134,11 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         jTNombre.setBackground(new java.awt.Color(153, 153, 153));
         jTNombre.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTNombre.setForeground(new java.awt.Color(51, 51, 51));
+        jTNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTNombreKeyReleased(evt);
+            }
+        });
 
         jLabel17.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(51, 204, 255));
@@ -144,6 +149,11 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         jTIEmail.setBackground(new java.awt.Color(153, 153, 153));
         jTIEmail.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIEmail.setForeground(new java.awt.Color(51, 51, 51));
+        jTIEmail.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTIEmailKeyReleased(evt);
+            }
+        });
 
         jLabel30.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(51, 204, 255));
@@ -154,6 +164,11 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         jTPwd.setBackground(new java.awt.Color(153, 153, 153));
         jTPwd.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTPwd.setForeground(new java.awt.Color(51, 51, 51));
+        jTPwd.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTPwdKeyReleased(evt);
+            }
+        });
 
         jLabel31.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(51, 204, 255));
@@ -164,6 +179,11 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         jTNacceso.setBackground(new java.awt.Color(153, 153, 153));
         jTNacceso.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTNacceso.setForeground(new java.awt.Color(51, 51, 51));
+        jTNacceso.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTNaccesoKeyReleased(evt);
+            }
+        });
 
         jLabel32.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(51, 204, 255));
@@ -396,6 +416,7 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
 
     private void jCBusquedaUsuarioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBusquedaUsuarioItemStateChanged
         rellenarCampos();
+        habilitarBotones();
     }//GEN-LAST:event_jCBusquedaUsuarioItemStateChanged
 
     private void jBModificarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarUsuarioActionPerformed
@@ -415,6 +436,38 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
                 + "Nivel 30 : Vendedor  Full" + "\n";
         JOptionPane.showMessageDialog(null, mensaje, "Detalle de Niveles", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jBInfoActionPerformed
+
+    private void jTNombreKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNombreKeyReleased
+       if(!jTNombre.getText().isEmpty() && !jTIEmail.getText().isEmpty() && !jTPwd.getText().isEmpty() && !jTNacceso.getText().isEmpty()){
+           jBNuevo.setEnabled(true);    
+       }else{
+           deshabilitarBotones();
+       }
+    }//GEN-LAST:event_jTNombreKeyReleased
+
+    private void jTIEmailKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTIEmailKeyReleased
+         if(!jTNombre.getText().isEmpty() && !jTIEmail.getText().isEmpty() && !jTPwd.getText().isEmpty() && !jTNacceso.getText().isEmpty()){
+           jBNuevo.setEnabled(true);    
+       }else{
+           deshabilitarBotones();
+       }
+    }//GEN-LAST:event_jTIEmailKeyReleased
+
+    private void jTPwdKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTPwdKeyReleased
+         if(!jTNombre.getText().isEmpty() && !jTIEmail.getText().isEmpty() && !jTPwd.getText().isEmpty() && !jTNacceso.getText().isEmpty()){
+           jBNuevo.setEnabled(true);    
+       }else{
+           deshabilitarBotones();
+       }
+    }//GEN-LAST:event_jTPwdKeyReleased
+
+    private void jTNaccesoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNaccesoKeyReleased
+         if(!jTNombre.getText().isEmpty() && !jTIEmail.getText().isEmpty() && !jTPwd.getText().isEmpty() && !jTNacceso.getText().isEmpty()){
+           jBNuevo.setEnabled(true);    
+       }else{
+           deshabilitarBotones();
+       }
+    }//GEN-LAST:event_jTNaccesoKeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -446,7 +499,6 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
     public void cargarCombos() {
 
         jCBusquedaUsuario.removeAllItems();
-        // alumnoData ad = new alumnoData();
         UsuarioData usuarioD = new UsuarioData();
         List<Usuario> usuarios = usuarioD.listarUsuario();
 
@@ -568,12 +620,19 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
                 jrbUAvtivo.setSelected(false);
             }
 
-            //actualizarActivo();
         }
+            //actualizarActivo();
+    }
+    
+ public void habilitarBotones() {
+        jBModificarUsuario.setEnabled(true);
+        jBEliminarUsuario.setEnabled(true);
+        jBNuevo.setEnabled(false);
     }
 
+    public void deshabilitarBotones() {
+        jBNuevo.setEnabled(false);
+        jBModificarUsuario.setEnabled(false);
+        jBEliminarUsuario.setEnabled(false);
 }
-
-    
-    
-
+}

@@ -89,7 +89,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return  idUsuario + ") " + nombre + " " + email + " " + password + " " + activo + " " + nivelAcceso; 
+        return  idUsuario + ") " + nombre + " / " + email; 
     }
     
     public String toStringUsuario() {
