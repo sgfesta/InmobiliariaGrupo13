@@ -44,7 +44,7 @@ public class InspectorData {
             ps.close();
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Inspector");
+            JOptionPane.showMessageDialog(null, "Ya existe un Inspector con esa matricula");
 
         }
 
