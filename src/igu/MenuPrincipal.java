@@ -666,6 +666,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
             malistados.setVisible(false);
             malistados = null;
         }
+        if (musuario != null) {
+            musuario.setVisible(false);
+            musuario = null;
+        }
+        
 
     }
 

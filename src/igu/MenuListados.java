@@ -1356,7 +1356,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 357, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jLFechaFinListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jLFechaContratoListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1449,7 +1449,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                                 .addGap(11, 11, 11)
                                 .addComponent(jDFechaContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTMontoContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1575,6 +1575,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             cargarCombos();
             borrarCampos();
         } else if (SelectPestaña == 3) {
+            cargarCombos();
             borrarCampos();
         }
     }//GEN-LAST:event_jTabbedPane1StateChanged
@@ -1937,12 +1938,16 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
     private void jCBusquedaContratosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBusquedaContratosItemStateChanged
 
-        if (!jCPropiedad.getSelectedItem().toString().isEmpty() && !jCPropietario.getSelectedItem().toString().isEmpty() && !jCInquilino.getSelectedItem().toString().isEmpty() && !jCGarante.getSelectedItem().toString().isEmpty() && !jCUsuario.getSelectedItem().toString().isEmpty()) {
-            habilitarBotonesContrato();
-        } else {
-            deshabilitarBotonesContrato();
-        }
+     //   if (!jCPropiedad.getSelectedItem().toString().isEmpty() && !jCPropietario.getSelectedItem().toString().isEmpty() && !jCInquilino.getSelectedItem().toString().isEmpty() && !jCGarante.getSelectedItem().toString().isEmpty() && !jCUsuario.getSelectedItem().toString().isEmpty()) {
+      //      habilitarBotonesContrato();
+     //   } else {
+    //        deshabilitarBotonesContrato();
+     //   }
+        comboContratos();
         rellenarCamposContratos();
+        
+        
+        
     }//GEN-LAST:event_jCBusquedaContratosItemStateChanged
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -2279,28 +2284,62 @@ public class MenuListados extends javax.swing.JInternalFrame {
             jDFechaInicioListados.setDate(java.sql.Date.valueOf(contratoSeleccionado.getFechaInicio()));
             jDFechaFinListados.setDate(java.sql.Date.valueOf(contratoSeleccionado.getFechaFin()));
 //            jTIDPropiedadListados.setText(String.valueOf(contratoSeleccionado.getPropiedad().toString()));
-
+                
+            //relleno combo propiedades con el contrato seleccionado    
             for (int i = 0; i < jCPropiedad.getItemCount(); i++) {
                 Propiedad x = jCPropiedad.getItemAt(i);
                 if (x.getIdPropiedad() == contratoSeleccionado.getPropiedad().getIdPropiedad()) {
                     jCPropiedad.setSelectedIndex(i);
                 }
             }
+            
+             //relleno combo propietario con el contrato seleccionado    
+            for (int i = 0; i < jCPropietario.getItemCount(); i++) {
+                Propietario x = jCPropietario.getItemAt(i);
+                if (x.getIdPropietario()== contratoSeleccionado.getPropietario().getIdPropietario()) {
+                    jCPropietario.setSelectedIndex(i);
+                }
+            }
+            
+             //relleno combo Inquiliono con el contrato seleccionado    
+            for (int i = 0; i < jCInquilino.getItemCount(); i++) {
+                Inquilino x = jCInquilino.getItemAt(i);
+                if (x.getIdInquilino()== contratoSeleccionado.getInquilino().getIdInquilino()) {
+                    jCInquilino.setSelectedIndex(i);
+                }
+            }
+               //relleno combo Garante con el contrato seleccionado    
+            for (int i = 0; i < jCGarante.getItemCount(); i++) {
+                Garante x = jCGarante.getItemAt(i);
+                if (x.getIdGarante()== contratoSeleccionado.getGarante().getIdGarante()) {
+                    jCGarante.setSelectedIndex(i);
+                }
+            }
+               //relleno combo Usuario con el contrato seleccionado    
+            for (int i = 0; i < jCUsuario.getItemCount(); i++) {
+                Usuario x = jCUsuario.getItemAt(i);
+                if (x.getIdUsuario()== contratoSeleccionado.getUsuario().getIdUsuario()) {
+                    jCUsuario.setSelectedIndex(i);
+                }
+            }
+            
+            
+            
 
-//            jTIDPropietarioListados.setText(String.valueOf(contratoSeleccionado.getPropietario().toStringSinDNI()));
-//            jTIDInquilinoListados.setText(String.valueOf(contratoSeleccionado.getInquilino().toString()));
-//            jTIDGaranteListados.setText(String.valueOf(contratoSeleccionado.getGarante().toString()));
-//            jTIDUsuarioContrato.setText(String.valueOf(contratoSeleccionado.getUsuario().toStringUsuario()));
-            jDFechaContratoListados.setDate(java.sql.Date.valueOf(contratoSeleccionado.getFechaContrato()));
-            jRActivoContrato.setSelected(contratoSeleccionado.isActivo());
-            jRVigenciaContrato.setSelected(contratoSeleccionado.isVigente());
-            jTMontoContrato.setText(String.valueOf(contratoSeleccionado.getMontoContrato()));
-            jRRenovado.setSelected(contratoSeleccionado.isRenovado());
-            jIDp.setText(String.valueOf(contratoSeleccionado.getPropietario().getIdPropietario()));
-            jIdPROPIEDAD.setText(String.valueOf(contratoSeleccionado.getPropiedad().getIdPropiedad()));
-            jIGARANTE.setText(String.valueOf(contratoSeleccionado.getGarante().getIdGarante()));
-            jIVendedor.setText(String.valueOf(contratoSeleccionado.getUsuario().getIdUsuario()));
-            jIInquilino.setText(String.valueOf(contratoSeleccionado.getInquilino().getIdInquilino()));
+////            jTIDPropietarioListados.setText(String.valueOf(contratoSeleccionado.getPropietario().toStringSinDNI()));
+////            jTIDInquilinoListados.setText(String.valueOf(contratoSeleccionado.getInquilino().toString()));
+////            jTIDGaranteListados.setText(String.valueOf(contratoSeleccionado.getGarante().toString()));
+////            jTIDUsuarioContrato.setText(String.valueOf(contratoSeleccionado.getUsuario().toStringUsuario()));
+//            jDFechaContratoListados.setDate(java.sql.Date.valueOf(contratoSeleccionado.getFechaContrato()));
+//            jRActivoContrato.setSelected(contratoSeleccionado.isActivo());
+//            jRVigenciaContrato.setSelected(contratoSeleccionado.isVigente());
+//            jTMontoContrato.setText(String.valueOf(contratoSeleccionado.getMontoContrato()));
+//            jRRenovado.setSelected(contratoSeleccionado.isRenovado());
+//            jIDp.setText(String.valueOf(contratoSeleccionado.getPropietario().getIdPropietario()));
+//            jIdPROPIEDAD.setText(String.valueOf(contratoSeleccionado.getPropiedad().getIdPropiedad()));
+//            jIGARANTE.setText(String.valueOf(contratoSeleccionado.getGarante().getIdGarante()));
+//            jIVendedor.setText(String.valueOf(contratoSeleccionado.getUsuario().getIdUsuario()));
+//            jIInquilino.setText(String.valueOf(contratoSeleccionado.getInquilino().getIdInquilino()));
         }
     }
 
