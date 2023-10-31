@@ -241,8 +241,10 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         });
 
         jBInfo.setBackground(new java.awt.Color(51, 51, 51));
-        jBInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trash_bin_delete_remove_icon_191682.png"))); // NOI18N
+        jBInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ic_info_outline_128_28513.png"))); // NOI18N
         jBInfo.setBorder(null);
+        jBInfo.setContentAreaFilled(false);
+        jBInfo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBInfoActionPerformed(evt);
@@ -333,12 +335,12 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
                 .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31)
                     .addComponent(jTPwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jBInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel32)
-                        .addComponent(jTNacceso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTNacceso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBInfo, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(22, 22, 22)
                 .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel34)
@@ -349,7 +351,7 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
                     .addComponent(jBEliminarUsuario)
                     .addComponent(jBSalirUsuario)
                     .addComponent(jBModificarUsuario))
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -43,7 +43,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         deshabilitarBotonesGarante();
         deshabilitarBotonesInspectores();
         deshabilitarBotonesInquilinos();
-        deshabilitarBotonesContrato();
+        
 
     }
     //defino dos métodosdentro del JInternalFrame y lo instanciamos de la siguiente manera.
@@ -175,6 +175,8 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(755, 592));
+        setPreferredSize(new java.awt.Dimension(755, 592));
 
         jPCardListados.setBackground(new java.awt.Color(55, 55, 55));
         jPCardListados.setMinimumSize(new java.awt.Dimension(748, 635));
@@ -447,7 +449,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addComponent(jBSalirGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
         jPGaranteLayout.setVerticalGroup(
             jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -489,7 +491,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLActivoGarante)
                     .addComponent(jRGarante))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
                 .addGroup(jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevoGarante)
                     .addComponent(jBModificarGarante)
@@ -684,7 +686,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                     .addGroup(jPInspectorLayout.createSequentialGroup()
                         .addGap(248, 248, 248)
                         .addComponent(jLTituloInspector)))
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addContainerGap(188, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInspectorLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -725,7 +727,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jPInspectorLayout.setVerticalGroup(
             jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPInspectorLayout.createSequentialGroup()
-                .addContainerGap(125, Short.MAX_VALUE)
+                .addContainerGap(128, Short.MAX_VALUE)
                 .addComponent(jLTituloInspector)
                 .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPInspectorLayout.createSequentialGroup()
@@ -998,9 +1000,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
                                         .addGap(11, 11, 11)))))
                         .addGap(33, 33, 33)
                         .addComponent(jBSalirInquilinos)))
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addContainerGap(192, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInquilinosLayout.createSequentialGroup()
-                .addContainerGap(174, Short.MAX_VALUE)
+                .addContainerGap(178, Short.MAX_VALUE)
                 .addComponent(jLBusquedaInquilinos)
                 .addGap(32, 32, 32)
                 .addComponent(jTDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1056,7 +1058,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                     .addComponent(jBModificarInquilinos)
                     .addComponent(jBEliminarInquilinos)
                     .addComponent(jBSalirInquilinos))
-                .addContainerGap(196, Short.MAX_VALUE))
+                .addContainerGap(199, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("INQUILINOS", jPInquilinos);
@@ -1290,17 +1292,14 @@ public class MenuListados extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(50, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLRenovadoListados)
+                                .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLIDUsuarioContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jBModificarListados)
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addComponent(jLRenovadoListados)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jRRenovado))))
+                                    .addComponent(jBModificarListados)
+                                    .addComponent(jRRenovado))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1309,74 +1308,76 @@ public class MenuListados extends javax.swing.JInternalFrame {
                                         .addComponent(jRActivoContrato)
                                         .addGap(58, 58, 58))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jCUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(85, 85, 85)
+                                        .addComponent(jBEliminarListados)
+                                        .addGap(86, 86, 86)
+                                        .addComponent(jBSalirListados, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addComponent(jIDp)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jIdPROPIEDAD)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(jLIDpropiedadListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jCPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                                    .addComponent(jLIDGaranteListados)
-                                                    .addGap(84, 84, 84)
-                                                    .addComponent(jCGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jLIDPropietarioListados, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jLIDInquilinoListados, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGap(6, 6, 6)
-                                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jCInquilino, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jCPropietario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addComponent(jLFechaInicioListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(150, 150, 150)
+                                .addComponent(jIDp)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jIdPROPIEDAD)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jDFechaInicioListados, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jIInquilino)
-                                .addGap(63, 63, 63))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jLFechaFinListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLFechaContratoListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(jBEliminarListados)
-                                        .addGap(120, 120, 120)))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jDFechaFinListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jDFechaContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jBSalirListados)
-                                        .addComponent(jTMontoContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                .addGap(63, 63, 63))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(230, 230, 230)
                         .addComponent(jLTituloContratoListados)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jIVendedor)))
+                        .addComponent(jIVendedor))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLIDpropiedadListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jCPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jLIDGaranteListados)
+                                            .addGap(84, 84, 84)
+                                            .addComponent(jCGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLIDPropietarioListados, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jLIDInquilinoListados, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGap(6, 6, 6)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jCInquilino, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jCPropietario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLFechaFinListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLFechaContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLFechaInicioListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLIDUsuarioContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jCUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jDFechaFinListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jDFechaContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTMontoContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(39, 39, 39))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -1390,40 +1391,72 @@ public class MenuListados extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jIInquilino)
-                .addGap(1, 1, 1)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLTituloContratoListados)
-                    .addComponent(jIVendedor))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLTituloContratoListados)
+                            .addComponent(jIVendedor))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jCBusquedaContratos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
-                                .addComponent(jCBusquedaContratos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jIDp)
+                                    .addComponent(jIdPROPIEDAD)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
+                                .addGap(23, 23, 23)
+                                .addComponent(jIGARANTE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jDFechaInicioListados, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLFechaInicioListados, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(11, 11, 11)
+                        .addComponent(jDFechaFinListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)
+                        .addComponent(jDFechaContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jIDp)
-                            .addComponent(jIdPROPIEDAD)))
+                            .addComponent(jTMontoContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(72, 72, 72)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLRenovadoListados)
+                            .addComponent(jRRenovado)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLActivoContrato)
+                                    .addComponent(jRActivoContrato)
+                                    .addComponent(jRVigenciaContrato)
+                                    .addComponent(jLVigenciaListados))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jBEliminarListados)
+                            .addComponent(jBModificarListados)
+                            .addComponent(jBSalirListados))
+                        .addGap(127, 127, 127))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jIGARANTE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(153, 153, 153)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLIDContratoListados)
                             .addComponent(jTIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(17, 17, 17)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLIDpropiedadListados)
-                            .addComponent(jCPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jCPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLFechaFinListados, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLIDPropietarioListados)
-                            .addComponent(jCPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jCPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLFechaContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLIDInquilinoListados)
@@ -1431,48 +1464,12 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jCGarante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLIDGaranteListados)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jDFechaInicioListados, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLFechaInicioListados, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(55, 55, 55)
-                                .addComponent(jLFechaContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(11, 11, 11)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLFechaFinListados, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jDFechaFinListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(11, 11, 11)
-                                .addComponent(jDFechaContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTMontoContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLIDUsuarioContrato)
-                    .addComponent(jCUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLRenovadoListados)
-                    .addComponent(jRRenovado)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLActivoContrato)
-                            .addComponent(jRActivoContrato)
-                            .addComponent(jRVigenciaContrato)
-                            .addComponent(jLVigenciaListados))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBEliminarListados)
-                    .addComponent(jBModificarListados)
-                    .addComponent(jBSalirListados))
-                .addGap(127, 127, 127))
+                            .addComponent(jLIDGaranteListados))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLIDUsuarioContrato)
+                            .addComponent(jCUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         jTabbedPane1.addTab("CONTRATOS", jPanel1);
@@ -1502,7 +1499,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 765, Short.MAX_VALUE)
+            .addGap(0, 790, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPCardListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1525,7 +1522,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
         Inspector nuevo = new Inspector(matricula, nombre, apellido, telefono, activo);
         inspectorD.guardarInspector(nuevo);
-        cargarCombos();
+        cargarCombosInspectores();
         borrarCampos();
         deshabilitarBotonesInspectores();
     }//GEN-LAST:event_jBNuevoInspectorActionPerformed
@@ -1547,7 +1544,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
         }
-        cargarCombos();
+        cargarCombosInspectores();
         borrarCampos();
 
     }//GEN-LAST:event_jBModificarInspectorActionPerformed
@@ -1556,10 +1553,10 @@ public class MenuListados extends javax.swing.JInternalFrame {
         Inspector inspectorSeleccionado = (Inspector) jCBusquedaInspector.getSelectedItem();
         inspectorD.eliminarInspector(inspectorSeleccionado.getIdInspector());
         deshabilitarBotonesInspectores();
-        cargarCombos();
+        cargarCombosInspectores();
         borrarCampos();
-        //Deshabilito botones luego de ejecutar acccion!
-        //desHabilitarBotones();
+        
+        
     }//GEN-LAST:event_jBEliminarInspectorActionPerformed
 
     private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
@@ -1569,13 +1566,12 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
             borrarCampos();
         } else if (SelectPestaña == 1) {
-            cargarCombos();
+            cargarCombosInspectores();
             borrarCampos();
         } else if (SelectPestaña == 2) {
-            cargarCombos();
             borrarCampos();
         } else if (SelectPestaña == 3) {
-            cargarCombos();
+            cargarCombosContratos();
             borrarCampos();
         }
     }//GEN-LAST:event_jTabbedPane1StateChanged
@@ -1689,13 +1685,13 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
     private void jBSalirListadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirListadosActionPerformed
         this.dispose();
-//     jPCardFondo.setVisible(true);
+       // jPCardFondo.setVisible(true);
     }//GEN-LAST:event_jBSalirListadosActionPerformed
 
     private void jBEliminarListadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarListadosActionPerformed
         Contrato contratoSeleccion = (Contrato) jCBusquedaContratos.getSelectedItem();
         contratoD.eliminarContrato(contratoSeleccion.getIdContrato());
-        cargarCombos();
+        cargarCombosContratos();
         borrarCampos();
 
 
@@ -1704,29 +1700,24 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private void jBModificarListadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarListadosActionPerformed
         try {
             int idContrato = Integer.parseInt(jTIDContratoListados.getText());
+            Propietario propietario=(Propietario)jCPropietario.getSelectedItem();
+            Propiedad propiedad=(Propiedad)jCPropiedad.getSelectedItem();
+            Inquilino inquilino=(Inquilino)jCInquilino.getSelectedItem();
+            Garante garante=(Garante)jCGarante.getSelectedItem();
+            Usuario usuario=(Usuario)jCUsuario.getSelectedItem();
             LocalDate fechaInicio = jDFechaInicioListados.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
             LocalDate fechaFin = jDFechaFinListados.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-            int idPropiedad = Integer.parseInt(jIdPROPIEDAD.getText());
-            Propiedad propiedad = propiedadD.buscarPropiedad(idPropiedad);
-            int idPropietario = Integer.parseInt(jIDp.getText());
-            Propietario propietario = propietarioD.buscarPropietario(idPropietario);
-            int idInquilino = Integer.parseInt(jIInquilino.getText());
-            Inquilino inquilino = inquilinoD.buscarInquilino(idInquilino);
-            int idGarante = Integer.parseInt(jIGARANTE.getText());
-            Garante garante = garanteD.buscarGarante(idGarante);
-            int idUsuario = Integer.parseInt(jIVendedor.getText());
-            Usuario usuario = usuarioD.buscarUsuario(idUsuario);
             LocalDate fechaContrato = jDFechaContratoListados.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-            double montoContrato = Double.parseDouble(jTMontoContrato.getText());
             boolean activo = jRActivoContrato.isSelected();
             boolean vigente = jRVigenciaContrato.isSelected();
             boolean renovado = jRRenovado.isSelected();
-            Contrato nuevo = new Contrato(idContrato, propietario, propiedad, inquilino, garante, usuario, fechaInicio, fechaFin, fechaContrato, montoContrato, vigente, activo, renovado);
+            double montoContrato = Double.parseDouble(jTMontoContrato.getText());
+            Contrato nuevo = new Contrato(idContrato, propietario, propiedad, inquilino, garante, usuario, fechaInicio, fechaFin, fechaContrato, montoContrato, vigente, renovado, activo);
             contratoD.modificarContrato(nuevo);
         } catch (NullPointerException e) {
-            JOptionPane.showMessageDialog(this, "Error al modificar" + e.getMessage());
+            JOptionPane.showMessageDialog(this, "Error al modificar contrato");
         }
-        cargarCombos();
+        cargarCombosContratos();
         borrarCampos();
     }//GEN-LAST:event_jBModificarListadosActionPerformed
 
@@ -1952,7 +1943,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         borrarCampos();
-        deshabilitarBotonesContrato();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -2149,7 +2140,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private javax.swing.JButton jbBuscarGarante;
     private javax.swing.JButton jbBuscarInquilino;
     // End of variables declaration//GEN-END:variables
-  public void cargarCombos() {
+    private void cargarCombosInspectores() {
 
         // combo inspectores
         jCBusquedaInspector.removeAllItems();
@@ -2181,8 +2172,10 @@ public class MenuListados extends javax.swing.JInternalFrame {
             }
         });
 
-        // combo contratos
-        jCBusquedaContratos.removeAllItems();
+    }
+    
+    private void cargarCombosContratos(){
+         jCBusquedaContratos.removeAllItems();
         ContratoData contratoD = new ContratoData();
         ArrayList<Contrato> contratos = new ArrayList<>();
 
@@ -2210,10 +2203,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 return this;
             }
         });
-
     }
 
-    public void rellenarCamposInquilinos() {
+    private void rellenarCamposInquilinos() {
 
         // relleno campos pestaña inquilinos
         String dniInquilino = jTDNIInquilinos.getText();
@@ -2238,7 +2230,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         }
     }
 
-    public void rellenarCamposGarantes() {
+    private void rellenarCamposGarantes() {
         // relleno campos pestaña garantes
         String dniGarante = jTDNIGarante.getText();
         Garante garanteSeleccionado = garanteD.buscarGarantePorDni(dniGarante);
@@ -2260,7 +2252,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         }
     }
 
-    public void rellenarCamposInspectores() {
+    private void rellenarCamposInspectores() {
 
         //relleno campos pestaña inspectores:
         Inspector inspectorSelecionado = (Inspector) jCBusquedaInspector.getSelectedItem();
@@ -2275,7 +2267,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         }
     }
 
-    public void rellenarCamposContratos() {
+    private void rellenarCamposContratos() {
         // relleno campos pestaña contratos
         Contrato contratoSeleccionado = (Contrato) jCBusquedaContratos.getSelectedItem();
 
@@ -2283,6 +2275,11 @@ public class MenuListados extends javax.swing.JInternalFrame {
             jTIDContratoListados.setText(String.valueOf(contratoSeleccionado.getIdContrato()));
             jDFechaInicioListados.setDate(java.sql.Date.valueOf(contratoSeleccionado.getFechaInicio()));
             jDFechaFinListados.setDate(java.sql.Date.valueOf(contratoSeleccionado.getFechaFin()));
+            jDFechaContratoListados.setDate(java.sql.Date.valueOf(contratoSeleccionado.getFechaContrato()));
+            jRActivoContrato.setSelected(contratoSeleccionado.isActivo());
+            jRVigenciaContrato.setSelected(contratoSeleccionado.isVigente());
+            jTMontoContrato.setText(String.valueOf(contratoSeleccionado.getMontoContrato()));
+            jRRenovado.setSelected(contratoSeleccionado.isRenovado());
 //            jTIDPropiedadListados.setText(String.valueOf(contratoSeleccionado.getPropiedad().toString()));
                 
             //relleno combo propiedades con el contrato seleccionado    
@@ -2343,7 +2340,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         }
     }
 
-    public void borrarCampos() {
+    private void borrarCampos() {
         jTIDInquilino.setText("");
         jTNombreInquilinos.setText("");
         jTApellidoInquilinos.setText("");
@@ -2381,53 +2378,43 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
     }
 
-    public void habilitarBotonesGarante() {
+    private void habilitarBotonesGarante() {
         jBModificarGarante.setEnabled(true);
         jBEliminarGarante.setEnabled(true);
         jBNuevoGarante.setEnabled(false);
     }
 
-    public void deshabilitarBotonesGarante() {
+    private void deshabilitarBotonesGarante() {
         jBNuevoGarante.setEnabled(false);
         jBModificarGarante.setEnabled(false);
         jBEliminarGarante.setEnabled(false);
     }
 
-    public void habilitarBotonesInspectores() {
+    private void habilitarBotonesInspectores() {
         jBModificarInspector.setEnabled(true);
         jBEliminarInspector.setEnabled(true);
         jBNuevoInspector.setEnabled(false);
     }
 
-    public void deshabilitarBotonesInspectores() {
+    private void deshabilitarBotonesInspectores() {
         jBNuevoInspector.setEnabled(false);
         jBModificarInspector.setEnabled(false);
         jBEliminarInspector.setEnabled(false);
     }
 
-    public void habilitarBotonesInquilinos() {
+    private void habilitarBotonesInquilinos() {
         jBModificarInquilinos.setEnabled(true);
         jBEliminarInquilinos.setEnabled(true);
         jBNuevoInquilinos.setEnabled(false);
     }
 
-    public void deshabilitarBotonesInquilinos() {
+    private void deshabilitarBotonesInquilinos() {
         jBNuevoInquilinos.setEnabled(false);
         jBModificarInquilinos.setEnabled(false);
         jBEliminarInquilinos.setEnabled(false);
     }
 
-    public void deshabilitarBotonesContrato() {
-        jBModificarListados.setEnabled(false);
-        jBEliminarListados.setEnabled(false);
-    }
-
-    public void habilitarBotonesContrato() {
-        jBModificarListados.setEnabled(true);
-        jBEliminarListados.setEnabled(true);
-    }
-
-    public void comboContratos() {
+    private void comboContratos() {
         jCPropiedad.removeAllItems();
         PropiedadData propiedadData = new PropiedadData();
 

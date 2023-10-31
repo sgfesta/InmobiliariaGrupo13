@@ -6,6 +6,12 @@
       <Border info="null"/>
     </Property>
     <Property name="defaultCloseOperation" type="int" value="1"/>
+    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[755, 592]"/>
+    </Property>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[755, 592]"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -25,7 +31,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="765" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="790" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Component id="jPCardListados" alignment="0" max="32767" attributes="0"/>
           </Group>
@@ -213,7 +219,7 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jButton4" min="-2" pref="38" max="-2" attributes="0"/>
-                          <EmptySpace pref="117" max="32767" attributes="0"/>
+                          <EmptySpace pref="121" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -267,7 +273,7 @@
                               <Component id="jLActivoGarante" min="-2" max="-2" attributes="0"/>
                               <Component id="jRGarante" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="143" max="32767" attributes="0"/>
+                          <EmptySpace pref="146" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jBNuevoGarante" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBModificarGarante" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -653,7 +659,7 @@
                                   <Component id="jLTituloInspector" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="184" max="32767" attributes="0"/>
+                          <EmptySpace pref="188" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
@@ -706,7 +712,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace pref="125" max="32767" attributes="0"/>
+                          <EmptySpace pref="128" max="32767" attributes="0"/>
                           <Component id="jLTituloInspector" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
@@ -1132,10 +1138,10 @@
                                   <Component id="jBSalirInquilinos" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="188" max="32767" attributes="0"/>
+                          <EmptySpace pref="192" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="174" max="32767" attributes="0"/>
+                          <EmptySpace pref="178" max="32767" attributes="0"/>
                           <Component id="jLBusquedaInquilinos" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                           <Component id="jTDNIInquilinos" min="-2" pref="206" max="-2" attributes="0"/>
@@ -1204,7 +1210,7 @@
                               <Component id="jBEliminarInquilinos" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBSalirInquilinos" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="196" max="32767" attributes="0"/>
+                          <EmptySpace pref="199" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1578,19 +1584,14 @@
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace pref="50" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLRenovadoListados" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLIDUsuarioContrato" min="-2" pref="140" max="-2" attributes="0"/>
-                                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                                  <Component id="jBModificarListados" min="-2" max="-2" attributes="0"/>
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="jLRenovadoListados" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                      <Component id="jRRenovado" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
+                                              <Component id="jBModificarListados" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRRenovado" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
@@ -1601,93 +1602,26 @@
                                                   <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jCUsuario" min="-2" pref="202" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                                                  <Component id="jBEliminarListados" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+                                                  <Component id="jBSalirListados" min="-2" pref="84" max="-2" attributes="0"/>
                                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
                                       <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="jLIDContratoListados" min="-2" pref="140" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" attributes="0">
-                                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                                          <Component id="jIDp" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                          <Component id="jIdPROPIEDAD" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="jTIDContratoListados" min="-2" pref="206" max="-2" attributes="0"/>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Group type="102" attributes="0">
-                                                          <Component id="jLIDpropiedadListados" min="-2" pref="140" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="jCPropiedad" min="-2" pref="202" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="jLIDGaranteListados" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                                                              <Component id="jCGarante" min="-2" pref="202" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Group type="102" attributes="0">
-                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Component id="jLIDPropietarioListados" alignment="1" min="-2" pref="140" max="-2" attributes="0"/>
-                                                                  <Component id="jLIDInquilinoListados" alignment="1" min="-2" pref="140" max="-2" attributes="0"/>
-                                                              </Group>
-                                                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Component id="jCInquilino" min="-2" pref="202" max="-2" attributes="0"/>
-                                                                  <Component id="jCPropietario" alignment="1" min="-2" pref="202" max="-2" attributes="0"/>
-                                                              </Group>
-                                                          </Group>
-                                                      </Group>
-                                                  </Group>
-                                                  <EmptySpace max="32767" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <Component id="jLFechaInicioListados" min="-2" pref="140" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
+                                          <Component id="jIDp" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="jIdPROPIEDAD" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                           <Component id="jDFechaInicioListados" min="-2" pref="156" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           <Component id="jIInquilino" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <EmptySpace max="32767" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="jLFechaFinListados" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="jLFechaContratoListados" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="jLabel1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                                  <Component id="jBEliminarListados" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jDFechaFinListados" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jDFechaContratoListados" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
-                                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                                  <Component id="jBSalirListados" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jTMontoContrato" min="-2" pref="110" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
                                       </Group>
                                   </Group>
                               </Group>
@@ -1696,6 +1630,74 @@
                                   <Component id="jLTituloContratoListados" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="jIVendedor" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="jLIDpropiedadListados" min="-2" pref="140" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jCPropiedad" min="-2" pref="202" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jLIDGaranteListados" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                                                      <Component id="jCGarante" min="-2" pref="202" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="jLIDPropietarioListados" alignment="1" min="-2" pref="140" max="-2" attributes="0"/>
+                                                          <Component id="jLIDInquilinoListados" alignment="1" min="-2" pref="140" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="jCInquilino" min="-2" pref="202" max="-2" attributes="0"/>
+                                                          <Component id="jCPropietario" alignment="1" min="-2" pref="202" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jLFechaFinListados" min="-2" pref="140" max="-2" attributes="0"/>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLFechaContratoListados" min="-2" pref="140" max="-2" attributes="0"/>
+                                                      <Component id="jLabel1" min="-2" pref="140" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLIDContratoListados" min="-2" pref="140" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTIDContratoListados" min="-2" pref="206" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jLFechaInicioListados" min="-2" pref="140" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLIDUsuarioContrato" min="-2" pref="140" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jCUsuario" min="-2" pref="202" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jDFechaFinListados" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jDFechaContratoListados" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
+                                      <Component id="jTMontoContrato" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
@@ -1714,37 +1716,74 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           <Component id="jIInquilino" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLTituloContratoListados" min="-2" max="-2" attributes="0"/>
-                              <Component id="jIVendedor" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jCBusquedaContratos" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                          <Component id="jButton1" min="-2" pref="44" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jIDp" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jIdPROPIEDAD" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jIGARANTE" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace pref="34" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLTituloContratoListados" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jIVendedor" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jCBusquedaContratos" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                                  <Component id="jButton1" min="-2" pref="44" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jIDp" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jIdPROPIEDAD" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                          <Component id="jIGARANTE" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace pref="39" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jDFechaInicioListados" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLFechaInicioListados" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                  <Component id="jDFechaFinListados" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                                  <Component id="jDFechaContratoListados" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jTMontoContrato" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                                      <Component id="jLabel1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLRenovadoListados" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRRenovado" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLActivoContrato" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRActivoContrato" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRVigenciaContrato" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLVigenciaListados" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace pref="60" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jBEliminarListados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jBModificarListados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jBSalirListados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLIDContratoListados" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTIDContratoListados" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1753,11 +1792,13 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLIDpropiedadListados" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jCPropiedad" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLFechaFinListados" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLIDPropietarioListados" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jCPropietario" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLFechaContratoListados" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1769,61 +1810,14 @@
                                       <Component id="jCGarante" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLIDGaranteListados" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jDFechaInicioListados" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLFechaInicioListados" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLIDUsuarioContrato" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                                          <Component id="jLFechaContratoListados" min="-2" pref="25" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="jLFechaFinListados" min="-2" pref="22" max="-2" attributes="0"/>
-                                              <Component id="jDFechaFinListados" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                                          <Component id="jDFechaContratoListados" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTMontoContrato" alignment="0" min="-2" pref="24" max="-2" attributes="0"/>
-                                              <Component id="jLabel1" min="-2" pref="24" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLIDUsuarioContrato" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLRenovadoListados" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRRenovado" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLActivoContrato" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRActivoContrato" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRVigenciaContrato" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLVigenciaListados" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace pref="45" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jBEliminarListados" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jBModificarListados" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jBSalirListados" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
