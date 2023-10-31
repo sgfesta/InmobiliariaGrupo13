@@ -465,11 +465,17 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
                 int nivelAcceso = Integer.parseInt(jTNacceso.getText());
                 
                 Usuario nuevo = new Usuario(nombre, email, password, activo, nivelAcceso);
-                ud.guardarUsuario(nuevo);
-                JOptionPane.showMessageDialog(this, "Usuario agregado exitosamente");
+                if (ud.guardarUsuario(nuevo)) {
+                    JOptionPane.showMessageDialog(this, "Usuario agregado exitosamente");
                 limpiarCampos();
                 // deshabilitarBotones();
                 cargarCombos();
+                } else {
+                    JOptionPane.showMessageDialog(this, "Error Usuario repetido o error al acceder a la base de datos");
+                }
+;
+                
+                
 
             } else {
                 JOptionPane.showMessageDialog(this, "No debe dejar campos vacios");

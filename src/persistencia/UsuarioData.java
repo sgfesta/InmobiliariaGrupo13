@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ public class UsuarioData {
     }
 
     //Guardo Usuario de forma individual
-    public void guardarUsuario(Usuario usuario) {
+    public boolean guardarUsuario(Usuario usuario) {
         //Consulta slq 
         String sql = "INSERT INTO  usuario (nombre, email, password, activo, nivelAcceso) VALUES (?,?,?,?,?)";
         try {
@@ -34,17 +35,13 @@ public class UsuarioData {
             int exito = ps.executeUpdate();
 
             ResultSet rs = ps.getGeneratedKeys();
-
-           /* if (rs.next()) {
-                usuario.setIdUsuario(rs.getInt(1));
-                JOptionPane.showMessageDialog(null, "Usuario guardado exitosamente");
-            }*/
             //Cierro la Conexion
             ps.close();
-
+            return true; // Usuario guardado exitosamente            
+      
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Usuario");
-
+          //  JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Usuario");
+          return false; // Error al guardar el usuario
         }
 
     }
