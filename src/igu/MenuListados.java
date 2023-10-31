@@ -285,6 +285,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTNombreGaranteKeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTNombreGaranteKeyTyped(evt);
+            }
         });
 
         jLApellidoGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -299,6 +302,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTApellidoGarante.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTApellidoGaranteKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTApellidoGaranteKeyTyped(evt);
             }
         });
 
@@ -594,6 +600,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTNombreInspectorKeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTNombreInspectorKeyTyped(evt);
+            }
         });
 
         jLApellidoInspector.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -608,6 +617,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTApellidoInspector.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTApellidoInspectorKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTApellidoInspectorKeyTyped(evt);
             }
         });
 
@@ -1254,6 +1266,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTNombreInquilinosKeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTNombreInquilinosKeyTyped(evt);
+            }
         });
 
         jLNombreInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -1274,6 +1289,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTApellidoInquilinos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTApellidoInquilinosKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTApellidoInquilinosKeyTyped(evt);
             }
         });
 
@@ -1298,6 +1316,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTLugarTrabajoInquilinos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTLugarTrabajoInquilinosKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTLugarTrabajoInquilinosKeyTyped(evt);
             }
         });
 
@@ -1721,7 +1742,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jbBuscarInquilinoActionPerformed
 
     private void jbBuscarGaranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarGaranteActionPerformed
-     rellenarCamposGarantes();
+        rellenarCamposGarantes();
 
     }//GEN-LAST:event_jbBuscarGaranteActionPerformed
 
@@ -1911,14 +1932,14 @@ public class MenuListados extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTLugarTrabajoInquilinosKeyReleased
 
     private void jCBusquedaInspectorItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBusquedaInspectorItemStateChanged
-    rellenarCamposInspectores();
+        rellenarCamposInspectores();
         if (!jTMatriculaInspector.getText().isEmpty() && !jTNombreInspector.getText().isEmpty() && !jTApellidoInspector.getText().isEmpty() && !jTTelefonoInspector.getText().isEmpty()) {
             habilitarBotonesInspectores();
 
         } else {
             deshabilitarBotonesInspectores();
         }
-        
+
     }//GEN-LAST:event_jCBusquedaInspectorItemStateChanged
 
     private void jCBusquedaContratosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBusquedaContratosItemStateChanged
@@ -1954,6 +1975,69 @@ public class MenuListados extends javax.swing.JInternalFrame {
     private void jRRenovadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRRenovadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRRenovadoActionPerformed
+
+    private void jTNombreGaranteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNombreGaranteKeyTyped
+        int key = evt.getKeyChar();
+        boolean letra = Character.isLetter(key); // Verifica si es una letra
+
+        if (!(letra)) {
+            evt.consume(); // Consume el evento si no es una letra o espacio en blanco
+        }
+    }//GEN-LAST:event_jTNombreGaranteKeyTyped
+
+    private void jTApellidoGaranteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTApellidoGaranteKeyTyped
+        int key = evt.getKeyChar();
+        boolean letra = Character.isLetter(key); // Verifica si es una letra
+
+        if (!(letra)) {
+            evt.consume(); // Consume el evento si no es una letra o espacio en blanco
+        }
+    }//GEN-LAST:event_jTApellidoGaranteKeyTyped
+
+    private void jTNombreInspectorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNombreInspectorKeyTyped
+        int key = evt.getKeyChar();
+        boolean letra = Character.isLetter(key); // Verifica si es una letra
+
+        if (!(letra)) {
+            evt.consume(); // Consume el evento si no es una letra o espacio en blanco
+        }
+    }//GEN-LAST:event_jTNombreInspectorKeyTyped
+
+    private void jTApellidoInspectorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTApellidoInspectorKeyTyped
+        int key = evt.getKeyChar();
+        boolean letra = Character.isLetter(key); // Verifica si es una letra
+
+        if (!(letra)) {
+            evt.consume(); // Consume el evento si no es una letra o espacio en blanco
+        }
+    }//GEN-LAST:event_jTApellidoInspectorKeyTyped
+
+    private void jTNombreInquilinosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNombreInquilinosKeyTyped
+        int key = evt.getKeyChar();
+        boolean letra = Character.isLetter(key); // Verifica si es una letra
+
+        if (!(letra)) {
+            evt.consume(); // Consume el evento si no es una letra o espacio en blanco
+        }
+    }//GEN-LAST:event_jTNombreInquilinosKeyTyped
+
+    private void jTApellidoInquilinosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTApellidoInquilinosKeyTyped
+        int key = evt.getKeyChar();
+        boolean letra = Character.isLetter(key); // Verifica si es una letra
+
+        if (!(letra)) {
+            evt.consume(); // Consume el evento si no es una letra o espacio en blanco
+        }
+    }//GEN-LAST:event_jTApellidoInquilinosKeyTyped
+
+    private void jTLugarTrabajoInquilinosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTLugarTrabajoInquilinosKeyTyped
+        int key = evt.getKeyChar();
+        boolean letra = Character.isLetter(key); // Verifica si es una letra
+
+        if (!(letra)) {
+            evt.consume(); // Consume el evento si no es una letra o espacio en blanco
+        }
+    }//GEN-LAST:event_jTLugarTrabajoInquilinosKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -2143,15 +2227,14 @@ public class MenuListados extends javax.swing.JInternalFrame {
             jTLugarTrabajoInquilinos.setText(inquilinoSelecionado.getLugarTrabajo());
             jRInquilino.setSelected(inquilinoSelecionado.isActivo());
             habilitarBotonesInquilinos();
-            
- }else if (jTDNIInquilinos.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Debe ingresar un DNI antes de realizar una busqueda"); 
-        }else if (inquilinoSelecionado == null){
+
+        } else if (jTDNIInquilinos.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Debe ingresar un DNI antes de realizar una busqueda");
+        } else if (inquilinoSelecionado == null) {
             JOptionPane.showMessageDialog(this, "No existe un Inquilino con ese DNI");
             jTDNIInquilinos.setText("");
-                }
         }
-    
+    }
 
     public void rellenarCamposGarantes() {
         // relleno campos pestaña garantes
@@ -2167,12 +2250,12 @@ public class MenuListados extends javax.swing.JInternalFrame {
             jRGarante.setSelected(garanteSeleccionado.isActivo());
             habilitarBotonesGarante();
 
-        }else if (jTDNIGarante.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Debe ingresar un DNI antes de realizar una busqueda"); 
-        }else if (garanteSeleccionado == null){
+        } else if (jTDNIGarante.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Debe ingresar un DNI antes de realizar una busqueda");
+        } else if (garanteSeleccionado == null) {
             JOptionPane.showMessageDialog(this, "No existe un Garante con ese DNI");
             jTDNIGarante.setText("");
-                }
+        }
     }
 
     public void rellenarCamposInspectores() {

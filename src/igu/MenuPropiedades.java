@@ -187,6 +187,9 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTAlturaPropiedadesKeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTAlturaPropiedadesKeyTyped(evt);
+            }
         });
 
         jTSuperTotalPropiedades.setBackground(new java.awt.Color(153, 153, 153));
@@ -511,12 +514,10 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                     .addGroup(jPPropiedadesLayout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(jRDisponibilidadPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLDisponibilidadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLDireccionPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLDisponibilidadPropiedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPPropiedadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLActivoPropiedades, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -593,11 +594,11 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         limpiarCampos();
         rellenarCampos();
         if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-            && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-            && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-            && jRDisponibilidadPropiedades.isSelected() == true && !jTObservacionesPropiedades.getText().isEmpty()) {
+                && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
+                && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
+                && jRDisponibilidadPropiedades.isSelected() == true && !jTObservacionesPropiedades.getText().isEmpty()) {
             habilitarBotones();
-        }else{
+        } else {
             deshabilitarBotones();
         }
     }//GEN-LAST:event_jCListaPropiedadesItemStateChanged
@@ -619,11 +620,11 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 rellenarCampos();
 
                 if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-                    && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-                    && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-                    && jRDisponibilidadPropiedades.isSelected() == true && !jTObservacionesPropiedades.getText().isEmpty()) {
+                        && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
+                        && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
+                        && jRDisponibilidadPropiedades.isSelected() == true && !jTObservacionesPropiedades.getText().isEmpty()) {
                     habilitarBotones();
-                }else{
+                } else {
                     deshabilitarBotones();
                 }
 
@@ -677,11 +678,11 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
     private void jTAntiguedadPropiedadKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTAntiguedadPropiedadKeyReleased
         if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-            && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-            && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-            && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
+                && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
+                && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
+                && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
             jBGuardarPropiedades.setEnabled(true);
-        }else{
+        } else {
             deshabilitarBotones();
         }
 
@@ -701,11 +702,11 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
     private void jTPrecioTasadoPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTPrecioTasadoPropiedadesKeyReleased
         if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-            && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-            && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-            && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
+                && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
+                && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
+                && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
             jBGuardarPropiedades.setEnabled(true);
-        }else{
+        } else {
             deshabilitarBotones();
         }
 
@@ -725,11 +726,11 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
     private void jTSuperTotalPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTSuperTotalPropiedadesKeyReleased
         if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-            && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-            && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-            && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
+                && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
+                && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
+                && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
             jBGuardarPropiedades.setEnabled(true);
-        }else{
+        } else {
             deshabilitarBotones();
         }
 
@@ -740,26 +741,26 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
     private void jTAlturaPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTAlturaPropiedadesKeyReleased
         if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-            && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-            && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-            && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
+                && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
+                && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
+                && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
             jBGuardarPropiedades.setEnabled(true);
-        }else{
+        } else {
             deshabilitarBotones();
         }
 
-        if (jTAlturaPropiedades.getText().isEmpty()){
+        if (jTAlturaPropiedades.getText().isEmpty()) {
             deshabilitarBotones();
         }
     }//GEN-LAST:event_jTAlturaPropiedadesKeyReleased
 
     private void jTDireccionPropiedadesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDireccionPropiedadesKeyReleased
         if (!jTDireccionPropiedades.getText().isEmpty() && !jTAlturaPropiedades.getText().isEmpty()
-            && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
-            && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
-            && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
+                && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
+                && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
+                && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
             jBGuardarPropiedades.setEnabled(true);
-        }else{
+        } else {
             deshabilitarBotones();
         }
 
@@ -767,6 +768,14 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             deshabilitarBotones();
         }
     }//GEN-LAST:event_jTDireccionPropiedadesKeyReleased
+
+    private void jTAlturaPropiedadesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTAlturaPropiedadesKeyTyped
+        int key = evt.getKeyChar();
+        boolean numero = (key >= 48 && key <= 57) || key == 46 || key == 44;
+        if (!numero) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTAlturaPropiedadesKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -819,7 +828,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                     && !jTSuperTotalPropiedades.getText().isEmpty() && !jTPrecioTasadoPropiedades.getText().isEmpty()
                     && !jTAntiguedadPropiedad.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true
                     && !jTObservacionesPropiedades.getText().isEmpty() && jRDisponibilidadPropiedades.isSelected() == true) {
-                 habilitarBotones();
+                habilitarBotones();
                 // Propiedad PSelec = (Propiedad) jCListaTipoPropiedades.getSelectedItem();
                 Propietario propietario = (Propietario) jCListaPropietarios.getSelectedItem();
                 String direccion = jTDireccionPropiedades.getText();
@@ -838,7 +847,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
                 pd.agregarPropiedad(nuevo);
                 JOptionPane.showMessageDialog(this, "Propiedad agregada exitosamente");
                 limpiarCampos();
-                 deshabilitarBotones();
+                deshabilitarBotones();
                 // cargarCombo();
 
             } else {
@@ -1088,9 +1097,10 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         jBModificarPropiedades.setEnabled(true);
         jBEliminarPropiedades.setEnabled(true);
     }
-public void combosEnBlanco(){
-         jCListaPropietarios.setSelectedItem(null);
-         jCListaPropiedades.setSelectedItem(null);
+
+    public void combosEnBlanco() {
+        jCListaPropietarios.setSelectedItem(null);
+        jCListaPropiedades.setSelectedItem(null);
         jCListaInspectoresPropiedades.setSelectedItem(null);
         jCListarZonaPropiedades.setSelectedItem(null);
         jCListarEstadoPropiedades.setSelectedItem(null);

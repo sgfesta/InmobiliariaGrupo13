@@ -185,7 +185,7 @@
               <Color blue="ff" green="cc" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="Garanre Buscado"/>
+            <Property name="text" type="java.lang.String" value="Garante Buscado"/>
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <Constraints>
@@ -194,7 +194,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTIDInquilinoAlquiler">
+        <Component class="javax.swing.JTextField" name="jTDNIInquilinoAlquiler">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -206,13 +206,16 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTDNIInquilinoAlquilerKeyTyped"/>
+          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="200" y="330" width="122" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTIDGaranteAlquiler">
+        <Component class="javax.swing.JTextField" name="jTDNIGaranteAlquiler">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -224,6 +227,9 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTDNIGaranteAlquilerKeyTyped"/>
+          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="510" y="330" width="122" height="-1"/>
@@ -646,7 +652,7 @@
               <Color blue="ff" green="cc" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="InquilinoBuscado"/>
+            <Property name="text" type="java.lang.String" value="Inquilino Buscado"/>
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <Constraints>
