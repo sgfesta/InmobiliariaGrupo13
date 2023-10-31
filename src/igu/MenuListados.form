@@ -537,7 +537,7 @@
                       <Color blue="ff" green="cc" red="33" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="Inactivo"/>
+                    <Property name="text" type="java.lang.String" value="Activo"/>
                     <Property name="verticalAlignment" type="int" value="3"/>
                   </Properties>
                 </Component>
