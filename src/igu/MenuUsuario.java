@@ -23,11 +23,10 @@ import persistencia.UsuarioData;
  */
 public class MenuUsuario extends javax.swing.JInternalFrame {
 
-    UsuarioData ud=new UsuarioData();
+    UsuarioData ud = new UsuarioData();
 
-     
     public MenuUsuario() {
-        initComponents(); 
+        initComponents();
         cargarCombos();
         QuitarLaBarraTitulo();
 
@@ -77,6 +76,7 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         jCBusquedaUsuario = new javax.swing.JComboBox<>();
         jBModificarUsuario = new javax.swing.JButton();
         jBLimpiezaUsuario = new javax.swing.JButton();
+        jBInfo = new javax.swing.JButton();
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -240,6 +240,15 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
             }
         });
 
+        jBInfo.setBackground(new java.awt.Color(51, 51, 51));
+        jBInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trash_bin_delete_remove_icon_191682.png"))); // NOI18N
+        jBInfo.setBorder(null);
+        jBInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBInfoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPCardUsuariosLayout = new javax.swing.GroupLayout(jPCardUsuarios);
         jPCardUsuarios.setLayout(jPCardUsuariosLayout);
         jPCardUsuariosLayout.setHorizontalGroup(
@@ -251,14 +260,14 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
                 .addGap(206, 206, 206)
                 .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPCardUsuariosLayout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(jLabel5))
+                    .addGroup(jPCardUsuariosLayout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addGap(18, 18, 18)
                         .addComponent(jCBusquedaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jBLimpiezaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPCardUsuariosLayout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(jLabel5)))
+                        .addComponent(jBLimpiezaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardUsuariosLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -275,13 +284,16 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jrbUAvtivo)
-                            .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTNacceso)
-                                .addComponent(jTPwd)
-                                .addComponent(jTIEmail)
-                                .addComponent(jTIDUsuario)
-                                .addComponent(jTNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(252, 252, 252))
+                            .addGroup(jPCardUsuariosLayout.createSequentialGroup()
+                                .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTNacceso)
+                                    .addComponent(jTPwd)
+                                    .addComponent(jTIEmail)
+                                    .addComponent(jTIDUsuario)
+                                    .addComponent(jTNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jBInfo)))
+                        .addGap(207, 207, 207))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardUsuariosLayout.createSequentialGroup()
                         .addComponent(jBNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -299,13 +311,13 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
                 .addComponent(jPBarraNavegador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(jLabel5)
-                .addGap(39, 39, 39)
-                .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(50, 50, 50)
+                .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel6)
                         .addComponent(jCBusquedaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jBLimpiezaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
+                .addGap(29, 29, 29)
                 .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
                     .addComponent(jTIDUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -322,10 +334,12 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
                     .addComponent(jLabel31)
                     .addComponent(jTPwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel32)
-                    .addComponent(jTNacceso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jBInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel32)
+                        .addComponent(jTNacceso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(22, 22, 22)
                 .addGroup(jPCardUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel34)
                     .addComponent(jrbUAvtivo))
@@ -335,7 +349,7 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
                     .addComponent(jBEliminarUsuario)
                     .addComponent(jBSalirUsuario)
                     .addComponent(jBModificarUsuario))
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -357,8 +371,8 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoActionPerformed
-       agregarUsuario();
-       limpiarCampos();
+        agregarUsuario();
+        limpiarCampos();
         cargarCombos();
     }//GEN-LAST:event_jBNuevoActionPerformed
 
@@ -369,33 +383,41 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jBEliminarUsuarioActionPerformed
 
     private void jBSalirUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirUsuarioActionPerformed
-         int respuesta = JOptionPane.showConfirmDialog(this, "Estás seguro que quieres salir?", "Cerrar Ventana", JOptionPane.YES_NO_OPTION);
+        int respuesta = JOptionPane.showConfirmDialog(this, "Estás seguro que quieres salir?", "Cerrar Ventana", JOptionPane.YES_NO_OPTION);
 
         if (respuesta == JOptionPane.YES_OPTION) {
 
             this.dispose();//cierro la ventana
         }
-      
+
     }//GEN-LAST:event_jBSalirUsuarioActionPerformed
 
     private void jCBusquedaUsuarioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBusquedaUsuarioItemStateChanged
-       rellenarCampos();
+        rellenarCampos();
     }//GEN-LAST:event_jCBusquedaUsuarioItemStateChanged
 
     private void jBModificarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarUsuarioActionPerformed
         modificarUsuario();
         limpiarCampos();
         cargarCombos();
-        rellenarCampos(); 
+        rellenarCampos();
     }//GEN-LAST:event_jBModificarUsuarioActionPerformed
 
     private void jBLimpiezaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimpiezaUsuarioActionPerformed
         limpiarCampos();
     }//GEN-LAST:event_jBLimpiezaUsuarioActionPerformed
 
+    private void jBInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBInfoActionPerformed
+        String mensaje = "Nivel 10 : Super Usuario acceso total" + "\n"
+                + "Nivel 20 : Administrativo Full  " + "\n"
+                + "Nivel 30 : Vendedor  Full" + "\n";
+        JOptionPane.showMessageDialog(null, mensaje, "Detalle de Niveles", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jBInfoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBEliminarUsuario;
+    private javax.swing.JButton jBInfo;
     private javax.swing.JButton jBLimpiezaUsuario;
     private javax.swing.JButton jBModificarUsuario;
     private javax.swing.JButton jBNuevo;
@@ -420,9 +442,9 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
     // End of variables declaration//GEN-END:variables
 
     public void cargarCombos() {
-      
+
         jCBusquedaUsuario.removeAllItems();
-       // alumnoData ad = new alumnoData();
+        // alumnoData ad = new alumnoData();
         UsuarioData usuarioD = new UsuarioData();
         List<Usuario> usuarios = usuarioD.listarUsuario();
 
@@ -450,32 +472,29 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
             jCBusquedaUsuario.addItem(usuario);
         }
     }
-    
+
     public void agregarUsuario() {
-        
+
         try {
             if (!jTNombre.getText().isEmpty() && !jTIEmail.getText().isEmpty() && !jTPwd.getText().isEmpty() && !jTNacceso.getText().isEmpty()
-                     && jrbUAvtivo.isSelected() == true) {
+                    && jrbUAvtivo.isSelected() == true) {
                 // habilitarBotones();
-             
+
                 String nombre = jTNombre.getText();
                 String email = jTIEmail.getText();
                 String password = jTPwd.getText();
                 boolean activo = jrbUAvtivo.isSelected();
                 int nivelAcceso = Integer.parseInt(jTNacceso.getText());
-                
+
                 Usuario nuevo = new Usuario(nombre, email, password, activo, nivelAcceso);
                 if (ud.guardarUsuario(nuevo)) {
                     JOptionPane.showMessageDialog(this, "Usuario agregado exitosamente");
-                limpiarCampos();
-                // deshabilitarBotones();
-                cargarCombos();
+                    limpiarCampos();
+                    // deshabilitarBotones();
+                    cargarCombos();
                 } else {
                     JOptionPane.showMessageDialog(this, "Error Usuario repetido o error al acceder a la base de datos");
                 }
-;
-                
-                
 
             } else {
                 JOptionPane.showMessageDialog(this, "No debe dejar campos vacios");
@@ -485,9 +504,9 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "No debe dejar campos vacios");
         }
     }
-  
-    public void limpiarCampos(){
-        
+
+    public void limpiarCampos() {
+
         jTIDUsuario.setText("");
         jTNombre.setText("");
         jTIEmail.setText("");
@@ -495,15 +514,15 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         jTNacceso.setText("");
         jrbUAvtivo.setSelected(true);
     }
-    
+
     public void modificarUsuario() {
         try {
             int id = Integer.parseInt(jTIDUsuario.getText());
             String nombre = jTNombre.getText();
             String email = jTIEmail.getText();
             String contraseña = jTPwd.getText();
-            int nivelAcceso =Integer.parseInt(jTNacceso.getText());
-           boolean activo = jrbUAvtivo.isSelected();
+            int nivelAcceso = Integer.parseInt(jTNacceso.getText());
+            boolean activo = jrbUAvtivo.isSelected();
             Usuario nuevoU = new Usuario(id, nombre, email, contraseña, activo, nivelAcceso);
             int respuesta = JOptionPane.showConfirmDialog(this, "\n\n¿Estás seguro que deseas guardar los cambios?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
             if (respuesta == JOptionPane.YES_OPTION) {
@@ -514,18 +533,18 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Error al modificar " + ex.getMessage());
         }
     }
-     
+
     public void eliminarUsuario() {
         int uSelect = Integer.parseInt(jTIDUsuario.getText());
         boolean activo = jrbUAvtivo.isSelected();
 
-         int respuesta = JOptionPane.showConfirmDialog(this, "\n\n¿Estás seguro que deseas eliminar al usuario?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
+        int respuesta = JOptionPane.showConfirmDialog(this, "\n\n¿Estás seguro que deseas eliminar al usuario?", "Confirmar Guardar", JOptionPane.YES_NO_OPTION);
         if (respuesta == JOptionPane.YES_OPTION) {
             ud.eliminarUsuario(uSelect); // Guardo el cambio
             JOptionPane.showMessageDialog(this, "Usuario eliminado exitosamente.");
         }
     }
-    
+
     public void rellenarCampos() {
 
         Usuario usuarioSeleccionado = (Usuario) jCBusquedaUsuario.getSelectedItem();
@@ -538,12 +557,9 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
             jTIEmail.setText(String.valueOf(usuarioSeleccionado.getEmail()));
             jTPwd.setText(String.valueOf(usuarioSeleccionado.getPassword()));
             jTNacceso.setText(String.valueOf(usuarioSeleccionado.getNivelAcceso()));
-            
 
             // Botones Radiales
-
-           // actualizarDisponibilidad();
-
+            // actualizarDisponibilidad();
             if (usuarioSeleccionado.isActivo() == true) {
                 jrbUAvtivo.setSelected(true);
             } else {
@@ -553,9 +569,8 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
             //actualizarActivo();
         }
     }
-    
-    
-    }
+
+}
 
     
     
