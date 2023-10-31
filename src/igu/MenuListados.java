@@ -346,7 +346,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jLActivoGarante.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLActivoGarante.setForeground(new java.awt.Color(51, 204, 255));
         jLActivoGarante.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLActivoGarante.setText("Inactivo");
+        jLActivoGarante.setText("Activo");
         jLActivoGarante.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jRGarante.setBackground(new java.awt.Color(51, 51, 51));

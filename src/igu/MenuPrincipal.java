@@ -508,11 +508,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLUsuarioMouseClicked
 
     private void jLUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLUsuarioMouseEntered
-        jListados.setForeground(new Color(102, 102, 102));
+        jLUsuario.setForeground(new Color(102, 102, 102));
     }//GEN-LAST:event_jLUsuarioMouseEntered
 
     private void jLUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLUsuarioMouseExited
-        exitTxt.setForeground(new Color(255, 255, 255));
+        jLUsuario.setForeground(new Color(255, 255, 255));
     }//GEN-LAST:event_jLUsuarioMouseExited
 
 //    /**
