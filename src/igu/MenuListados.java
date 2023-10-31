@@ -1591,6 +1591,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         inquilinoD.guardarInquilino(nuevo);
         deshabilitarBotonesInquilinos();
         borrarCampos();
+        
     }//GEN-LAST:event_jBNuevoInquilinosActionPerformed
 
     private void jBModificarInquilinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarInquilinosActionPerformed
