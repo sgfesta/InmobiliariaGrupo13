@@ -1083,6 +1083,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jTIDContratoListados.setBackground(new java.awt.Color(153, 153, 153));
         jTIDContratoListados.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDContratoListados.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDContratoListados.setEnabled(false);
 
         jLFechaInicioListados.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLFechaInicioListados.setForeground(new java.awt.Color(51, 204, 255));
@@ -1359,8 +1360,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                                         .addComponent(jLVigenciaListados)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jRVigenciaContrato))
-                                    .addComponent(jCUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                    .addComponent(jCUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(109, 109, 109))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1572,6 +1572,8 @@ public class MenuListados extends javax.swing.JInternalFrame {
             borrarCampos();
         } else if (SelectPestaña == 3) {
             cargarCombosContratos();
+            
+            //buscar
             borrarCampos();
         }
     }//GEN-LAST:event_jTabbedPane1StateChanged
@@ -2372,6 +2374,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jCInquilino.setSelectedItem(null);
         jCGarante.setSelectedItem(null);
         jCUsuario.setSelectedItem(null);
+        jTMontoContrato.setText("");
         jDFechaContratoListados.setDate(null);
         jRActivoContrato.setSelected(false);
         jRVigenciaContrato.setSelected(false);

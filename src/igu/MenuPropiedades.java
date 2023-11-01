@@ -233,6 +233,9 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTAntiguedadPropiedadKeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTAntiguedadPropiedadKeyTyped(evt);
+            }
         });
 
         jLEstadoPropiedad.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -579,7 +582,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, 679, Short.MAX_VALUE)
+            .addComponent(jPPropiedades, javax.swing.GroupLayout.DEFAULT_SIZE, 666, Short.MAX_VALUE)
         );
 
         pack();
@@ -776,6 +779,14 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
             evt.consume();
         }
     }//GEN-LAST:event_jTAlturaPropiedadesKeyTyped
+
+    private void jTAntiguedadPropiedadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTAntiguedadPropiedadKeyTyped
+          int key = evt.getKeyChar();
+        boolean numero = (key >= 48 && key <= 57);
+        if (!numero) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTAntiguedadPropiedadKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

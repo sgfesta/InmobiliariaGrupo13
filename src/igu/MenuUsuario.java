@@ -130,6 +130,7 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         jTIDUsuario.setBackground(new java.awt.Color(153, 153, 153));
         jTIDUsuario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
         jTIDUsuario.setForeground(new java.awt.Color(51, 51, 51));
+        jTIDUsuario.setEnabled(false);
 
         jTNombre.setBackground(new java.awt.Color(153, 153, 153));
         jTNombre.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
