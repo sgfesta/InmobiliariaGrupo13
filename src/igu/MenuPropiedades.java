@@ -668,7 +668,7 @@ public class MenuPropiedades extends javax.swing.JInternalFrame {
 
     private void jBModificarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBModificarPropiedadesActionPerformed
         modificarPropiedad(); // Llama al método modificar solo si se ha seleccionado una propiedad
-
+cargarComboPropiedades();
     }//GEN-LAST:event_jBModificarPropiedadesActionPerformed
 
     private void jBModificarPropiedadesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jBModificarPropiedadesItemStateChanged
