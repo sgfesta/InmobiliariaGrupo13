@@ -677,6 +677,7 @@ cargarComboPropiedades();
 
     private void jBGuardarPropiedadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarPropiedadesActionPerformed
         guardarPropiedad();
+        cargarComboPropiedades();
     }//GEN-LAST:event_jBGuardarPropiedadesActionPerformed
 
     private void jTAntiguedadPropiedadKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTAntiguedadPropiedadKeyReleased
