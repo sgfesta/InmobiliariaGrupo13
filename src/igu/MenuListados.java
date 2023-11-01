@@ -175,10 +175,10 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(755, 592));
-        setPreferredSize(new java.awt.Dimension(755, 592));
+        setMinimumSize(new java.awt.Dimension(755, 699));
+        setPreferredSize(new java.awt.Dimension(755, 699));
 
-        jPCardListados.setBackground(new java.awt.Color(55, 55, 55));
+        jPCardListados.setBackground(new java.awt.Color(51, 51, 51));
         jPCardListados.setMinimumSize(new java.awt.Dimension(748, 635));
 
         jPBarraNavegador3.setBackground(new java.awt.Color(153, 153, 153));
@@ -195,7 +195,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
             .addGroup(jPBarraNavegador3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(568, Short.MAX_VALUE))
         );
         jPBarraNavegador3Layout.setVerticalGroup(
             jPBarraNavegador3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,6 +204,8 @@ public class MenuListados extends javax.swing.JInternalFrame {
 
         jTabbedPane1.setBackground(new java.awt.Color(51, 51, 51));
         jTabbedPane1.setForeground(new java.awt.Color(51, 204, 255));
+        jTabbedPane1.setMinimumSize(new java.awt.Dimension(755, 699));
+        jTabbedPane1.setPreferredSize(new java.awt.Dimension(755, 699));
         jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jTabbedPane1StateChanged(evt);
@@ -449,7 +451,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addComponent(jBSalirGarante, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(185, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
         jPGaranteLayout.setVerticalGroup(
             jPGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -497,7 +499,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                     .addComponent(jBModificarGarante)
                     .addComponent(jBEliminarGarante)
                     .addComponent(jBSalirGarante))
-                .addContainerGap(225, Short.MAX_VALUE))
+                .addContainerGap(157, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("GARANTES", jPGarante);
@@ -702,24 +704,27 @@ public class MenuListados extends javax.swing.JInternalFrame {
                                 .addComponent(jLActivoInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jRInspector)
-                                .addGap(102, 102, 102))
-                            .addGroup(jPInspectorLayout.createSequentialGroup()
-                                .addComponent(jLBusquedaInspector)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCBusquedaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3)))
-                .addContainerGap(245, Short.MAX_VALUE))
+                                .addGap(102, 102, 102)))))
+                .addContainerGap(254, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInspectorLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jBNuevoInspector)
-                .addGap(18, 18, 18)
-                .addComponent(jBModificarInspector)
-                .addGap(18, 18, 18)
-                .addComponent(jBEliminarInspector)
-                .addGap(18, 18, 18)
-                .addComponent(jBSalirInspector)
-                .addGap(233, 233, 233))
+                .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInspectorLayout.createSequentialGroup()
+                        .addComponent(jLBusquedaInspector)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCBusquedaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3)
+                        .addGap(203, 203, 203))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInspectorLayout.createSequentialGroup()
+                        .addComponent(jBNuevoInspector)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBModificarInspector)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBEliminarInspector)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBSalirInspector, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(172, 172, 172))))
         );
         jPInspectorLayout.setVerticalGroup(
             jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -734,7 +739,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                             .addComponent(jLBusquedaInspector)
                             .addComponent(jCBusquedaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jButton3))
-                .addGap(36, 36, 36)
+                .addGap(41, 41, 41)
                 .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTMatriculaInspector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLMatriculaInspector))
@@ -754,18 +759,20 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLActivoInspector)
                     .addComponent(jRInspector))
-                .addGap(96, 96, 96)
+                .addGap(81, 81, 81)
                 .addGroup(jPInspectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevoInspector)
                     .addComponent(jBModificarInspector)
                     .addComponent(jBEliminarInspector)
                     .addComponent(jBSalirInspector))
-                .addContainerGap(225, Short.MAX_VALUE))
+                .addContainerGap(167, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("INSPECTORES", jPInspector);
 
         jPInquilinos.setBackground(new java.awt.Color(51, 51, 51));
+        jPInquilinos.setMinimumSize(new java.awt.Dimension(755, 699));
+        jPInquilinos.setPreferredSize(new java.awt.Dimension(755, 699));
 
         jLTituloInquilinos.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLTituloInquilinos.setForeground(new java.awt.Color(51, 204, 255));
@@ -995,25 +1002,24 @@ public class MenuListados extends javax.swing.JInternalFrame {
                                         .addComponent(jBEliminarInquilinos)
                                         .addGap(11, 11, 11)))))
                         .addGap(33, 33, 33)
-                        .addComponent(jBSalirInquilinos)))
-                .addContainerGap(256, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInquilinosLayout.createSequentialGroup()
-                .addContainerGap(242, Short.MAX_VALUE)
-                .addComponent(jLBusquedaInquilinos)
-                .addGap(32, 32, 32)
-                .addComponent(jTDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jbBuscarInquilino, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79))
+                        .addComponent(jBSalirInquilinos))
+                    .addGroup(jPInquilinosLayout.createSequentialGroup()
+                        .addGap(98, 98, 98)
+                        .addComponent(jLBusquedaInquilinos)
+                        .addGap(32, 32, 32)
+                        .addComponent(jTDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jbBuscarInquilino, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
         jPInquilinosLayout.setVerticalGroup(
             jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPInquilinosLayout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(jLTituloInquilinos)
-                .addGap(35, 35, 35)
+                .addGap(36, 36, 36)
                 .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jbBuscarInquilino, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1024,7 +1030,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                                 .addComponent(jTDNIInquilinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(10, 10, 10)))
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
+                .addGap(38, 38, 38)
                 .addGroup(jPInquilinosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTIDInquilino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLIdInquilinos))
@@ -1054,7 +1060,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                     .addComponent(jBModificarInquilinos)
                     .addComponent(jBEliminarInquilinos)
                     .addComponent(jBSalirInquilinos))
-                .addContainerGap(236, Short.MAX_VALUE))
+                .addContainerGap(246, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("INQUILINOS", jPInquilinos);
@@ -1277,14 +1283,6 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(203, 203, 203)
-                .addComponent(jCBusquedaContratos, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(jIGARANTE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -1302,13 +1300,8 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jIVendedor))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
+                        .addGap(32, 32, 32)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(jLIDUsuarioContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jCUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -1331,12 +1324,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLRenovadoListados1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jRRenovado)
-                                        .addGap(98, 98, 98)))
+                                        .addComponent(jTIDContratoListados, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(184, 184, 184)
@@ -1356,26 +1344,50 @@ public class MenuListados extends javax.swing.JInternalFrame {
                                             .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(166, 166, 166)
                                                 .addComponent(jTMontoContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jBModificarListados)
-                        .addGap(85, 85, 85)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLVigenciaListados)
+                                .addGap(4, 4, 4)
+                                .addComponent(jLIDUsuarioContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRVigenciaContrato)
-                                .addGap(38, 38, 38)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLRenovadoListados1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jRRenovado))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(159, 159, 159)
+                                        .addComponent(jLVigenciaListados)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jRVigenciaContrato))
+                                    .addComponent(jCUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addGap(109, 109, 109))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(203, 203, 203)
+                        .addComponent(jCBusquedaContratos, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(61, 61, 61)
+                        .addComponent(jIGARANTE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(191, 191, 191)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jBModificarListados)
+                                    .addGap(284, 284, 284))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(143, 143, 143)
+                                    .addComponent(jBEliminarListados)
+                                    .addGap(65, 65, 65)
+                                    .addComponent(jBSalirListados, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLActivoContrato)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRActivoContrato))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jBEliminarListados)
-                                .addGap(86, 86, 86)
-                                .addComponent(jBSalirListados, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(109, 109, 109))
+                                .addComponent(jRActivoContrato)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1444,23 +1456,21 @@ public class MenuListados extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTMontoContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRRenovado)
-                            .addComponent(jLRenovadoListados1)
-                            .addComponent(jLVigenciaListados)
-                            .addComponent(jRVigenciaContrato))
-                        .addGap(82, 82, 82)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jBEliminarListados)
-                            .addComponent(jBModificarListados)
-                            .addComponent(jBSalirListados)))
+                    .addComponent(jRRenovado)
+                    .addComponent(jLRenovadoListados1)
+                    .addComponent(jLVigenciaListados)
+                    .addComponent(jRVigenciaContrato)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jRActivoContrato, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jLActivoContrato, javax.swing.GroupLayout.Alignment.TRAILING)))
-                .addGap(127, 127, 127))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBEliminarListados)
+                    .addComponent(jBModificarListados)
+                    .addComponent(jBSalirListados))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("CONTRATOS", jPanel1);
@@ -1470,11 +1480,12 @@ public class MenuListados extends javax.swing.JInternalFrame {
         jPCardListadosLayout.setHorizontalGroup(
             jPCardListadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPCardListadosLayout.createSequentialGroup()
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPCardListadosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPBarraNavegador3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPBarraNavegador3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPCardListadosLayout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPCardListadosLayout.setVerticalGroup(
             jPCardListadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1482,23 +1493,21 @@ public class MenuListados extends javax.swing.JInternalFrame {
                 .addGap(12, 12, 12)
                 .addComponent(jPBarraNavegador3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 715, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 647, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 854, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPCardListados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPCardListados, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 765, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPCardListados, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPCardListados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
