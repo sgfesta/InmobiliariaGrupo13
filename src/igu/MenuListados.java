@@ -499,7 +499,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                     .addComponent(jBModificarGarante)
                     .addComponent(jBEliminarGarante)
                     .addComponent(jBSalirGarante))
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("GARANTES", jPGarante);
@@ -765,7 +765,7 @@ public class MenuListados extends javax.swing.JInternalFrame {
                     .addComponent(jBModificarInspector)
                     .addComponent(jBEliminarInspector)
                     .addComponent(jBSalirInspector))
-                .addContainerGap(167, Short.MAX_VALUE))
+                .addContainerGap(155, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("INSPECTORES", jPInspector);
@@ -1492,9 +1492,9 @@ public class MenuListados extends javax.swing.JInternalFrame {
             .addGroup(jPCardListadosLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addComponent(jPBarraNavegador3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 647, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addGap(18, 28, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
